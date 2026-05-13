@@ -1,0 +1,10 @@
+{
+  "id": "evidence",
+  "term": "Evidence",
+  "short": "Captured artefacts (logs, traces, screenshots, diffs) that justify what the agent did.",
+  "patterns": [
+    "trust-layer",
+    "analysis-report",
+    "review-result"
+  ]
+}

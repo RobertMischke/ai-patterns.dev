@@ -1,0 +1,11 @@
+{
+  "id": "agent",
+  "term": "Agent",
+  "short": "An LLM that can decide, call tools, and act in a loop — not just answer.",
+  "patterns": [
+    "orchestrator-subagent",
+    "workforce",
+    "trust-layer",
+    "yolo-rails"
+  ]
+}

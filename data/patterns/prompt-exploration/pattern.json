@@ -1,0 +1,16 @@
+{
+  "id": "prompt-exploration",
+  "num": "P-01",
+  "category": "prompt",
+  "layer": "operating",
+  "classify": "new",
+  "title": "Prompt Exploration & Building",
+  "one_liner": "Before the agent runs, the human should know what they actually want.",
+  "problem": "An idea is not yet a task. The leap from 'I want X' to a prompt an agent can execute is bigger than developers expect — and skipping it produces locally-plausible but strategically wrong results.",
+  "solution": "Treat intent-clarification as its own step. Use AI tooling to explore the solution space, then commit to a sharp task with scope, non-goals and acceptance criteria.",
+  "keywords": [
+    "intent",
+    "scoping",
+    "exploration"
+  ]
+}

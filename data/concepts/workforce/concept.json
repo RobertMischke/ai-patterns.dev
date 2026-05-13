@@ -1,0 +1,10 @@
+{
+  "id": "workforce",
+  "term": "Agent workforce",
+  "short": "A roster of agents managed like a team — roles, budgets, performance, escalation.",
+  "patterns": [
+    "workforce",
+    "worktree",
+    "orchestrator-subagent"
+  ]
+}

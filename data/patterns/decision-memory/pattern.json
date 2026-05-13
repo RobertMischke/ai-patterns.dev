@@ -1,0 +1,12 @@
+{
+  "id": "decision-memory",
+  "num": "P-28",
+  "category": "sud",
+  "layer": "operating",
+  "classify": "intensified",
+  "title": "Searchable Decision Memory",
+  "one_liner": "Architectural decisions live as ADRs, versioned, dated and grep-able — not as folklore.",
+  "problem": "When the rationale behind a structure lives only in someone's head, in a closed Slack thread, or in a deleted Notion page, agents (and engineers) re-derive it badly. They reopen settled debates, undo intentional constraints, or violate a rule that was once written down but is no longer reachable from the code.",
+  "solution": "Store Architecture Decision Records inside the repo, numbered, dated, with context, decision, consequences and status. Link from the relevant code/READMEs to the ADR. Keep superseded ADRs visible and explicitly marked — the history is part of the memory. An agent asked 'why this way?' should be able to grep an answer.",
+  "keywords": []
+}

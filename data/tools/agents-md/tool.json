@@ -1,0 +1,13 @@
+{
+  "id": "agents-md",
+  "name": "AGENTS.md",
+  "vendor": "community standard",
+  "kind": "convention",
+  "blurb": "A repo-level file that tells every agent how to behave in this codebase.",
+  "url": "https://agents.md",
+  "oss_url": "https://github.com/openai/agents.md",
+  "patterns": [
+    "spec-driven",
+    "structure-context"
+  ]
+}

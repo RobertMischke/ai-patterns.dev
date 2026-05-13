@@ -1,0 +1,8 @@
+{
+  "id": "sud",
+  "num": "08",
+  "color": "var(--cat-sud)",
+  "name": "LLM-Friendly System Under Development",
+  "tagline": "Shape the codebase so an LLM can find, understand, change and verify the right parts.",
+  "blurb": "What reduces cognitive load for humans usually reduces context load for LLMs. Locality, small units, narrow interfaces, navigation, decision memory, project metadata, executable checks."
+}

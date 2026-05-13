@@ -1,0 +1,14 @@
+{
+  "id": "langgraph",
+  "name": "LangGraph",
+  "vendor": "LangChain",
+  "kind": "framework",
+  "blurb": "Graph-based orchestration framework for multi-agent and human-in-the-loop runs.",
+  "url": "https://langchain-ai.github.io/langgraph/",
+  "oss_url": "https://github.com/langchain-ai/langgraph",
+  "patterns": [
+    "orchestrator-subagent",
+    "workforce",
+    "task-intake-proxy"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "verbose-intent",
+  "num": "P-03",
+  "category": "prompt",
+  "layer": "operating",
+  "classify": "intensified",
+  "title": "Verbose Spoken Intent Capture",
+  "one_liner": "Speak the whole situation. The LLM compresses verbose intent better than humans type perfect prompts.",
+  "problem": "Typed prompts are terse, linear and pre-cleaned. The leftover context — hunches, edge cases, 'not like this' — is what the LLM actually needs.",
+  "solution": "Speak freely, including uncertainty and non-goals. The LLM transcribes, clusters, normalises; raw audio stays as evidence.",
+  "keywords": [
+    "speech",
+    "capture",
+    "compression"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "claude-code",
+  "name": "Claude Code",
+  "vendor": "Anthropic",
+  "kind": "agent-cli",
+  "blurb": "Terminal-native coding agent with plan mode, subagents and a tight bash/edit toolset.",
+  "url": "https://docs.claude.com/en/docs/claude-code",
+  "oss_url": null,
+  "patterns": [
+    "plan-mode",
+    "orchestrator-subagent",
+    "verbose-intent",
+    "context-compaction"
+  ]
+}

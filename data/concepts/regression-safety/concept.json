@@ -1,0 +1,9 @@
+{
+  "id": "regression-safety",
+  "term": "Regression safety",
+  "short": "The discipline of refusing merges that silently break previously passing behaviour.",
+  "patterns": [
+    "trust-layer",
+    "review-result"
+  ]
+}

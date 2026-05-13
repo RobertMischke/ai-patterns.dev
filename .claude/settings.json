@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls /c/Projects/ 2>&1 | head -50)",
+      "Read(//c/Projects//**)"
+    ]
+  }
+}

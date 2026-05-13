@@ -1,0 +1,8 @@
+{
+  "id": "provider-trust",
+  "term": "Provider trust",
+  "short": "Whether the execution channel (retention, residency, contract) is acceptable — not the same as model trust.",
+  "patterns": [
+    "provider-trust-map"
+  ]
+}

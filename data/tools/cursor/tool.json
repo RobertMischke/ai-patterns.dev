@@ -1,0 +1,14 @@
+{
+  "id": "cursor",
+  "name": "Cursor",
+  "vendor": "Anysphere",
+  "kind": "ide",
+  "blurb": "AI-first IDE with agent mode, composer, and rules per project.",
+  "url": "https://cursor.com",
+  "oss_url": null,
+  "patterns": [
+    "structure-context",
+    "plan-mode",
+    "review-result"
+  ]
+}

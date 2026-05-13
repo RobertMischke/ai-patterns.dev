@@ -1,0 +1,11 @@
+{
+  "id": "s2",
+  "title": "Context Engineering for Coding Agents",
+  "author": "Martin Fowler",
+  "kind": "post",
+  "url": "#",
+  "patterns": [
+    "context-compaction",
+    "structure-context"
+  ]
+}

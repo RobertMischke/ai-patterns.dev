@@ -1,0 +1,13 @@
+{
+  "id": "sourcegraph-cody",
+  "name": "Sourcegraph Cody",
+  "vendor": "Sourcegraph",
+  "kind": "ide",
+  "blurb": "Codebase-aware AI with deep repo indexing and code intelligence under the hood.",
+  "url": "https://sourcegraph.com/cody",
+  "oss_url": null,
+  "patterns": [
+    "structure-context",
+    "context-compaction"
+  ]
+}

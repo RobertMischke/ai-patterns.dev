@@ -1,0 +1,25 @@
+{
+  "lede": "An agent workforce is a managed roster of named roles — not a pool of identical instances. Each role has a budget, a trust profile, a performance record and an escalation path.",
+  "body": [
+    {
+      "h": "Why one agent isn't enough",
+      "p": "A single all-purpose agent looks elegant until production. Code, review, security, tests, docs and incident response do not share one system prompt, one toolset, or one trust level. Trying to make them share it produces a vague generalist that is mediocre at everything."
+    },
+    {
+      "h": "What a role contains",
+      "p": "A versioned prompt and behaviour spec. An approved model (P-19) and trust profile (P-20). A toolset narrow enough that the agent cannot drift. A per-role budget (P-17). A performance record built from past runs. A clear escalation path when it gets stuck."
+    },
+    {
+      "h": "How work flows through it",
+      "p": "Tasks are admitted through the intake proxy (P-22), routed to the right role, executed sequentially per task and parallel across tasks (P-11). Output goes through quality gates (P-32). Scheduled sweeps (P-33) audit the workforce itself. The orchestrator (P-12) holds the overview."
+    },
+    {
+      "h": "Where it pays off",
+      "p": "Volume of similar work where the operator would otherwise become the bottleneck. Multi-skill workflows where each skill needs its own standards. Compliance-heavy environments where audit needs to see who did what with what authority."
+    },
+    {
+      "h": "Where it does not",
+      "p": "Throwaway one-shot work. Exploratory phases where you do not yet know what the steady-state shape looks like. Tiny teams where managing five roles is a bigger tax than running five separate sessions."
+    }
+  ]
+}

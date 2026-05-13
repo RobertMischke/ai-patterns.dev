@@ -1,0 +1,16 @@
+{
+  "id": "sandbox",
+  "num": "P-16",
+  "category": "guard",
+  "layer": "infra",
+  "classify": "intensified",
+  "title": "Sandbox",
+  "one_liner": "Sandbox is not a premium feature. It is the precondition for running at all.",
+  "problem": "A longer-running, more tool-using, more file-changing agent is the biggest lever and the biggest risk surface.",
+  "solution": "Four dimensions, all required: isolation, capability limits, cost caps, audit trail. None optional, all visible.",
+  "keywords": [
+    "isolation",
+    "capabilities",
+    "audit"
+  ]
+}

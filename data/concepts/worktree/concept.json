@@ -1,0 +1,9 @@
+{
+  "id": "worktree",
+  "term": "Worktree",
+  "short": "A git working copy that lets many agents touch one repo without colliding.",
+  "patterns": [
+    "worktree",
+    "workforce"
+  ]
+}

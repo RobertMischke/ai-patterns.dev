@@ -1,0 +1,10 @@
+{
+  "id": "spec",
+  "term": "Spec",
+  "short": "A reviewed statement of intent — the source of truth that the agent compiles down to code.",
+  "patterns": [
+    "spec-driven",
+    "spec-drift",
+    "plan-mode"
+  ]
+}

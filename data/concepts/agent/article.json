@@ -1,0 +1,25 @@
+{
+  "lede": "An agent is an LLM with permission, memory and tools. It decides what to do next, it acts, and it watches what happens — not just a sentence generator.",
+  "body": [
+    {
+      "h": "What makes it an agent",
+      "p": "Three properties promote a model from chatbot to agent: (1) tool use — it can call typed functions, edit files, run shells; (2) a goal or task that survives between turns; (3) a loop that keeps running until the task is done or the loop is cut."
+    },
+    {
+      "h": "What it is not",
+      "p": "An agent is not a magic intern. It does not have judgement of consequence beyond what is encoded in its prompt, its tools, and its observable evidence. A capable model with reckless permissions is more dangerous, not less."
+    },
+    {
+      "h": "Roles and shapes",
+      "p": "Orchestrator (P-12) — coordinates and delegates. Subagent — narrow scope, fresh context. Workforce agent — a role with a budget and an SLA. Gate agent (P-32) — a structured judgement at a pipeline stage. Sweep agent (P-33) — a periodic auditor. Each shape has different trust, cost and review needs."
+    },
+    {
+      "h": "The trust frame",
+      "p": "Capability is not authority. Whether an agent may do X depends on the task fit (P-19), the model's trust profile (P-20) and the execution channel (P-21). Sandbox (P-16) and budget caps (P-17) are not optional — they are the precondition."
+    },
+    {
+      "h": "How to work with one",
+      "p": "Frame the agent like a senior — role, standards, permission to refuse (avoid Anti-Pattern A-01). Use plan mode (P-08), then fire-track-review (P-23). Read the artefact, not the chat (P-15). Capture evidence so reviewers can trust without watching."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "feature-folder-locality",
+  "num": "P-24",
+  "category": "sud",
+  "layer": "infra",
+  "classify": "intensified",
+  "title": "Feature Folder Locality",
+  "one_liner": "Keep related code, tests, docs and configuration together — per feature, not per layer.",
+  "problem": "Layer-first layouts scatter a single feature across controllers/, services/, models/, dto/, tests/, docs/. To understand or change it, an LLM (or human) has to stitch together files from six folders and re-derive the relationships every time. Context windows fill with navigation noise; subtle couplings hide between layers.",
+  "solution": "Organize the tree by feature. Each feature folder contains its handlers, domain logic, data access, tests, fixtures, README and feature-specific config. Cross-cutting concerns live in clearly-named shared folders, and shared code is the exception, not the default. An LLM asked to change feature X needs to read mostly the X folder.",
+  "keywords": []
+}

@@ -1,0 +1,10 @@
+{
+  "id": "sandbox",
+  "term": "Sandbox",
+  "short": "Isolation + capability limits + cost caps + audit trail — the precondition for letting an agent run.",
+  "patterns": [
+    "sandbox",
+    "yolo-rails",
+    "token-budget"
+  ]
+}

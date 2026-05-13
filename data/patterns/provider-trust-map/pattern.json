@@ -1,0 +1,17 @@
+{
+  "id": "provider-trust-map",
+  "num": "P-21",
+  "category": "routing",
+  "layer": "infra",
+  "classify": "new",
+  "title": "Provider Trust Map",
+  "one_liner": "The model is not the provider. The execution channel is its own trust boundary.",
+  "problem": "Treating model access as a simple API call hides retention, logging, residency, contractual posture, dependency and supply-chain risk. A capable, trusted model may still be inappropriate through a given provider.",
+  "solution": "Maintain a provider trust map across data classes, task types, environments and operational privileges. Allowed execution requires task fit AND model trust AND provider trust.",
+  "keywords": [
+    "provider",
+    "channel",
+    "residency",
+    "supply chain"
+  ]
+}

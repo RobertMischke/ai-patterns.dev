@@ -1,0 +1,8 @@
+{
+  "id": "context",
+  "num": "02",
+  "color": "var(--cat-context)",
+  "name": "Context Engineering",
+  "tagline": "Less context, retrieved on demand, beats more context dumped upfront.",
+  "blurb": "Context is the control surface that turns model capability into project-aligned work. Compaction, retrieval, memory tiers, structure."
+}

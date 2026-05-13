@@ -1,0 +1,10 @@
+{
+  "id": "task-intake",
+  "term": "Task intake",
+  "short": "The step that turns raw requests into clear, classified, linked tasks before any agent executes.",
+  "patterns": [
+    "task-intake-proxy",
+    "llm-mediated-task",
+    "prompt-exploration"
+  ]
+}

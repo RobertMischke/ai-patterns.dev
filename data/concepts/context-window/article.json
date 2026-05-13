@@ -1,0 +1,25 @@
+{
+  "lede": "The context window is the bounded slice of text and structure an LLM can actually see when it produces its next token. Everything outside it does not exist for the model.",
+  "body": [
+    {
+      "h": "What it is",
+      "p": "The context window is a fixed-size buffer measured in tokens. Modern models advertise windows from a few thousand up to multi-million tokens. The number sounds large, but every system prompt, tool definition, file fragment and prior message lives inside the same buffer."
+    },
+    {
+      "h": "Why size is misleading",
+      "p": "A larger context window does not mean better answers. Studies repeatedly show retrieval accuracy degrading with distance from either end of the buffer (the 'lost in the middle' effect) and reasoning quality dropping as the window fills with weakly-related material."
+    },
+    {
+      "h": "What lives in the window",
+      "p": "System prompt and behaviour rules. Tool / function definitions. Retrieved files or snippets. Prior turns of the conversation. The current user message. Recent tool results. Every one of these competes for the same tokens."
+    },
+    {
+      "h": "Operating implications",
+      "p": "Treat the window like RAM, not like a hard drive. Plan compaction (P-04), tier memory (P-05), structure code so the agent can pull just what it needs (P-06), and cap the budget so a runaway agent cannot melt the bill (P-17)."
+    },
+    {
+      "h": "When it bites you",
+      "p": "Long-running agent sessions silently push the original instructions out of view. Retrieval pipelines pre-load the window with hopeful 'maybe relevant' chunks. Conversational UIs append every turn without compaction. All three show up as 'the model used to be smarter at the start of the chat'."
+    }
+  ]
+}

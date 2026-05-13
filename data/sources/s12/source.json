@@ -1,0 +1,11 @@
+{
+  "id": "s12",
+  "title": "From Prompt to Task — Speech-First Agent UX",
+  "author": "Latent Space pod",
+  "kind": "video",
+  "url": "#",
+  "patterns": [
+    "verbose-intent",
+    "llm-mediated-task"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "model-task-capability",
+  "num": "P-19",
+  "category": "routing",
+  "layer": "operating",
+  "classify": "new",
+  "title": "Model–Task Capability Map",
+  "one_liner": "Route tasks by verified suitability, not by what's cheapest or fastest.",
+  "problem": "Multi-model setups make routing accidental: tasks land on whichever model is available or familiar. A model good at writing may be weak at code, unfit for high-impact reasoning.",
+  "solution": "Maintain an explicit map of which models are approved for which task categories — backed by benchmarks, internal evals, regression tests, incident history. Describes what the system is willing to let a model do, not what it could theoretically do.",
+  "keywords": [
+    "routing",
+    "capability",
+    "evals",
+    "policy"
+  ]
+}

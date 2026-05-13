@@ -1,0 +1,17 @@
+{
+  "id": "memory-tiering",
+  "num": "P-05",
+  "category": "context",
+  "layer": "infra",
+  "classify": "new",
+  "title": "Memory Tiering",
+  "one_liner": "Working, episodic, semantic, procedural — each tier with its own job.",
+  "problem": "Agents start each session blind. Without tiered memory, humans must reproduce state — unreliable and expensive.",
+  "solution": "Working memory for the turn, episodic for what happened, semantic for project facts, procedural for reusable workflows.",
+  "keywords": [
+    "working",
+    "episodic",
+    "semantic",
+    "procedural"
+  ]
+}

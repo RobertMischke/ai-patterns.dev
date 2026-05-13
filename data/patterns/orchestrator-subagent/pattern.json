@@ -1,0 +1,16 @@
+{
+  "id": "orchestrator-subagent",
+  "num": "P-12",
+  "category": "orch",
+  "layer": "operating",
+  "classify": "new",
+  "title": "Orchestrator / Subagent",
+  "one_liner": "Orchestrator thinks. Subagents act.",
+  "problem": "A single agent context holding plan, code, tests, review, security fills up — and quality falls with it.",
+  "solution": "Orchestrator coordinates, holds overview, delegates. Subagents get fresh context, narrow tool sets, return compact summaries.",
+  "keywords": [
+    "orchestrator",
+    "subagents",
+    "delegation"
+  ]
+}

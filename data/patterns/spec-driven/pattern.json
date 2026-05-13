@@ -1,0 +1,16 @@
+{
+  "id": "spec-driven",
+  "num": "P-07",
+  "category": "spec",
+  "layer": "operating",
+  "classify": "intensified",
+  "title": "Spec-Driven Development",
+  "one_liner": "The spec is the source of truth, not the code.",
+  "problem": "Without a clear spec, agents produce plausible-looking code that misses the actual requirement. More prompting won't fix this.",
+  "solution": "Write the spec first with acceptance, non-goals, constraints. A project 'constitution' (AGENTS.md) carries non-negotiable principles.",
+  "keywords": [
+    "AGENTS.md",
+    "acceptance",
+    "constitution"
+  ]
+}

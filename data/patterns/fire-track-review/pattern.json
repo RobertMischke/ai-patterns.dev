@@ -1,0 +1,12 @@
+{
+  "id": "fire-track-review",
+  "num": "P-23",
+  "category": "trust",
+  "layer": "operating",
+  "classify": "new",
+  "title": "Fire, Track, Review",
+  "one_liner": "Review the artifact, not the agent. Dispatch the task, track the output, inspect the result.",
+  "problem": "Watching an agent work feels productive and creates a sense of control, but it consumes the same scarce resource agents are supposed to save: human attention. Continuous supervision pulls the operator down to the execution layer — interrupting, second-guessing, and reacting to intermediate steps — instead of staying at the meta level where tasks, priorities and outcomes are decided. Busy is not the same as in control.",
+  "solution": "Use agents like asynchronous workers, not stage performers. Dispatch a clear task with a defined expected output. The agent works in a bounded environment and produces a reviewable artifact — branch, diff, pull request, draft, report — backed by automated checks, a written summary, risk notes and any follow-up tasks. Human attention is spent at review points, not during the agent's working phase. Calibration runs are the explicit exception: watch enough to improve the system, not to feel in control.",
+  "keywords": []
+}

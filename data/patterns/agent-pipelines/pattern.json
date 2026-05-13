@@ -1,0 +1,12 @@
+{
+  "id": "agent-pipelines",
+  "num": "P-31",
+  "category": "orch",
+  "layer": "infra",
+  "classify": "new",
+  "title": "Agent Pipelines & Triggered Roles",
+  "one_liner": "Treat the agent workflow as a pipeline. Roles join at defined points or on triggers — not ad-hoc.",
+  "problem": "Without a defined pipeline, quality work happens because someone remembers it. The security agent gets called when there is fear, the reviewer when there is noise, the drift check when something breaks. Coverage is uneven, the trigger is human anxiety, and reproducing yesterday's chain is impossible. Audit and improvement both need a stable shape to operate on.",
+  "solution": "Define versioned pipelines in the repo. Each stage names a role (what it is), a trigger (commit, PR, schedule, drift signal, manual), a scope (which files / which feature), and a pass criterion (what it means to be done). Mid-pipeline gates can block; periodic sweeps run independently. The pipeline is code — reviewed, diff-able, evolved deliberately. \"Quality Layers\" (P-32) plug into named stages; \"Scheduled Quality Sweeps\" (P-33) ride the trigger system. Spec-drift control (P-09) is one such recurring role.",
+  "keywords": []
+}

@@ -1,0 +1,12 @@
+{
+  "id": "context-entry-points",
+  "num": "P-27",
+  "category": "sud",
+  "layer": "operating",
+  "classify": "new",
+  "title": "Context Entry Points",
+  "one_liner": "Every relevant subsystem has a README. Without one, the agent has to reverse-engineer purpose from code.",
+  "problem": "Agents (and new humans) drop into the repo at an arbitrary file. Without a per-module README they have to infer purpose, ownership, intended entry points and the gotchas from filenames and grep — burning tokens and frequently guessing wrong about which file is canonical, which is legacy, and which is a trap.",
+  "solution": "Add a short README at every meaningful module/feature boundary: purpose in one paragraph, the entry points, the typical workflows (call X then Y), known pitfalls, and pointers to related modules and ADRs. Keep it boring and current — three honest paragraphs beat thirty stale ones.",
+  "keywords": []
+}

@@ -1,0 +1,13 @@
+{
+  "id": "aider",
+  "name": "Aider",
+  "vendor": "open source",
+  "kind": "agent-cli",
+  "blurb": "Pair-programming agent that edits your repo with git commits per change.",
+  "url": "https://aider.chat",
+  "oss_url": "https://github.com/Aider-AI/aider",
+  "patterns": [
+    "review-result",
+    "structure-context"
+  ]
+}

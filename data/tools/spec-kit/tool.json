@@ -1,0 +1,13 @@
+{
+  "id": "spec-kit",
+  "name": "Spec Kit",
+  "vendor": "GitHub",
+  "kind": "framework",
+  "blurb": "Open-source toolkit for spec-driven development with AI agents.",
+  "url": "https://github.com/github/spec-kit",
+  "oss_url": "https://github.com/github/spec-kit",
+  "patterns": [
+    "spec-driven",
+    "spec-drift"
+  ]
+}

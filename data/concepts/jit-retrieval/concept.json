@@ -1,0 +1,9 @@
+{
+  "id": "jit-retrieval",
+  "term": "JIT retrieval",
+  "short": "Just-in-time fetching: pull files/snippets when asked, not all up front.",
+  "patterns": [
+    "context-compaction",
+    "structure-context"
+  ]
+}

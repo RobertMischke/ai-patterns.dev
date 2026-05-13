@@ -1,0 +1,13 @@
+{
+  "id": "copilot",
+  "name": "GitHub Copilot",
+  "vendor": "GitHub",
+  "kind": "ide",
+  "blurb": "Inline completions and Copilot Chat, plus a Copilot agent for issues and PRs.",
+  "url": "https://github.com/features/copilot",
+  "oss_url": null,
+  "patterns": [
+    "spec-driven",
+    "structure-context"
+  ]
+}

@@ -1,0 +1,80 @@
+@if (submitted()) {
+  <main class="shell-narrow" style="padding: 80px 28px;">
+    <div class="eyebrow"><span class="dot"></span>OK</div>
+    <h1 class="page-h1" style="margin-top: 14px;">Thanks — we'll review it.</h1>
+    <p class="lede" style="margin-top: 14px;">
+      Want to submit another?
+      <a routerLink="/submit" style="border-bottom: 1px solid var(--ink); margin-left: 6px;">Start over</a>
+    </p>
+  </main>
+} @else {
+  <main class="shell-narrow" style="padding-top: 64px; padding-bottom: 96px;">
+    <div class="eyebrow"><span class="dot"></span>Contribute</div>
+    <h1 class="page-h1">Submit a pattern.</h1>
+    <p class="lede" style="margin-top: 18px;">
+      Have you found a working pattern? Tell us how you do it. We curate every submission and credit you when it ships.
+    </p>
+
+    <form (submit)="onSubmit($event)" style="margin-top: 40px;">
+      <div class="form-row">
+        <label for="name">Pattern name</label>
+        <input id="name" type="text" required placeholder="e.g. Verbose Spoken Intent Capture">
+        <span class="helper">Short, citable. Title-case.</span>
+      </div>
+
+      <div class="form-row">
+        <label for="oneliner">One-liner</label>
+        <input id="oneliner" type="text" required>
+      </div>
+
+      <div class="two-col">
+        <div class="form-row">
+          <label for="category">Group</label>
+          <select id="category" required>
+            @for (c of categories; track c.id) {
+              <option [value]="c.id">{{ c.num }} · {{ c.name }}</option>
+            }
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="classify">Classification</label>
+          <select id="classify" required>
+            <option value="new">New</option>
+            <option value="intensified">Intensified</option>
+            <option value="proven">Proven</option>
+            <option value="anti-pattern">Anti-pattern</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label for="problem">Problem</label>
+        <textarea id="problem" required></textarea>
+      </div>
+
+      <div class="form-row">
+        <label for="solution">Solution</label>
+        <textarea id="solution" required></textarea>
+      </div>
+
+      <div class="form-row">
+        <label for="sources">Sources (one URL per line)</label>
+        <textarea id="sources"></textarea>
+      </div>
+
+      <div class="two-col">
+        <div class="form-row">
+          <label for="you">Your name</label>
+          <input id="you" type="text">
+        </div>
+        <div class="form-row">
+          <label for="email">Email (we won't publish it)</label>
+          <input id="email" type="email">
+        </div>
+      </div>
+
+      <button type="submit" class="btn accent">Submit for review</button>
+      <p class="helper" style="margin-top: 14px;">This is a placeholder form — submissions are not yet wired to a backend.</p>
+    </form>
+  </main>
+}

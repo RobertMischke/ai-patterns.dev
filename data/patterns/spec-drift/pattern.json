@@ -1,0 +1,16 @@
+{
+  "id": "spec-drift",
+  "num": "P-09",
+  "category": "spec",
+  "layer": "operating",
+  "classify": "new",
+  "title": "Specification Drift Control",
+  "one_liner": "A meta-loop that asks whether fast-moving work still matches intent.",
+  "problem": "Agent work drifts from original intent, ADRs, roadmap, tests. Nobody notices until it shows up in a release.",
+  "solution": "Run a meta-loop that re-reads spec, README, roadmap, ADRs against actual code. Surface drift as scores, badges, follow-up tasks.",
+  "keywords": [
+    "drift",
+    "meta-loop",
+    "alignment"
+  ]
+}

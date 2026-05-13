@@ -1,4 +1,4 @@
-# Angular specific
+# Angular build artefacts
 /dist/
 /out-tsc/
 /tmp/
@@ -6,23 +6,35 @@
 /e2e/test-output/
 /.angular/
 .angular/
-
-# Node modules and dependency files
-/node_modules/
-/package-lock.json
-/yarn.lock
-
-# Environment files
-/.env
-
-# Angular CLI and build artefacts
 /.angular-cli.json
 /.ng/
 
-# TypeScript cache
+# Node + dependency files
+/node_modules/
+**/node_modules/
+/package-lock.json
+/yarn.lock
+
+# Environment + caches
+/.env
 *.tsbuildinfo
 
 # Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Editor / personal workspace settings (NOT app/.vscode which is shared dev tooling)
+/.vscode/
+
+# Claude Code per-user overrides (project-wide settings.json can be committed if desired)
+.claude/settings.local.json
+
+# Migration references — kept on disk for lookup, never committed
+_unpacked/
+*.zip
+
+# Generated data artefacts — rebuilt by scripts/build-data.mjs on each prestart/prebuild
+/app/src/data/index.ts
+/app/src/data/types.ts
+/app/public/data/

@@ -1,0 +1,16 @@
+{
+  "id": "context-compaction",
+  "num": "P-04",
+  "category": "context",
+  "layer": "infra",
+  "classify": "new",
+  "title": "Context Compaction & JIT Retrieval",
+  "one_liner": "Less context, retrieved on demand, beats more context dumped upfront.",
+  "problem": "Long contexts produce worse agent work — the model loses itself, weights wrong tokens, finds irrelevant snippets.",
+  "solution": "Keep the active frame small via compaction; let the agent pull on demand with glob/grep/read_file rather than pre-pump everything.",
+  "keywords": [
+    "JIT retrieval",
+    "compaction",
+    "frame size"
+  ]
+}

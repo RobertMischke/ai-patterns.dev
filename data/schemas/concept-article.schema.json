@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ai-patterns.dev/schemas/concept-article.schema.json",
+  "title": "ConceptArticle",
+  "description": "Long-form article for a concept. Optional sibling to concept.json.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["lede", "body"],
+  "properties": {
+    "lede": { "type": "string" },
+    "body": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["h", "p"],
+        "properties": {
+          "h": { "type": "string", "description": "Section heading." },
+          "p": { "type": "string", "description": "Section paragraph." }
+        }
+      }
+    }
+  }
+}

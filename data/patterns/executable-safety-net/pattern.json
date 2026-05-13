@@ -1,0 +1,12 @@
+{
+  "id": "executable-safety-net",
+  "num": "P-30",
+  "category": "sud",
+  "layer": "infra",
+  "classify": "proven",
+  "title": "Executable Safety Net",
+  "one_liner": "Tests, builds, types, lints and policy checks tell the agent — fast — whether its change is good.",
+  "problem": "Without fast, deterministic feedback, the agent's only validator is human review. Bugs survive because the loop is too slow to catch them; the agent can't tell a regression from a successful change; reviewers become the runtime. The system encourages cautious half-changes that ship anyway.",
+  "solution": "Make validation runnable on a developer machine and in CI in a single command: unit + integration tests, type checks, lint, format, dependency policy, security scan, smoke build. Optimize for under a few minutes for the agent loop. Tag tests by feature so the agent can run a relevant subset. The output of a successful run is the agent's permission to propose the change for review.",
+  "keywords": []
+}

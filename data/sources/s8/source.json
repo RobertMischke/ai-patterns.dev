@@ -1,0 +1,10 @@
+{
+  "id": "s8",
+  "title": "Dive into Claude Code — Subagents",
+  "author": "arXiv 2604.14228",
+  "kind": "paper",
+  "url": "#",
+  "patterns": [
+    "orchestrator-subagent"
+  ]
+}

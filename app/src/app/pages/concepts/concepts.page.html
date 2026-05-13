@@ -1,0 +1,37 @@
+<main>
+  <section class="shell" style="padding-top: 64px; padding-bottom: 28px;">
+    <div class="eyebrow"><span class="dot"></span>Reference</div>
+    <h1 class="page-h1">A vocabulary for working with agents.</h1>
+    <p class="lede" style="margin-top: 18px; max-width: 720px;">
+      Short definitions for the terms the patterns lean on. Each concept links to the patterns where it appears.
+    </p>
+  </section>
+
+  <section class="shell" style="margin-top: 32px; margin-bottom: 96px;">
+    <ul class="concept-list">
+      @for (c of concepts; track c.id) {
+        <li class="concept-row" [class.has-article]="c.has_article">
+          <div class="concept-term">
+            <h3>
+              <a class="concept-term-link" [routerLink]="['/concepts', c.id]">{{ c.term }}</a>
+              @if (c.has_article) {
+                <a class="concept-article-flag" [routerLink]="['/concepts', c.id]" title="Read the article">article &rarr;</a>
+              }
+            </h3>
+            <span class="kicker concept-pat-count">{{ c.patterns.length }} pattern{{ c.patterns.length === 1 ? '' : 's' }}</span>
+          </div>
+          <div>
+            <p class="concept-def">{{ c.short }}</p>
+            <div class="concept-pats">
+              @for (pid of c.patterns; track pid) {
+                <a class="chip chip-link" [routerLink]="['/patterns', pid]">
+                  <span class="mono muted">{{ patternNum(pid) }}</span>&nbsp;{{ patternTitle(pid) }}
+                </a>
+              }
+            </div>
+          </div>
+        </li>
+      }
+    </ul>
+  </section>
+</main>

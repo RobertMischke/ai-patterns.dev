@@ -1,0 +1,13 @@
+{
+  "id": "windsurf",
+  "name": "Windsurf",
+  "vendor": "Codeium",
+  "kind": "ide",
+  "blurb": "Agentic IDE with cascades — multi-step agent runs across files.",
+  "url": "https://windsurf.com",
+  "oss_url": null,
+  "patterns": [
+    "plan-mode",
+    "structure-context"
+  ]
+}

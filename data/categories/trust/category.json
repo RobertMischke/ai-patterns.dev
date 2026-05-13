@@ -1,0 +1,8 @@
+{
+  "id": "trust",
+  "num": "05",
+  "color": "var(--cat-trust)",
+  "name": "Trust & Evidence",
+  "tagline": "Agents can produce software. The trust layer makes humans believe it.",
+  "blurb": "Observability, evidence capture, analysis reports, review panels, regression safety. Result-first review, not chat-watching."
+}

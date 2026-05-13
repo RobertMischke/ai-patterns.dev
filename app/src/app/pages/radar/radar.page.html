@@ -1,0 +1,68 @@
+<main>
+  <section class="shell" style="padding-top: 64px; padding-bottom: 28px;">
+    <div class="eyebrow"><span class="dot"></span>Library</div>
+    <h1 class="page-h1">Where each pattern stands today.</h1>
+    <p class="lede" style="margin-top: 18px; max-width: 760px;">
+      A tech-radar view of the library. <em>Adopt</em> is the centre, <em>Hold</em> is the outside; sectors are the eight pattern groups.
+    </p>
+  </section>
+
+  <section class="shell" style="margin-top: 24px; margin-bottom: 64px;">
+    <div class="radar-page-grid">
+      <div class="radar-stage-lg">
+        <app-tech-radar [patterns]="all" [size]="560" [showLabels]="true" />
+      </div>
+      <aside class="radar-page-side">
+        <div>
+          <h4 class="kicker">Rings</h4>
+          <div class="radar-legend">
+            @for (r of rings; track r.id) {
+              <div class="radar-legend-row" [class]="'radar-ring-' + r.id">
+                <span class="radar-legend-dot"></span>
+                <span class="radar-legend-name">{{ r.label }}</span>
+                <span class="radar-legend-hint muted">{{ r.hint }}</span>
+              </div>
+            }
+          </div>
+        </div>
+        <div class="radar-page-counts">
+          @for (r of rings; track r.id) {
+            <div class="radar-count" [class]="'radar-ring-' + r.id">
+              <span style="display: inline-flex; align-items: center; gap: 8px;">
+                <span class="radar-legend-dot"></span>
+                <span class="radar-count-name">{{ r.label }}</span>
+              </span>
+              <span class="mono muted">{{ r.patterns.length }}</span>
+            </div>
+          }
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="shell" style="margin-bottom: 96px;">
+    @for (r of rings; track r.id) {
+      <div class="radar-ring-block" [class]="'radar-ring-' + r.id">
+        <div class="radar-ring-block-head">
+          <h2 class="radar-ring-title">
+            <span class="radar-ring-dot"></span>
+            {{ r.label }}
+          </h2>
+          <span class="mono muted">{{ r.patterns.length }}</span>
+        </div>
+        <p class="radar-ring-hint">{{ r.hint }}</p>
+        <ul class="radar-ring-list">
+          @for (p of r.patterns; track p.id) {
+            <li>
+              <a [routerLink]="['/patterns', p.id]">
+                <span class="mono muted radar-ring-num">{{ p.num }}</span>
+                <span class="radar-ring-pattern">{{ p.title }}</span>
+                <span class="mono muted radar-ring-cat">{{ categoryName(p.category) }}</span>
+              </a>
+            </li>
+          }
+        </ul>
+      </div>
+    }
+  </section>
+</main>

@@ -1,0 +1,12 @@
+{
+  "id": "mem0",
+  "name": "mem0",
+  "vendor": "mem0.ai",
+  "kind": "memory",
+  "blurb": "Memory layer for AI agents — working, episodic and semantic tiers as a service.",
+  "url": "https://mem0.ai",
+  "oss_url": null,
+  "patterns": [
+    "memory-tiering"
+  ]
+}

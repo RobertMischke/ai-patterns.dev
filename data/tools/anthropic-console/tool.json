@@ -1,0 +1,13 @@
+{
+  "id": "anthropic-console",
+  "name": "Anthropic Workbench",
+  "vendor": "Anthropic",
+  "kind": "console",
+  "blurb": "Browser playground for prompt design, evals and model comparison.",
+  "url": "https://console.anthropic.com",
+  "oss_url": null,
+  "patterns": [
+    "prompt-exploration",
+    "model-task-capability"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "orchestrator",
+  "term": "Orchestrator",
+  "short": "The agent that holds overview and delegates — does not type code itself.",
+  "patterns": [
+    "orchestrator-subagent",
+    "workforce",
+    "task-intake-proxy"
+  ]
+}

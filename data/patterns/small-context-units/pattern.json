@@ -1,0 +1,12 @@
+{
+  "id": "small-context-units",
+  "num": "P-25",
+  "category": "sud",
+  "layer": "infra",
+  "classify": "intensified",
+  "title": "Small Context Units",
+  "one_liner": "Keep files, classes and functions small enough that an agent can hold one in mind without spilling.",
+  "problem": "1500-line files, 40-method classes and 200-line functions are review-hostile for humans and context-hostile for agents. Loading one such unit can consume most of the working budget; partial loads break understanding; edits ripple unpredictably because the unit does too many things.",
+  "solution": "Set explicit size budgets and enforce them with linting: e.g. files ≤ 300 lines, functions ≤ 40, classes ≤ 7 public methods. Treat exceedance as a refactor signal, not a style nit. Aim for units a competent reader can hold in mind in one pass — that is also the unit an agent can change safely.",
+  "keywords": []
+}

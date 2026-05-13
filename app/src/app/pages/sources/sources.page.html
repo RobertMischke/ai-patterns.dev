@@ -1,0 +1,33 @@
+<main>
+  <section class="shell" style="padding-top: 64px; padding-bottom: 28px;">
+    <div class="eyebrow"><span class="dot"></span>Reference</div>
+    <h1 class="page-h1">Sources &amp; references.</h1>
+    <p class="lede" style="margin-top: 18px; max-width: 720px;">
+      Every citation across the library, in one place. Each entry lists the patterns it backs.
+    </p>
+  </section>
+
+  <section class="shell" style="margin-top: 32px; margin-bottom: 96px;">
+    <div class="bigsrc-list">
+      @for (s of sources; track s.id; let i = $index) {
+        <div class="bigsrc-row">
+          <div class="src-num">[{{ i + 1 }}]</div>
+          <div>
+            <div class="src-title">
+              <a [href]="s.url" target="_blank" rel="noopener">{{ s.title }}</a>
+            </div>
+            <div class="src-author">{{ s.author }}</div>
+          </div>
+          <div class="src-pats">
+            @for (pid of s.patterns; track pid) {
+              <a class="tool-tpat" [routerLink]="['/patterns', pid]" [title]="patternTitle(pid)">{{ patternNum(pid) }}</a>
+            }
+          </div>
+          <div class="src-kind" [class.video]="s.kind === 'video'">
+            @if (s.kind === 'video') { &#9654; } {{ s.kind }}
+          </div>
+        </div>
+      }
+    </div>
+  </section>
+</main>

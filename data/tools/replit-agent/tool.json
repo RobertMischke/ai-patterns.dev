@@ -1,0 +1,13 @@
+{
+  "id": "replit-agent",
+  "name": "Replit Agent",
+  "vendor": "Replit",
+  "kind": "autonomous-agent",
+  "blurb": "Cloud agent that ships full apps from a prompt, with built-in hosting.",
+  "url": "https://replit.com/agent",
+  "oss_url": null,
+  "patterns": [
+    "sandbox",
+    "yolo-rails"
+  ]
+}

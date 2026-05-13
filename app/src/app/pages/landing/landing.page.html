@@ -1,0 +1,69 @@
+<main>
+  <section class="shell" style="padding-top: 56px; padding-bottom: 8px;">
+    <div class="eyebrow"><span class="dot"></span>AI usage patterns for agentic software work</div>
+    <h1 class="page-h1" style="margin-top: 18px;">
+      A library of <em>{{ patternCount }} patterns</em> across <em>{{ categoryCount }} groups</em> for AI software work.
+    </h1>
+    <p class="lede" style="margin-top: 16px; max-width: 760px;">
+      Named, sourced, classifiable patterns for the work above the keystroke &mdash; task shaping, context, specs, orchestration, trust and guardrails. Curated in the open. Skim the index, then dive into any pattern.
+    </p>
+    <div style="display: flex; gap: 10px; margin-top: 28px; flex-wrap: wrap;">
+      <a class="btn" routerLink="/patterns">Explore patterns &rarr;</a>
+      <a class="btn ghost" routerLink="/radar">See the radar</a>
+    </div>
+  </section>
+
+  <section class="shell" style="margin-top: 48px;">
+    <div class="section-hd">
+      <h2 class="mono kicker">{{ categoryCount }} pattern groups</h2>
+      <a class="btn ghost sm" routerLink="/categories">Browse all &rarr;</a>
+    </div>
+    <div class="grid-cat-list">
+      @for (row of rows; track row.category.id) {
+        <a class="ccard ccard-list" [attr.data-cat]="row.category.id" [routerLink]="['/categories', row.category.id]">
+          <div class="ccard-list-head">
+            <span class="cat-bar ccard-list-bar"></span>
+            <span class="cat-name mono">{{ row.category.num }}</span>
+            <h3 class="ccard-list-title">{{ row.category.name }}</h3>
+            <span class="ccard-list-count mono">{{ row.patterns.length }} patterns</span>
+            <span class="ccard-list-arrow" aria-hidden="true">&rarr;</span>
+          </div>
+          <ul class="ccard-list-patterns">
+            @for (p of row.patterns; track p.id) {
+              <li [class.is-anti]="p.classify === 'anti-pattern'"><span class="muted mono">{{ p.num }}</span> {{ p.title }}</li>
+            }
+          </ul>
+        </a>
+      }
+    </div>
+  </section>
+
+  <section class="shell" style="margin-top: 96px; margin-bottom: 96px;">
+    <div class="audience-hd">
+      <div class="kicker mono">Who this is for</div>
+      <h2 class="page-h1" style="margin-top: 14px; max-width: 880px; font-size: clamp(28px, 3vw, 44px);">
+        For engineers who build with agents &mdash; or build the agents.
+      </h2>
+      <p class="lede" style="margin-top: 18px; max-width: 760px;">
+        This is a daily driver for the next abstraction layer. Not a beginner&rsquo;s tour of LLMs; a working library for people whose job is now to delegate, supervise and verify software work done by AI.
+      </p>
+    </div>
+    <div class="audience-grid">
+      <article class="audience-card">
+        <div class="mono kicker audience-num">01</div>
+        <h3 class="h3" style="margin-top: 8px;">Agentic builders</h3>
+        <p class="audience-body">You ship features through agents. You spend more time shaping tasks and reviewing artifacts than typing code.</p>
+      </article>
+      <article class="audience-card">
+        <div class="mono kicker audience-num">02</div>
+        <h3 class="h3" style="margin-top: 8px;">Agent engineers</h3>
+        <p class="audience-body">You build the agents, the orchestrators, the guardrails. You need a shared vocabulary for the problems your users hit.</p>
+      </article>
+      <article class="audience-card">
+        <div class="mono kicker audience-num">03</div>
+        <h3 class="h3" style="margin-top: 8px;">Tech leads &amp; platform teams</h3>
+        <p class="audience-body">You make the system under development LLM-friendly: locality, small units, decision memory, executable checks.</p>
+      </article>
+    </div>
+  </section>
+</main>

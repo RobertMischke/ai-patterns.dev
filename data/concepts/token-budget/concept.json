@@ -1,0 +1,10 @@
+{
+  "id": "token-budget",
+  "term": "Token budget",
+  "short": "The cost ceiling for an agent run — capped at the gateway, not in hope.",
+  "patterns": [
+    "token-budget",
+    "sandbox",
+    "yolo-rails"
+  ]
+}

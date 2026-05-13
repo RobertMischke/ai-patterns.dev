@@ -1,0 +1,16 @@
+{
+  "id": "model-trust-map",
+  "num": "P-20",
+  "category": "routing",
+  "layer": "operating",
+  "classify": "new",
+  "title": "Model Trust Map",
+  "one_liner": "Capability is not authority. Some models are good enough but not trusted enough.",
+  "problem": "Model selection often reduces to 'can it do the task?'. For sensitive systems the better question is 'should it be allowed to see this data, call this tool, or take this action?'.",
+  "solution": "Maintain a trust map across dimensions — data access, tool use, write access, execution, autonomy, recovery, instruction-following, hallucination risk — separate from the capability map. A capable model may still be denied authority.",
+  "keywords": [
+    "authority",
+    "permissions",
+    "trust dimensions"
+  ]
+}

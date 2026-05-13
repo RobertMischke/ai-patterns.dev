@@ -1,0 +1,182 @@
+@let p = pattern();
+@let cat = category();
+@let sib = siblings();
+
+@if (!p) {
+  <main class="shell" style="padding: 80px 0;">
+    <p>Pattern not found. <a routerLink="/patterns">&larr; Back</a></p>
+  </main>
+} @else {
+  <main [attr.data-cat]="p.category">
+    <section class="shell" style="padding-top: 36px;">
+      <div style="font-size: 13px;" class="muted mono">
+        <a routerLink="/">Home</a>
+        @if (cat) {
+          / <a routerLink="/categories">Groups</a> / <a [routerLink]="['/categories', cat.id]">{{ cat.name }}</a>
+        }
+        / {{ p.num }}
+      </div>
+    </section>
+
+    <section class="detail-hero shell">
+      <div class="meta-row">
+        <span class="kicker">{{ p.num }}</span>
+        <span class="cat-dot"></span>
+        @if (cat) { <span class="cat-name">{{ cat.name }}</span> }
+        <span class="chip">{{ p.layer }}</span>
+        @if (p.classify === 'anti-pattern') {
+          <span class="chip chip-anti">Anti-pattern</span>
+        } @else {
+          <span class="chip" [class]="'chip classify-' + p.classify">{{ p.classify }}</span>
+        }
+      </div>
+      <h1>{{ p.title }}</h1>
+      <p class="lede">{{ p.one_liner }}</p>
+    </section>
+
+    <section class="shell pattern-radar-block">
+      <div class="pattern-radar-card" [class]="'pattern-radar-card radar-ring-' + ring()">
+        <div class="pattern-radar-stage">
+          <app-tech-radar [patterns]="allPatterns" [highlightId]="p.id" [size]="180" [showLabels]="false" />
+        </div>
+        <div class="pattern-radar-side">
+          <div class="kicker mono">Radar position</div>
+          <div class="radar-pos" [class]="'radar-pos radar-ring-' + ring()">
+            <span class="radar-pos-dot"></span>
+            <span class="radar-pos-name">{{ ringLabel() }}</span>
+          </div>
+          <p class="radar-pos-hint">{{ ringHint() }}</p>
+          <a class="radar-see-full" routerLink="/radar">See the full radar &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="shell">
+      <div class="detail-grid">
+        <article class="body-prose">
+          <div class="section" id="problem">
+            <h2>The problem</h2>
+            <p>{{ p.problem }}</p>
+          </div>
+
+          <div class="section" id="solution">
+            <h2>The solution</h2>
+            <p>{{ p.solution }}</p>
+            <div class="callout">&ldquo;{{ p.one_liner }}&rdquo;</div>
+          </div>
+
+          <div class="section" id="critique">
+            <h2>Critical questioning</h2>
+            @if (hasContent(research?.critique)) {
+              <p class="kicker" style="margin: 0 0 8px;">Stance: <strong style="color: var(--ink); margin-left: 4px;">{{ research?.critique?.stance }}</strong></p>
+              @if (research?.critique?.summary) { <p>{{ research?.critique?.summary }}</p> }
+              @if (research?.critique?.points?.length) {
+                <ul>
+                  @for (pt of research!.critique!.points; track pt.text) { <li>{{ pt.text }}</li> }
+                </ul>
+              }
+            } @else {
+              <div class="research-empty">Not yet researched. Drop your bullet points into <code>data/patterns/{{ p.id }}/research/critique.json</code>.</div>
+            }
+          </div>
+
+          <div class="section" id="counter">
+            <h2>Counter-arguments</h2>
+            @if (hasContent(research?.counterArguments)) {
+              @if (research?.counterArguments?.summary) { <p>{{ research?.counterArguments?.summary }}</p> }
+              @if (research?.counterArguments?.points?.length) {
+                <ul>
+                  @for (pt of research!.counterArguments!.points; track pt.text) { <li>{{ pt.text }}</li> }
+                </ul>
+              }
+            } @else {
+              <div class="research-empty">Not yet researched. <code>data/patterns/{{ p.id }}/research/counter-arguments.json</code></div>
+            }
+          </div>
+
+          <div class="section" id="extensions">
+            <h2>Extensions</h2>
+            @if (hasContent(research?.extensions)) {
+              @if (research?.extensions?.summary) { <p>{{ research?.extensions?.summary }}</p> }
+              @if (research?.extensions?.items?.length) {
+                <ul>
+                  @for (it of research!.extensions!.items; track it.text) { <li>{{ it.text }}</li> }
+                </ul>
+              }
+            } @else {
+              <div class="research-empty">Not yet researched. <code>data/patterns/{{ p.id }}/research/extensions.json</code></div>
+            }
+          </div>
+
+          @if (relatedTools().length) {
+            <div class="section" id="tools">
+              <h2>Tools that implement this</h2>
+              <dl class="spec-grid">
+                @for (t of relatedTools(); track t.id) {
+                  <dt>{{ t.vendor }}</dt>
+                  <dd><a [href]="t.url" target="_blank" rel="noopener" style="font-weight: 600;">{{ t.name }}</a> &middot; <span class="muted">{{ t.blurb }}</span></dd>
+                }
+              </dl>
+            </div>
+          }
+
+          @if (relatedSources().length) {
+            <div class="section" id="sources">
+              <h2>Sources</h2>
+              <div class="src-list">
+                @for (s of relatedSources(); track s.id; let i = $index) {
+                  <div class="src-row">
+                    <div class="src-num">[{{ i + 1 }}]</div>
+                    <div>
+                      <div style="font-weight: 600;"><a [href]="s.url" target="_blank" rel="noopener">{{ s.title }}</a></div>
+                      <div class="muted" style="font-size: 13px; margin-top: 2px;">{{ s.author }}</div>
+                    </div>
+                    <div class="src-kind" [class.video]="s.kind === 'video'">
+                      @if (s.kind === 'video') { &#9654; } {{ s.kind }}
+                    </div>
+                  </div>
+                }
+              </div>
+            </div>
+          }
+
+          @if (relatedConcepts().length) {
+            <div class="section" id="concepts">
+              <h2>Related concepts</h2>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                @for (c of relatedConcepts(); track c.id) {
+                  <span class="chip">{{ c.term }}</span>
+                }
+              </div>
+            </div>
+          }
+
+          <div class="section" id="next">
+            <div style="display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;">
+              @if (sib.prev) {
+                <a class="btn ghost" [routerLink]="['/patterns', sib.prev.id]">&larr; {{ sib.prev.title }}</a>
+              }
+              @if (sib.next) {
+                <a class="btn ghost" [routerLink]="['/patterns', sib.next.id]">{{ sib.next.title }} &rarr;</a>
+              }
+            </div>
+          </div>
+        </article>
+
+        <aside class="toc">
+          <h4 class="kicker">On this page</h4>
+          <ol>
+            <li><a href="#problem">The problem</a></li>
+            <li><a href="#solution">The solution</a></li>
+            <li><a href="#critique">Critical questioning</a></li>
+            <li><a href="#counter">Counter-arguments</a></li>
+            <li><a href="#extensions">Extensions</a></li>
+            @if (relatedTools().length)   { <li><a href="#tools">Tools</a></li> }
+            @if (relatedSources().length) { <li><a href="#sources">Sources</a></li> }
+            @if (relatedConcepts().length){ <li><a href="#concepts">Concepts</a></li> }
+          </ol>
+        </aside>
+      </div>
+    </section>
+  </main>
+}

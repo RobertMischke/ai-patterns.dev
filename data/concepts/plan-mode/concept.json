@@ -1,0 +1,9 @@
+{
+  "id": "plan-mode",
+  "term": "Plan mode",
+  "short": "An agent state that produces a reviewable plan before any tool call lands a change.",
+  "patterns": [
+    "plan-mode",
+    "spec-driven"
+  ]
+}

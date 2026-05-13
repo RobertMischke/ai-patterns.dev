@@ -1,0 +1,12 @@
+{
+  "id": "task-intake-proxy",
+  "num": "P-22",
+  "category": "orch",
+  "layer": "operating",
+  "classify": "new",
+  "title": "Task Intake Proxy",
+  "one_liner": "No task enters the system raw. A proxy agent inspects, normalizes and registers it first.",
+  "problem": "Tasks arrive informal, ambiguous, duplicated or out of order. Handed straight to an execution agent, they trigger the wrong work, skip dependencies, or fan out into rework — especially in multi-agent systems where humans, agents and queues all create tasks at once.",
+  "solution": "A Task Intake Proxy sits in front of every task queue. It does not execute and does not plan. It checks clarity, boundaries, relations to existing tasks, dependency order, priority, required preparation, and only asks concrete clarifying questions when a task cannot be responsibly registered. Its job ends when the task is defined, classified, linked and ready for planning or execution.",
+  "keywords": []
+}

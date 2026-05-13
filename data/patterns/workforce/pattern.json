@@ -1,0 +1,16 @@
+{
+  "id": "workforce",
+  "num": "P-10",
+  "category": "orch",
+  "layer": "operating",
+  "classify": "new",
+  "title": "Agent-Workforce Management",
+  "one_liner": "Manage agents like a workforce — roles, costs, allowances, escalation paths.",
+  "problem": "One agent for everything breaks at scale. Code, review, security, tests, docs and custody don't share one system prompt.",
+  "solution": "Versioned role definitions, per-role budgets, performance dashboards and model routing. Sequential rotation on each task; parallel across projects.",
+  "keywords": [
+    "roles",
+    "budgets",
+    "routing"
+  ]
+}

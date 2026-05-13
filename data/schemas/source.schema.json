@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ai-patterns.dev/schemas/source.schema.json",
+  "title": "Source",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "title", "author", "kind", "url", "patterns"],
+  "properties": {
+    "id":       { "type": "string" },
+    "title":    { "type": "string" },
+    "author":   { "type": "string" },
+    "kind":     { "type": "string", "enum": ["post", "doc", "paper", "video", "book", "other"] },
+    "url":      { "type": "string" },
+    "patterns": { "type": "array", "items": { "type": "string" } }
+  }
+}

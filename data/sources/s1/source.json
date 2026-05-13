@@ -1,0 +1,11 @@
+{
+  "id": "s1",
+  "title": "Effective Context Engineering for AI Agents",
+  "author": "Anthropic",
+  "kind": "post",
+  "url": "#",
+  "patterns": [
+    "context-compaction",
+    "memory-tiering"
+  ]
+}

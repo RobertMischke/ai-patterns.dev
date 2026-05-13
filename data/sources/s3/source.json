@@ -1,0 +1,10 @@
+{
+  "id": "s3",
+  "title": "Spec Kit — Spec-Driven Development",
+  "author": "GitHub",
+  "kind": "doc",
+  "url": "#",
+  "patterns": [
+    "spec-driven"
+  ]
+}

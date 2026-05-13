@@ -1,0 +1,16 @@
+{
+  "id": "structure-context",
+  "num": "P-06",
+  "category": "context",
+  "layer": "infra",
+  "classify": "intensified",
+  "title": "Structure as Context",
+  "one_liner": "Clean architecture is context engineering for coding agents.",
+  "problem": "Feature folders, layering, naming, ubiquitous language reduce load for humans — and even more for LLMs that have to navigate the codebase.",
+  "solution": "Treat code structure as a context interface. Tasks point to features, layers, terms, ADRs. Drift loops verify alignment.",
+  "keywords": [
+    "architecture",
+    "feature folders",
+    "ADRs"
+  ]
+}

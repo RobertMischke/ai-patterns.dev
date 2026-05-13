@@ -1,0 +1,9 @@
+{
+  "id": "memory-tier",
+  "term": "Memory tier",
+  "short": "Working / episodic / semantic / procedural — each tier has a different job and lifetime.",
+  "patterns": [
+    "memory-tiering",
+    "context-compaction"
+  ]
+}

@@ -1,0 +1,64 @@
+<header class="site-header">
+  <div class="inner">
+    <a routerLink="/" class="brand" aria-label="ai-patterns.dev home">
+      <span class="mark">a</span>
+      <span class="wm">ai-patterns<span class="tld">.dev</span></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a routerLink="/patterns"   routerLinkActive="active">Patterns</a>
+      <a routerLink="/categories" routerLinkActive="active">Groups</a>
+      <a routerLink="/radar"      routerLinkActive="active">Radar</a>
+      <a routerLink="/concepts"   routerLinkActive="active">Concepts</a>
+      <a routerLink="/tools"      routerLinkActive="active">Tools</a>
+      <a routerLink="/sources"    routerLinkActive="active">Sources</a>
+    </nav>
+  </div>
+</header>
+
+<router-outlet />
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="cols">
+      <div>
+        <div class="brand" style="margin-bottom: 12px;">
+          <span class="mark">a</span>
+          <span class="wm">ai-patterns<span class="tld">.dev</span></span>
+        </div>
+        <p class="muted" style="max-width: 360px; font-size: 14px;">
+          A growing library of named patterns for the work above the keystroke &mdash; task shaping, context, specs, orchestration, trust and guardrails. Curated in the open.
+        </p>
+        <p class="kicker" style="margin-top: 14px;">Curated in the open · GitHub-backed</p>
+      </div>
+      <div>
+        <h4>Library</h4>
+        <div class="col-links">
+          <a routerLink="/categories">Groups</a>
+          <a routerLink="/patterns">All patterns</a>
+          <a routerLink="/radar">Radar</a>
+        </div>
+      </div>
+      <div>
+        <h4>Reference</h4>
+        <div class="col-links">
+          <a routerLink="/concepts">Concepts</a>
+          <a routerLink="/tools">Tools</a>
+          <a routerLink="/sources">Sources</a>
+          <a routerLink="/submit">Submit a pattern</a>
+        </div>
+      </div>
+      <div>
+        <h4>Stack</h4>
+        <div class="col-links" style="font-size: 13px;">
+          <span>Angular 21 · SSG</span>
+          <span>JSON-backed</span>
+          <span>English</span>
+        </div>
+      </div>
+    </div>
+    <div class="legal">
+      <span>&copy; 2026 ai-patterns.dev &middot; Open library</span>
+      <span class="mono">v0.1.0</span>
+    </div>
+  </div>
+</footer>

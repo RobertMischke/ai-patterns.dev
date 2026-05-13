@@ -1,0 +1,8 @@
+{
+  "id": "guard",
+  "num": "06",
+  "color": "var(--cat-guard)",
+  "name": "Guard Engineering",
+  "tagline": "Guards are not constraints on trust. They are what makes trust rational.",
+  "blurb": "Sandbox, capability limits, cost caps, audit trails, deterministic post-checks. Pre-guards, mid-run rails, post-guards."
+}

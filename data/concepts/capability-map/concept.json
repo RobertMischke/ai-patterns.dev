@@ -1,0 +1,8 @@
+{
+  "id": "capability-map",
+  "term": "Capability map",
+  "short": "A matrix of which model can actually do which task — measured, not assumed.",
+  "patterns": [
+    "model-task-capability"
+  ]
+}

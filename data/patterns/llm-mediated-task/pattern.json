@@ -1,0 +1,16 @@
+{
+  "id": "llm-mediated-task",
+  "num": "P-02",
+  "category": "prompt",
+  "layer": "operating",
+  "classify": "new",
+  "title": "LLM-Mediated Task Creation",
+  "one_liner": "Let humans describe intent; let the LLM turn intent into a reviewable task.",
+  "problem": "If every task has to be hand-written as a perfect prompt, the human becomes the system's input API.",
+  "solution": "The human sketches; an LLM drafts the actual task with title, scope, non-goals, risks, acceptance. The human reviews intent, not grammar.",
+  "keywords": [
+    "task drafting",
+    "acceptance",
+    "review"
+  ]
+}

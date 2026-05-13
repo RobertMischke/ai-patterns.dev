@@ -1,0 +1,16 @@
+{
+  "id": "token-budget",
+  "num": "P-17",
+  "category": "guard",
+  "layer": "infra",
+  "classify": "new",
+  "title": "Token Budget as Architecture Constraint",
+  "one_liner": "Treat tokens like RAM. Cap them at the gateway, not in hope.",
+  "problem": "Token usage shows up too late, in the bill. By then a runaway has already burned the daily budget.",
+  "solution": "Per-request ceilings, per-session rolling budgets, daily aggregates. Circuit breakers in gateway code, not in agent prompts.",
+  "keywords": [
+    "gateway",
+    "caps",
+    "circuit breakers"
+  ]
+}

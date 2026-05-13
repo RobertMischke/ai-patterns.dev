@@ -1,0 +1,16 @@
+{
+  "id": "plan-mode",
+  "num": "P-08",
+  "category": "spec",
+  "layer": "operating",
+  "classify": "intensified",
+  "title": "Plan-First Agents",
+  "one_liner": "Plan first, type second. Expensive decisions live in the plan.",
+  "problem": "An agent that starts editing files often has the wrong idea of what to do. 80% of value is the first strategy decision.",
+  "solution": "Plan and execution are two modes. No keystroke before the human approves the plan; the plan becomes a reusable artefact.",
+  "keywords": [
+    "plan first",
+    "approval",
+    "two modes"
+  ]
+}

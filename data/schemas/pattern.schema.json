@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ai-patterns.dev/schemas/pattern.schema.json",
+  "title": "Pattern",
+  "description": "Core record for one AI-engineering pattern or anti-pattern. Lives at data/patterns/<id>/pattern.json.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "num", "category", "layer", "classify", "title", "one_liner", "problem", "solution", "keywords"],
+  "properties": {
+    "id":        { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+    "num":       { "type": "string", "description": "Display code, e.g. P-08 or A-01." },
+    "category":  { "type": "string", "description": "Category id; matches data/categories/<id>/." },
+    "layer":     { "type": "string", "enum": ["operating", "infra"] },
+    "classify":  { "type": "string", "enum": ["new", "intensified", "proven", "anti-pattern", "unknown"] },
+    "title":     { "type": "string" },
+    "one_liner": { "type": "string" },
+    "problem":   { "type": "string" },
+    "solution":  { "type": "string" },
+    "keywords":  { "type": "array", "items": { "type": "string" } }
+  }
+}

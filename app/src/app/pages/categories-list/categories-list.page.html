@@ -1,0 +1,28 @@
+<main>
+  <section class="shell" style="padding-top: 64px; padding-bottom: 28px;">
+    <div class="eyebrow"><span class="dot"></span>Index</div>
+    <h1 class="page-h1">Groups.</h1>
+    <p class="lede" style="max-width: 720px; margin-top: 18px;">
+      Eight clusters that frame the operating loop for agentic software work.
+    </p>
+  </section>
+
+  <section class="shell" style="margin-top: 32px; margin-bottom: 64px;">
+    <div class="grid-cats">
+      @for (c of cards; track c.id) {
+        <a class="ccard" [attr.data-cat]="c.id" [routerLink]="['/categories', c.id]">
+          <div style="height: 5px; background: var(--cat, var(--ink));"></div>
+          <div class="ccard-body">
+            <span class="cat-name">{{ c.num }}</span>
+            <h3 class="ccard-title">{{ c.name }}</h3>
+            <p class="muted" style="margin: 0; font-size: 14px; line-height: 1.5;">{{ c.tagline }}</p>
+            <div class="ccard-meta">
+              <span>{{ c.patternCount }} pattern{{ c.patternCount === 1 ? '' : 's' }}</span>
+              <span aria-hidden="true">&rarr;</span>
+            </div>
+          </div>
+        </a>
+      }
+    </div>
+  </section>
+</main>

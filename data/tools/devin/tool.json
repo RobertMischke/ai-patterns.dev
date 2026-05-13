@@ -1,0 +1,14 @@
+{
+  "id": "devin",
+  "name": "Devin",
+  "vendor": "Cognition",
+  "kind": "autonomous-agent",
+  "blurb": "Long-running autonomous SWE agent with its own VM, browser and editor.",
+  "url": "https://devin.ai",
+  "oss_url": null,
+  "patterns": [
+    "workforce",
+    "sandbox",
+    "review-result"
+  ]
+}

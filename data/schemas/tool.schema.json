@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ai-patterns.dev/schemas/tool.schema.json",
+  "title": "Tool",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "vendor", "kind", "blurb", "url", "patterns"],
+  "properties": {
+    "id":       { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+    "name":     { "type": "string" },
+    "vendor":   { "type": "string" },
+    "kind":     { "type": "string", "description": "Tool-kind id; matches data/_meta/tool-kinds.json." },
+    "blurb":    { "type": "string" },
+    "url":      { "type": "string", "format": "uri" },
+    "oss_url":  { "type": ["string", "null"], "format": "uri" },
+    "patterns": { "type": "array", "items": { "type": "string" } }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "agents-md",
+  "term": "AGENTS.md",
+  "short": "A repo-level constitutional file that tells every agent how to behave in this codebase.",
+  "patterns": [
+    "spec-driven",
+    "structure-context"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "s11",
+  "title": "Coding Agents at Scale (talk)",
+  "author": "Cursor Conf '26",
+  "kind": "video",
+  "url": "#",
+  "patterns": [
+    "worktree",
+    "review-result"
+  ]
+}

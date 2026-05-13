@@ -1,0 +1,11 @@
+{
+  "id": "intent",
+  "term": "Intent",
+  "short": "What the human actually wants — before it is a prompt, ticket or task.",
+  "patterns": [
+    "prompt-exploration",
+    "llm-mediated-task",
+    "verbose-intent",
+    "task-intake-proxy"
+  ]
+}

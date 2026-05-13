@@ -1,0 +1,45 @@
+<main>
+  <section class="shell" style="padding-top: 64px; padding-bottom: 28px;">
+    <div class="eyebrow"><span class="dot"></span>Reference</div>
+    <h1 class="page-h1">Tools mapped to patterns.</h1>
+    <p class="lede" style="margin-top: 18px; max-width: 720px;">
+      The agents, IDEs, frameworks and primitives this library refers to &mdash; with the patterns each one supports.
+    </p>
+  </section>
+
+  <section class="shell" style="margin-bottom: 96px;">
+    @for (g of groups; track g.kind.id) {
+      <section class="tool-group">
+        <div class="tool-group-head">
+          <h2 class="tool-group-title">{{ g.kind.label }}</h2>
+          <span class="tool-group-count mono muted">{{ g.tools.length }}</span>
+        </div>
+        <p class="tool-group-intro">{{ g.kind.intro }}</p>
+
+        <table class="tool-table">
+          <tbody>
+            @for (t of g.tools; track t.id) {
+              <tr class="tool-trow">
+                <td class="tool-tname">
+                  <a class="tool-tname-link" [href]="t.url" target="_blank" rel="noopener">{{ t.name }}</a>
+                  @if (t.oss_url) {
+                    <a class="oss-dot" [href]="t.oss_url" target="_blank" rel="noopener" [title]="'Open source — view on GitHub'">
+                      <span class="oss-badge">OSS</span>
+                    </a>
+                  }
+                </td>
+                <td class="tool-tvendor">{{ t.vendor }}</td>
+                <td class="tool-tblurb">{{ t.blurb }}</td>
+                <td class="tool-tpats">
+                  @for (pid of t.patterns; track pid) {
+                    <a class="tool-tpat" [routerLink]="['/patterns', pid]" [title]="patternTitle(pid)">{{ patternNum(pid) }}</a>
+                  }
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </section>
+    }
+  </section>
+</main>

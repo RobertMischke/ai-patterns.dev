@@ -1,0 +1,8 @@
+{
+  "id": "spec",
+  "num": "03",
+  "color": "var(--cat-spec)",
+  "name": "Spec Engineering",
+  "tagline": "The spec is the source of truth — not the code.",
+  "blurb": "A spec is the instruction the agent works from, and the baseline against which its output is judged. Living, drift-aware, plan-first."
+}

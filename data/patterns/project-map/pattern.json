@@ -1,0 +1,12 @@
+{
+  "id": "project-map",
+  "num": "P-29",
+  "category": "sud",
+  "layer": "infra",
+  "classify": "new",
+  "title": "Machine-Readable Project Map",
+  "one_liner": "Architecture, features, dependencies and ownership as Markdown/YAML/JSON the agent can load directly.",
+  "problem": "Diagrams in Confluence, ownership in HR tools, dependencies inferred from imports, conventions in someone's onboarding doc. The agent cannot reach any of it. Every task starts with an expensive, lossy re-discovery of facts the team already knows.",
+  "solution": "Maintain a project map inside the repo: a features.yaml of feature folders and their purpose, a CODEOWNERS file, an architecture.md with the high-level boxes, a deps file that names allowed cross-module dependencies, a conventions.md with style and naming rules. Format matters less than presence and freshness — the agent should be able to ingest the map before touching code.",
+  "keywords": []
+}

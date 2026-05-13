@@ -1,0 +1,13 @@
+{
+  "id": "git-worktree",
+  "name": "git worktree",
+  "vendor": "git",
+  "kind": "primitive",
+  "blurb": "The built-in git primitive that lets many agents own their own working copy of one repo.",
+  "url": "https://git-scm.com/docs/git-worktree",
+  "oss_url": "https://github.com/git/git",
+  "patterns": [
+    "worktree",
+    "workforce"
+  ]
+}

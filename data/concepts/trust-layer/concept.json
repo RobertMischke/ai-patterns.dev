@@ -1,0 +1,10 @@
+{
+  "id": "trust-layer",
+  "term": "Trust layer",
+  "short": "The observability + evidence + regression + review surface that makes agent output reviewable.",
+  "patterns": [
+    "trust-layer",
+    "review-result",
+    "analysis-report"
+  ]
+}

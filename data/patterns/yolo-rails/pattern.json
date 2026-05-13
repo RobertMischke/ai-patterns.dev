@@ -1,0 +1,17 @@
+{
+  "id": "yolo-rails",
+  "num": "P-18",
+  "category": "guard",
+  "layer": "operating",
+  "classify": "new",
+  "title": "YOLO with Rails",
+  "one_liner": "Letting agents run is not reckless when work is bounded, observable, recoverable, reviewed.",
+  "problem": "Either you babysit every tool-call (you become the bottleneck) or you let go and lose visibility — both kill the leverage.",
+  "solution": "Make the rails visible: clear task, non-goals, sequential lanes, tests, structured logs, review hand-off, commit discipline.",
+  "keywords": [
+    "lanes",
+    "tests",
+    "logs",
+    "review"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "no-pro-framing",
+  "num": "A-01",
+  "category": "prompt",
+  "layer": "operating",
+  "classify": "anti-pattern",
+  "title": "Not framing the agent as a pro",
+  "one_liner": "Treating the agent like a generic chatbot — no role, no standards — invites confident hallucination.",
+  "problem": "Without a role frame (\"You are a senior X working on Y\"), the model falls back on its statistical centre of gravity: average code, average prose, average judgement. It also loses the licence to say \"I don't know\" — because a generic helper is supposed to help. Result: confidently wrong output, plausibly formatted, hard to spot in review.",
+  "solution": "Frame the agent at the top of the system prompt: who they are, what bar they hold themselves to, what they should refuse, when to ask before guessing. \"Senior backend engineer; production safety > speed; if unsure, list options instead of choosing.\" Pair with explicit permission to say \"I don't have enough context\".",
+  "keywords": []
+}

@@ -1,0 +1,8 @@
+{
+  "id": "prompt",
+  "num": "01",
+  "color": "var(--cat-prompt)",
+  "name": "Prompt Management",
+  "tagline": "From raw intent to an agent-ready task.",
+  "blurb": "The prompt is no longer just text you type. It is the interface where intent becomes a task — explored, captured, mediated, validated."
+}

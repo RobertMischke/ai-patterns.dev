@@ -1,0 +1,13 @@
+{
+  "id": "continue",
+  "name": "Continue.dev",
+  "vendor": "open source",
+  "kind": "ide",
+  "blurb": "Open-source AI code assistant with custom contexts, providers and rules.",
+  "url": "https://continue.dev",
+  "oss_url": "https://github.com/continuedev/continue",
+  "patterns": [
+    "structure-context",
+    "provider-trust-map"
+  ]
+}

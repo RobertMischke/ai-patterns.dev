@@ -1,0 +1,8 @@
+{
+  "id": "orch",
+  "num": "04",
+  "color": "var(--cat-orch)",
+  "name": "Agent Orchestration",
+  "tagline": "Roles, not just agents. Manage the workforce like a team.",
+  "blurb": "Subagents, worktrees, queues, AI team steering. Sequential by default, parallel where it earns its keep."
+}

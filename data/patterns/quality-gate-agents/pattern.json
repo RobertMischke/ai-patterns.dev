@@ -1,0 +1,12 @@
+{
+  "id": "quality-gate-agents",
+  "num": "P-32",
+  "category": "trust",
+  "layer": "operating",
+  "classify": "new",
+  "title": "Quality Gate Agents",
+  "one_liner": "Testing, security and code review run as named agents at fixed gates — with documented standards and structured verdicts.",
+  "problem": "Calling 'a model' to check quality returns a thumbs-up of unclear meaning. Different reviewers apply different standards on different runs; nobody can trace why a change passed. Quality becomes vibes — the same opinion problem the trust layer is supposed to solve.",
+  "solution": "Each quality dimension is a named gate agent — Testing Gate, Security Gate, Code-Review Gate, Drift Gate — wired to a stage in the pipeline (P-31). Every gate carries an explicit standard: coverage floor and test-shape rules for testing; OWASP top-10 plus org-specific policies for security; ADR conformance, naming and small-context rules for review; spec-vs-code alignment (P-09) for drift. Output is structured: verdict (pass / fail / advisory), findings list with severity and evidence pointers, follow-up tasks. Pass/fail blocks or releases the change. Reviewers consume the verdict, not the chat.",
+  "keywords": []
+}

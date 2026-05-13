@@ -1,0 +1,56 @@
+@let g = geometry();
+@let h = hover();
+
+<div class="radar-wrap" (mouseleave)="onLeave()">
+  <svg [attr.viewBox]="'0 0 ' + g.total + ' ' + g.total" class="radar-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pattern radar">
+    @for (r of g.ringR; track $index) {
+      <circle [attr.cx]="g.cx" [attr.cy]="g.cy" [attr.r]="r" fill="none" stroke="var(--line)" stroke-width="1" />
+    }
+    @for (s of g.sectors; track $index) {
+      <line [attr.x1]="g.cx" [attr.y1]="g.cy" [attr.x2]="s.x2" [attr.y2]="s.y2" stroke="var(--line)" stroke-width="1" />
+    }
+    @for (rl of g.ringLabels; track $index) {
+      <text [attr.x]="g.cx" [attr.y]="rl.y"
+            text-anchor="middle" dominant-baseline="middle"
+            class="radar-ring-label" [attr.fill]="rl.color">{{ rl.label }}</text>
+    }
+    @for (sl of g.sectorLabels; track $index) {
+      <text [attr.x]="sl.x" [attr.y]="sl.y" [attr.text-anchor]="sl.anchor"
+            dominant-baseline="middle" class="radar-sector-label">{{ sl.short }}</text>
+    }
+    @for (d of g.dots; track d.id) {
+      <g class="radar-dot" [class.is-hl]="d.isHL">
+        <a [attr.href]="'/patterns/' + d.id"
+           (click)="go(d, $event)"
+           (mouseenter)="onMove($event, d)"
+           (mousemove)="onMove($event, d)">
+          @if (d.isHL) {
+            <circle [attr.cx]="d.x" [attr.cy]="d.y" r="11" fill="var(--accent)" opacity="0.25"/>
+          }
+          <circle [attr.cx]="d.x" [attr.cy]="d.y"
+                  [attr.r]="d.isHL ? 6 : 4"
+                  [attr.fill]="d.isHL ? 'var(--accent)' : 'var(--ink)'"
+                  stroke="var(--paper)"
+                  [attr.stroke-width]="d.isHL ? 2 : 1.4"/>
+          <circle [attr.cx]="d.x" [attr.cy]="d.y" r="14" fill="transparent" pointer-events="all"/>
+        </a>
+      </g>
+    }
+  </svg>
+
+  @if (h) {
+    <div class="radar-tooltip" [class]="'radar-tooltip radar-ring-' + h.d.ring"
+         [style.left.px]="h.px + 16" [style.top.px]="h.py" style="transform: translateY(-50%);">
+      <div class="radar-tooltip-head">
+        <span class="radar-tooltip-num mono">{{ h.d.num }}</span>
+        <span class="radar-tooltip-ring">
+          <span class="radar-pos-dot"></span>{{ ringLabel(h.d.ring) }}
+        </span>
+      </div>
+      <div class="radar-tooltip-title">{{ h.d.title }}</div>
+      <div class="radar-tooltip-cat mono">{{ h.d.catName }}</div>
+      <div class="radar-tooltip-one">{{ h.d.one }}</div>
+      <div class="radar-tooltip-hint">&nearr; {{ ringHint(h.d.ring) }}</div>
+    </div>
+  }
+</div>

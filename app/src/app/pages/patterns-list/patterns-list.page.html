@@ -1,0 +1,67 @@
+<main>
+  <section class="shell" style="padding-top: 64px; padding-bottom: 28px;">
+    <div class="eyebrow"><span class="dot"></span>Library</div>
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-top: 14px; flex-wrap: wrap;">
+      <h1 class="page-h1">All patterns.</h1>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <label class="kicker" for="cat-filter">Group</label>
+        <div class="patterns-filter">
+          <select id="cat-filter" [value]="filter()" (change)="setFilter($event)">
+            <option value="all">All &middot; {{ totalCount }}</option>
+            @for (c of categories; track c.id) {
+              <option [value]="c.id">{{ c.name }} &middot; {{ count(c.id) }}</option>
+            }
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  @for (g of groups(); track g.category.id) {
+    <section class="shell" style="margin-top: 56px;" [attr.data-cat]="g.category.id">
+      <div class="section-hd" style="align-items: baseline;">
+        <div style="display: flex; align-items: baseline; gap: 14px;">
+          <span class="cat-dot" style="align-self: center;"></span>
+          <h2 class="h2">
+            <a [routerLink]="['/categories', g.category.id]" style="text-decoration: none;">{{ g.category.name }}</a>
+          </h2>
+          <span class="mono muted" style="font-size: 12px;">{{ g.patterns.length }} patterns</span>
+        </div>
+        <a class="btn ghost sm" [routerLink]="['/categories', g.category.id]">Explore group &rarr;</a>
+      </div>
+      <div class="grid-patterns">
+        @for (p of g.patterns; track p.id) {
+          <a class="pcard"
+             [attr.data-cat]="p.category"
+             [class.is-anti]="p.classify === 'anti-pattern'"
+             [routerLink]="['/patterns', p.id]">
+            <span class="pcard-num mono">{{ p.num }}</span>
+            <span class="pcard-cat-bar cat-bar"></span>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span class="cat-name">{{ g.category.name }}</span>
+              @if (p.classify === 'anti-pattern') {
+                <span class="chip chip-anti">Anti-pattern</span>
+              }
+            </div>
+            <h3 class="pcard-title">{{ p.title }}</h3>
+            <p class="pcard-blurb">{{ p.one_liner }}</p>
+            @if (p.keywords.length) {
+              <div class="pcard-keywords">
+                @for (k of p.keywords; track k) {
+                  <span class="keyword">{{ k }}</span>
+                }
+              </div>
+            }
+            <div class="pcard-foot">
+              <span class="pcard-radar" [class]="'pcard-radar radar-ring-' + ringOf(p)">
+                <span class="pcard-radar-dot"></span>
+                <span class="pcard-radar-name">{{ ringLabel(ringOf(p)) }}</span>
+              </span>
+              <span class="mono muted" style="font-size: 11px;">&nearr;</span>
+            </div>
+          </a>
+        }
+      </div>
+    </section>
+  }
+</main>

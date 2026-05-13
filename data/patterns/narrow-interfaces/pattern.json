@@ -1,0 +1,12 @@
+{
+  "id": "narrow-interfaces",
+  "num": "P-26",
+  "category": "sud",
+  "layer": "infra",
+  "classify": "proven",
+  "title": "Narrow Interfaces",
+  "one_liner": "Make boundaries small, explicit and stable. Hidden coupling burns context fastest.",
+  "problem": "Wide interfaces — modules exporting everything, structs with 30 fields, services with 20 methods — force any consumer (and any agent reasoning about the consumer) to load the whole surface to know what is safe to use. Hidden coupling through shared mutable state, global registries or implicit ordering is invisible until something breaks.",
+  "solution": "Expose the minimum public surface a feature needs to be used. Prefer explicit dependency injection over globals. Make ordering, side-effects and lifecycles part of the type signature where possible. The cost of using a module should be readable in one screen — that is also the context the agent needs.",
+  "keywords": []
+}

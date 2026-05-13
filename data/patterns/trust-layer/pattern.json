@@ -1,0 +1,16 @@
+{
+  "id": "trust-layer",
+  "num": "P-13",
+  "category": "trust",
+  "layer": "infra",
+  "classify": "new",
+  "title": "Trust Layer",
+  "one_liner": "Agents can produce software. The trust layer helps humans trust the result.",
+  "problem": "Output volume grows; review hours don't. Without observability, evidence and regression safety, output is vibes at scale.",
+  "solution": "Agent observability, runtime observability, regression safety, token transparency, analysis reports, human review queue.",
+  "keywords": [
+    "observability",
+    "evidence",
+    "review"
+  ]
+}

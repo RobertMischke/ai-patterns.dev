@@ -1,0 +1,42 @@
+[
+  {
+    "id": "agent-cli",
+    "label": "Agent CLIs",
+    "intro": "Terminal-native coding agents you steer from a prompt. The day-to-day driver for spec, plan, edit, test, commit."
+  },
+  {
+    "id": "ide",
+    "label": "AI-native IDEs",
+    "intro": "Editors and IDE extensions with agent mode built in. Inline completions, chat, multi-file edits, repo awareness."
+  },
+  {
+    "id": "autonomous-agent",
+    "label": "Autonomous agents",
+    "intro": "Longer-running agents with their own runtime, VM or browser. Take a task, walk away, review the artifact."
+  },
+  {
+    "id": "framework",
+    "label": "Frameworks",
+    "intro": "Programmatic scaffolds for spec-driven and multi-agent systems. Code-level building blocks rather than products."
+  },
+  {
+    "id": "memory",
+    "label": "Memory layers",
+    "intro": "Storage for what an agent should remember across runs — working, episodic, semantic, procedural."
+  },
+  {
+    "id": "convention",
+    "label": "Conventions",
+    "intro": "Repo-level files and community standards that tell every agent how to behave inside your codebase."
+  },
+  {
+    "id": "primitive",
+    "label": "Primitives",
+    "intro": "Low-level building blocks the patterns lean on. Usually already on your machine, often overlooked."
+  },
+  {
+    "id": "console",
+    "label": "Consoles & workbenches",
+    "intro": "Browser-based labs for prompt design, model comparison, evals and quick prototyping."
+  }
+]

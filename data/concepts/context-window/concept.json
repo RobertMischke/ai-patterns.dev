@@ -1,0 +1,10 @@
+{
+  "id": "context-window",
+  "term": "Context window",
+  "short": "The bounded set of tokens an LLM can see at one moment in time.",
+  "patterns": [
+    "context-compaction",
+    "memory-tiering",
+    "token-budget"
+  ]
+}

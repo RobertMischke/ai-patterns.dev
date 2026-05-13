@@ -1,0 +1,12 @@
+{
+  "id": "scheduled-quality-sweeps",
+  "num": "P-33",
+  "category": "trust",
+  "layer": "operating",
+  "classify": "new",
+  "title": "Scheduled Quality Sweeps",
+  "one_liner": "Not every check fits in a commit. Some run on a cadence — and produce the same evidence shape as inline gates.",
+  "problem": "Whole-system audits — drift against the spec (P-09), dependency-vulnerability scans, architecture conformance, dead-code surveys — never fire in a per-commit pipeline. Done manually, they go stale within weeks; done as one-off scripts, their reports drift away from the trust-layer format and nobody trusts them. Without a regular cadence, the system rots in the gaps between gates.",
+  "solution": "Run named sweeps on a schedule or on a global trigger (\"nightly drift check\", \"weekly security sweep\", \"monthly architecture review\"). Each sweep is the same kind of object as a gate (P-32): a role, a standard, a structured verdict with evidence and follow-up tasks. Reports land in the trust-layer queue alongside per-commit findings, so reviewers see one stream of evidence — not one stream per script. Sweeps inform the spec-drift loop (P-09) and the pipeline definition (P-31), closing the meta-loop.",
+  "keywords": []
+}

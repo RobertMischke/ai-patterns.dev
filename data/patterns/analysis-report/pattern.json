@@ -1,0 +1,16 @@
+{
+  "id": "analysis-report",
+  "num": "P-14",
+  "category": "trust",
+  "layer": "operating",
+  "classify": "new",
+  "title": "Analysis Report Loop",
+  "one_liner": "Meta-review as a product feature: 'Are we still on track?'",
+  "problem": "Single reports are hard to place. Is the analysis good? Is severity right? Are there similar past cases?",
+  "solution": "Schedule or trigger meta-analyses that read queue, roadmap, ADRs, reports, logs and evidence. Output is markdown + structured JSON + follow-up tasks.",
+  "keywords": [
+    "meta-review",
+    "follow-ups",
+    "queue"
+  ]
+}

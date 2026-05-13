@@ -1,0 +1,16 @@
+{
+  "id": "review-result",
+  "num": "P-15",
+  "category": "trust",
+  "layer": "operating",
+  "classify": "new",
+  "title": "Review the Result, Not the Chat",
+  "one_liner": "Start the run. Walk away. Read the result, not the chat.",
+  "problem": "Senior-dev reflex says watch every tool call. At scale that's anti-scaled behaviour — the operator becomes the bottleneck.",
+  "solution": "Sentinels and auto-review pull attention only when needed. Read diff, tests, evidence summary; dive into the chat only on suspicion.",
+  "keywords": [
+    "diff-first",
+    "sentinels",
+    "auto-review"
+  ]
+}

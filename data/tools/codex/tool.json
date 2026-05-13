@@ -1,0 +1,14 @@
+{
+  "id": "codex",
+  "name": "OpenAI Codex CLI",
+  "vendor": "OpenAI",
+  "kind": "agent-cli",
+  "blurb": "Local agent that runs models against your repo with sandbox profiles.",
+  "url": "https://github.com/openai/codex",
+  "oss_url": "https://github.com/openai/codex",
+  "patterns": [
+    "sandbox",
+    "yolo-rails",
+    "plan-mode"
+  ]
+}

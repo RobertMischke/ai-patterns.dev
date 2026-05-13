@@ -1,0 +1,16 @@
+{
+  "id": "worktree",
+  "num": "P-11",
+  "category": "orch",
+  "layer": "operating",
+  "classify": "new",
+  "title": "Worktree Fan-Out",
+  "one_liner": "Many agents, one repo, no collisions — each in its own worktree.",
+  "problem": "Modern subscriptions give more inference than one human can sequentially consume — but agents shouldn't trample each other.",
+  "solution": "Each agent in its own git worktree, branch, sandbox, runtime. Conflicts get pushed to merge time — when the human is back in the loop.",
+  "keywords": [
+    "git worktree",
+    "fan-out",
+    "sandbox"
+  ]
+}
