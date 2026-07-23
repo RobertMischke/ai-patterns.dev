@@ -12,6 +12,7 @@
     "orchestrator-subagent",
     "escalation-cascade",
     "companion-model",
-    "compute-investment-quality-signal"
+    "compute-investment-quality-signal",
+    "wiki-as-cognitive-interface"
   ]
 }
