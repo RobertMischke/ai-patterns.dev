@@ -1,0 +1,31 @@
+{
+  "id": "sidecar-metadata",
+  "num": "P-40",
+  "category": "sud",
+  "layer": "infra",
+  "classify": "new",
+  "title": "Sidecar Metadata",
+  "one_liner": "Put rich artifact metadata in predictably named companion files beside the artifact so people and agents can see, diff and discover it without opening the content.",
+  "problem": "At a higher abstraction level, artifacts need much more metadata: classification, relationships, review state, provenance, fingerprints and lifecycle state. Where that metadata lives is a pattern decision. An external registry or database can query across a fleet, but it is invisible at the file, separates history and permissions from the artifact, and quietly rots. Frontmatter or comments keep content and metadata together through moves and are appropriate for tiny one-field annotations and code files whose native tooling already understands comments. But they couple every consumer to a parser, can break renderers, do not work uniformly for HTML, JSON and binary artifacts, and hide the very existence of metadata until someone opens the file. The deciding force is visibility: a sidecar is stronger when rich metadata matters because the tree immediately shows that the companion exists. It is universal across file types, has a separate diff and history, and is discoverable by a simple filename glob.",
+  "solution": "Adopt one boring convention: an artifact `path/<file>` is annotated by `path/<file>.meta.json`; reserve clearly named folder-level registrations such as `path/workbench.json` for metadata about the folder as a unit. Agents and tools discover companions with globs instead of a registry or content-type-specific parsing. Keep the machinery visible in the repository tree but filter it from reading surfaces: document browsers show the documents by default, while metadata files remain present, inspectable and available through a metadata or developer view. The reference system demonstrates the pattern in at least eight concrete path shapes: `wiki/<page>.md.meta.json` stores `classification`, `relatedTasks`, `supersededBy` and `fingerprint`; `prompts/<prompt>.md.meta.json` stores review `lastReviewedAt`, `status` and `findings`; `<feature-folder>/workbench.json` registers a folder; and one unit of work is surrounded by the sidecar family `tasks/<task-id>/task.json`, `tasks/<task-id>/status.md`, `tasks/<task-id>/lifecycle.json` and `tasks/<task-id>/pipeline-execution.json`. Library repositories add `<library>/release-manifest.json` as a release companion. These examples show that a companion can annotate one file, a folder or a conceptual unit without forcing all metadata into one overloaded document. Sidecars also have established precedents: REUSE `.license` companions annotate otherwise un-commentable files; `.sig` files detach signatures; checksum files pair digests with artifacts; Adobe XMP sidecars carry media metadata when embedding is unavailable; and TypeScript `.d.ts` files describe the types of corresponding JavaScript without changing its implementation. Counter drift explicitly: store a content fingerprint plus review/age fields, invalidate metadata when the fingerprint changes, and surface overdue review state, as the prompt-review `lastReviewedAt` mechanism does. Reject distant-database-only metadata, overloaded frontmatter, stale companions and unfiltered sidecar clutter. This is the data layer for `wiki-as-cognitive-interface`, preserves rationale alongside `decision-memory`, follows `feature-folder-locality`, and treats caches from `on-the-fly-generated-uis` as derived sidecars rather than sources of truth.",
+  "keywords": [
+    "sidecar metadata",
+    "metadata placement",
+    "<file>.meta.json",
+    "frontmatter",
+    "external registry",
+    "visible companions",
+    "glob discovery",
+    "separate diffs",
+    "content fingerprint",
+    "metadata drift",
+    "review age",
+    "hidden reading surface",
+    "workbench.json",
+    "release-manifest.json",
+    "wiki-as-cognitive-interface",
+    "decision-memory",
+    "feature-folder-locality",
+    "on-the-fly-generated-uis"
+  ]
+}

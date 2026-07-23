@@ -1,0 +1,22 @@
+{
+  "stance": "supports",
+  "summary": "Visibility is the deciding advantage, provided the convention also controls drift and reading-surface clutter.",
+  "points": [
+    {
+      "text": "A distant database is queryable but invisible beside the artifact, has separate access and history, and can rot without appearing in ordinary review.",
+      "severity": "warning"
+    },
+    {
+      "text": "Overloaded frontmatter or comments couple metadata to file-specific parsers and can break renderers or consumers.",
+      "severity": "warning"
+    },
+    {
+      "text": "A stale sidecar can misdescribe current content; fingerprints, `lastReviewedAt`, explicit status and age-based review make drift observable.",
+      "severity": "warning"
+    },
+    {
+      "text": "Visible companions become visual noise when document-reading surfaces do not filter machinery by default.",
+      "severity": "note"
+    }
+  ]
+}

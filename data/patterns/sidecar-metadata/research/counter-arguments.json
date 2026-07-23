@@ -1,0 +1,22 @@
+{
+  "stance": "mixed",
+  "summary": "Sidecars are not universally best; metadata size, native syntax and atomic movement determine when in-file annotations win.",
+  "points": [
+    {
+      "text": "In-file metadata cannot be accidentally left behind when a file is moved or copied by tools unaware of the sidecar convention.",
+      "severity": "note"
+    },
+    {
+      "text": "A tiny one-field annotation is often clearer in frontmatter or a native code comment than in a separate JSON file.",
+      "severity": "note"
+    },
+    {
+      "text": "Code-oriented metadata already understood by compilers, linters or documentation generators should normally stay in the native comment or declaration mechanism.",
+      "severity": "note"
+    },
+    {
+      "text": "Fleet-wide transactions and high-volume analytics may require a registry or database, but it should be an index rebuilt from repository-local metadata rather than the only source of truth.",
+      "severity": "info"
+    }
+  ]
+}

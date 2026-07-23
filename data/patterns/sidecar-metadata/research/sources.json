@@ -1,0 +1,30 @@
+{
+  "summary": "Mature ecosystems use visible companion files when metadata must remain independent of the annotated payload.",
+  "items": [
+    {
+      "text": "The REUSE Specification permits `<filename>.license` companion files and identifies them as the option for files that cannot carry comments.",
+      "ref_type": "external",
+      "url": "https://reuse.software/spec/"
+    },
+    {
+      "text": "OpenPGP describes detached signatures as separate entities stored as standalone files alongside or independently of the signed data.",
+      "ref_type": "external",
+      "url": "https://openpgp.dev/book/signing_data.html"
+    },
+    {
+      "text": "GNU Coreutils documents checksum output that records a digest with its file name and can later verify the file against that record.",
+      "ref_type": "external",
+      "url": "https://www.gnu.org/software/coreutils/manual/html_node/cksum-invocation.html"
+    },
+    {
+      "text": "Adobe documents XMP sidecar files for metadata that cannot be embedded in the media format.",
+      "ref_type": "external",
+      "url": "https://www.adobe.com/content/dam/cc/us/en/acom/products/xmp/Pdfs/XMP_for_CreativeProfessionals.pdf"
+    },
+    {
+      "text": "TypeScript declaration files contain type information without implementation, and declaration layout mirrors the JavaScript library it describes.",
+      "ref_type": "external",
+      "url": "https://www.typescriptlang.org/docs/handbook/2/type-declarations"
+    }
+  ]
+}

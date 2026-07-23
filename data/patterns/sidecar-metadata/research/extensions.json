@@ -1,0 +1,25 @@
+{
+  "summary": "Sidecars compose with the repository's documentation, memory, locality and generated-view patterns.",
+  "items": [
+    {
+      "text": "Companion metadata is the structured data layer beneath the cognitive wiki.",
+      "ref_type": "pattern",
+      "ref_id": "wiki-as-cognitive-interface"
+    },
+    {
+      "text": "Keep decisions and their rationale searchable beside the artifacts they govern.",
+      "ref_type": "pattern",
+      "ref_id": "decision-memory"
+    },
+    {
+      "text": "Place companions with the feature rather than in a central metadata layer.",
+      "ref_type": "pattern",
+      "ref_id": "feature-folder-locality"
+    },
+    {
+      "text": "Treat cached generated interfaces as fingerprinted, disposable sidecars whose source artifacts remain authoritative.",
+      "ref_type": "pattern",
+      "ref_id": "on-the-fly-generated-uis"
+    }
+  ]
+}
