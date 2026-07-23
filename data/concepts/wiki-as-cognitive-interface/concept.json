@@ -1,8 +1,9 @@
 {
   "id": "wiki-as-cognitive-interface",
   "term": "Wiki as cognitive interface",
-  "short": "A navigable knowledge surface that exposes the evidence, relationships and operating context people need to judge agent work.",
+  "short": "A layered, navigable knowledge surface through which humans and agents understand, judge, navigate and extend a system.",
   "patterns": [
+    "wiki-as-cognitive-interface",
     "project-map",
     "compute-investment-quality-signal",
     "on-the-fly-generated-uis"
