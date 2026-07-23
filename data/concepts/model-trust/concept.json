@@ -4,6 +4,7 @@
   "short": "Whether a model is allowed to see this data, call this tool, or take this action — independent of skill.",
   "patterns": [
     "model-trust-map",
+    "council",
     "provider-trust-map"
   ]
 }

@@ -1,0 +1,10 @@
+{
+  "id": "s18",
+  "title": "Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+  "author": "NIST",
+  "kind": "doc",
+  "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf",
+  "patterns": [
+    "council"
+  ]
+}

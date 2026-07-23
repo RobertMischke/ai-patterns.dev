@@ -1,0 +1,11 @@
+{
+  "id": "council",
+  "term": "Review council",
+  "short": "A review body that produces findings, paired with one accountable owner who records a fix, reasoned acceptance, or escalation for each one.",
+  "patterns": [
+    "council",
+    "orchestrator-subagent",
+    "model-trust-map",
+    "fire-track-review"
+  ]
+}
