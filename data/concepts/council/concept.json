@@ -6,6 +6,7 @@
     "council",
     "orchestrator-subagent",
     "model-trust-map",
-    "fire-track-review"
+    "fire-track-review",
+    "compute-investment-quality-signal"
   ]
 }

@@ -5,6 +5,7 @@
   "patterns": [
     "model-trust-map",
     "council",
-    "provider-trust-map"
+    "provider-trust-map",
+    "compute-investment-quality-signal"
   ]
 }

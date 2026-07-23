@@ -1,0 +1,9 @@
+{
+  "id": "wiki-as-cognitive-interface",
+  "term": "Wiki as cognitive interface",
+  "short": "A navigable knowledge surface that exposes the evidence, relationships and operating context people need to judge agent work.",
+  "patterns": [
+    "project-map",
+    "compute-investment-quality-signal"
+  ]
+}
