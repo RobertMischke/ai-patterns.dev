@@ -1,0 +1,19 @@
+{
+  "id": "council",
+  "num": "P-34",
+  "category": "routing",
+  "layer": "operating",
+  "classify": "new",
+  "title": "Council: Review Verdicts Need a Reaction",
+  "one_liner": "Every named review finding gets an accountable decision: fix, accept with reasons, or escalate.",
+  "problem": "Aspect reviews and quality grades can identify defects without changing the work. A passing grade with named defects invites reviewer optimism to turn known defects into silently accepted debt: no accountable owner records whether to fix, accept, or escalate the finding.",
+  "solution": "Give one accountable orchestrator the council verdict. For every named finding, it must either fix it now by starting a targeted follow-up round that carries exactly the relevant finding text, accept it with written reasoning, or escalate it. Make the decision visible, cap follow-up rounds with an explicit loop budget, and report unresolved findings when the budget is exhausted.",
+  "keywords": [
+    "review findings",
+    "accountability",
+    "follow-up loop",
+    "quality gate",
+    "escalation",
+    "loop budget"
+  ]
+}

@@ -4,6 +4,7 @@
   "short": "A scoped child agent with fresh context, narrow tools, and a single return — spawned by an orchestrator.",
   "patterns": [
     "orchestrator-subagent",
+    "council",
     "context-compaction"
   ]
 }

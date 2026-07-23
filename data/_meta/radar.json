@@ -49,6 +49,7 @@
     "executable-safety-net":   "adopt",
     "agent-pipelines":         "assess",
     "quality-gate-agents":     "assess",
-    "scheduled-quality-sweeps":"assess"
+    "scheduled-quality-sweeps":"assess",
+    "council":                 "assess"
   }
 }

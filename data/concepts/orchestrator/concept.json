@@ -4,6 +4,7 @@
   "short": "The agent that holds overview and delegates — does not type code itself.",
   "patterns": [
     "orchestrator-subagent",
+    "council",
     "workforce",
     "task-intake-proxy"
   ]
