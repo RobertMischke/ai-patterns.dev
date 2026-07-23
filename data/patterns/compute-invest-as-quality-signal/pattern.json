@@ -1,0 +1,25 @@
+{
+  "id": "compute-invest-as-quality-signal",
+  "num": "P-37",
+  "category": "trust",
+  "layer": "operating",
+  "classify": "new",
+  "title": "Compute Investment as Quality Signal",
+  "one_liner": "Read a delivery's model, token and validation history as an effort fingerprint that calibrates scrutiny, never as proof of quality.",
+  "problem": "A generated diff hides how it was produced. A drive-by answer and a delivery refined through independent reviews, benchmark runs and adversarial checks may look equally polished, leaving maintainers unable to estimate the process behind the artifact. Raw token totals alone do not solve this: spend can be padded, inefficient loops can look impressive, and access to expensive models can be mistaken for merit.",
+  "solution": "Attach a compact effort fingerprint to the delivery: tokens in and out, model and tier, process stages, review passes, benchmark runs and their outcomes. Use that trace to calibrate trust and scrutiny, not to replace outcome validation: coherent investment through a credible process can lower review uncertainty, while weak or missing evidence calls for closer inspection. Normalize the signal by task and process where possible, expose failed as well as successful runs, and treat suspicious padding as a gaming anti-pattern rather than generosity. Compute access must never become a gate; attention-only work and contributions made with modest resources remain first-class. The sibling pattern compute-as-oss-contribution reads the same effort fingerprint through a different lens: this pattern calibrates trust in a delivery, while that pattern denominates contribution to a project. It also composes with decision-making-above-the-code-line, model-trust-map and council.",
+  "keywords": [
+    "effort fingerprint",
+    "compute provenance",
+    "trust calibration",
+    "token ledger",
+    "model tier",
+    "process evidence",
+    "outcome validation",
+    "gaming resistance",
+    "compute-as-oss-contribution",
+    "decision-making-above-the-code-line",
+    "model-trust-map",
+    "council"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "compute-as-oss-contribution",
+  "num": "P-38",
+  "category": "trust",
+  "layer": "operating",
+  "classify": "new",
+  "title": "Compute as Open-Source Contribution",
+  "one_liner": "Open-source contribution is the delivered outcome plus the attention and high-quality compute invested in producing and validating it.",
+  "problem": "Open-source contribution has traditionally been measured mainly in attention: human time spent implementing changes, reviewing code and triaging issues. AI-assisted work adds a second measurable input, yet a PR usually exposes only the final diff. That makes donated review passes, benchmark sweeps and validation runs invisible, and it makes a drive-by generated patch look equivalent to an invested delivery. Maintainer attention remains scarce and precious; hiding the process behind a diff forces maintainers to reconstruct it at review time.",
+  "solution": "Attach a contribution statement to each PR: the outcome plus an effort-and-process trace covering tokens in and out, model and tier, review and benchmark runs, and the process that produced the evidence. For example: \"Built and validated with N tokens on model X, through process Y.\" This makes compute sponsorship a first-class way to support a project: contributors can donate validation runs, benchmark sweeps and review passes, not only money or time, while projects can honestly distinguish drive-by PRs from invested deliveries. Keep attention-only contributions prominently first-class; this pattern must not create a paywall for contributors without compute access. Never rank people by raw spend, reward padding as fake generosity, or use token totals as a substitute for outcome validation. Maintainers read the trace to lower review cost and calibrate scrutiny at the project boundary. Agent Orchestrator task cards are the reference implementation: their per-run token/model ledgers and process evidence can ship with a PR. Token Economy aggregates per-project compute investment through ingest TE-5; a contribution statement is a rendering of that data. The sibling pattern compute-invest-as-quality-signal uses the same effort fingerprint through a different lens: there it calibrates trust in a delivery, while here it denominates contribution to a project. It also composes with decision-making-above-the-code-line, model-trust-map and council.",
+  "keywords": [
+    "open source contribution",
+    "compute sponsorship",
+    "contribution statement",
+    "attention",
+    "effort fingerprint",
+    "token ledger",
+    "model tier",
+    "validation runs",
+    "benchmark sweeps",
+    "Agent Orchestrator",
+    "Token Economy",
+    "TE-5",
+    "compute-invest-as-quality-signal",
+    "decision-making-above-the-code-line",
+    "model-trust-map",
+    "council"
+  ]
+}
