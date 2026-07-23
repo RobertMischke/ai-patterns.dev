@@ -11,6 +11,7 @@
     "review-result",
     "orchestrator-subagent",
     "escalation-cascade",
-    "companion-model"
+    "companion-model",
+    "compute-investment-quality-signal"
   ]
 }

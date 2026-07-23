@@ -5,6 +5,7 @@
   "patterns": [
     "model-task-capability",
     "escalation-cascade",
-    "companion-model"
+    "companion-model",
+    "compute-investment-quality-signal"
   ]
 }

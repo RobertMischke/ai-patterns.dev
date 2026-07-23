@@ -1,0 +1,20 @@
+{
+  "id": "compute-investment-quality-signal",
+  "num": "P-37",
+  "category": "trust",
+  "layer": "operating",
+  "classify": "new",
+  "title": "Compute Investment as a Quality Signal",
+  "one_liner": "Calibrate trust with both the visible effort fingerprint and the traceable process that produced a delivery.",
+  "problem": "Outcome checks alone reveal defects only after validation, while an opaque run hides earlier warning signs. Tokens in and out, run duration, model tier and reasoning effort form an effort fingerprint when read against the task class. The signal works in both directions: a complex card reported \"done\" after 30 seconds with unusually few tokens is a review flag before tests run; an unusually expensive repeated loop is a churn flag, not proof of diligence. Neither can be interpreted reliably when the agent's path is missing: effort without a visible process is unverifiable, and a process trace without effort data can hide rubber-stamping.",
+  "solution": "Record the effort fingerprint for every run together with a defined, ordered process trace: the run trigger and prompt provenance, pipeline steps that ran, step evidence and verdicts. Use the Token Economy ingest and benchmark loop to learn expected effort ranges from historical outcomes for each task class; deviations attract review attention but never cause automatic rejection. The Agent Orchestrator task card is the reference implementation: a per-run token ledger, model and thinking badges, run trigger and prompt trace, and pipeline-step evidence. Keep this signal as one input beside validated outcome checks. Otherwise token padding can imitate diligence, cost pressure can mislabel every cheap run as good, and opaque agent runs can claim compliance without evidence. Reviewers use the combined signal to ask better questions, while accountable decision-making, capability and trust maps, councils, and the wiki's cognitive interface retain the final judgment.",
+  "keywords": [
+    "effort fingerprint",
+    "token ledger",
+    "process trace",
+    "provenance",
+    "calibration",
+    "task class",
+    "review signal"
+  ]
+}
