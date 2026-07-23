@@ -1,10 +1,12 @@
 {
   "id": "s17",
-  "title": "Agent Studio council loop â€” reference implementation, in progress",
-  "author": "Agent Studio",
-  "kind": "other",
-  "url": "#",
+  "title": "Secure Software Development Framework (SSDF) Version 1.1",
+  "author": "NIST",
+  "kind": "doc",
+  "url": "https://csrc.nist.gov/pubs/sp/800/218/final",
   "patterns": [
-    "council"
+    "executable-safety-net",
+    "quality-gate-agents",
+    "scheduled-quality-sweeps"
   ]
 }

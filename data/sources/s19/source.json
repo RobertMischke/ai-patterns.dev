@@ -1,0 +1,12 @@
+{
+  "id": "s19",
+  "title": "AI Risk Management Framework Core",
+  "author": "NIST",
+  "kind": "doc",
+  "url": "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/",
+  "patterns": [
+    "model-trust-map",
+    "quality-gate-agents",
+    "council"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "lede": "At agent scale, reading individual lines of code is no longer a sensible unit of judgement; operators need system understanding and system validation. Good decisions rest on reliable systems and trust that is built from evidence, then continuously revalidated.",
+  "body": [
+    {
+      "h": "The decision moves above the code line",
+      "p": "The operator judges a delivery through system-level signals: gate verdicts, review grades, benchmark results, runtime health sensors and provenance. A diff remains available for diagnosis and sampling, but it is no longer the primary control surface. The object of judgement is the delivery system: what it attempted, which evidence it produced, which constraints it satisfied, where uncertainty remains and how it reacts when a check fails."
+    },
+    {
+      "h": "Trust is machinery, not confidence",
+      "p": "Model output is not trustworthy because it looks plausible, and a green dashboard is not trustworthy because it is green. Trust is earned by independent gates, adversarial review, calibrated benchmarks, production-facing sensors, traceable provenance and explicit feedback loops to reality. Every signal used for a decision must itself be validated: test the gate on known failures, monitor sensor freshness and coverage, verify provenance, compare benchmark predictions with production outcomes and alert when a validator is bypassed. In other words, build sensors for the sensors."
+    },
+    {
+      "h": "Classic quality layers matter more",
+      "p": "Regression suites, penetration tests, code review, performance tests, static analysis, type checks, coverage analysis and dependency policy do not become obsolete when agents write the code. They become more important because they are the machinery that produces the validated signals an operator can safely act on. The shift is not less verification; it is more and deeper verification, executed continuously and aggregated by the system. Each classic practice becomes a sensor-read validation layer, with independent layers stacked so that one blind spot does not silently become a fleet-wide assumption."
+    },
+    {
+      "h": "Three ways trust fails",
+      "p": "Unvalidated trust rubber-stamps model output or accepts a reviewer model's grade without testing the reviewer. Derived-state trust treats artifacts, dashboards or status claims as reality without closing the feedback loop; the 22–23 July incident class includes stale artifacts, zombie claims and silent overrides that leave a convincing but false system state. The inverse failure is retreating to line-by-line reading. That approach does not scale across an agent fleet, samples the wrong abstraction and creates false confidence that inspected lines imply a healthy delivery system."
+    },
+    {
+      "h": "Failure must be honest",
+      "p": "A pipeline needs an honest infrastructure failure verdict alongside pass, product failure and advisory. Missing credentials, an unavailable benchmark service, a stale checkout or a broken sensor must never be flattened into either a product defect or a pass. The Council provides accountable reaction to findings: it accepts evidence, assigns an owner, decides whether to block or escalate and records the disposition. Model Trust Maps constrain authority; Escalation Cascades and Companion Models spend stronger judgement where evidence warrants it; the Executable Safety Net, Quality Gate Agents and scheduled sweeps generate the evidence the Council consumes."
+    },
+    {
+      "h": "Build validation before fleet size",
+      "p": "Invest in validation machinery before increasing concurrency or autonomy. Start with acceptance criteria and executable checks, add independent review and adversarial cases, calibrate thresholds against known outcomes, then instrument the validators themselves. The Agent Orchestrator review pipeline is the reference implementation for gates, grades, provenance and a health-sensor line. Quality Studio demonstrates stacked security sensors, coverage ingestion, static analysis and performance sensors. The Token Economy validation loop uses benchmarks as ongoing trust calibration rather than as a one-time model leaderboard."
+    },
+    {
+      "h": "What the operator still owns",
+      "p": "Operating above the code line does not remove accountability. The operator owns the standards, the independence and calibration of validators, the response to findings and the decision to expand authority. They inspect code when evidence conflicts, risk is novel or a sampled audit calls for it; they do not pretend that manually reading every line is a viable safety system. System understanding means knowing how claims are produced, challenged, refreshed and tied back to observable reality."
+    }
+  ]
+}
