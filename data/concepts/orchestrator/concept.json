@@ -5,6 +5,7 @@
   "patterns": [
     "orchestrator-subagent",
     "workforce",
-    "task-intake-proxy"
+    "task-intake-proxy",
+    "companion-model"
   ]
 }

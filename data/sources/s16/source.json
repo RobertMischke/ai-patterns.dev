@@ -1,0 +1,11 @@
+{
+  "id": "s16",
+  "title": "Planning-Driven Programming: A Large Language Model Programming Workflow",
+  "author": "ACL 2025",
+  "kind": "paper",
+  "url": "https://aclanthology.org/2025.acl-long.621/",
+  "patterns": [
+    "companion-model",
+    "orchestrator-subagent"
+  ]
+}

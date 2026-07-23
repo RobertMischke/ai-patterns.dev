@@ -1,0 +1,12 @@
+{
+  "id": "model-routing",
+  "term": "Model routing",
+  "short": "A policy that assigns model, provider and escalation path to a task using fit, trust, cost, latency and observable outcomes.",
+  "patterns": [
+    "model-task-capability",
+    "model-trust-map",
+    "provider-trust-map",
+    "escalation-cascade",
+    "companion-model"
+  ]
+}

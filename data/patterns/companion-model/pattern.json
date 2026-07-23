@@ -1,0 +1,18 @@
+{
+  "id": "companion-model",
+  "num": "P-35",
+  "category": "routing",
+  "layer": "operating",
+  "classify": "assess",
+  "title": "Companion Model",
+  "one_liner": "Split high-judgement planning or verification from bounded execution, and choose model size for each role.",
+  "problem": "A single model must simultaneously keep the task model, make architectural judgements, operate tools and verify output. Running the largest model for every step is expensive; assigning every step to a small model can hide planning and review mistakes.",
+  "solution": "Use a large model to plan, decompose and review while a small, tool-bounded executor implements well-specified steps; where drafts are cheap and ambiguity is high, invert the split: let a small model draft and a large model verify or repair. Pass explicit artefacts between roles and use tests, linters or review criteria as the acceptance signal. Treat this as a per-task-class choice, not a default for agentic coding: it helps when roles have measurably different capability needs and hand-offs are cheap; it loses when coordination latency, context transfer or review overhead exceeds the saving.",
+  "keywords": [
+    "routing",
+    "orchestration",
+    "planning",
+    "verification",
+    "small models"
+  ]
+}

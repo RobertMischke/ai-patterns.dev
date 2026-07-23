@@ -40,6 +40,8 @@
     "model-task-capability":   "assess",
     "model-trust-map":         "assess",
     "provider-trust-map":      "trial",
+    "escalation-cascade":      "trial",
+    "companion-model":         "assess",
     "feature-folder-locality": "adopt",
     "small-context-units":     "adopt",
     "narrow-interfaces":       "adopt",

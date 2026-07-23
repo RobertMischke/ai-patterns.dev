@@ -3,6 +3,6 @@
   "num": "07",
   "color": "var(--cat-routing)",
   "name": "Trusted Model Routing",
-  "tagline": "Pick a model by task fit, trust level, and provider — not by availability.",
-  "blurb": "Capability ≠ authority ≠ channel. Three layered policies decide whether a model may run a task in a given context."
+  "tagline": "Pick a model and execution path by task fit, trust, provider, cost and evidence — not availability.",
+  "blurb": "Capability ≠ authority ≠ channel. The cluster combines those three policies with cost-aware escalation and complementary plan, execute and verify roles. The Token Economy knowledge base's model-routing-knowledge-base card can reference this cluster."
 }

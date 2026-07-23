@@ -1,0 +1,10 @@
+{
+  "id": "s15",
+  "title": "FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance",
+  "author": "Lingjiao Chen, Matei Zaharia, James Zou",
+  "kind": "paper",
+  "url": "https://arxiv.org/abs/2305.05176",
+  "patterns": [
+    "escalation-cascade"
+  ]
+}

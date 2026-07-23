@@ -1,0 +1,18 @@
+{
+  "id": "escalation-cascade",
+  "num": "P-34",
+  "category": "routing",
+  "layer": "operating",
+  "classify": "trial",
+  "title": "Escalation Cascade",
+  "one_liner": "Start with the smallest model that may succeed; pay for a larger one only when evidence says it will not.",
+  "problem": "Using the strongest model for every request wastes budget and capacity, but choosing a cheap model blindly can turn a difficult task into repeated, low-quality attempts.",
+  "solution": "Route to a small model first, then escalate through a bounded sequence when an external failure signal or calibrated low-confidence signal is observed. Define the task class, acceptance check, retry limit, escalation budget and terminal fallback. This FrugalGPT-style cascade wins when easy requests dominate and failure can be detected cheaply; it loses when tasks need the large model anyway, when failure detection is weak, or when the added round trip and double cost of an escalation matter more than the saved calls.",
+  "keywords": [
+    "routing",
+    "cost",
+    "confidence",
+    "failure detection",
+    "escalation"
+  ]
+}
