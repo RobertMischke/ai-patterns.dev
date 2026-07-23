@@ -1,4 +1,10 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "The direction of the split can be reversed: small models may draft while a large model verifies or repairs.",
+  "items": [
+    {
+      "text": "Orchestrator / Subagent provides the delegation structure for role-separated agents.",
+      "ref_type": "pattern",
+      "ref_id": "orchestrator-subagent"
+    }
+  ]
 }

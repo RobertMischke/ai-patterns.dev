@@ -3,7 +3,7 @@
   "num": "P-35",
   "category": "routing",
   "layer": "operating",
-  "classify": "assess",
+  "classify": "new",
   "title": "Companion Model",
   "one_liner": "Split high-judgement planning or verification from bounded execution, and choose model size for each role.",
   "problem": "A single model must simultaneously keep the task model, make architectural judgements, operate tools and verify output. Running the largest model for every step is expensive; assigning every step to a small model can hide planning and review mistakes.",

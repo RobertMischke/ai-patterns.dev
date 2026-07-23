@@ -1,4 +1,10 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "FrugalGPT provides the direct evidence base for cascading lower-cost and higher-capability models.",
+  "items": [
+    {
+      "text": "FrugalGPT evaluates cascades that route requests to more capable models when needed.",
+      "ref_type": "source",
+      "ref_id": "s15"
+    }
+  ]
 }

@@ -1,5 +1,11 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "mixed",
+  "summary": "A cascade only saves money when escalation signals are reliable and inexpensive.",
+  "points": [
+    {
+      "text": "Measure failure-detection quality and the escalation rate before treating a cascade as a cost saving.",
+      "severity": "warning",
+      "source_id": "s15"
+    }
+  ]
 }
