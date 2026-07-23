@@ -1,0 +1,30 @@
+{
+  "id": "wiki-as-cognitive-interface",
+  "num": "P-36",
+  "category": "sud",
+  "layer": "operating",
+  "classify": "new",
+  "title": "The Wiki as Cognitive Interface",
+  "one_liner": "Describe the system at higher quality, from graphical overview to decision-level detail, so the wiki becomes the shared cognitive interface through which humans and agents understand, navigate and extend it.",
+  "problem": "A higher abstraction level does not reduce the need for precise documentation; it raises it. Humans need a fast view of behavior and target versus current state, while agents need stable anchors, navigable paths and the reasoning behind the current design. Unstructured prose is as invisible to a grounding agent as it is to a newcomer, and documentation debt compounds at agent speed: agents re-discover paths, re-litigate settled decisions and repeat known failures. The common alternatives all break the interface: human-only prose lacks stable IDs, machine-only schemas lack explanatory narrative, and snapshots without decision history erase why the system became this way. Yet indiscriminate documentation also rots when nobody owns it.",
+  "solution": "Give every topic a layered entry: one graphical high-level concept page that explains behavior and contrasts target with current state, plus a subordinate feature folder containing the details needed for deeper work, including dated decision history, incidents and experience reports, and an open-issues register. Make decisions and paths first-class content, not commentary: record what was chosen, why, when, and by whom; link the relevant card and commit; and retain superseded ideas with an explicit status so history remains searchable. Make the interface bidirectional. Agents read it for grounding through canonical style guides wired into prompts and documentation-pipeline steps that resolve the right page for each topic. Agents write back through wiki-maintenance and learnings stages, while meta companions connect pages to related tasks and agent read counters reveal which pages are actually consulted. Couple each page to live cards or issues and assign an owner so usage and delivery pressure expose staleness. The Agent Orchestrator review-pipeline-health implementation is the reference shape: a graphical concept page with a feature folder containing decision-history.md, an incident report and an issues register, reinforced by meta companions, agent read counters, style-guide prompt wiring, and pipeline steps that read and maintain the wiki. Use this pattern with decision-making-above-the-code-line: validated trust requires described systems. It also composes with context-entry-points for navigation, feature-folder-locality for placement, memory-tiering for retention policy, and decision-memory for durable rationale.",
+  "keywords": [
+    "cognitive interface",
+    "layered documentation",
+    "graphical concept page",
+    "target versus current state",
+    "decision history",
+    "incident report",
+    "issues register",
+    "agent grounding",
+    "wiki maintenance",
+    "meta companions",
+    "agent read counters",
+    "style-guide prompt wiring",
+    "decision-making-above-the-code-line",
+    "context-entry-points",
+    "feature-folder-locality",
+    "memory-tiering",
+    "decision-memory"
+  ]
+}
