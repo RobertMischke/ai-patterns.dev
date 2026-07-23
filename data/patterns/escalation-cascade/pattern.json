@@ -3,7 +3,7 @@
   "num": "P-34",
   "category": "routing",
   "layer": "operating",
-  "classify": "trial",
+  "classify": "new",
   "title": "Escalation Cascade",
   "one_liner": "Start with the smallest model that may succeed; pay for a larger one only when evidence says it will not.",
   "problem": "Using the strongest model for every request wastes budget and capacity, but choosing a cheap model blindly can turn a difficult task into repeated, low-quality attempts.",

@@ -1,7 +1,7 @@
 {
   "id": "orchestrator-subagent",
   "num": "P-12",
-  "category": "orch",
+  "category": "routing",
   "layer": "operating",
   "classify": "new",
   "title": "Orchestrator / Subagent",

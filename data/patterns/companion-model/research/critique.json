@@ -1,0 +1,11 @@
+{
+  "stance": "mixed",
+  "summary": "Role splitting helps only when the capability difference outweighs the cost of hand-offs and review.",
+  "points": [
+    {
+      "text": "Compare split-role workflows with a single-model baseline for each task class before making them a default.",
+      "severity": "note",
+      "source_id": "s16"
+    }
+  ]
+}

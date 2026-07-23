@@ -1,0 +1,10 @@
+{
+  "summary": "Use external acceptance checks, calibrated confidence, and a bounded fallback sequence.",
+  "items": [
+    {
+      "text": "Model-Task Capability Map defines the task classes and approved models that can feed a cascade.",
+      "ref_type": "pattern",
+      "ref_id": "model-task-capability"
+    }
+  ]
+}

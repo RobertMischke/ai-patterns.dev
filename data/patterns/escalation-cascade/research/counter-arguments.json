@@ -1,0 +1,10 @@
+{
+  "stance": "challenges",
+  "summary": "The added attempt can increase latency and cost for tasks that usually need the larger model.",
+  "points": [
+    {
+      "text": "Do not cascade latency-sensitive or high-complexity tasks without evidence that the small model succeeds often enough.",
+      "severity": "warning"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "stance": "challenges",
+  "summary": "Context transfer, coordination latency, and review overhead can erase the savings from a smaller executor.",
+  "points": [
+    {
+      "text": "Avoid the split when the executor needs the full planning context or a fast interactive response.",
+      "severity": "warning"
+    }
+  ]
+}
