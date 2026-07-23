@@ -1,0 +1,17 @@
+{
+  "summary": "Use constrained component and schema-rendering systems as implementation substrates; add model generation only where it improves the mapping from source artifact to task surface.",
+  "items": [
+    {
+      "text": "AI SDK UI for model-selected, streamed application components.",
+      "url": "https://ai-sdk.dev/docs/ai-sdk-ui/generative-user-interfaces"
+    },
+    {
+      "text": "JSON Forms for JSON Schema plus a separate UI schema and renderer set.",
+      "url": "https://jsonforms.io/docs/"
+    },
+    {
+      "text": "react-jsonschema-form for automatically generated React forms with schema validation.",
+      "url": "https://rjsf-team.github.io/react-jsonschema-form/docs/"
+    }
+  ]
+}

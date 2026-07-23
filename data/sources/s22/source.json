@@ -1,0 +1,10 @@
+{
+  "id": "s22",
+  "title": "react-jsonschema-form: Introduction",
+  "author": "rjsf team",
+  "kind": "doc",
+  "url": "https://rjsf-team.github.io/react-jsonschema-form/docs/",
+  "patterns": [
+    "on-the-fly-generated-uis"
+  ]
+}

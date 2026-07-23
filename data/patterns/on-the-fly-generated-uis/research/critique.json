@@ -1,0 +1,18 @@
+{
+  "stance": "supports",
+  "summary": "Existing generative-UI and schema-form systems validate both ends of the spectrum; the pattern's contribution is to make caching, provenance and input-triggered regeneration explicit for durable artifact-facing surfaces.",
+  "points": [
+    {
+      "text": "AI SDK UI maps model-selected tool results to application components, demonstrating rich per-response UI without requiring arbitrary generated markup.",
+      "source_id": "s20"
+    },
+    {
+      "text": "JSON Forms and react-jsonschema-form demonstrate that schemas can drive forms while retaining schema-owned validation and allowing a separate presentation layer.",
+      "source_id": "s21"
+    },
+    {
+      "text": "Generated HTML remains untrusted output; safe DOM construction, contextual encoding and sanitization are part of the pattern rather than optional hardening.",
+      "source_id": "s23"
+    }
+  ]
+}

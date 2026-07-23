@@ -52,6 +52,7 @@
     "agent-pipelines":         "assess",
     "quality-gate-agents":     "assess",
     "scheduled-quality-sweeps":"assess",
-    "council":                 "assess"
+    "council":                 "assess",
+    "on-the-fly-generated-uis":"assess"
   }
 }

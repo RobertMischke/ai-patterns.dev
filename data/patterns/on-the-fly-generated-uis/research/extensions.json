@@ -1,0 +1,21 @@
+{
+  "summary": "The derived-artifact framing opens a path from conversational fragments to governed process surfaces.",
+  "items": [
+    {
+      "text": "Store a generation manifest beside each cached view: input hashes, generator version, model, prompt, component vocabulary, theme version, timestamp and validation result."
+    },
+    {
+      "text": "Use semantic change detection so comments or formatting in a source artifact do not automatically invalidate a view unless they affect its meaning."
+    },
+    {
+      "text": "Route generation through agent-pipelines with stages for source extraction, generation, sanitization, schema conformance, visual review and publication.",
+      "ref_type": "pattern",
+      "ref_id": "agent-pipelines"
+    },
+    {
+      "text": "Publish generated surfaces into the wiki-as-cognitive-interface with provenance and version history so humans and agents share the same navigable representation.",
+      "ref_type": "pattern",
+      "ref_id": "wiki-as-cognitive-interface"
+    }
+  ]
+}

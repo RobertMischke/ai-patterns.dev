@@ -1,0 +1,16 @@
+{
+  "stance": "mixed",
+  "summary": "Not every adaptive interface needs a model or a cache.",
+  "points": [
+    {
+      "text": "A deterministic schema renderer is preferable when the schema already contains enough presentation semantics; model generation should earn its added cost and uncertainty.",
+      "source_id": "s22"
+    },
+    {
+      "text": "Inline conversational components are naturally response-scoped and may be generated each time; caching is the default for substantial reusable views, not a rule for every fragment."
+    },
+    {
+      "text": "Input hashing is insufficient if undeclared prompt, model, component-library or theme changes can alter output; those dependencies must join the cache key or trigger an explicit migration."
+    }
+  ]
+}

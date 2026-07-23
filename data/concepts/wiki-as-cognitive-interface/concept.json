@@ -4,6 +4,7 @@
   "short": "A navigable knowledge surface that exposes the evidence, relationships and operating context people need to judge agent work.",
   "patterns": [
     "project-map",
-    "compute-investment-quality-signal"
+    "compute-investment-quality-signal",
+    "on-the-fly-generated-uis"
   ]
 }

@@ -1,0 +1,10 @@
+{
+  "id": "s23",
+  "title": "Cross Site Scripting Prevention Cheat Sheet",
+  "author": "OWASP Cheat Sheet Series",
+  "kind": "doc",
+  "url": "https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html",
+  "patterns": [
+    "on-the-fly-generated-uis"
+  ]
+}

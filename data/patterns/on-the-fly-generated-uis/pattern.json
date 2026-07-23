@@ -1,0 +1,33 @@
+{
+  "id": "on-the-fly-generated-uis",
+  "num": "P-39",
+  "category": "sud",
+  "layer": "operating",
+  "classify": "new",
+  "title": "On-the-Fly Generated UIs (Usually Cached)",
+  "one_liner": "Generate an interface from the artifact it fronts, cache and version the result against those inputs, and regenerate it when they change.",
+  "problem": "Hand-maintained views over deployment scripts, schemas and process definitions drift away from the artifacts they claim to explain. Generating the entire interface on every request avoids that drift but introduces a different failure mode: repeated model cost, visible flicker, latency and non-deterministic layouts for the same underlying state. At the small end, plain-text model responses waste opportunities for compact, richer feedback. At the large end, generic schema renderers preserve structure but often fail to bridge it into a surface that is legible for the actual process. Generated markup also creates a trust boundary: unsafe HTML, leaked live secrets, controls that bypass schema validation and styling that ignores the host product can turn adaptability into risk and inconsistency.",
+  "solution": "Treat the UI as a derived artifact. Generate it from a declared input set such as deployment scripts, data schemas, validation rules and process definitions; record the input versions or a content hash with the generated result; cache that result; and regenerate only when a relevant input or the generator contract changes. Keep the underlying artifact authoritative and validate every submitted value against its schema or process rules. Use a three-level spectrum: (1) inline model feedback as sanitized HTML fragments or constrained components, small and cheap enough to generate per response; (2) cached views over changing artifacts, where the Agent Orchestrator DEPLOYMENT VIEW is the reference-in-progress and deliberately differs by project according to its deployment scripts; and (3) schema- or process-driven forms, input masks and views, where the model bridges formal structure into a usable task surface while the schema still owns validation. Define cache invalidation explicitly: distinguish semantic input changes from irrelevant file churn, and include model, prompt, component-library and design-token versions when they can change the rendering. Balance determinism against freshness by reusing a pinned result for unchanged inputs and offering controlled regeneration rather than silently varying the view. Treat generated output as untrusted: sanitize free-form markup, prefer an allowlisted component vocabulary, never place live secrets in generation context or cached output, and bind components to the host application's theme tokens instead of letting the model invent an isolated style system. Avoid three anti-patterns: regenerating substantial views on every request, letting generated controls bypass validation of the underlying schema, and shipping unstyled model-HTML islands that break the product look. This extends streaming component generation in AI SDKs and the longer schema-to-form lineage rather than replacing them. It composes with wiki-as-cognitive-interface because both make generated artifacts first-class, versioned surfaces, and with agent-pipelines because generation and invalidation belong in explicit triggered stages. No URL-preview/embed pattern is present in the current catalogue; add that lineage as a cross-link if one is introduced.",
+  "keywords": [
+    "generative UI",
+    "on-the-fly UI",
+    "derived artifact",
+    "cached generated view",
+    "content-addressed UI",
+    "cache invalidation",
+    "deployment scripts",
+    "DEPLOYMENT VIEW",
+    "reference-in-progress",
+    "schema-driven forms",
+    "process-driven forms",
+    "input masks",
+    "streaming components",
+    "sanitized HTML",
+    "design tokens",
+    "schema validation",
+    "determinism",
+    "wiki-as-cognitive-interface",
+    "agent-pipelines",
+    "url-preview-embed"
+  ]
+}

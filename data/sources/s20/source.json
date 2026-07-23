@@ -1,0 +1,10 @@
+{
+  "id": "s20",
+  "title": "AI SDK UI: Generative User Interfaces",
+  "author": "Vercel",
+  "kind": "doc",
+  "url": "https://ai-sdk.dev/docs/ai-sdk-ui/generative-user-interfaces",
+  "patterns": [
+    "on-the-fly-generated-uis"
+  ]
+}

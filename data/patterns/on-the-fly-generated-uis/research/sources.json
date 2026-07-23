@@ -1,0 +1,29 @@
+{
+  "summary": "Primary documentation anchors the streaming-component branch, the schema-to-form lineage and the markup safety boundary.",
+  "items": [
+    {
+      "text": "AI SDK UI: Generative User Interfaces",
+      "ref_type": "source",
+      "ref_id": "s20",
+      "url": "https://ai-sdk.dev/docs/ai-sdk-ui/generative-user-interfaces"
+    },
+    {
+      "text": "JSON Forms: What is JSON Forms?",
+      "ref_type": "source",
+      "ref_id": "s21",
+      "url": "https://jsonforms.io/docs/"
+    },
+    {
+      "text": "react-jsonschema-form: Introduction and philosophy",
+      "ref_type": "source",
+      "ref_id": "s22",
+      "url": "https://rjsf-team.github.io/react-jsonschema-form/docs/"
+    },
+    {
+      "text": "OWASP: Cross Site Scripting Prevention Cheat Sheet",
+      "ref_type": "source",
+      "ref_id": "s23",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html"
+    }
+  ]
+}
