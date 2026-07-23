@@ -1,0 +1,18 @@
+{
+  "id": "council",
+  "num": "P-36",
+  "category": "trust",
+  "layer": "operating",
+  "classify": "new",
+  "title": "Council",
+  "one_liner": "Findings become trustworthy only when an accountable body reacts to them.",
+  "problem": "Automated gates and reviewers can produce excellent findings that nobody owns. Unassigned advisories accumulate, repeated failures are waived without a record, and a dashboard quietly substitutes observation for action.",
+  "solution": "Route structured findings to a Council with explicit decision rights. For each finding it records the evidence, owner, disposition, deadline and rationale; it may block, accept bounded risk, request more evidence or escalate. Keep the reaction auditable and feed outcomes back into gate calibration so recurring false positives, misses and ignored advisories improve the validation system.",
+  "keywords": [
+    "accountability",
+    "findings",
+    "disposition",
+    "governance",
+    "feedback loop"
+  ]
+}
