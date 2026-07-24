@@ -1,6 +1,6 @@
 {
   "id": "validated-trust",
-  "term": "Decision-making above the code line",
+  "term": "Validated trust",
   "short": "At agent scale, operators judge deliveries through validated system signals rather than by reading every changed line.",
   "patterns": [
     "model-trust-map",
@@ -12,7 +12,6 @@
     "orchestrator-subagent",
     "escalation-cascade",
     "companion-model",
-    "compute-investment-quality-signal",
-    "wiki-as-cognitive-interface"
+    "compute-investment-quality-signal"
   ]
 }

@@ -1,0 +1,10 @@
+{
+  "id": "decision-making-above-the-code-line",
+  "term": "Decision-making above the code line",
+  "short": "Validated trust needs described systems: record system behavior, paths and rationale so humans and agents can assess decisions above individual code changes.",
+  "patterns": [
+    "wiki-as-cognitive-interface",
+    "compute-invest-as-quality-signal",
+    "compute-as-oss-contribution"
+  ]
+}
