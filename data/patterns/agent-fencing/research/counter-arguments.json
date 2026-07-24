@@ -1,0 +1,18 @@
+{
+  "stance": "mixed",
+  "summary": "Fencing improves accountability, but can become costly bureaucracy or false assurance if its record and checks are incomplete.",
+  "points": [
+    {
+      "text": "Logging every event can expose sensitive inputs or create retention obligations. Apply data minimization, access controls and retention limits to the history itself.",
+      "severity": "warning"
+    },
+    {
+      "text": "A trust score is a decision aid, not a safety proof. It must be recalibrated from outcomes and must never silently widen authority after a model or provider changes.",
+      "severity": "warning"
+    },
+    {
+      "text": "Too many approval gates slow safe work and encourage bypasses. Keep escalation targeted to irreversible effects, sensitive data and missing or conflicting evidence.",
+      "severity": "note"
+    }
+  ]
+}

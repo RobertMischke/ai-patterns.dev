@@ -1,0 +1,19 @@
+{
+  "id": "agent-fencing",
+  "num": "P-41",
+  "category": "trust",
+  "layer": "operating",
+  "classify": "new",
+  "title": "Agent Fencing",
+  "one_liner": "The platform owns the durable history; agents receive bounded authority and oversight proportional to trust and risk.",
+  "problem": "When an agent's chat, scratchpad or self-reported summary becomes the system of record, its actions cannot be independently reconstructed, policies are easy to bypass, and every task is either over-supervised or trusted too far. The result is an opaque automation boundary: operators cannot prove what the agent saw, did, changed or was allowed to do.",
+  "solution": "Fence each agent behind platform-controlled task, identity, tool and artifact boundaries. The platform records append-only task state, authority grants, tool calls, inputs, outputs, approvals, evidence and hand-offs; the agent may propose work but does not own or rewrite that history. Assign a trust tier from the agent's demonstrated reliability, the task's reversibility, data sensitivity and blast radius. Low-risk, well-evidenced work can flow automatically; higher-risk work requires stronger isolation, narrower permissions, independent checks and explicit human approval. Escalate on policy violations, missing evidence, uncertainty or unexpected scope rather than on every action.",
+  "keywords": [
+    "agent governance",
+    "audit trail",
+    "least privilege",
+    "oversight",
+    "provenance",
+    "trust tiers"
+  ]
+}

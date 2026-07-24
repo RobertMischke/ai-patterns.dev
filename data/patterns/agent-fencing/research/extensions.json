@@ -1,0 +1,20 @@
+{
+  "summary": "Agent fencing combines existing platform patterns into a single authority-and-history boundary.",
+  "items": [
+    {
+      "text": "Use named, structured review verdicts as the evidence consumed by escalation decisions.",
+      "ref_type": "pattern",
+      "ref_id": "quality-gate-agents"
+    },
+    {
+      "text": "Run work in sandboxed environments so the authority recorded by the platform matches the authority available at runtime.",
+      "ref_type": "pattern",
+      "ref_id": "sandbox"
+    },
+    {
+      "text": "Select model and execution channel separately; a trusted model through an unsuitable provider is still outside the fence.",
+      "ref_type": "pattern",
+      "ref_id": "provider-trust-map"
+    }
+  ]
+}

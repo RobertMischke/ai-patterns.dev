@@ -1,0 +1,10 @@
+{
+  "summary": "The NIST AI RMF provides a published governance anchor for managing AI risks across the lifecycle.",
+  "items": [
+    {
+      "text": "NIST AI Risk Management Framework Core",
+      "ref_type": "source",
+      "ref_id": "s19"
+    }
+  ]
+}

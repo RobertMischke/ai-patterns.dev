@@ -1,0 +1,19 @@
+{
+  "stance": "supports",
+  "summary": "A platform-owned event trail makes agent work reviewable and gives policy enforcement a durable control point.",
+  "points": [
+    {
+      "text": "Separate the agent's private reasoning from the authoritative record of requested work, grants, tool effects and evidence. This improves reconstruction without treating generated chat as proof.",
+      "severity": "info"
+    },
+    {
+      "text": "Trust tiers let routine, reversible work move quickly while concentrating human attention on sensitive, irreversible or weakly evidenced actions.",
+      "severity": "info"
+    },
+    {
+      "text": "Independent gates and structured verdicts make escalation evidence-based instead of relying on the originating agent's confidence.",
+      "severity": "note",
+      "source_id": "s19"
+    }
+  ]
+}

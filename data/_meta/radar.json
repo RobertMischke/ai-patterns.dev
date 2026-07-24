@@ -53,6 +53,7 @@
     "quality-gate-agents":     "assess",
     "scheduled-quality-sweeps":"assess",
     "council":                 "assess",
-    "on-the-fly-generated-uis":"assess"
+    "on-the-fly-generated-uis":"assess",
+    "agent-fencing":            "assess"
   }
 }

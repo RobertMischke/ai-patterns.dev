@@ -7,6 +7,7 @@
   "patterns": [
     "model-trust-map",
     "quality-gate-agents",
-    "council"
+    "council",
+    "agent-fencing"
   ]
 }
