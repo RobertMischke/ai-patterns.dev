@@ -20,7 +20,7 @@
     <section class="shell">
       <div class="concept-article">
         <article class="concept-article-body body-prose">
-          @if (article) {
+          @if (article(); as article) {
             <p class="lede" style="margin: 12px 0 24px; font-style: italic;">{{ article.lede }}</p>
             @for (sec of article.body; track sec.h) {
               <div class="section">

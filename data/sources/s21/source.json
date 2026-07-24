@@ -1,10 +1,11 @@
 {
   "id": "s21",
-  "title": "What is JSON Forms?",
-  "author": "EclipseSource / JSON Forms",
+  "title": "SLSA v1.2: Provenance and artifact verification",
+  "author": "OpenSSF",
   "kind": "doc",
-  "url": "https://jsonforms.io/docs/",
+  "url": "https://slsa.dev/spec/v1.2/verifying-artifacts",
   "patterns": [
-    "on-the-fly-generated-uis"
+    "executable-safety-net",
+    "quality-gate-agents"
   ]
 }

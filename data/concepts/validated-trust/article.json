@@ -15,7 +15,7 @@
     },
     {
       "h": "Three ways trust fails",
-      "p": "Unvalidated trust rubber-stamps model output or accepts a reviewer model's grade without testing the reviewer. Derived-state trust treats artifacts, dashboards or status claims as reality without closing the feedback loop; the 22–23 July incident class includes stale artifacts, zombie claims and silent overrides that leave a convincing but false system state. The inverse failure is retreating to line-by-line reading. That approach does not scale across an agent fleet, samples the wrong abstraction and creates false confidence that inspected lines imply a healthy delivery system."
+      "p": "Unvalidated trust rubber-stamps model output or accepts a reviewer model's grade without testing the reviewer. Derived-state trust treats artifacts, dashboards or status claims as reality without closing the feedback loop; the 22/23 July incident class includes stale artifacts, zombie claims and silent overrides that leave a convincing but false system state. The inverse failure is retreating to line-by-line reading. That approach does not scale across an agent fleet, samples the wrong abstraction and creates false confidence that inspected lines imply a healthy delivery system."
     },
     {
       "h": "Failure must be honest",

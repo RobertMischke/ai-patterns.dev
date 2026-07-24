@@ -1,18 +1,19 @@
 {
   "id": "council",
-  "num": "P-36",
-  "category": "trust",
+  "num": "P-34",
+  "category": "routing",
   "layer": "operating",
   "classify": "new",
-  "title": "Council",
-  "one_liner": "Findings become trustworthy only when an accountable body reacts to them.",
-  "problem": "Automated gates and reviewers can produce excellent findings that nobody owns. Unassigned advisories accumulate, repeated failures are waived without a record, and a dashboard quietly substitutes observation for action.",
-  "solution": "Route structured findings to a Council with explicit decision rights. For each finding it records the evidence, owner, disposition, deadline and rationale; it may block, accept bounded risk, request more evidence or escalate. Keep the reaction auditable and feed outcomes back into gate calibration so recurring false positives, misses and ignored advisories improve the validation system.",
+  "title": "Council: Review Verdicts Need a Reaction",
+  "one_liner": "Every named review finding gets an accountable decision: fix, accept with reasons, or escalate.",
+  "problem": "Aspect reviews and quality grades can identify defects without changing the work. A passing grade with named defects invites reviewer optimism to turn known defects into silently accepted debt: no accountable owner records whether to fix, accept, or escalate the finding.",
+  "solution": "Give one accountable orchestrator the council verdict. For every named finding, it must either fix it now by starting a targeted follow-up round that carries exactly the relevant finding text, accept it with written reasoning, or escalate it. Make the decision visible, cap follow-up rounds with an explicit loop budget, and report unresolved findings when the budget is exhausted.",
   "keywords": [
+    "review findings",
     "accountability",
-    "findings",
-    "disposition",
-    "governance",
-    "feedback loop"
+    "follow-up loop",
+    "quality gate",
+    "escalation",
+    "loop budget"
   ]
 }

@@ -1,4 +1,5 @@
-import { Component, computed, effect, inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, computed, effect, inject, PLATFORM_ID, signal } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { Title, Meta } from '@angular/platform-browser';
@@ -21,6 +22,7 @@ export class ConceptDetailPage {
   private readonly http  = inject(HttpClient);
   private readonly title = inject(Title);
   private readonly meta  = inject(Meta);
+  private readonly platformId = inject(PLATFORM_ID);
 
   private readonly id = toSignal(this.route.paramMap, { requireSync: true });
 
@@ -38,7 +40,7 @@ export class ConceptDetailPage {
       .slice(0, 8);
   });
 
-  protected article: ConceptArticle | null = null;
+  protected readonly article = signal<ConceptArticle | null>(null);
 
   protected patternTitle(id: string): string {
     return PATTERN_BY_ID.get(id)?.title ?? id;
@@ -53,14 +55,18 @@ export class ConceptDetailPage {
 
     this.title.setTitle(`${c.term} · ai-patterns.dev`);
     this.meta.updateTag({ name: 'description', content: c.short });
+  }
 
+  private async loadArticle() {
+    const c = this.concept();
+    if (!c) return;
     if (c.has_article) {
       try {
-        this.article = await firstValueFrom(
+        this.article.set(await firstValueFrom(
           this.http.get<ConceptArticle>(`/data/concepts/${c.id}/article.json`)
-        );
+        ));
       } catch {
-        this.article = null;
+        this.article.set(null);
       }
     }
   }
@@ -70,5 +76,8 @@ export class ConceptDetailPage {
       const c = this.concept();
       if (c) this.title.setTitle(`${c.term} · ai-patterns.dev`);
     });
+    if (isPlatformBrowser(this.platformId)) {
+      setTimeout(() => void this.loadArticle());
+    }
   }
 }
