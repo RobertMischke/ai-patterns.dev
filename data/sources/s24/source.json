@@ -1,0 +1,10 @@
+{
+  "id": "s24",
+  "title": "NIST AI RMF Playbook: Measure",
+  "author": "NIST",
+  "kind": "doc",
+  "url": "https://airc.nist.gov/airmf-resources/playbook/measure/",
+  "patterns": [
+    "agent-fencing"
+  ]
+}

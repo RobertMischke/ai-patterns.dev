@@ -1,0 +1,10 @@
+{
+  "id": "s25",
+  "title": "NIST SP 800-171 Rev. 3: Protecting Controlled Unclassified Information",
+  "author": "NIST",
+  "kind": "doc",
+  "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/800-171r3/NIST.SP.800-171r3.html",
+  "patterns": [
+    "agent-fencing"
+  ]
+}

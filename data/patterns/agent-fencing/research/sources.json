@@ -1,10 +1,20 @@
 {
-  "summary": "The NIST AI RMF provides a published governance anchor for managing AI risks across the lifecycle.",
+  "summary": "NIST guidance supports the pattern's two control planes: documented, risk-proportionate human oversight and platform-enforced least-privilege with auditable events.",
   "items": [
     {
       "text": "NIST AI Risk Management Framework Core",
       "ref_type": "source",
       "ref_id": "s19"
+    },
+    {
+      "text": "NIST AI RMF Playbook: Measure — document oversight, escalations and accountable decisions",
+      "ref_type": "source",
+      "ref_id": "s24"
+    },
+    {
+      "text": "NIST SP 800-171 Rev. 3 — least privilege and audit-record content",
+      "ref_type": "source",
+      "ref_id": "s25"
     }
   ]
 }
