@@ -54,6 +54,7 @@
     "scheduled-quality-sweeps":"assess",
     "council":                 "assess",
     "on-the-fly-generated-uis":"assess",
-    "agent-fencing":            "assess"
+    "agent-fencing":            "assess",
+    "topic-switching":          "assess"
   }
 }

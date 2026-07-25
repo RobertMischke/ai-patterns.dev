@@ -1,0 +1,25 @@
+{
+  "summary": "Combine explicit topic boundaries, durable checkpoints and age-aware telemetry so session reuse can adapt to the local workload.",
+  "items": [
+    {
+      "text": "Compact the active context at topic boundaries, retaining the new objective and durable shared facts while retiring topic-local residue.",
+      "ref_type": "pattern",
+      "ref_id": "context-compaction"
+    },
+    {
+      "text": "Store decisions that must survive a reset outside the conversation so a fresh session does not have to rediscover them.",
+      "ref_type": "pattern",
+      "ref_id": "decision-memory"
+    },
+    {
+      "text": "Use explicit context entry points to make a reset cheap and to reduce variation in orientation latency.",
+      "ref_type": "pattern",
+      "ref_id": "context-entry-points"
+    },
+    {
+      "text": "Segment TE results by task similarity: shared-repository microtasks should not be pooled with unrelated or high-risk topic switches.",
+      "ref_type": "concept",
+      "ref_id": "context-window"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "stance": "mixed",
+  "summary": "First-hand operator experience supports a real warm-context dividend, while the pattern remains a hypothesis to calibrate from TE telemetry rather than a universal session-length rule.",
+  "points": [
+    {
+      "text": "Practice observation, Robert Mischke, 24 July 2026: a long-running orchestrator feels faster because it already knows the paths and information; on many small, heterogeneous tasks it avoids repeated orientation and searching. This is the motivating observation, not yet a controlled result.",
+      "severity": "note"
+    },
+    {
+      "text": "The counter-force is delayed and easy to misattribute: an old assumption may cause a wrong edit several tasks later, making context rot look like an ordinary implementation mistake unless repairs are tagged with session age and cause.",
+      "severity": "warning"
+    },
+    {
+      "text": "The useful decision variable is the crossover between orientation time saved and repair cost added. TE should compare age buckets and task classes rather than infer quality from raw session length alone.",
+      "severity": "info"
+    },
+    {
+      "text": "A local threshold is essential. Repository size, model, compaction behavior, task similarity and operator discipline can move the crossover point substantially.",
+      "severity": "info"
+    }
+  ]
+}

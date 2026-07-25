@@ -5,6 +5,7 @@
   "patterns": [
     "context-compaction",
     "memory-tiering",
-    "token-budget"
+    "token-budget",
+    "topic-switching"
   ]
 }

@@ -1,0 +1,20 @@
+{
+  "id": "topic-switching",
+  "num": "P-42",
+  "category": "context",
+  "layer": "operating",
+  "classify": "new",
+  "title": "Topic Switching in One Long Operator Context",
+  "one_liner": "Keep a session warm while shared context saves orientation time; reset it when repair density shows that old topics have become interference.",
+  "problem": "A fresh operator session pays an orientation tax: it must rediscover paths, commands, constraints, terminology and the current shape of the system before useful work begins. Across many small, heterogeneous tasks, that tax can dominate execution, so one warm session can turn minutes of searching into seconds. But every topic switch also leaves instructions, facts, failed approaches and assumptions in the active context. As the session ages, stale material can be mistaken for current intent, attention diffuses and apparently competent work needs more correction. A fixed rule such as \"always start fresh\" or \"never lose context\" hides the real trade-off between context warmth and context rot.",
+  "solution": "Treat session lifetime as an empirical operating decision. Reuse one operator context while tasks share a workspace, vocabulary, tooling and stable constraints, and preserve a compact task boundary at every switch: state the new objective, mark prior assumptions inactive, record authoritative paths and define done. Instrument both sides of the trade-off. Measure orientation latency from task arrival to first effective action, and in Token Economy (TE) record repair density by session-age bucket: context-related corrections, rework or reopened outcomes divided by completed tasks. Track age in elapsed time, turns or tokens and number of topic switches. Continue the warm session while its saved orientation time exceeds its age-adjusted repair cost; compact, checkpoint and start a fresh session when repair density rises materially or crosses a locally calibrated threshold. The restart should carry forward durable facts and decisions, not the conversational residue that caused the rot.",
+  "keywords": [
+    "topic switching",
+    "warm context",
+    "context rot",
+    "orientation latency",
+    "repair density",
+    "session age",
+    "Token Economy"
+  ]
+}

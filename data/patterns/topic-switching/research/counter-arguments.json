@@ -1,0 +1,22 @@
+{
+  "stance": "mixed",
+  "summary": "Long sessions are neither free speed nor inevitable decay; measurement can still mislead if task mix and repair attribution are weak.",
+  "points": [
+    {
+      "text": "Fresh sessions provide isolation and a clean statement of intent. For high-risk, unrelated or policy-sensitive work, that boundary may be worth more than any orientation saving.",
+      "severity": "warning"
+    },
+    {
+      "text": "Repair density can rise simply because later tasks are harder. Compare similar task classes, models and validation regimes, and report uncertainty instead of declaring session age causal from a raw correlation.",
+      "severity": "warning"
+    },
+    {
+      "text": "A repair is often discovered after the session ends. TE needs a stable session identifier and delayed linkage from review findings or reopened tasks back to the session-age bucket that produced them.",
+      "severity": "note"
+    },
+    {
+      "text": "Compact checkpoints themselves cost time and can discard useful tacit context. Count checkpoint and reorientation overhead when evaluating a restart policy.",
+      "severity": "note"
+    }
+  ]
+}
