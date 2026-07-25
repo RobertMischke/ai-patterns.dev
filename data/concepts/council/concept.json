@@ -7,6 +7,6 @@
     "orchestrator-subagent",
     "model-trust-map",
     "fire-track-review",
-    "compute-investment-quality-signal"
+    "compute-invest-as-quality-signal"
   ]
 }
