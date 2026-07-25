@@ -12,6 +12,12 @@ export const routes: Routes = [
     title: 'Patterns · ai-patterns.dev',
   },
   {
+    // Keep links to the superseded duplicate slug working without publishing it as a pattern.
+    path: 'patterns/compute-investment-quality-signal',
+    redirectTo: 'patterns/compute-invest-as-quality-signal',
+    pathMatch: 'full',
+  },
+  {
     path: 'patterns/:id',
     loadComponent: () => import('./pages/pattern-detail/pattern-detail.page').then(m => m.PatternDetailPage),
   },

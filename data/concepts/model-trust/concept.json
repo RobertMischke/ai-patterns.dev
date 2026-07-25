@@ -6,6 +6,6 @@
     "model-trust-map",
     "council",
     "provider-trust-map",
-    "compute-investment-quality-signal"
+    "compute-invest-as-quality-signal"
   ]
 }

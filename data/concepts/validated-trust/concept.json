@@ -12,6 +12,6 @@
     "orchestrator-subagent",
     "escalation-cascade",
     "companion-model",
-    "compute-investment-quality-signal"
+    "compute-invest-as-quality-signal"
   ]
 }
