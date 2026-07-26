@@ -1,0 +1,11 @@
+{
+  "id": "s51",
+  "title": "Living Documentation: Continuous Knowledge Sharing by Design",
+  "author": "Cyrille Martraire",
+  "kind": "book",
+  "url": "https://leanpub.com/livingdocumentation",
+  "patterns": [
+    "companion-app",
+    "continuous-two-way-alignment"
+  ]
+}

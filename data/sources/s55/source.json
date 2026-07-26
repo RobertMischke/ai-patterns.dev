@@ -1,0 +1,10 @@
+{
+  "id": "s55",
+  "title": "RDF 1.1 Concepts and Abstract Syntax",
+  "author": "W3C",
+  "kind": "doc",
+  "url": "https://www.w3.org/TR/rdf11-concepts/",
+  "patterns": [
+    "companion-app"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "summary": "Naming remains a product decision for Robert. Companion App is the recommendation because it is concrete, non-academic and accommodates both the minimal HTML form and a richer interactive product.",
+  "items": [
+    {
+      "text": "Companion App — recommended. Tangible and product-ready; broad enough for a generated site, interactive wiki, graph or canvas. Its generic wording needs a strong one-line definition."
+    },
+    {
+      "text": "Comprehension Layer — accurate and broad, but sounds architectural and academic rather than like something a developer would open and use."
+    },
+    {
+      "text": "Cognitive Sidecar — memorable and structurally apt, but both words are technical; sidecar also collides with the narrower sidecar-metadata pattern."
+    },
+    {
+      "text": "Catch-up Companion — makes the speed gap immediately clear, but sounds remedial and temporary although ongoing system care is equally important."
+    },
+    {
+      "text": "System Companion — plain and product-capable, but too generic and easily confused with companion-model."
+    },
+    {
+      "text": "Comprehension Companion — precise and distinctive, but less natural in speech and slightly more academic than Companion App."
+    },
+    {
+      "text": "The wiki-shaped implementation is already captured by wiki-as-cognitive-interface; reuse its layered content model.",
+      "ref_type": "pattern",
+      "ref_id": "wiki-as-cognitive-interface"
+    },
+    {
+      "text": "Use predictable companion files for provenance, fingerprints, ownership and review state.",
+      "ref_type": "pattern",
+      "ref_id": "sidecar-metadata"
+    },
+    {
+      "text": "Generate and cache artifact-specific views when a fixed renderer cannot provide the needed task surface.",
+      "ref_type": "pattern",
+      "ref_id": "on-the-fly-generated-uis"
+    },
+    {
+      "text": "Keep the companion synchronized in both directions instead of assuming generation alone prevents drift.",
+      "ref_type": "pattern",
+      "ref_id": "continuous-two-way-alignment"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "summary": "The pattern deliberately composes established approaches to living, versioned and navigable system knowledge; the Companion App is a product-shaped integration, not a claim of invention.",
+  "items": [
+    {
+      "text": "Cyrille Martraire, Living Documentation — documentation evolves with the code through well-crafted artifacts and automation.",
+      "ref_type": "source",
+      "ref_id": "s51"
+    },
+    {
+      "text": "Write the Docs, Docs as Code — version control, plain text, reviews and automated tests apply software workflows to documentation.",
+      "ref_type": "source",
+      "ref_id": "s52"
+    },
+    {
+      "text": "Simon Brown, C4 model — hierarchical diagrams provide different zoom levels for different audiences.",
+      "ref_type": "source",
+      "ref_id": "s53"
+    },
+    {
+      "text": "ISO/IEC 13250-2:2006 — the current Topic Maps data model defines structure, interpretation and merging rules.",
+      "ref_type": "source",
+      "ref_id": "s54"
+    },
+    {
+      "text": "W3C RDF 1.1 Concepts — a standard graph data model underlying many knowledge-graph implementations.",
+      "ref_type": "source",
+      "ref_id": "s55"
+    },
+    {
+      "text": "Michael Nygard, Documenting Architecture Decisions — small repository-local records preserve forces, decisions, status and consequences.",
+      "ref_type": "source",
+      "ref_id": "s56"
+    },
+    {
+      "text": "Agent Studio operational evidence — Wiki Pulse, drift grading, Quality Review and target-state consolidation exercise the integrated pattern.",
+      "ref_type": "source",
+      "ref_id": "s57"
+    }
+  ]
+}

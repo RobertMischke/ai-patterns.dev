@@ -1,0 +1,10 @@
+{
+  "id": "s53",
+  "title": "C4 model: Diagrams",
+  "author": "Simon Brown",
+  "kind": "doc",
+  "url": "https://c4model.com/diagrams",
+  "patterns": [
+    "companion-app"
+  ]
+}

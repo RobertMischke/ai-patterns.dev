@@ -1,0 +1,33 @@
+{
+  "id": "companion-app",
+  "num": "P-46",
+  "category": "sud",
+  "layer": "operating",
+  "classify": "intensified",
+  "title": "Companion App",
+  "one_liner": "Give every fast-changing system a separate, navigable product surface through which people can catch up with, understand and care for what has been built.",
+  "problem": "AI can produce useful software faster than a person can reconstruct its shape, behavior and rationale. The resulting gap is not merely an onboarding problem: maintainers must understand the current state, the intended state, what changed and why before they can safely judge or extend the system. Source files remain the executable truth, but they are a poor overview; prose alone hides relationships; generic dashboards show status without meaning; and a single diagram cannot serve both orientation and detailed inquiry. The forces pull in opposite directions. The surface must stay close enough to authoritative artifacts to be trustworthy yet be organized for human comprehension; it must compress aggressively without erasing provenance or uncertainty; it must support stable shared views while allowing interactive, question-specific exploration; and it must justify its maintenance cost while the underlying system changes at agent speed.",
+  "solution": "Build a sidecar comprehension product beside the system: a Companion App that turns code, specifications, architecture, runtime evidence and recorded decisions into layered, linked views. Start with a generated static HTML site when that is enough. Grow toward interactive wikis, architecture graphics, topic maps, knowledge graphs and large or effectively infinite canvases when users need to traverse relationships, compare current with target state or zoom from system overview to a feature, decision, change or incident. Keep every claim traceable to its source artifact, version and freshness state; distinguish observed current state, intended target state and human interpretation; and provide task-oriented entry points rather than one exhaustive map. Treat the companion as a maintained product with users, information architecture, access controls and quality criteria, not as a one-off documentation export. Pair it with continuous-two-way-alignment: generated views bring artifact changes into the companion, while decisions and learning captured in the companion are written back into durable system artifacts. The consequence is faster orientation, safer review and a shared place to care for the system, at the cost of another product surface whose scope, security and fidelity must be operated. This pattern does not invent living documentation or architectural knowledge systems. It composes established Living Documentation, docs-as-code, C4 and diagrams-as-code, Topic Maps, knowledge graphs and ADR practices into a comprehension surface for AI-accelerated development. Internally, wiki-as-cognitive-interface is the wiki-shaped special case; sidecar-metadata supplies visible provenance and freshness data; and on-the-fly-generated-uis supplies derived, cached views.",
+  "keywords": [
+    "companion app",
+    "comprehension surface",
+    "human catch-up",
+    "system understanding",
+    "interactive wiki",
+    "architecture visualization",
+    "topic maps",
+    "knowledge graphs",
+    "infinite canvas",
+    "generated static HTML",
+    "current versus target state",
+    "living documentation",
+    "docs as code",
+    "C4 model",
+    "diagrams as code",
+    "architecture decision records",
+    "continuous-two-way-alignment",
+    "wiki-as-cognitive-interface",
+    "sidecar-metadata",
+    "on-the-fly-generated-uis"
+  ]
+}

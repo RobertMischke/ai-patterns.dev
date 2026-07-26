@@ -1,0 +1,11 @@
+{
+  "id": "s52",
+  "title": "Docs as Code",
+  "author": "Eric Holscher and the Write the Docs community",
+  "kind": "doc",
+  "url": "https://www.writethedocs.org/guide/docs-as-code/",
+  "patterns": [
+    "companion-app",
+    "continuous-two-way-alignment"
+  ]
+}

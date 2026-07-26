@@ -8,6 +8,8 @@
     "compute-as-oss-contribution",
     "switching-abstraction-layers",
     "process-actor",
-    "versioned-prompt-text"
+    "versioned-prompt-text",
+    "companion-app",
+    "continuous-two-way-alignment"
   ]
 }

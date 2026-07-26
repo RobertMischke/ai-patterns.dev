@@ -1,0 +1,22 @@
+{
+  "stance": "mixed",
+  "summary": "A continuous loop can reduce drift, but excessive synchronization produces noise, churn and misplaced confidence.",
+  "points": [
+    {
+      "text": "Regenerating on every file change wastes compute and destabilizes shared views. Trigger on declared semantic inputs, debounce bursts and retain a pinned version while review is pending.",
+      "severity": "warning"
+    },
+    {
+      "text": "Forcing every conversation into the repository creates low-signal records. Capture only decisions, constraints, corrected facts, unresolved questions and reusable learnings with a named owner.",
+      "severity": "warning"
+    },
+    {
+      "text": "A green freshness badge can certify only the alignment contract it measured. It cannot prove that the contract includes every relevant artifact or that a generated explanation is correct.",
+      "severity": "blocker"
+    },
+    {
+      "text": "Automated write-back into code, specs or ADRs can launder an unreviewed human or model claim into apparent authority. Keep semantic write-back reviewable and attributable.",
+      "severity": "warning"
+    }
+  ]
+}

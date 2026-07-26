@@ -1,0 +1,23 @@
+{
+  "stance": "supports",
+  "summary": "Bidirectionality closes the gap left by generated documentation: artifact freshness and durable human intent require different propagation paths and an explicit reconciliation point.",
+  "points": [
+    {
+      "text": "Hashes and commits-behind counts are strong lag indicators but weak semantic checks. Pair them with Quality Review for meaning, omissions and target-versus-current confusion.",
+      "severity": "note"
+    },
+    {
+      "text": "Human-to-artifact write-back should end in the artifact type that owns the claim: an ADR for rationale, a spec for intent, a test for behavior, code or configuration for implementation, and a task for unresolved work.",
+      "severity": "info"
+    },
+    {
+      "text": "The pattern aligns multiple legitimate truths; it must surface conflicts rather than treating the newest timestamp as automatically correct.",
+      "severity": "warning"
+    },
+    {
+      "text": "Agent Studio's Wiki Pulse, drift grading, Quality Review and target-state consolidation provide operational evidence for both directions, while broader validation across projects is still needed.",
+      "severity": "note",
+      "source_id": "s57"
+    }
+  ]
+}

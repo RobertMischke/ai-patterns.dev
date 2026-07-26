@@ -1,0 +1,11 @@
+{
+  "id": "s56",
+  "title": "Documenting Architecture Decisions",
+  "author": "Michael Nygard",
+  "kind": "post",
+  "url": "https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions",
+  "patterns": [
+    "companion-app",
+    "continuous-two-way-alignment"
+  ]
+}

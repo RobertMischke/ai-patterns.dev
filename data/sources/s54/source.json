@@ -1,0 +1,10 @@
+{
+  "id": "s54",
+  "title": "ISO/IEC 13250-2:2006 — Topic Maps — Data model",
+  "author": "ISO/IEC",
+  "kind": "doc",
+  "url": "https://www.iso.org/standard/40017.html",
+  "patterns": [
+    "companion-app"
+  ]
+}

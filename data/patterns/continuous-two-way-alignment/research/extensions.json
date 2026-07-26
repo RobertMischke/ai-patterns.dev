@@ -1,0 +1,40 @@
+{
+  "summary": "The alignment loop reuses existing catalogue mechanisms and gives them explicit directionality around the Companion App.",
+  "items": [
+    {
+      "text": "Provide the human-facing surface whose freshness and write-back paths the alignment contract governs.",
+      "ref_type": "pattern",
+      "ref_id": "companion-app"
+    },
+    {
+      "text": "Extend the existing specification meta-loop from spec-versus-code to companion-versus-artifact and human-intent-versus-durable-system reconciliation.",
+      "ref_type": "pattern",
+      "ref_id": "spec-drift"
+    },
+    {
+      "text": "Use fingerprints, source versions, review timestamps and explicit state in visible companion files.",
+      "ref_type": "pattern",
+      "ref_id": "sidecar-metadata"
+    },
+    {
+      "text": "Write architectural rationale into the established searchable decision store.",
+      "ref_type": "pattern",
+      "ref_id": "decision-memory"
+    },
+    {
+      "text": "Run change-triggered alignment stages as named, versioned pipeline roles.",
+      "ref_type": "pattern",
+      "ref_id": "agent-pipelines"
+    },
+    {
+      "text": "Use scheduled sweeps to detect slow or cross-cutting drift that no individual change trigger sees.",
+      "ref_type": "pattern",
+      "ref_id": "scheduled-quality-sweeps"
+    },
+    {
+      "text": "Reuse the layered wiki maintenance and learnings stages when the companion takes wiki form.",
+      "ref_type": "pattern",
+      "ref_id": "wiki-as-cognitive-interface"
+    }
+  ]
+}

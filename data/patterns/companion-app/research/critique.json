@@ -1,0 +1,23 @@
+{
+  "stance": "supports",
+  "summary": "The pattern addresses a real comprehension bottleneck, provided the companion is treated as a selective, evidence-linked product rather than a prettier copy of the repository.",
+  "points": [
+    {
+      "text": "The smallest useful implementation may be generated static HTML. Interactivity, graph navigation and a large canvas should be added only when concrete comprehension tasks require them.",
+      "severity": "info"
+    },
+    {
+      "text": "A companion earns trust through provenance, explicit current-versus-target semantics and visible freshness, not through visual polish.",
+      "severity": "note"
+    },
+    {
+      "text": "The pattern generalizes wiki-as-cognitive-interface; it should reuse that pattern's layered pages, decision history and task links rather than duplicate them under a new name.",
+      "severity": "info"
+    },
+    {
+      "text": "Living Documentation already establishes continuous investment in knowledge and automation. AI changes the urgency and feasible interaction model, not the underlying need.",
+      "severity": "info",
+      "source_id": "s51"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "summary": "Published work establishes living, repository-local knowledge practices; Agent Studio supplies the current operational evidence for the explicit two-way loop.",
+  "items": [
+    {
+      "text": "Cyrille Martraire, Living Documentation — documentation should evolve with the code through continuous investment and automation.",
+      "ref_type": "source",
+      "ref_id": "s51"
+    },
+    {
+      "text": "Write the Docs, Docs as Code — shared version-control and review workflows make documentation changes traceable and automatable.",
+      "ref_type": "source",
+      "ref_id": "s52"
+    },
+    {
+      "text": "Michael Nygard, Documenting Architecture Decisions — changing context and superseded decisions remain visible rather than being overwritten.",
+      "ref_type": "source",
+      "ref_id": "s56"
+    },
+    {
+      "text": "Agent Studio field evidence — Wiki Pulse, commits-behind drift grading, Quality Review and the 24 July target-state consolidation.",
+      "ref_type": "source",
+      "ref_id": "s57"
+    }
+  ]
+}
