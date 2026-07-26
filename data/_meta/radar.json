@@ -55,6 +55,7 @@
     "council":                 "assess",
     "on-the-fly-generated-uis":"assess",
     "agent-fencing":            "assess",
-    "topic-switching":          "assess"
+    "topic-switching":          "assess",
+    "switching-abstraction-layers": "assess"
   }
 }

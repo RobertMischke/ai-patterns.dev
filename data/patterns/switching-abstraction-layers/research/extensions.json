@@ -1,0 +1,30 @@
+{
+  "summary": "Build the higher layer from explicit pipeline stages, trustworthy evidence and deliberate context boundaries while preserving drill-down.",
+  "items": [
+    {
+      "text": "Fence agents behind platform-owned task history, authority and evidence so aggregate management signals remain independently inspectable.",
+      "ref_type": "pattern",
+      "ref_id": "agent-fencing"
+    },
+    {
+      "text": "Represent work as versioned stages, triggers and pass criteria before managing pipeline flow or capacity.",
+      "ref_type": "pattern",
+      "ref_id": "agent-pipelines"
+    },
+    {
+      "text": "Use explicit task boundaries when a move between implementation and management also changes the operator's active topic.",
+      "ref_type": "pattern",
+      "ref_id": "topic-switching"
+    },
+    {
+      "text": "Use named, structured gate verdicts as drill-down evidence behind higher-level quality signals.",
+      "ref_type": "pattern",
+      "ref_id": "quality-gate-agents"
+    },
+    {
+      "text": "Document system behavior and rationale so operators can make accountable decisions above individual code changes.",
+      "ref_type": "concept",
+      "ref_id": "decision-making-above-the-code-line"
+    }
+  ]
+}

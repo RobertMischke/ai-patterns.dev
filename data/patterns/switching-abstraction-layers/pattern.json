@@ -1,0 +1,21 @@
+{
+  "id": "switching-abstraction-layers",
+  "num": "P-43",
+  "category": "orch",
+  "layer": "operating",
+  "classify": "new",
+  "title": "Switching Abstraction Layers",
+  "one_liner": "Move from code and prompts to tasks, pipelines, reviews and capacity only when evidence makes the lower layer trustworthy enough to manage by signals.",
+  "problem": "Agent tooling can move a developer's bottleneck above the individual edit. Once several agents produce work, the scarce attention shifts toward task definition, pipeline flow, review quality, failures and capacity. Staying at the code and prompt layer then creates a cognitive-load trap: the operator manually follows every local action while queues, dependencies and system-wide quality go unmanaged. Moving up too early creates the opposite failure, blind flight. A dashboard, completion count or confident agent summary can hide misunderstood requirements, weak checks and correlated errors when the lower layer has not yet earned trust.",
+  "solution": "Treat abstraction level as a reversible operating choice, not a promotion away from code. Move up when the lower layer has explicit acceptance criteria, executable checks, platform-owned evidence, bounded authority and a sampled history showing that its signals predict acceptable outcomes. At the higher layer, manage task readiness, queue age, blocked work, pipeline health, review findings, rework and available agent and human capacity instead of shadowing every edit. Keep drill-down paths from each aggregate signal to the task, diff, tool trace and verdict that produced it. Define descent triggers before scaling: novel or high-impact work, missing or conflicting evidence, validator changes, unusual failure clusters and sampled audits return the operator to prompts, code and raw traces. Expand autonomy and concurrency only after those inspections restore confidence. Recalibrate continuously: if review escapes, reopenings or rework rise, narrow scope or descend a layer; if lower-layer outcomes remain stable while coordination delay dominates, move up again. Agent Studio practice provides the qualitative signal behind this pattern: agent tooling shifts operator attention from code and prompts toward tasks, pipelines, reviews and capacity. No measured effect size is claimed yet. Compose this pattern with agent-fencing so higher-level signals come from platform-owned evidence, with agent-pipelines so managed work has explicit stages, and with topic-switching so an operator changes both subject and abstraction level deliberately.",
+  "keywords": [
+    "abstraction layers",
+    "management layer",
+    "validated trust",
+    "agent operations",
+    "pipeline health",
+    "review capacity",
+    "cognitive load",
+    "drill-down"
+  ]
+}

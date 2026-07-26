@@ -5,6 +5,7 @@
   "patterns": [
     "wiki-as-cognitive-interface",
     "compute-invest-as-quality-signal",
-    "compute-as-oss-contribution"
+    "compute-as-oss-contribution",
+    "switching-abstraction-layers"
   ]
 }

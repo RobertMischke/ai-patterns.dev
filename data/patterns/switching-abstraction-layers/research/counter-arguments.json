@@ -1,0 +1,22 @@
+{
+  "stance": "mixed",
+  "summary": "A higher abstraction layer can multiply leverage, but it can also hide defects, create metric gaming and separate operators from the system they remain accountable for.",
+  "points": [
+    {
+      "text": "Small teams or one-off tasks may have no coordination bottleneck. Adding task states, dashboards and pipeline policy can cost more than working directly at the code layer.",
+      "severity": "note"
+    },
+    {
+      "text": "Observable proxies become targets. Agents and operators can optimize completion counts or queue age while quality, maintainability and user value decline; pair flow measures with independent outcome checks and sampled audits.",
+      "severity": "warning"
+    },
+    {
+      "text": "Validation errors can be correlated across agents because they share a model, prompt, fixture or review policy. More passing runs do not create independent evidence unless the checks exercise genuinely different failure modes.",
+      "severity": "warning"
+    },
+    {
+      "text": "Frequent movement between aggregate management and raw implementation has its own context-switching cost. Use explicit descent triggers and compact evidence bundles instead of continuously hovering between layers.",
+      "severity": "note"
+    }
+  ]
+}

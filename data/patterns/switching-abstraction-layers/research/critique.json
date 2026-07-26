@@ -1,0 +1,22 @@
+{
+  "stance": "mixed",
+  "summary": "First-hand Agent Studio experience supports the shift in operator attention, but the point at which a team should move up must be calibrated from its own delivery evidence.",
+  "points": [
+    {
+      "text": "Practice observation, Robert Mischke, 26 July 2026: with agent tooling, developer work moves from code and prompt handling toward management of tasks, pipelines, reviews and capacity. This is a qualitative operating observation; no measured productivity or quality effect is available.",
+      "severity": "note"
+    },
+    {
+      "text": "The layer switch is justified only when lower-layer evidence is predictive enough to support decisions. A green dashboard is not trust if acceptance checks are weak, provenance is missing or failures cannot be traced back to work artifacts.",
+      "severity": "warning"
+    },
+    {
+      "text": "The higher layer should reduce attention spent per routine delivery while improving control of flow. Track coordination delay, blocked work, review latency, reopenings, escaped findings and audit outcomes by task class rather than treating throughput alone as success.",
+      "severity": "info"
+    },
+    {
+      "text": "Operators must retain the skill and access to descend. Sampling code, prompts and traces is part of managing the system, especially after validator, model, provider or workload changes.",
+      "severity": "info"
+    }
+  ]
+}
