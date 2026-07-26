@@ -1,0 +1,30 @@
+{
+  "summary": "Tools differ mainly in source-of-truth placement. The pattern can export to any of them as long as the repository identifier and immutable content version survive the integration.",
+  "items": [
+    {
+      "text": "Prompty: closest file-first substrate; add stable cross-run identity and version aggregates to its local traces.",
+      "ref_type": "external",
+      "url": "https://prompty.ai/welcome/"
+    },
+    {
+      "text": "LangSmith: reuse prompt commits, tags and rich runs; keep a repository sync or mapping when code-coupled review is the governing workflow.",
+      "ref_type": "external",
+      "url": "https://docs.langchain.com/langsmith/manage-prompts"
+    },
+    {
+      "text": "PromptLayer: its explicit request-to-template-version association is directly transferable to the minimal call ledger.",
+      "ref_type": "external",
+      "url": "https://docs.promptlayer.com/features/prompt-history/tracking-templates"
+    },
+    {
+      "text": "Langfuse: versions, labels and prompt-to-trace links provide a ready observability projection, including a self-hosted option.",
+      "ref_type": "external",
+      "url": "https://langfuse.com/docs/prompt-management/features/link-to-traces"
+    },
+    {
+      "text": "Humanloop: version-control-friendly serialized prompt files plus version-linked logs demonstrate the same hybrid boundary.",
+      "ref_type": "external",
+      "url": "https://humanloop.com/docs/reference/serialized-files"
+    }
+  ]
+}

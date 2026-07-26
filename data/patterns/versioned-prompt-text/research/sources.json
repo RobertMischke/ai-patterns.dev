@@ -1,0 +1,50 @@
+{
+  "summary": "Primary vendor and project documentation supports each surveyed strand and the in-progress reference implementation.",
+  "items": [
+    {
+      "text": "Prompty file-first prompts-as-code and tracing",
+      "ref_type": "source",
+      "ref_id": "s35"
+    },
+    {
+      "text": "LangSmith prompt commits, Git sync and structured run records",
+      "ref_type": "source",
+      "ref_id": "s37"
+    },
+    {
+      "text": "PromptLayer version-linked request tracking",
+      "ref_type": "source",
+      "ref_id": "s39"
+    },
+    {
+      "text": "Langfuse prompt version control and trace linkage",
+      "ref_type": "source",
+      "ref_id": "s40"
+    },
+    {
+      "text": "Humanloop serialized files and version-linked logs",
+      "ref_type": "source",
+      "ref_id": "s42"
+    },
+    {
+      "text": "Semantic Kernel version-controlled YAML prompt templates",
+      "ref_type": "source",
+      "ref_id": "s44"
+    },
+    {
+      "text": "LangChain local prompt-file loading",
+      "ref_type": "source",
+      "ref_id": "s50"
+    },
+    {
+      "text": "OpenAI, Vertex AI and Amazon Bedrock prompt versioning",
+      "ref_type": "source",
+      "ref_id": "s45"
+    },
+    {
+      "text": "Agent Orchestrator prompt registry reference implementation, in progress",
+      "ref_type": "source",
+      "ref_id": "s49"
+    }
+  ]
+}

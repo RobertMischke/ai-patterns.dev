@@ -1,0 +1,10 @@
+{
+  "id": "s48",
+  "title": "Monitor model invocation using CloudWatch Logs and Amazon S3",
+  "author": "Amazon Web Services",
+  "kind": "doc",
+  "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-invocation-logging.html",
+  "patterns": [
+    "versioned-prompt-text"
+  ]
+}

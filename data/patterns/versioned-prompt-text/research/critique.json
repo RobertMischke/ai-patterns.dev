@@ -1,0 +1,26 @@
+{
+  "stance": "supports",
+  "summary": "The pattern docks onto four established strands. The transferable core is not a particular registry product: it is an immutable prompt identity joined to each execution, with the repository remaining authoritative when code and prompt must change together.",
+  "points": [
+    {
+      "text": "Git-based prompts as code. Microsoft Prompty defines a `.prompty` file as portable plain text containing model configuration, inputs, tools and Markdown instructions, and explicitly recommends versioning it in Git and testing it in CI. Its per-execution `.tracy` record captures timestamped load, render, parse and execute stages, timings, token counts and request/response payloads. Transferability verdict: strong fit for the knowledge-base method because the prompt remains a reviewable file; add a stable identifier and source-content hash to each trace so runs aggregate across paths and deployments.",
+      "severity": "info",
+      "source_id": "s35"
+    },
+    {
+      "text": "Hosted prompt registries and observability. LangSmith versions serialized prompt manifests as prompt commits and environment tags, while runs carry IDs, start/end times, inputs, outputs, errors, tokens, cost and metadata. PromptLayer versions templates behind release labels and explicitly associates request ID, prompt name, input variables and exact version or label, with usage, latency and cost. Langfuse assigns immutable version IDs plus movable labels and links the prompt object to generation traces for metrics per version. Humanloop supports version-control-friendly `.prompt` files and logs an exact version ID or environment with timestamps, outputs, errors, latency and provider payloads. Transferability verdict: these products prove that version-linked execution is the useful join. Reuse their trace/export integrations where valuable, but do not make a remote registry authoritative by default when the prompt must be reviewed and released with code.",
+      "severity": "info",
+      "source_id": "s39"
+    },
+    {
+      "text": "Agent-framework templates. Semantic Kernel can load prompt functions from version-controlled YAML containing the template, input metadata and execution settings; LangChain can load a prompt template from a local file. These frameworks version the serialized template only insofar as the repository versions the file, and invocation APIs do not by themselves establish a durable application-level content-version ledger. Transferability verdict: adopt the file formats and loaders, then wrap the single load/render boundary with the identifier, hash and call record required by this pattern.",
+      "severity": "note",
+      "source_id": "s44"
+    },
+    {
+      "text": "Platform-vendor prompt resources. OpenAI Playground publishes project-level Prompt IDs with version history, rollback and optional pinned versions; Vertex AI creates, lists, retrieves and restores prompt versions by prompt and version ID; Amazon Bedrock stores prompt variants and immutable versions that can be invoked by prompt ARN and version. Bedrock invocation logs separately record timestamp, request ID, model ID, caller metadata, request metadata, token counts and payloads. Transferability verdict: vendor IDs are useful deployment coordinates and should be captured as context, but a portable repository hash remains the cross-provider content identity and prevents the vendor registry from detaching prompt history from application history.",
+      "severity": "info",
+      "source_id": "s45"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "s45",
+  "title": "Prompt management in Playground",
+  "author": "OpenAI",
+  "kind": "doc",
+  "url": "https://help.openai.com/en/articles/9824968",
+  "patterns": [
+    "versioned-prompt-text"
+  ]
+}

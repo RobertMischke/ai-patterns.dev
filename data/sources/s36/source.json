@@ -1,0 +1,10 @@
+{
+  "id": "s36",
+  "title": "Prompty Tracing",
+  "author": "Microsoft Prompty",
+  "kind": "doc",
+  "url": "https://prompty.ai/vscode/tracing/",
+  "patterns": [
+    "versioned-prompt-text"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "versioned-prompt-text",
+  "num": "P-45",
+  "category": "prompt",
+  "layer": "infra",
+  "classify": "intensified",
+  "title": "Versioned Prompt Text",
+  "one_liner": "Keep prompts as plain files in the code repository, and link every model call to the exact prompt version that produced it.",
+  "problem": "Prompts steer production behavior but are often harder to inspect than the code around them. When instructions are buried in code strings, teams cannot inventory, review or compare them cleanly at scale. When prompts live only in a hosted registry, their history and release state can drift away from the code paths they control. Basic call counts are not enough either: without a prompt identifier and exact content version, telemetry cannot answer which variant ran, whether a change reached production or whether an apparently dead prompt is still reachable.",
+  "solution": "Use the code repository as the source of truth for prompt text. Store each prompt as a predictably named UTF-8 plain-text file, so ordinary pull requests provide readable diffs, blame, branches, review, rollback and release coupling. Route every prompt through one loader and renderer. On each model call, that path resolves a stable prompt identifier and a normalized content hash or immutable version, then records a small ledger event containing the identifier, version, UTC timestamp and privacy-safe execution context such as feature, environment, task or trace ID, provider and model. Project the ledger back onto the prompt view as calls per version plus first-used and last-used times. The key payoff is immediate and operational: \"Has my change run yet?\" A newly edited version with zero calls answers no; older versions that still receive calls expose rollout lag or unexpected consumers. Flag prompts with zero usage inside an explicit observation window as dead candidates, while distinguishing never deployed, conditionally reachable and telemetry-missing states. Put review state in a companion `<prompt>.meta.json` sidecar with the reviewed content fingerprint, reviewer, date, status and findings. Keep the hot path light: enqueue a bounded minimal event, batch durable writes and compute aggregates asynchronously; expose dropped telemetry, and reserve fail-closed recording for workloads with an audit requirement. Treat full inputs and outputs as separately governed traces rather than mandatory usage fields. This combines established prompts-as-code, prompt-registry and observability practices without requiring the registry to become a second source of truth.",
+  "keywords": [
+    "prompts as code",
+    "plain text prompts",
+    "git versioning",
+    "content hash",
+    "prompt identifier",
+    "call ledger",
+    "per-version usage",
+    "has my change run yet",
+    "prompt observability",
+    "review sidecar",
+    "dead prompts",
+    "single loader path"
+  ]
+}

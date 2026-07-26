@@ -1,0 +1,30 @@
+{
+  "summary": "The prompt file is the content artifact, its sidecar is the review artifact, and the usage projection is visible operational evidence at the same reading surface.",
+  "items": [
+    {
+      "text": "Use Sidecar Metadata for `<prompt>.meta.json`: bind review status and findings to the reviewed content fingerprint so a prompt edit visibly invalidates stale approval.",
+      "ref_type": "pattern",
+      "ref_id": "sidecar-metadata"
+    },
+    {
+      "text": "Use Compute Investment as a Quality Signal for the shared figure: invisible runtime work becomes legible when usage is rendered as metadata beside the artifact it qualifies.",
+      "ref_type": "pattern",
+      "ref_id": "compute-invest-as-quality-signal"
+    },
+    {
+      "text": "Use Wiki as Cognitive Interface to place source text, review state and runtime evidence at the prompt rather than scattering them across specialist consoles.",
+      "ref_type": "pattern",
+      "ref_id": "wiki-as-cognitive-interface"
+    },
+    {
+      "text": "Use Decision-making Above the Code Line to let operators judge rollout and reachability from system evidence, not from isolated code inspection.",
+      "ref_type": "concept",
+      "ref_id": "decision-making-above-the-code-line"
+    },
+    {
+      "text": "Agent Orchestrator (Agent Studio) reference implementation, in progress: `prompts/runtime/*.md` and `RuntimePromptService` establish the file registry and single loader; the target line adds a call ledger, per-content-version counts and review sidecars at that prompt surface.",
+      "ref_type": "external",
+      "url": "https://github.com/agent-orc/agent-studio/tree/develop/prompts/runtime"
+    }
+  ]
+}

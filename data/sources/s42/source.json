@@ -1,0 +1,10 @@
+{
+  "id": "s42",
+  "title": ".prompt and .agent Files",
+  "author": "Humanloop",
+  "kind": "doc",
+  "url": "https://humanloop.com/docs/reference/serialized-files",
+  "patterns": [
+    "versioned-prompt-text"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "stance": "mixed",
+  "summary": "The pattern is deliberately small, but four common substitutions break its main question or its operational safety.",
+  "points": [
+    {
+      "text": "Prompts hidden in code strings are technically covered by source control, but they are not independently inventoryable, reviewable or diffable at scale. Concatenation and control flow also obscure the actual text sent to the model. Use a build guard to reject substantial inline instruction blocks outside the loader.",
+      "severity": "warning"
+    },
+    {
+      "text": "An external prompt database can enable non-developer editing, traffic splitting and rapid promotion, but database-only prompts detach the behavior from the code path and release that consume it. If remote editing is required, synchronize an immutable manifest into the repository or record an explicit repository-to-registry mapping.",
+      "severity": "warning"
+    },
+    {
+      "text": "Tracking calls without linking them to the exact content version produces impressive totals that cannot answer which variant ran. A movable label such as `production` is context, not identity; resolve and record the immutable version or normalized content hash for every call.",
+      "severity": "warning"
+    },
+    {
+      "text": "Capturing rendered prompts, full context and responses synchronously can add latency, leak sensitive data and make the model hot path depend on the telemetry backend. Keep the required event minimal, redact or reference context, use bounded local buffering and asynchronous aggregation, and make telemetry loss visible.",
+      "severity": "warning"
+    },
+    {
+      "text": "Zero calls is evidence only inside a named time and deployment window. Rare recovery prompts, feature-gated prompts and newly released versions can be valid at zero. Mark them as dead candidates for review, not automatic deletion targets.",
+      "severity": "note"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "s39",
+  "title": "Tracking Templates",
+  "author": "PromptLayer",
+  "kind": "doc",
+  "url": "https://docs.promptlayer.com/features/prompt-history/tracking-templates",
+  "patterns": [
+    "versioned-prompt-text"
+  ]
+}

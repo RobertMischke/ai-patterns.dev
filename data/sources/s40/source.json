@@ -1,0 +1,10 @@
+{
+  "id": "s40",
+  "title": "Link Prompts to Traces",
+  "author": "Langfuse",
+  "kind": "doc",
+  "url": "https://langfuse.com/docs/prompt-management/features/link-to-traces",
+  "patterns": [
+    "versioned-prompt-text"
+  ]
+}

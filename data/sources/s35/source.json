@@ -1,0 +1,10 @@
+{
+  "id": "s35",
+  "title": "Welcome to Prompty",
+  "author": "Microsoft Prompty",
+  "kind": "doc",
+  "url": "https://prompty.ai/welcome/",
+  "patterns": [
+    "versioned-prompt-text"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "s50",
+  "title": "load_prompt",
+  "author": "LangChain",
+  "kind": "doc",
+  "url": "https://api.python.langchain.com/en/latest/core/prompts/langchain_core.prompts.loading.load_prompt.html",
+  "patterns": [
+    "versioned-prompt-text"
+  ]
+}

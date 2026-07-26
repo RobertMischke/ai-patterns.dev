@@ -6,6 +6,7 @@
     "wiki-as-cognitive-interface",
     "project-map",
     "compute-invest-as-quality-signal",
-    "on-the-fly-generated-uis"
+    "on-the-fly-generated-uis",
+    "versioned-prompt-text"
   ]
 }

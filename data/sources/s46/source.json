@@ -1,0 +1,10 @@
+{
+  "id": "s46",
+  "title": "List available prompt versions",
+  "author": "Google Cloud Vertex AI",
+  "kind": "doc",
+  "url": "https://cloud.google.com/vertex-ai/generative-ai/docs/samples/generativeaionvertexai-prompt-list-prompt-version",
+  "patterns": [
+    "versioned-prompt-text"
+  ]
+}

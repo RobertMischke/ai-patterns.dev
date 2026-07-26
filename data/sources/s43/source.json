@@ -1,0 +1,10 @@
+{
+  "id": "s43",
+  "title": "Log to a Prompt",
+  "author": "Humanloop",
+  "kind": "doc",
+  "url": "https://humanloop.com/docs/api/prompts/log",
+  "patterns": [
+    "versioned-prompt-text"
+  ]
+}

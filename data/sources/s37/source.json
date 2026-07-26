@@ -1,0 +1,10 @@
+{
+  "id": "s37",
+  "title": "Manage prompts",
+  "author": "LangChain",
+  "kind": "doc",
+  "url": "https://docs.langchain.com/langsmith/manage-prompts",
+  "patterns": [
+    "versioned-prompt-text"
+  ]
+}

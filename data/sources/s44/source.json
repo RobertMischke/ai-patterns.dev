@@ -1,0 +1,10 @@
+{
+  "id": "s44",
+  "title": "Using the Liquid prompt template language",
+  "author": "Microsoft Semantic Kernel",
+  "kind": "doc",
+  "url": "https://learn.microsoft.com/en-us/semantic-kernel/concepts/prompts/liquid-prompt-templates",
+  "patterns": [
+    "versioned-prompt-text"
+  ]
+}

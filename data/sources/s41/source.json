@@ -1,0 +1,10 @@
+{
+  "id": "s41",
+  "title": "Prompt Version Control",
+  "author": "Langfuse",
+  "kind": "doc",
+  "url": "https://langfuse.com/docs/prompt-management/features/prompt-version-control",
+  "patterns": [
+    "versioned-prompt-text"
+  ]
+}

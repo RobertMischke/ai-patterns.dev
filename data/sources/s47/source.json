@@ -1,0 +1,10 @@
+{
+  "id": "s47",
+  "title": "Construct and store reusable prompts with Prompt management in Amazon Bedrock",
+  "author": "Amazon Web Services",
+  "kind": "doc",
+  "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management.html",
+  "patterns": [
+    "versioned-prompt-text"
+  ]
+}
