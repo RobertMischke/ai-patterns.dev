@@ -1,0 +1,50 @@
+{
+  "summary": "Landscape survey: the pattern docks onto durable agent graphs, bounded multi-agent conversations, agentic BPM, interoperability protocols and classic workflow coordination. Each strand transfers a useful semantic fragment; none alone supplies the complete process-actor contract.",
+  "items": [
+    {
+      "text": "Agent workflow frameworks — LangGraph persistence. Transferability verdict: PARTIAL. Checkpoints, interruption, recovery and inspectable thread state transfer directly to process evidence and resumability; exclusive claims, fencing and domain-level outcome types still belong to the surrounding process runtime.",
+      "ref_type": "source",
+      "ref_id": "s26"
+    },
+    {
+      "text": "Multi-agent orchestration — AutoGen termination and hand-off conditions. Transferability verdict: PARTIAL-STRONG. Maximum messages, token use, timeouts, external stops and HandoffMessage provide useful loop budgets and control-yield primitives, but a conversation stop reason is not yet a typed business-process verdict.",
+      "ref_type": "source",
+      "ref_id": "s27"
+    },
+    {
+      "text": "Agentic process automation literature — Agentic BPM research manifesto. Transferability verdict: STRONG CONCEPTUAL. Its process-aware human/software actors and framed autonomy support bounded autonomous actors; the manifesto remains a research agenda, so leases, fencing, evidence schemas and operational escalation must be made concrete by the runtime.",
+      "ref_type": "source",
+      "ref_id": "s28"
+    },
+    {
+      "text": "Agent-to-agent interoperability — A2A task lifecycle. Transferability verdict: STRONG AT THE WIRE BOUNDARY. Stateful tasks, immutable terminal states, artifacts and separate input-required/completed/failed/rejected states are directly reusable for honest hand-offs; add blocked versus infra-failure and do not mistake a remote task ID for exclusive step ownership.",
+      "ref_type": "source",
+      "ref_id": "s29"
+    },
+    {
+      "text": "Agent/host separation — Agent Host Protocol. Transferability verdict: STRONG FOR AUTHORITY AND TRACE ORDERING. Host-owned sequencing, immutable derived state, reconciliation, protected-resource declarations and ping liveness fit the platform-owned control plane; AHP deliberately does not define the agent loop, work lease or process verdict taxonomy.",
+      "ref_type": "source",
+      "ref_id": "s30"
+    },
+    {
+      "text": "Classic BPM — BPMN 2.0.2. Transferability verdict: ADAPT, DO NOT COPY BLINDLY. Tasks, user/service actors, events, gateways, errors and compensation give a mature process vocabulary; model execution is probabilistic, so task completion must be evidence-gated and human tasks must receive a decision packet rather than merely a lane assignment.",
+      "ref_type": "source",
+      "ref_id": "s31"
+    },
+    {
+      "text": "Long-running transactions — Sagas. Transferability verdict: SELECTIVE BUT ESSENTIAL. Explicit compensating actions transfer to agent side effects that cannot be rolled back atomically; compensation is a domain action with its own evidence and possible failure, not a prompt asking the model to undo.",
+      "ref_type": "source",
+      "ref_id": "s32"
+    },
+    {
+      "text": "Durable workflow engines — Temporal task queues and Activity lifecycle. Transferability verdict: STRONG OPERATIONAL. Polling workers, task tokens, event history, heartbeat timeouts and retries are close precedents for claims, liveness and traceability; because an Activity may execute more than once, external effects still require idempotency or fencing.",
+      "ref_type": "source",
+      "ref_id": "s33"
+    },
+    {
+      "text": "Distributed coordination — etcd's lease-expiry and fencing-token example. Transferability verdict: DIRECT. A lease alone cannot stop a paused former owner; monotonically ordered tokens must reach the protected resource, which rejects stale writes. The same rule applies when the worker is an agent runner.",
+      "ref_type": "source",
+      "ref_id": "s34"
+    }
+  ]
+}

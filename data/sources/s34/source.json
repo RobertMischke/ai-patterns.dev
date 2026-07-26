@@ -1,0 +1,10 @@
+{
+  "id": "s34",
+  "title": "etcd Lease Expiry and Fencing Tokens Example",
+  "author": "etcd Authors",
+  "kind": "doc",
+  "url": "https://github.com/etcd-io/etcd/blob/main/contrib/lock/README.md",
+  "patterns": [
+    "process-actor"
+  ]
+}

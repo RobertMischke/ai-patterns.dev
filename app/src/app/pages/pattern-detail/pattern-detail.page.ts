@@ -5,7 +5,8 @@ import { Title, Meta } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
 import {
-  PATTERNS, PATTERN_BY_ID, CATEGORY_BY_ID, TOOLS, SOURCES, CONCEPTS,
+  PATTERNS, PATTERN_BY_ID, CATEGORY_BY_ID, CONCEPT_BY_ID, TOOL_BY_ID,
+  SOURCE_BY_ID, TOOLS, SOURCES, CONCEPTS,
   RADAR, radarRingOf, type Pattern, type RadarRingId,
 } from '../../../data';
 import { TechRadar } from '../../components/tech-radar/tech-radar';
@@ -125,5 +126,21 @@ export class PatternDetailPage {
     if ('points' in r) return r.summary.length > 0 || r.points.length > 0;
     if ('items'  in r) return r.summary.length > 0 || r.items.length > 0;
     return false;
+  }
+
+  protected referencedPattern(refId?: string) {
+    return refId ? PATTERN_BY_ID.get(refId) : undefined;
+  }
+
+  protected referencedConcept(refId?: string) {
+    return refId ? CONCEPT_BY_ID.get(refId) : undefined;
+  }
+
+  protected referencedTool(refId?: string) {
+    return refId ? TOOL_BY_ID.get(refId) : undefined;
+  }
+
+  protected referencedSource(refId?: string) {
+    return refId ? SOURCE_BY_ID.get(refId) : undefined;
   }
 }

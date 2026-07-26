@@ -1,0 +1,35 @@
+{
+  "summary": "The process actor is the execution contract that connects delegation, pipelines, review reaction, task intake and escalation.",
+  "items": [
+    {
+      "text": "Orchestrator / Subagent defines who delegates; Process Actor adds claim ownership, verdict and hand-off semantics to the delegated step.",
+      "ref_type": "pattern",
+      "ref_id": "orchestrator-subagent"
+    },
+    {
+      "text": "Council consumes typed findings and runs the accountable, budgeted reaction loop after a process-actor verdict.",
+      "ref_type": "pattern",
+      "ref_id": "council"
+    },
+    {
+      "text": "Agent Pipelines define the versioned chain of roles and gates in which process actors claim work.",
+      "ref_type": "pattern",
+      "ref_id": "agent-pipelines"
+    },
+    {
+      "text": "LLM-Mediated Task Creation turns human intent into the explicit objective and acceptance contract a process actor receives.",
+      "ref_type": "pattern",
+      "ref_id": "llm-mediated-task"
+    },
+    {
+      "text": "Decision-making above the code line depends on the complete process evidence emitted by every actor and hand-off.",
+      "ref_type": "concept",
+      "ref_id": "decision-making-above-the-code-line"
+    },
+    {
+      "text": "Escalation Cascade supplies bounded routing across accountable model and human actors when evidence says the current lane cannot finish safely.",
+      "ref_type": "pattern",
+      "ref_id": "escalation-cascade"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "stance": "supports",
+  "summary": "The design separates process truth from model narration: ownership, liveness, verdicts and evidence are enforced by the host even when the acting model is uncertain or unavailable.",
+  "points": [
+    {
+      "text": "Safety requires both halves of claiming: a renewable lease makes abandonment observable, while a fencing token checked at every protected side effect prevents a stale runner from acting after reassignment.",
+      "severity": "note",
+      "source_id": "s34"
+    },
+    {
+      "text": "The verdict taxonomy is intentionally process-facing. Blocked and needs-input preserve a valid task that cannot presently advance; infra-failure prevents broken credentials, runners or sensors from being mislabeled as product failure or success.",
+      "severity": "info",
+      "source_id": "s29"
+    },
+    {
+      "text": "Human participation is a normal actor transition. An escalation packet must name the decision, relevant evidence, attempted paths, remaining authority and the consequence of each option.",
+      "severity": "info",
+      "source_id": "s28"
+    },
+    {
+      "text": "A compact hand-off is not a lossy summary when durable process evidence remains addressable. It is a least-context view over an immutable path, tailored to the next actor's responsibility.",
+      "severity": "info",
+      "source_id": "s30"
+    }
+  ]
+}

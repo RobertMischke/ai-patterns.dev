@@ -1,0 +1,10 @@
+{
+  "id": "s29",
+  "title": "Agent2Agent Protocol: Life of a Task",
+  "author": "A2A Project",
+  "kind": "doc",
+  "url": "https://a2a-protocol.org/latest/topics/life-of-a-task/",
+  "patterns": [
+    "process-actor"
+  ]
+}

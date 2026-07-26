@@ -1,0 +1,10 @@
+{
+  "id": "s26",
+  "title": "LangGraph Persistence",
+  "author": "LangChain",
+  "kind": "doc",
+  "url": "https://docs.langchain.com/oss/python/langgraph/persistence",
+  "patterns": [
+    "process-actor"
+  ]
+}

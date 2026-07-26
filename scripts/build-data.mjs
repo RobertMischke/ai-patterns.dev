@@ -88,6 +88,8 @@ const radarMeta  = readJson(join(DATA, '_meta', 'radar.json'));
 const patternIds = new Set(patterns.map(p => p.id));
 const categoryIds = new Set(categories.map(c => c.id));
 const conceptIds = new Set(concepts.map(c => c.id));
+const toolIds = new Set(tools.map(t => t.id));
+const sourceIds = new Set(sources.map(s => s.id));
 const errors = [];
 
 for (const p of patterns) {
@@ -108,6 +110,40 @@ for (const t of tools) {
 for (const s of sources) {
   for (const ref of s.patterns) {
     if (!patternIds.has(ref)) errors.push(`source ${s.id} references missing pattern ${ref}`);
+  }
+}
+
+const researchTargets = {
+  pattern: patternIds,
+  concept: conceptIds,
+  tool: toolIds,
+  source: sourceIds,
+};
+for (const p of patterns) {
+  const researchDir = join(DATA, 'patterns', p.id, 'research');
+  for (const file of ['sources.json', 'extensions.json', 'tools.json']) {
+    const absPath = join(researchDir, file);
+    if (!existsSync(absPath)) continue;
+    const research = readJson(absPath);
+    for (const item of research.items ?? []) {
+      if (!item.ref_type || item.ref_type === 'external') continue;
+      const targets = researchTargets[item.ref_type];
+      if (!targets) {
+        errors.push(`pattern ${p.id} ${file} uses unknown ref_type ${item.ref_type}`);
+      } else if (!item.ref_id || !targets.has(item.ref_id)) {
+        errors.push(`pattern ${p.id} ${file} references missing ${item.ref_type} ${item.ref_id ?? '(empty)'}`);
+      }
+    }
+  }
+  for (const file of ['critique.json', 'counter-arguments.json']) {
+    const absPath = join(researchDir, file);
+    if (!existsSync(absPath)) continue;
+    const research = readJson(absPath);
+    for (const point of research.points ?? []) {
+      if (point.source_id && !sourceIds.has(point.source_id)) {
+        errors.push(`pattern ${p.id} ${file} references missing source ${point.source_id}`);
+      }
+    }
   }
 }
 if (errors.length) {

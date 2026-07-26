@@ -1,0 +1,10 @@
+{
+  "id": "s28",
+  "title": "Agentic Business Process Management: A Research Manifesto",
+  "author": "Diego Calvanese et al.",
+  "kind": "paper",
+  "url": "https://arxiv.org/abs/2603.18916",
+  "patterns": [
+    "process-actor"
+  ]
+}

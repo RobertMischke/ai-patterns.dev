@@ -1,0 +1,20 @@
+{
+  "id": "process-actor",
+  "num": "P-44",
+  "category": "orch",
+  "layer": "infra",
+  "classify": "new",
+  "title": "Agent as a Process Actor",
+  "one_liner": "Let agents own bounded process steps, never ambiguous process state.",
+  "problem": "An agent can look busy while the process has already lost control. A runner claims a step and disappears without a liveness signal; a stale runner resumes after reassignment; every exit is reported as \"done\"; a council loops until someone stops it; or a hand-off supplies neither evidence nor the context needed to continue. Human actors then become context-free exception handlers. These failures turn model autonomy into zombie claims, duplicate side effects, invisible hand-offs and untraceable process paths.",
+  "solution": "Make the model an actor inside a platform-owned state machine. Claim each step atomically with a runner identity, lease expiry and monotonically increasing fencing token; renew it with heartbeats, and let every protected write reject stale tokens so only the current owner can advance the step. Require one typed verdict: done (acceptance evidence passed), blocked (a task condition prevents progress), needs-input (a named actor must supply a named fact or decision), or infra-failure (execution machinery failed, not the product). Attach evidence, retryability and the next admissible transition. Bound autonomy with attempt, token and elapsed-time budgets; when a budget or authority boundary is reached, route to an accountable agent or human escalation lane. Record the input snapshot, authority grant, claims and renewals, tool effects, artifacts, verdicts, council reactions and hand-offs as process evidence. A hand-off carries only the next actor's relevant objective, accepted artifacts, open findings, prior attempts, authority and requested action; chat history is neither the contract nor the audit trail. The Agent Orchestrator pipeline is the reference implementation: leased runner claims, step verdicts with evidence, a budgeted council reaction loop, and escalation lanes that present human actors with the decision, context and consequences rather than an unexplained exception.",
+  "keywords": [
+    "process actor",
+    "lease",
+    "fencing token",
+    "typed verdict",
+    "handoff",
+    "process evidence",
+    "bounded autonomy"
+  ]
+}

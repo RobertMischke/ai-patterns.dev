@@ -1,0 +1,10 @@
+{
+  "id": "s30",
+  "title": "Agent Host Protocol Doctrine",
+  "author": "Microsoft",
+  "kind": "doc",
+  "url": "https://microsoft.github.io/agent-host-protocol/guide/doctrine.html",
+  "patterns": [
+    "process-actor"
+  ]
+}

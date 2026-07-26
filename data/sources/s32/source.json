@@ -1,0 +1,10 @@
+{
+  "id": "s32",
+  "title": "Sagas",
+  "author": "Hector Garcia-Molina and Kenneth Salem",
+  "kind": "paper",
+  "url": "https://www.cs.princeton.edu/research/techreps/598",
+  "patterns": [
+    "process-actor"
+  ]
+}

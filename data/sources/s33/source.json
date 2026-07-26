@@ -1,0 +1,10 @@
+{
+  "id": "s33",
+  "title": "Temporal API: Activity Tasks, Heartbeats and Workflow History",
+  "author": "Temporal Technologies",
+  "kind": "doc",
+  "url": "https://api-docs.temporal.io/",
+  "patterns": [
+    "process-actor"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "stance": "mixed",
+  "summary": "Process rigor controls autonomy but cannot make model behavior transactional; side effects, evidence quality and context selection remain application responsibilities.",
+  "points": [
+    {
+      "text": "A lease timeout does not stop a paused runner or retract an external API call. Propagate fencing tokens where the resource supports them; otherwise use idempotency keys, effect journals and explicit reconciliation before retry.",
+      "severity": "warning",
+      "source_id": "s34"
+    },
+    {
+      "text": "Over-modeling every conversational turn as a process step creates ceremony and brittle state machines. Use tracked tasks for durable, consequential or asynchronous work; leave trivial exchanges as messages.",
+      "severity": "note",
+      "source_id": "s29"
+    },
+    {
+      "text": "A typed verdict can still be false. Done must be derived from independent acceptance evidence, not selected solely because the model emitted the corresponding label.",
+      "severity": "warning"
+    },
+    {
+      "text": "Full traceability can conflict with privacy and least-context hand-offs. Store references, hashes and redacted evidence where possible; scope each actor's view and apply retention policy to the process trail.",
+      "severity": "warning"
+    },
+    {
+      "text": "Compensation is not rollback. A compensating action may be partial, externally visible or fail itself, so it needs a separately claimed step, typed verdict and escalation path.",
+      "severity": "note",
+      "source_id": "s32"
+    }
+  ]
+}
