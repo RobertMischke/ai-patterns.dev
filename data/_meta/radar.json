@@ -81,6 +81,7 @@
     "versioned-prompt-text": "adopt",
     "companion-app": "trial",
     "continuous-two-way-alignment": "trial",
-    "skip-the-pull-request": "assess"
+    "skip-the-pull-request": "assess",
+    "prompt-enrichment-preprocessing": "assess"
   }
 }

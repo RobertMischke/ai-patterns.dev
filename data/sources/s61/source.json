@@ -1,0 +1,10 @@
+{
+  "id": "s61",
+  "title": "Effective context engineering for AI agents",
+  "author": "Anthropic",
+  "kind": "post",
+  "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+  "patterns": [
+    "prompt-enrichment-preprocessing"
+  ]
+}

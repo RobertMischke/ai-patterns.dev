@@ -1,0 +1,21 @@
+{
+  "id": "prompt-enrichment-preprocessing",
+  "num": "P-48",
+  "category": "prompt",
+  "layer": "operating",
+  "classify": "new",
+  "title": "Prompt Enrichment Preprocessing",
+  "one_liner": "Before execution, classify a generic request and visibly attach only the house context needed for that kind of work.",
+  "problem": "A prompt can be clear in ordinary language and still be underspecified inside an organization. It does not name the local architecture, vocabulary, policies, prior decisions, source-of-truth documents or expected evidence that an experienced teammate would silently bring to the task. Sending it through unchanged makes the model rediscover house knowledge or guess, so cheap-looking prompts produce retries, corrections and inconsistent outcomes. Loading every available instruction and document avoids some misses but spends tokens on irrelevant material and can bury the request. The forces are token cost versus retry cost, broad recall versus a focused context window, automatic convenience versus operator control, and reusable organizational knowledge versus task-specific judgment. Invisible prompt rewriting adds a further trust problem: users cannot tell what the system actually asked the model to do.",
+  "solution": "Put a visible enrichment stage between task intake and model execution. First classify the request by work type, domain, repository area, risk and lifecycle stage. Use that classification to select small, curated, versioned context blocks such as terminology, architectural constraints, applicable decisions, policy rules, examples and completion criteria. Compose the execution prompt from the original request plus those blocks without paraphrasing or replacing the user's intent. Before execution, show an enrichment report that lists the classification, every injected block, its source and version, the token estimate, and any conflicts or missing context; let the operator inspect or remove blocks and preserve the report with the run. Set per-class token budgets and measure whether a block reduces retries or improves accepted outcomes, then prune blocks that are stale, redundant or weak. Prefer deterministic selection rules for stable house knowledge and retrieval only within an approved source set; do not let similarity search turn enrichment into an unaudited knowledge dump. The consequence is fewer avoidable retries, more consistent use of house knowledge and an auditable execution prompt, at the cost of preprocessing latency, ongoing block curation and extra interface detail. Bad classification can confidently attach the wrong context, while overgrown blocks recreate the noise this pattern is meant to remove, so the original request and enrichment report must remain available for diagnosis. The context blocks can be packaged and costed as delegation-economy units when that capability exists. This pattern composes with Task Intake Proxy for normalization, Structure Context for block design, Versioned Prompt Text for change history and Token Budget for enforcement.",
+  "keywords": [
+    "prompt preprocessing",
+    "prompt enrichment",
+    "context injection",
+    "context blocks",
+    "house knowledge",
+    "custom instructions",
+    "provenance",
+    "token economy"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "s62",
+  "title": "Adding repository custom instructions for GitHub Copilot in your IDE",
+  "author": "GitHub",
+  "kind": "doc",
+  "url": "https://docs.github.com/en/copilot/how-tos/configure-custom-instructions-in-your-ide/add-repository-instructions-in-your-ide",
+  "patterns": [
+    "prompt-enrichment-preprocessing"
+  ]
+}
