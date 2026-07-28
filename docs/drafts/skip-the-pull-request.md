@@ -110,3 +110,10 @@ audit trail stays — it just lives in the platform's task history instead of a 
 UI. What goes away is the assumption that a human reading a diff is the last honest
 line of defence. In an agent-first pipeline it was never the strongest one; it was
 only the most visible.
+
+---
+
+*Sources: DORA, [Streamlining change approval](https://dora.dev/capabilities/streamlining-change-approval/) ·
+Sadowski et al., [Modern Code Review: A Case Study at Google](https://research.google/pubs/modern-code-review-a-case-study-at-google/) (ICSE-SEIP 2018) ·
+DORA, [State of AI-assisted Software Development 2025](https://dora.dev/dora-report-2025/) ·
+NIST, [SSDF SP 800-218](https://csrc.nist.gov/pubs/sp/800/218/final), practice PW.7. Pattern record: `data/patterns/skip-the-pull-request/`.*
