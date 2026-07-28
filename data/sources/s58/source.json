@@ -1,0 +1,10 @@
+{
+  "id": "s58",
+  "title": "Streamlining change approval",
+  "author": "DORA",
+  "kind": "doc",
+  "url": "https://dora.dev/capabilities/streamlining-change-approval/",
+  "patterns": [
+    "skip-the-pull-request"
+  ]
+}

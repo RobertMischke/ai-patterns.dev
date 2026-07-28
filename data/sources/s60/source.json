@@ -1,0 +1,10 @@
+{
+  "id": "s60",
+  "title": "State of AI-assisted Software Development 2025",
+  "author": "DORA",
+  "kind": "doc",
+  "url": "https://dora.dev/dora-report-2025/",
+  "patterns": [
+    "skip-the-pull-request"
+  ]
+}

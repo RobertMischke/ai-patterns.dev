@@ -1,0 +1,10 @@
+{
+  "id": "s59",
+  "title": "Modern Code Review: A Case Study at Google (ICSE-SEIP 2018)",
+  "author": "Sadowski, Söderberg, Church, Sipko, Bacchelli",
+  "kind": "paper",
+  "url": "https://research.google/pubs/modern-code-review-a-case-study-at-google/",
+  "patterns": [
+    "skip-the-pull-request"
+  ]
+}
