@@ -80,6 +80,7 @@
     "process-actor": "assess",
     "versioned-prompt-text": "adopt",
     "companion-app": "trial",
-    "continuous-two-way-alignment": "trial"
+    "continuous-two-way-alignment": "trial",
+    "skip-the-pull-request": "assess"
   }
 }
