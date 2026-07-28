@@ -1,0 +1,29 @@
+{
+  "stance": "mixed",
+  "summary": "Delivery research has questioned the defect-catching value of formal change approval for years; agent pipelines make the cost side unbearable. The substitution only holds where the gates are real, and where the non-defect functions of review are re-homed.",
+  "points": [
+    {
+      "text": "First-hand case study, agent-first delivery system, July 2026: zero pull requests are opened. Every change branch must build and pass the suite against the current integration head before it may merge, and an envelope-based automated review returns a structured verdict per change; operators sight verdicts and intervene on contested ones. Qualitative single-organization evidence — no measured defect-escape or change-failure rate is available.",
+      "severity": "note"
+    },
+    {
+      "text": "DORA finds no evidence that a more formal, external review process is associated with lower change fail rates, and reports that heavyweight approval slows delivery into larger, riskier batches. That weakens the assumption that removing a human approval step must cost stability.",
+      "severity": "info",
+      "source_id": "s26"
+    },
+    {
+      "text": "The Google study of nine million reviewed changes describes modern code review as fast, lightweight and usually single-reviewer, with its dominant value in education, ownership and norm-keeping rather than in finding defects. Naming those functions is what makes the substitution honest: they must move somewhere, they do not disappear with the pull request.",
+      "severity": "info",
+      "source_id": "s27"
+    },
+    {
+      "text": "SSDF PW.7 treats human code review and tool-based code analysis as selectable and combinable controls, and PW.7.2 requires that discovered issues be recorded and triaged in the team's workflow. An automated path can satisfy the practice if its standard is documented and its findings are tracked — which is exactly what a structured verdict provides.",
+      "severity": "info",
+      "source_id": "s20"
+    },
+    {
+      "text": "The claim is scoped to the review gate, not to version control hygiene. Branch, merge and a durable trail all remain; what is removed is the human diff-reading step as the mandatory condition for integration.",
+      "severity": "info"
+    }
+  ]
+}

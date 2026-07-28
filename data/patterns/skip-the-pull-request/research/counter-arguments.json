@@ -1,0 +1,32 @@
+{
+  "stance": "mixed",
+  "summary": "Without a hard gate layer this pattern is simply merging unreviewed machine output, and the record, independence and social functions of the pull request all have to be rebuilt somewhere else.",
+  "points": [
+    {
+      "text": "No gate infrastructure, no pattern. DORA's 2025 work reports that AI adoption raises throughput while stability degrades where validation systems lag behind the speed of the automation. Removing the human gate before the machine gates are trustworthy converts a review bottleneck into a change-failure problem.",
+      "severity": "blocker",
+      "source_id": "s28"
+    },
+    {
+      "text": "Regulated environments may require a named human approver or documented four-eyes segregation of duties. Keep the pull request where an external rule demands it, and run the gates in front of it; the verdict chain then shortens the human step instead of replacing it.",
+      "severity": "warning"
+    },
+    {
+      "text": "Reviewer independence is not free. When the author agent, the review agent and the adversarial wave share a model family, prompt lineage, fixture or context bundle, their errors correlate and three green verdicts are close to one. Rotate models and prompts, keep deterministic checks that do not depend on a model at all, and keep a sampled human audit.",
+      "severity": "warning"
+    },
+    {
+      "text": "Code review at scale mostly transports knowledge, ownership and norms rather than defect finds. In an agent-first team those functions must be re-homed into specs, decision records and the wiki; if nothing takes them over, the codebase drifts architecturally and stylistically while every gate stays green.",
+      "severity": "warning",
+      "source_id": "s27"
+    },
+    {
+      "text": "Gates erode under delivery pressure. When a gate blocks, the cheapest local fix is to weaken the gate — lower the coverage floor, skip the flaky suite, downgrade a finding to advisory. Treat gate configuration and review standards as a protected, separately reviewed surface with their own change history.",
+      "severity": "warning"
+    },
+    {
+      "text": "Small teams with low change volume have no review bottleneck to solve. There, a fast human pull request is cheaper than building and maintaining gate, envelope and verdict infrastructure.",
+      "severity": "note"
+    }
+  ]
+}

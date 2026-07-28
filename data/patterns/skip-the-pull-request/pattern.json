@@ -1,0 +1,21 @@
+{
+  "id": "skip-the-pull-request",
+  "num": "P-44",
+  "category": "trust",
+  "layer": "operating",
+  "classify": "new",
+  "title": "Skip the Pull Request",
+  "one_liner": "In agent-first delivery, gates in front of the integration merge replace the human pull-request review — the operator reads verdicts, not diffs.",
+  "problem": "Pull-request review was designed for a scarcity that no longer holds: a human wrote the change slowly, and a second human reading it was the cheapest additional check available. Agent pipelines invert both halves. Change volume rises far past the rate at which anyone can read diffs, the author is a machine that can explain itself on demand, and the reviewer rarely carries the task context that made the change necessary. The queue becomes the bottleneck: batches grow, review degrades into rubber-stamped approval, and the pull request produces a compliance record rather than defect detection. Meanwhile the checks that actually discriminate — build, test suite, static analysis, security rules, spec conformance, architecture rules — are available before the merge and cost machine time instead of human attention. Keeping the pull request as the gate spends the scarcest resource on the weakest check, and frequently runs the strong checks after the merge, or not at all.",
+  "solution": "Move the accept-or-reject decision out of the pull request and in front of the integration merge, then give the human the verdict stream instead of the diff. Three layers carry the weight. First a deterministic gate: the change branch must build and pass the suite against the current integration head before a merge is attempted, and a red gate blocks integration without an argumentative override. Second an automated review over a change envelope rather than a bare diff — task intent, acceptance criteria, diff, test results and captured evidence go to a named review agent that returns a structured verdict of pass, fail or advisory with findings, severity and evidence pointers. Third an adversarial wave above a risk threshold: a second reviewer, differently prompted and preferably a different model, is asked to argue against the change instead of confirming it. Merge becomes a machine decision against written criteria; humans sight verdicts, spot-check a sample and open a diff only when a verdict is contested, unclear or the blast radius is large. Everything the pull request provided besides review has to be re-homed explicitly: the durable record of who changed what, why and under whose authority moves into platform-owned task history; knowledge transfer and norm-keeping move into specs, decision records and the project wiki; segregation of duties is demonstrated by the verdict and evidence chain rather than by an approval click. Post-integration sweeps catch what per-change checks structurally cannot see. Adopt this only where those layers exist and are protected — gate configuration is a reviewed surface, not a knob the delivering agent may turn. Where an external rule demands a named human approver, or where the gates are still missing, keep the pull request and run the gates in front of it; the pattern then degrades gracefully into a far cheaper human review of an already-verified change. First-hand case study: an agent-first delivery system (Agent Studio) runs zero pull requests, with a build-and-test gate ahead of every integration merge and an envelope-based automated review per change. That is a qualitative single-organization signal; no defect-escape rate is claimed.",
+  "keywords": [
+    "pull request",
+    "code review",
+    "integration gate",
+    "auto-review",
+    "merge policy",
+    "trunk-based development",
+    "segregation of duties",
+    "review verdict"
+  ]
+}

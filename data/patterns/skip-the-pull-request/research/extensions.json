@@ -1,0 +1,40 @@
+{
+  "summary": "The pattern is an assembly: it only works when the deterministic layer, the verdict layer, the durable record and the post-integration sweep are all present.",
+  "items": [
+    {
+      "text": "Run the review itself as named gates with documented standards and structured pass, fail or advisory verdicts — the artifact the human actually reads instead of the diff.",
+      "ref_type": "pattern",
+      "ref_id": "quality-gate-agents"
+    },
+    {
+      "text": "Anchor the deterministic layer: build, tests and checks that fail without a model in the loop and therefore cannot be argued with.",
+      "ref_type": "pattern",
+      "ref_id": "executable-safety-net"
+    },
+    {
+      "text": "Model the delivery path as explicit stages with pass criteria so that 'before the integration merge' is a real, versioned position rather than a habit.",
+      "ref_type": "pattern",
+      "ref_id": "agent-pipelines"
+    },
+    {
+      "text": "Re-home the audit trail the pull request used to carry: platform-owned task history, authority grants and evidence that the delivering agent cannot rewrite.",
+      "ref_type": "pattern",
+      "ref_id": "agent-fencing"
+    },
+    {
+      "text": "Give the verdict a stable shape — findings, severity, evidence pointers, follow-up tasks — so operators can triage a stream of them.",
+      "ref_type": "pattern",
+      "ref_id": "review-result"
+    },
+    {
+      "text": "Cover what per-change gates structurally cannot see with periodic sweeps across the integrated codebase.",
+      "ref_type": "pattern",
+      "ref_id": "scheduled-quality-sweeps"
+    },
+    {
+      "text": "Keep human attention on results rather than on the working phase: the operator inspects the outcome, not the agent at work.",
+      "ref_type": "pattern",
+      "ref_id": "fire-track-review"
+    }
+  ]
+}
