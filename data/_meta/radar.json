@@ -16,13 +16,13 @@
       "id": "assess",
       "label": "Assess",
       "color": "#5fa3a0",
-      "hint": "Promising — track and experiment, don't bet on it yet."
+      "hint": "Might work for you — not for everyone."
     },
     {
       "id": "hold",
-      "label": "Hold",
+      "label": "Anti-Pattern",
       "color": "#8a8a8a",
-      "hint": "Approach with caution or avoid. Anti-patterns live here."
+      "hint": "Don't do this — the anti-patterns to avoid."
     }
   ],
   "sector_short": {
