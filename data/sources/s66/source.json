@@ -1,0 +1,10 @@
+{
+  "id": "s66",
+  "title": "Claude Code Workflows",
+  "author": "Anthropic",
+  "kind": "doc",
+  "url": "https://code.claude.com/docs/en/workflows",
+  "patterns": [
+    "workflow-sized-tasks"
+  ]
+}

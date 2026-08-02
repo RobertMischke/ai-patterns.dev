@@ -13,6 +13,7 @@
     "escalation-cascade",
     "companion-model",
     "compute-invest-as-quality-signal",
-    "skip-the-pull-request"
+    "skip-the-pull-request",
+    "workflow-sized-tasks"
   ]
 }

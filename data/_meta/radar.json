@@ -82,6 +82,7 @@
     "companion-app": "trial",
     "continuous-two-way-alignment": "trial",
     "skip-the-pull-request": "assess",
+    "workflow-sized-tasks": "assess",
     "prompt-enrichment-preprocessing": "assess"
   }
 }

@@ -1,0 +1,20 @@
+{
+  "summary": "Workflow-sized tasks depend on trustworthy gates and regression checks, and they complement delivery policies that replace manual diff review with structured evidence.",
+  "items": [
+    {
+      "text": "Use validated system signals to judge the combined result; a large workflow without trustworthy evidence only enlarges the opaque change surface.",
+      "ref_type": "concept",
+      "ref_id": "validated-trust"
+    },
+    {
+      "text": "Require one end-to-end gate that protects previously passing behavior across all slices before treating them as a single workflow-sized delivery.",
+      "ref_type": "concept",
+      "ref_id": "regression-safety"
+    },
+    {
+      "text": "If pull-request diff reading is removed, keep the workflow's combined change reviewable through deterministic gates, structured verdicts and per-slice evidence.",
+      "ref_type": "pattern",
+      "ref_id": "skip-the-pull-request"
+    }
+  ]
+}

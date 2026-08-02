@@ -10,6 +10,7 @@
     "plan-mode",
     "orchestrator-subagent",
     "verbose-intent",
-    "context-compaction"
+    "context-compaction",
+    "workflow-sized-tasks"
   ]
 }

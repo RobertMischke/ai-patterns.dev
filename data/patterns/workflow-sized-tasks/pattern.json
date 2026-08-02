@@ -1,0 +1,22 @@
+{
+  "id": "workflow-sized-tasks",
+  "num": "P-49",
+  "category": "orch",
+  "layer": "operating",
+  "classify": "new",
+  "title": "Workflow-Sized Tasks",
+  "one_liner": "Keep dependency-linked cards as the default; use one workflow-sized task only when independent slices, a qualified orchestration runtime and one end-to-end gate make the larger failure and review surface worthwhile.",
+  "problem": "A large body of agent work can be represented as one card whose runtime delegates dynamically, or as several smaller cards linked by explicit dependencies. One large card removes repeated claims, worktree setup, reviews, gates and merges, and can keep intermediate results inside a workflow. But it also combines review scope, attribution and retry blast radius: one failed integration gate can reopen every slice, concurrent writers can collide, and the operator loses decision points between phases. Small cards preserve durable hand-offs, precise acceptance contracts and failure isolation, but repeat context and pipeline mechanics. Token economics do not decide the cut by themselves. In the measured Agent Studio corpus, coding runs accounted for 98.1% of recorded tokens and review aspects about 1.9%, while deterministic gates used no model tokens. A larger card therefore saves tokens only if it avoids repeated coding context and retries by more than it spends on workflow planning, worker fan-out, duplicated context and synthesis.",
+  "solution": "Default to small, coherent cards joined by dependsOn, each owning an independently testable outcome. Promote work to one workflow-sized card only when the run has a qualified scripted-workflow capability, at least three genuinely independent and mostly path-disjoint slices, no operator decision between slices, a combined diff that remains reviewable, and one deterministic end-to-end gate that can validate the whole result. Treat provider capability as a hard routing constraint: Claude Code workflows can own loops, branches, intermediate values and subagent fan-out, but a headless claude -p route must use a tested activation path and allowlist because workflow children run in acceptEdits mode and inherit allowed tools rather than unrestricted parent permissions. Codex provides native subagents and Ultra delegation, including per-agent model configuration, but the supplied evidence does not establish a codex exec lifecycle contract for spawning, permissions, attribution and terminal results; until that integration is smoke-tested, cut orchestrated Codex work into dependency-linked cards. Separate orchestration capability from worker model choice and pin cheaper models only for bounded, low-risk supporting work. Record requested cutting mode, actual provider and CLI, activation path, agent count, worker models, per-agent tokens, outer attempts and fallback reason. Prefer hybrids when uncertain: use a workflow to produce the cut, run disjoint leaf cards in parallel with an explicit integration card, or keep one writing owner while cheaper agents perform read-only discovery, testing and review.",
+  "keywords": [
+    "task cutting",
+    "workflow orchestration",
+    "dependency-linked cards",
+    "dependsOn",
+    "subagents",
+    "failure isolation",
+    "review granularity",
+    "token economy",
+    "headless execution"
+  ]
+}

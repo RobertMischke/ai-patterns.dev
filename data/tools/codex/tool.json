@@ -9,6 +9,7 @@
   "patterns": [
     "sandbox",
     "yolo-rails",
-    "plan-mode"
+    "plan-mode",
+    "workflow-sized-tasks"
   ]
 }

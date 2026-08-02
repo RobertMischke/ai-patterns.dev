@@ -1,0 +1,15 @@
+{
+  "summary": "The task cut is a policy decision; current tool capabilities differ enough that routing must enforce the chosen cut.",
+  "items": [
+    {
+      "text": "Claude Code supplies scripted workflows plus ordinary subagents; workflow-sized cards require a qualified headless activation and allowlist.",
+      "ref_type": "tool",
+      "ref_id": "claude-code"
+    },
+    {
+      "text": "Codex supplies native subagents and per-agent model configuration, but this pattern keeps non-interactive orchestration on small dependency-linked cards until the runner contract is verified.",
+      "ref_type": "tool",
+      "ref_id": "codex"
+    }
+  ]
+}

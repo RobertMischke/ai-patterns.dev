@@ -1,0 +1,10 @@
+{
+  "id": "s67",
+  "title": "Claude Code Subagents",
+  "author": "Anthropic",
+  "kind": "doc",
+  "url": "https://code.claude.com/docs/en/sub-agents",
+  "patterns": [
+    "workflow-sized-tasks"
+  ]
+}

@@ -35,6 +35,11 @@
       "text": "Keep human attention on results rather than on the working phase: the operator inspects the outcome, not the agent at work.",
       "ref_type": "pattern",
       "ref_id": "fire-track-review"
+    },
+    {
+      "text": "When several independent slices are delivered as one workflow-sized task, preserve per-slice evidence and one end-to-end gate so skipping manual diff review does not hide a combined failure surface.",
+      "ref_type": "pattern",
+      "ref_id": "workflow-sized-tasks"
     }
   ]
 }

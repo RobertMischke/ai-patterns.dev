@@ -1,0 +1,40 @@
+{
+  "summary": "The accepted TE-23 analysis is the factual core; its measured Agent Studio evidence and vendor documentation establish the economic and capability boundaries.",
+  "items": [
+    {
+      "text": "TE-23 — Dynamic Workflows as a Task-Cutting Strategy: accepted cost model, decision rubric, capability matrix and limitations.",
+      "ref_type": "source",
+      "ref_id": "s63"
+    },
+    {
+      "text": "Agent Studio pipeline-time-economy brief: corpus scope and aggregate coding/review token shares.",
+      "ref_type": "source",
+      "ref_id": "s64"
+    },
+    {
+      "text": "Agent Studio pipeline-time-economy analysis: per-step compute, deterministic gate repetition and retry amplification.",
+      "ref_type": "source",
+      "ref_id": "s65"
+    },
+    {
+      "text": "Claude Code workflow documentation: scripted runtime, headless behavior, cost guidance and workflow approvals.",
+      "ref_type": "source",
+      "ref_id": "s66"
+    },
+    {
+      "text": "Claude Code subagent documentation: subagent configuration and permission modes.",
+      "ref_type": "source",
+      "ref_id": "s67"
+    },
+    {
+      "text": "Codex subagent documentation: parallel delegation, custom agent models and non-interactive approval boundary.",
+      "ref_type": "source",
+      "ref_id": "s68"
+    },
+    {
+      "text": "Codex non-interactive mode reference: codex exec sandboxing and event output, without a verified subagent lifecycle contract in the supplied analysis.",
+      "ref_type": "source",
+      "ref_id": "s69"
+    }
+  ]
+}

@@ -5,6 +5,7 @@
   "patterns": [
     "trust-layer",
     "review-result",
-    "skip-the-pull-request"
+    "skip-the-pull-request",
+    "workflow-sized-tasks"
   ]
 }

@@ -1,0 +1,10 @@
+{
+  "id": "s65",
+  "title": "Pipeline Time Economy — Analysis",
+  "author": "Agent Studio",
+  "kind": "other",
+  "url": "https://github.com/agent-orc/agent-studio/blob/2e5b52cf06eb11db7ef053a5ddc45d0a26414dfa/docs/quality/pipeline-time-economy/index.html",
+  "patterns": [
+    "workflow-sized-tasks"
+  ]
+}
