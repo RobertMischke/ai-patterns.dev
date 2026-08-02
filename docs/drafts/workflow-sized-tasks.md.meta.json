@@ -1,0 +1,10 @@
+{
+  "relatedTasks": [
+    {
+      "key": "AIP-16",
+      "title": "Pattern candidate: workflow-sized tasks (one big orchestrated task vs many small cards)",
+      "linkedAt": "2026-08-02T15:14:39.4601667Z",
+      "source": "auto"
+    }
+  ]
+}
