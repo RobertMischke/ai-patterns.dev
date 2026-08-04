@@ -22,7 +22,7 @@
       "ref_id": "decision-making-above-the-code-line"
     },
     {
-      "text": "Agent Orchestrator (Agent Studio) reference implementation, in progress: `prompts/runtime/*.md` and `RuntimePromptService` establish the file registry and single loader; the target line adds a call ledger, per-content-version counts and review sidecars at that prompt surface.",
+      "text": "Agent Studio reference implementation, in progress: `prompts/runtime/*.md` and `RuntimePromptService` establish the file registry and single loader; the target line adds a call ledger, per-content-version counts and review sidecars at that prompt surface.",
       "ref_type": "external",
       "url": "https://github.com/agent-orc/agent-studio/tree/develop/prompts/runtime"
     }

@@ -1,6 +1,6 @@
 {
   "id": "s49",
-  "title": "Agent Orchestrator runtime prompt registry, reference implementation in progress",
+  "title": "Agent Studio runtime prompt registry, reference implementation in progress",
   "author": "Agent Studio",
   "kind": "other",
   "url": "https://github.com/agent-orc/agent-studio/tree/develop/prompts/runtime",

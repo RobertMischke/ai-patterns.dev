@@ -1,4 +1,4 @@
 {
-  "summary": "Reference implementation: the Agent Orchestrator pipeline uses leased runner claims; typed pipeline-step verdicts with evidence; a council reaction loop capped by a round budget; and escalation lanes as a context-bearing human-actor interface.",
+  "summary": "Reference implementation: the Agent Studio pipeline uses leased Runner claims; typed pipeline-step verdicts with evidence; a council reaction loop capped by a round budget; and escalation lanes as a context-bearing human-actor interface.",
   "items": []
 }
