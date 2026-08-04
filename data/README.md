@@ -43,12 +43,10 @@ data/
 - **Schemas** under `data/schemas/` are authoritative — `scripts/validate.mjs`
   (TODO) will fail the build on any drift.
 
-## Regenerating from the React prototype
+## Regenerating from the React prototype (obsolete)
 
-```
-node scripts/extract.mjs
-```
-
-Destructive: wipes `data/patterns/`, `categories/`, `concepts/`, `tools/`,
-`sources/` and rewrites them from `_unpacked/src/*.jsx`. Once the prototype
-is gone, this script is replaced by `scripts/validate.mjs` only.
+> **Do not run this.** `scripts/extract.mjs` rebuilt the content database from
+> the React prototype under `_unpacked/`. That prototype is gone, so the script
+> would wipe `data/patterns/`, `categories/`, `concepts/`, `tools/` and
+> `sources/` and rewrite them from nothing. The JSON under `data/` is now the
+> source of truth and is edited directly.
