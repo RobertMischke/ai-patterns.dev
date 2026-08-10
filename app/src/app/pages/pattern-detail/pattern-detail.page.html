@@ -65,13 +65,13 @@
             <div class="callout">&ldquo;{{ p.one_liner }}&rdquo;</div>
           </div>
 
-          @if (hasContent(research?.sources)) {
+          @if (hasContent(research()?.sources)) {
             <div class="section" id="survey">
               <h2>Landscape survey</h2>
-              @if (research?.sources?.summary) { <p>{{ research?.sources?.summary }}</p> }
-              @if (research?.sources?.items?.length) {
+              @if (research()?.sources?.summary) { <p>{{ research()?.sources?.summary }}</p> }
+              @if (research()?.sources?.items?.length) {
                 <ul>
-                  @for (it of research!.sources!.items; track it.text) {
+                  @for (it of research()!.sources!.items; track it.text) {
                     <li>
                       {{ it.text }}
                       @if (referencedSource(it.ref_id); as source) {
@@ -88,12 +88,12 @@
 
           <div class="section" id="critique">
             <h2>Critical questioning</h2>
-            @if (hasContent(research?.critique)) {
-              <p class="kicker" style="margin: 0 0 8px;">Stance: <strong style="color: var(--ink); margin-left: 4px;">{{ research?.critique?.stance }}</strong></p>
-              @if (research?.critique?.summary) { <p>{{ research?.critique?.summary }}</p> }
-              @if (research?.critique?.points?.length) {
+            @if (hasContent(research()?.critique)) {
+              <p class="kicker" style="margin: 0 0 8px;">Stance: <strong style="color: var(--ink); margin-left: 4px;">{{ research()?.critique?.stance }}</strong></p>
+              @if (research()?.critique?.summary) { <p>{{ research()?.critique?.summary }}</p> }
+              @if (research()?.critique?.points?.length) {
                 <ul>
-                  @for (pt of research!.critique!.points; track pt.text) { <li>{{ pt.text }}</li> }
+                  @for (pt of research()!.critique!.points; track pt.text) { <li>{{ pt.text }}</li> }
                 </ul>
               }
             } @else {
@@ -103,11 +103,11 @@
 
           <div class="section" id="counter">
             <h2>Counter-arguments</h2>
-            @if (hasContent(research?.counterArguments)) {
-              @if (research?.counterArguments?.summary) { <p>{{ research?.counterArguments?.summary }}</p> }
-              @if (research?.counterArguments?.points?.length) {
+            @if (hasContent(research()?.counterArguments)) {
+              @if (research()?.counterArguments?.summary) { <p>{{ research()?.counterArguments?.summary }}</p> }
+              @if (research()?.counterArguments?.points?.length) {
                 <ul>
-                  @for (pt of research!.counterArguments!.points; track pt.text) { <li>{{ pt.text }}</li> }
+                  @for (pt of research()!.counterArguments!.points; track pt.text) { <li>{{ pt.text }}</li> }
                 </ul>
               }
             } @else {
@@ -117,11 +117,11 @@
 
           <div class="section" id="extensions">
             <h2>Extensions</h2>
-            @if (hasContent(research?.extensions)) {
-              @if (research?.extensions?.summary) { <p>{{ research?.extensions?.summary }}</p> }
-              @if (research?.extensions?.items?.length) {
+            @if (hasContent(research()?.extensions)) {
+              @if (research()?.extensions?.summary) { <p>{{ research()?.extensions?.summary }}</p> }
+              @if (research()?.extensions?.items?.length) {
                 <ul>
-                  @for (it of research!.extensions!.items; track it.text) {
+                  @for (it of research()!.extensions!.items; track it.text) {
                     <li>
                       {{ it.text }}
                       @if (referencedPattern(it.ref_id); as relatedPattern) {
@@ -144,13 +144,13 @@
             }
           </div>
 
-          @if (hasContent(research?.tools)) {
+          @if (hasContent(research()?.tools)) {
             <div class="section" id="implementation">
               <h2>Reference implementation</h2>
-              @if (research?.tools?.summary) { <p>{{ research?.tools?.summary }}</p> }
-              @if (research?.tools?.items?.length) {
+              @if (research()?.tools?.summary) { <p>{{ research()?.tools?.summary }}</p> }
+              @if (research()?.tools?.items?.length) {
                 <ul>
-                  @for (it of research!.tools!.items; track it.text) { <li>{{ it.text }}</li> }
+                  @for (it of research()!.tools!.items; track it.text) { <li>{{ it.text }}</li> }
                 </ul>
               }
             </div>
@@ -216,11 +216,11 @@
           <ol>
             <li><a href="#problem">The problem</a></li>
             <li><a href="#solution">The solution</a></li>
-            @if (hasContent(research?.sources)) { <li><a href="#survey">Landscape survey</a></li> }
+            @if (hasContent(research()?.sources)) { <li><a href="#survey">Landscape survey</a></li> }
             <li><a href="#critique">Critical questioning</a></li>
             <li><a href="#counter">Counter-arguments</a></li>
             <li><a href="#extensions">Extensions</a></li>
-            @if (hasContent(research?.tools)) { <li><a href="#implementation">Reference implementation</a></li> }
+            @if (hasContent(research()?.tools)) { <li><a href="#implementation">Reference implementation</a></li> }
             @if (relatedTools().length)   { <li><a href="#tools">Tools</a></li> }
             @if (relatedSources().length) { <li><a href="#sources">Sources</a></li> }
             @if (relatedConcepts().length){ <li><a href="#concepts">Concepts</a></li> }

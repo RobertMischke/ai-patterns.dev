@@ -1,0 +1,24 @@
+{
+  "summary": "The pattern becomes more useful when memory maintenance is treated as ordinary repository maintenance rather than a separate knowledge-management programme.",
+  "items": [
+    {
+      "text": "Validate index targets, duplicate identifiers, broken links and supersession cycles in continuous integration."
+    },
+    {
+      "text": "Display recalled file paths and revisions alongside agent output so an operator can inspect the effective context."
+    },
+    {
+      "text": "Assign review intervals by consequence: command syntax and operational policy expire faster than historical rationale."
+    },
+    {
+      "text": "Connect durable memory to the existing pattern for searchable decisions rather than creating a parallel decision archive.",
+      "ref_type": "pattern",
+      "ref_id": "decision-memory"
+    },
+    {
+      "text": "Load memory through small, explicit context entry points instead of injecting the whole folder into every run.",
+      "ref_type": "pattern",
+      "ref_id": "context-entry-points"
+    }
+  ]
+}

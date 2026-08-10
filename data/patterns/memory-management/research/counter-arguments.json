@@ -1,0 +1,21 @@
+{
+  "stance": "mixed",
+  "summary": "A folder is a default, not a universal database. The burden of proof sits with the additional store because every second persistence mechanism creates another place where visibility, structure and currency can diverge.",
+  "points": [
+    {
+      "text": "A database is appropriate for high-volume event streams, transactional coordination or queries that cannot be served from a small index. Keep the durable human-agent contract in files and derive the database representation where possible.",
+      "severity": "note"
+    },
+    {
+      "text": "A vector index can help semantic retrieval across a corpus too large for direct navigation. Treat it as a rebuildable access layer: returned passages still need stable source paths and revisions so a human can inspect them.",
+      "severity": "note"
+    },
+    {
+      "text": "A secrets manager or access-controlled service is necessary when Git cannot meet confidentiality, retention or deletion requirements. Store only a pointer and non-sensitive provenance in the memory folder.",
+      "severity": "note"
+    },
+    {
+      "text": "Session scratch state does not need durable review history. Keep it ephemeral and promote only facts that should affect future work."
+    }
+  ]
+}

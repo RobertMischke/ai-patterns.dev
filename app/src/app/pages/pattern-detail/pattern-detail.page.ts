@@ -1,4 +1,5 @@
-import { Component, computed, inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, computed, inject, PLATFORM_ID, signal } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { Title, Meta } from '@angular/platform-browser';
@@ -54,6 +55,7 @@ export class PatternDetailPage {
   private readonly http  = inject(HttpClient);
   private readonly title = inject(Title);
   private readonly meta  = inject(Meta);
+  private readonly platformId = inject(PLATFORM_ID);
 
   private readonly id = toSignal(this.route.paramMap, { requireSync: true });
 
@@ -91,7 +93,7 @@ export class PatternDetailPage {
     return { prev, next };
   });
 
-  protected research: ResearchBundle | null = null;
+  protected readonly research = signal<ResearchBundle | null>(null);
 
   async ngOnInit() {
     const p = this.pattern();
@@ -102,6 +104,8 @@ export class PatternDetailPage {
     this.meta.updateTag({ property: 'og:title', content: p.title });
     this.meta.updateTag({ property: 'og:description', content: p.one_liner });
 
+    if (!isPlatformBrowser(this.platformId)) return;
+
     const base = `/data/patterns/${p.id}/research`;
     const [critique, counterArguments, tools, extensions, sources] = await Promise.all([
       this.loadJson<ResearchOpinion>(`${base}/critique.json`),
@@ -110,7 +114,7 @@ export class PatternDetailPage {
       this.loadJson<ResearchList>(`${base}/extensions.json`),
       this.loadJson<ResearchList>(`${base}/sources.json`),
     ]);
-    this.research = { critique, counterArguments, tools, extensions, sources };
+    this.research.set({ critique, counterArguments, tools, extensions, sources });
   }
 
   private async loadJson<T>(url: string): Promise<T | undefined> {

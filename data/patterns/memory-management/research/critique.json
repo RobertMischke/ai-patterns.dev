@@ -1,0 +1,18 @@
+{
+  "stance": "supports",
+  "summary": "The evidence supports Git-backed folders as the default storage mechanism, but storage does not settle the three management problems. Each needs its own practice and still has an unresolved boundary.",
+  "points": [
+    {
+      "text": "Visibility emerges because retrieval can influence an action without entering the human-visible transcript. Show the memory path, excerpt, revision and reason for each recall, and provide a browsable view of the current index. What remains open is how much recall evidence to show before inspection itself becomes noise or exposes sensitive context.",
+      "severity": "warning"
+    },
+    {
+      "text": "Organizedness degrades because every new fact, link and exception increases navigation cost, even when each file is well formed. Keep one durable assertion per file, use stable names and typed links, and validate that indexed targets and backlinks exist. What remains open is when to split, merge or reclassify memories without breaking references or teaching the agent a second taxonomy.",
+      "severity": "warning"
+    },
+    {
+      "text": "Currency becomes difficult because a once-correct instruction remains readable and plausible after the surrounding system changes. Attach provenance and review dates, link corrections with explicit supersedes relationships, and test high-impact instructions against the current interface. What remains open is reliable staleness detection for facts whose invalidating change happens outside the repository.",
+      "severity": "blocker"
+    }
+  ]
+}

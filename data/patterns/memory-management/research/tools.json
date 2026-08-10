@@ -1,0 +1,17 @@
+{
+  "summary": "A minimal implementation needs repository primitives before it needs a memory service.",
+  "items": [
+    {
+      "text": "Use memory/index.md as the human-readable entry point and keep each durable assertion in memory/facts/<stable-id>.md."
+    },
+    {
+      "text": "Give each fact a short metadata header with status, source, recorded date, reviewed date and optional supersedes or related links."
+    },
+    {
+      "text": "Have retrieval return source_path, source_revision and the selected excerpt with every result."
+    },
+    {
+      "text": "Run a small validator for missing index entries, broken links, multiple current versions and overdue reviews."
+    }
+  ]
+}

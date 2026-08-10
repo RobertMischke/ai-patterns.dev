@@ -1,0 +1,17 @@
+{
+  "summary": "The operational evidence for this pattern comes from an anonymized production agent workspace. It used file-based memory with an index and exposed both the value of simple storage and the failure modes that remain after storage is solved.",
+  "items": [
+    {
+      "text": "Durable facts were stored one per file, indexed from a small entry point and connected with explicit links. Operators could review changes with the same diff and history tools used for code."
+    },
+    {
+      "text": "Corrections were written as successors to older entries. Keeping the supersession link preserved provenance while giving recall a clear current answer."
+    },
+    {
+      "text": "Recall became debuggable when the system displayed the selected memory paths and relevant excerpts. Before that change, operators could observe an answer but not the beliefs that shaped it."
+    },
+    {
+      "text": "Three recurring incidents remained: stale memory recommended command-line flags that no longer existed, beliefs used during a run were invisible to the operator, and the index drifted away from the files it was meant to expose."
+    }
+  ]
+}
