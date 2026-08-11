@@ -36,6 +36,9 @@
             <span class="pcard-cat-bar cat-bar"></span>
             <div style="display: flex; align-items: center; gap: 10px;">
               <span class="cat-name">{{ c.name }}</span>
+              @if (p.abstraction && p.abstraction !== 'pattern') {
+                <span class="chip chip-abstraction">{{ p.abstraction }}</span>
+              }
               @if (p.classify === 'anti-pattern') {
                 <span class="chip chip-anti">Anti-pattern</span>
               }

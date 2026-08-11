@@ -1,5 +1,18 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "supports",
+  "summary": "Mediation is valuable as an ambiguity-reduction and review step, provided the generated task is treated as a proposal rather than a recovered statement of intent.",
+  "points": [
+    {
+      "text": "A structured draft externalizes hidden assumptions early: scope, non-goals, acceptance tests, dependencies, risk, and unresolved questions can be challenged before implementation cost accumulates."
+    },
+    {
+      "text": "The human review must compare the draft with source intent and repository reality. Fluency can conceal invented constraints, missing stakeholders, or acceptance criteria that merely restate the proposed implementation."
+    },
+    {
+      "text": "Traceability improves review: each acceptance criterion should point to a user statement, issue, policy, or explicit new decision rather than appearing as unsupported model-authored fact."
+    },
+    {
+      "text": "The mediator should surface uncertainty and questions, not force every ambiguity into a confident specification. Unresolved choices are legitimate outputs."
+    }
+  ]
 }

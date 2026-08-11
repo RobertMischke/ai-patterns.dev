@@ -1,0 +1,45 @@
+{
+  "summary": "The run trace is the evidence substrate connecting platform ownership, process state, tool events, review and defect proof.",
+  "items": [
+    {
+      "text": "Agent Fencing makes the trace platform-owned and binds every event to the authority under which it occurred.",
+      "ref_type": "pattern",
+      "ref_id": "agent-fencing"
+    },
+    {
+      "text": "Process Actor supplies Task, Run, Attempt, claim and lifecycle semantics; the trace makes that path reconstructible.",
+      "ref_type": "pattern",
+      "ref_id": "process-actor"
+    },
+    {
+      "text": "Fire, Track, Review consumes the evidence envelope first and opens the raw trace only when evidence conflicts or a result is suspicious.",
+      "ref_type": "pattern",
+      "ref_id": "fire-track-review"
+    },
+    {
+      "text": "The Agent–Computer Interface supplies versioned operation identities, structured results, declared effects and stable evidence pointers.",
+      "ref_type": "pattern",
+      "ref_id": "agent-computer-interface"
+    },
+    {
+      "text": "Reproduce–Patch–Prove contributes the failing baseline and passing repair as a linked red/green proof envelope.",
+      "ref_type": "pattern",
+      "ref_id": "reproduce-patch-prove"
+    },
+    {
+      "text": "Sidecar Metadata keeps task, lifecycle, pipeline and result records beside the durable task unit while hashes prevent silent drift.",
+      "ref_type": "pattern",
+      "ref_id": "sidecar-metadata"
+    },
+    {
+      "text": "Versioned Prompt Text connects the exact instruction revision used by a run without turning a provider chat transcript into the system of record.",
+      "ref_type": "pattern",
+      "ref_id": "versioned-prompt-text"
+    },
+    {
+      "text": "Trust Layer aggregates evidence envelopes across runs; this pattern defines the underlying lineage and replay contract.",
+      "ref_type": "pattern",
+      "ref_id": "trust-layer"
+    }
+  ]
+}

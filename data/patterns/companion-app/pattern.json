@@ -4,6 +4,7 @@
   "category": "sud",
   "layer": "operating",
   "classify": "intensified",
+  "abstraction": "hub",
   "title": "Companion App",
   "one_liner": "Give every fast-changing system a separate, navigable product surface through which people can catch up with, understand and care for what has been built.",
   "problem": "AI can produce useful software faster than a person can reconstruct its shape, behavior and rationale. The resulting gap is not merely an onboarding problem: maintainers must understand the current state, the intended state, what changed and why before they can safely judge or extend the system. Source files remain the executable truth, but they are a poor overview; prose alone hides relationships; generic dashboards show status without meaning; and a single diagram cannot serve both orientation and detailed inquiry. The forces pull in opposite directions. The surface must stay close enough to authoritative artifacts to be trustworthy yet be organized for human comprehension; it must compress aggressively without erasing provenance or uncertainty; it must support stable shared views while allowing interactive, question-specific exploration; and it must justify its maintenance cost while the underlying system changes at agent speed.",

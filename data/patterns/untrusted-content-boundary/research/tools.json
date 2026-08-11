@@ -1,0 +1,15 @@
+{
+  "summary": "Evaluation tools can probe the boundary, but enforcement belongs in context assembly, policy and the capability layer.",
+  "items": [
+    {
+      "text": "Promptfoo red-team suites can exercise direct and indirect prompt-injection cases against the assembled workflow.",
+      "ref_type": "external",
+      "url": "https://www.promptfoo.dev/docs/red-team/"
+    },
+    {
+      "text": "Policy engines can independently authorize proposed actions from typed task, content-origin and effect metadata; the model's prose is not the policy input.",
+      "ref_type": "external",
+      "url": "https://www.openpolicyagent.org/docs/latest/"
+    }
+  ]
+}

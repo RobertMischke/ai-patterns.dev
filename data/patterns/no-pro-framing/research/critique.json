@@ -1,5 +1,18 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "challenges",
+  "summary": "The useful part of the pattern is explicit quality and uncertainty behavior, not the unsupported premise that naming a professional persona supplies professional capability.",
+  "points": [
+    {
+      "text": "A role can focus vocabulary, audience, and style, but direct factual-question evidence finds no dependable accuracy gain from expert personas across models."
+    },
+    {
+      "text": "Concrete instructions are testable: cite evidence, distinguish observation from inference, state assumptions, run validators, refuse beyond a defined boundary, and expose uncertainty. 'Act as a pro' is not."
+    },
+    {
+      "text": "Persona usefulness is task-conditional. Role-play may scaffold some reasoning interactions, so the correct practice is an evaluated prompt variant rather than either mandatory framing or a universal ban."
+    },
+    {
+      "text": "Professional presentation and calibrated truth are separate dimensions. Evaluation must score correctness, calibration, coverage, and appropriate refusal, not merely confident domain language."
+    }
+  ]
 }

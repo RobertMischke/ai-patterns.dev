@@ -4,6 +4,7 @@
   "category": "trust",
   "layer": "infra",
   "classify": "new",
+  "abstraction": "hub",
   "title": "Trust Layer",
   "one_liner": "Agents can produce software. The trust layer helps humans trust the result.",
   "problem": "Output volume grows; review hours don't. Without observability, evidence and regression safety, output is vibes at scale.",

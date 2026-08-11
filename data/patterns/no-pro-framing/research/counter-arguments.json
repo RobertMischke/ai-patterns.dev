@@ -1,5 +1,18 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "challenges",
+  "summary": "Mandatory professional framing can introduce authority bias, brittle refusals, and narrower reasoning without adding knowledge.",
+  "points": [
+    {
+      "text": "An invented credential or seniority cue can cause users to over-trust an answer and reviewers to miss unsupported claims, especially when the model produces polished professional language."
+    },
+    {
+      "text": "A narrow professional identity can anchor the model to one discipline's default solution and suppress cross-domain alternatives or legitimate uncertainty."
+    },
+    {
+      "text": "Generic instructions to refuse when unsure do not produce calibrated uncertainty. Models may refuse answerable cases or answer unanswerable ones unless the behavior is tested on representative examples."
+    },
+    {
+      "text": "Long persona prompts compete with task evidence and can conflict with higher-priority policy or user needs. The same tokens may be better spent on source context, examples, and acceptance criteria."
+    }
+  ]
 }

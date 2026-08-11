@@ -1,4 +1,25 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Empirical studies support the importance of task-oriented documentation, architecture knowledge and decision records. Evidence for a single graphical wiki as the optimal interface remains limited and largely observational.",
+  "items": [
+    {
+      "text": "Dagenais and Robillard (FSE 2010) studied how developers create and use documentation for open-source projects through interviews and repository observations, emphasizing audience and task fit rather than documentation volume.",
+      "ref_type": "external",
+      "url": "https://www.cs.mcgill.ca/~martin/papers/fse2010.pdf"
+    },
+    {
+      "text": "A 2024 action-research study of architecture decision records reports benefits and adoption challenges in an industrial setting; context dependence and the small number of organizations limit generalization.",
+      "ref_type": "external",
+      "url": "https://research.chalmers.se/publication/542849"
+    },
+    {
+      "text": "A 2023 industry survey of 45 software architects examines how architecture knowledge is managed and shared, providing adjacent evidence for discoverable knowledge interfaces.",
+      "ref_type": "external",
+      "url": "https://arxiv.org/abs/2309.11572"
+    },
+    {
+      "text": "A 2024 exploratory study of LLM-assisted ADR creation found GPT-4 outputs below human-authored decisions in the evaluated setting, warning that agent write access still needs review.",
+      "ref_type": "external",
+      "url": "https://arxiv.org/abs/2403.01709"
+    }
+  ]
 }

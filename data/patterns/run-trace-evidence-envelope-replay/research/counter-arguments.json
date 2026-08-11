@@ -1,0 +1,22 @@
+{
+  "stance": "mixed",
+  "summary": "A trace can improve reconstruction while also increasing data exposure, storage cost and false confidence in reproducibility.",
+  "points": [
+    {
+      "text": "Prompts, tool outputs and environment snapshots can contain credentials, personal data and proprietary code. Capture-time redaction, retention limits and access control are part of the pattern, not optional cleanup.",
+      "severity": "blocker"
+    },
+    {
+      "text": "Recording model settings and inputs does not make stochastic output bit-for-bit reproducible, and external systems may have changed. Re-execution must report divergence instead of claiming deterministic replay.",
+      "severity": "warning"
+    },
+    {
+      "text": "If the acting agent controls which events and evidence are emitted, the trace can omit failed attempts or side effects. The host must capture boundary events independently.",
+      "severity": "blocker"
+    },
+    {
+      "text": "High-volume traces can become an unreadable second log platform. Stable schemas, sampling for low-value telemetry and a deliberately small evidence envelope are required.",
+      "severity": "note"
+    }
+  ]
+}

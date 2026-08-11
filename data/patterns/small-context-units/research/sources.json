@@ -1,4 +1,25 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Evidence strength: moderate but adjacent. Human readability, fault-proneness and repository-level code-completion research all favor smaller or selectively pruned units, but no direct controlled study located validates universal limits such as 300 lines per file, 40 per function or seven public methods.",
+  "items": [
+    {
+      "text": "Buse and Weimer, Learning a Metric for Code Readability (IEEE Transactions on Software Engineering, 2010), learned from 120 human annotators, predicted readability judgments with about 80% accuracy and found correlations with changes and defect indicators over more than 2.2 million lines. It supports measurable local readability, but correlation does not identify a causal line-count threshold.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1109/TSE.2009.70"
+    },
+    {
+      "text": "Basili, Briand and Melo, A Validation of Object-Oriented Design Metrics as Quality Indicators (IEEE Transactions on Software Engineering, 1996), analyzed eight systems built from identical requirements and found several class design metrics useful for predicting fault-prone classes. It supports bounding complex class surfaces, while the C++ student-project setting limits transfer to modern agent workflows.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1109/32.544352"
+    },
+    {
+      "text": "Palomba, Bavota, Di Penta, Fasano, Oliveto and De Lucia, On the Diffuseness and the Impact on Maintainability of Code Smells (Empirical Software Engineering, 2018), examined 395 releases and 13 smell types, finding long or complex smells widespread and smelly classes more change- and fault-prone. This is observational evidence and does not prove that mechanically splitting files improves quality.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1007/s10664-017-9535-z"
+    },
+    {
+      "text": "Zhang et al., Hierarchical Context Pruning: Optimizing Real-World Code Completion with Repository-Level Pretrained Code LLMs (Chinese Academy of Sciences and partners, AAAI 2025), evaluated hierarchical pruning across repository-level code-completion models and reported improved completion after removing irrelevant context. This directly supports selective model context, but not source-code size caps as the pruning mechanism.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1609/aaai.v39i24.34782"
+    }
+  ]
 }

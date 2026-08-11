@@ -1,9 +1,9 @@
 {
   "id": "s8",
-  "title": "Dive into Claude Code — Subagents",
-  "author": "arXiv 2604.14228",
+  "title": "Dive into Claude Code: The Design Space of Today's and Future AI Agent Systems",
+  "author": "Jiacheng Liu et al.",
   "kind": "paper",
-  "url": "#",
+  "url": "https://arxiv.org/abs/2604.14228",
   "patterns": [
     "orchestrator-subagent"
   ]

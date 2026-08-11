@@ -1,4 +1,10 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "A project map makes the global structure explicit when local code organization is not enough for orientation.",
+  "items": [
+    {
+      "text": "Use Structure as Context as the organizing principle; the project map records the architecture, ownership and dependency facts that cannot be inferred safely from folders alone.",
+      "ref_type": "pattern",
+      "ref_id": "structure-context"
+    }
+  ]
 }

@@ -24,6 +24,9 @@
         <span class="cat-dot"></span>
         @if (cat) { <span class="cat-name">{{ cat.name }}</span> }
         <span class="chip">{{ p.layer }}</span>
+        @if (p.abstraction && p.abstraction !== 'pattern') {
+          <span class="chip chip-abstraction">{{ p.abstraction }}</span>
+        }
         @if (p.classify === 'anti-pattern') {
           <span class="chip chip-anti">Anti-pattern</span>
         } @else {

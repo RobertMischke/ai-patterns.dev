@@ -1,4 +1,20 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Evidence strength: direct but narrow for LLM clarification, and adjacent for general requirements elicitation. The literature supports resolving ambiguity early, while no controlled study located covers the full proposed conversational contract across large production agent tasks.",
+  "items": [
+    {
+      "text": "Mu et al., ClarifyGPT: Empowering LLM-based Code Generation with Intention Clarification (PACM Software Engineering/FSE 2024), detected ambiguous programming tasks, generated clarification questions and reported GPT-4 Pass@1 rising from 70.96% to 80.80% on its sanitized MBPP setting, alongside a small human evaluation. This is direct evidence for clarification, but on bounded benchmark tasks rather than repository-scale delivery.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1145/3660810"
+    },
+    {
+      "text": "Pacheco, Garcia and Reyes, Requirements elicitation techniques: a systematic literature review based on maturity (IET Software, 2018), synthesized elicitation research and found technique effectiveness depends on context and stakeholder conditions rather than one universally best method. It supports deliberate exploration but cautions against a fixed interview script.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1049/iet-sen.2017.0144"
+    },
+    {
+      "text": "Montgomery, Fucci, Bouraffa, Scholz and Maalej, Empirical research on requirements quality: a systematic mapping study (Requirements Engineering, 2022), found heterogeneous definitions and evidence, with only a subset of quality factors repeatedly tied to downstream outcomes. This is adjacent evidence for explicit acceptance and scope, while also warning that more detailed requirements are not automatically better requirements.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1007/s00766-021-00367-z"
+    }
+  ]
 }

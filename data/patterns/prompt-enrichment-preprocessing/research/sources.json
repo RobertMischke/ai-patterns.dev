@@ -1,0 +1,25 @@
+{
+  "summary": "Evidence strength: adjacent. Retrieval and selective-context studies support choosing relevant material and expose ordering and injection risks, but no direct controlled study located evaluates visible, operator-editable organizational enrichment blocks with a provenance and token report.",
+  "items": [
+    {
+      "text": "Lewis et al., Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (Facebook AI Research, NeurIPS 2020), combined parametric generation with retrieved passages and set state of the art on three open-domain QA tasks while producing more factual language. It supports selective external context, but not curated organizational instructions or operator control.",
+      "ref_type": "external",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html"
+    },
+    {
+      "text": "Liu et al., Lost in the Middle: How Language Models Use Long Contexts (TACL 2024), found that performance often drops when relevant information appears in the middle of long inputs, even for models advertised with long contexts. This directly supports selection and token budgeting, while the experiments used synthetic and QA retrieval settings rather than enterprise prompt blocks.",
+      "ref_type": "external",
+      "url": "https://aclanthology.org/2024.tacl-1.9/"
+    },
+    {
+      "text": "Asai et al., Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection (University of Washington, IBM Research and partners, ICLR 2024), showed that adaptive retrieval and reflection improved factuality and quality over strong LLM and retrieval-augmented baselines. It is adjacent evidence for conditional enrichment, not evidence for a human-visible preprocessing report.",
+      "ref_type": "external",
+      "url": "https://openreview.net/forum?id=hSyW5go0v8"
+    },
+    {
+      "text": "Wen et al., Defending against Indirect Prompt Injection by Instruction Detection (Findings of EMNLP 2025), evaluated instruction detection in retrieved content and demonstrated that external context can carry adversarial instructions. This supplies adjacent security evidence for provenance, trust labels and removable blocks; it does not test the complete enrichment workflow.",
+      "ref_type": "external",
+      "url": "https://aclanthology.org/2025.findings-emnlp.1060/"
+    }
+  ]
+}

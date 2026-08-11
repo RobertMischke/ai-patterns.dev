@@ -5,6 +5,8 @@
   "patterns": [
     "trust-layer",
     "analysis-report",
-    "review-result"
+    "fire-track-review",
+    "run-trace-evidence-envelope-replay",
+    "reproduce-patch-prove"
   ]
 }

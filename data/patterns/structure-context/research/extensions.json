@@ -1,4 +1,35 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Structure as Context is the umbrella principle; the linked patterns make locality, unit size, boundaries, navigation and project shape concrete.",
+  "items": [
+    {
+      "text": "Implement structural locality by colocating a feature's code, tests, documentation and configuration in one navigable folder.",
+      "ref_type": "pattern",
+      "ref_id": "feature-folder-locality"
+    },
+    {
+      "text": "Keep structural units small enough to load, reason about and change without spilling the active context budget.",
+      "ref_type": "pattern",
+      "ref_id": "small-context-units"
+    },
+    {
+      "text": "Turn module boundaries into compact context boundaries through minimal, explicit and stable interfaces.",
+      "ref_type": "pattern",
+      "ref_id": "narrow-interfaces"
+    },
+    {
+      "text": "Expose the intended structure through local README entry points so agents do not have to reconstruct purpose and navigation from filenames.",
+      "ref_type": "pattern",
+      "ref_id": "context-entry-points"
+    },
+    {
+      "text": "Add a machine-readable project map when directory structure alone cannot communicate architecture, ownership and allowed dependencies.",
+      "ref_type": "pattern",
+      "ref_id": "project-map"
+    },
+    {
+      "text": "See Prompt Enrichment Preprocessing for the related use case or counterpoint: Before execution, classify a generic request and visibly attach only the house context needed for that kind of work.",
+      "ref_type": "pattern",
+      "ref_id": "prompt-enrichment-preprocessing"
+    }
+  ]
 }

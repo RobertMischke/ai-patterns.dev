@@ -1,5 +1,18 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "supports",
+  "summary": "Tiering is useful when each tier has a distinct contract for scope, write authority, retrieval, lifetime, and evaluation rather than serving as cognitive-sounding labels.",
+  "points": [
+    {
+      "text": "Working memory should be small, task-scoped, and disposable; treating the entire transcript as working memory consumes context and preserves irrelevant or adversarial text."
+    },
+    {
+      "text": "Episodic records should retain event time and provenance, while semantic records represent consolidated claims with validity and source links. Mixing them makes later updates and contradictions difficult to reason about."
+    },
+    {
+      "text": "Procedural memory has higher authority than recalled facts because it can alter behavior and tool use. It therefore needs stricter approval, versioning, and rollback than ordinary observations."
+    },
+    {
+      "text": "The architecture must specify promotion and retrieval rules. Merely naming four databases does not prevent duplicate, stale, or wrongly classified information from entering context."
+    }
+  ]
 }

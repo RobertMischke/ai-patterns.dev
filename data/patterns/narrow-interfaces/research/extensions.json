@@ -1,4 +1,15 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Narrow interfaces bound cross-module context; Structure as Context places those boundaries inside a coherent repository shape.",
+  "items": [
+    {
+      "text": "Use Structure as Context to align explicit interfaces with feature locality, unit size, navigation and architecture metadata.",
+      "ref_type": "pattern",
+      "ref_id": "structure-context"
+    },
+    {
+      "text": "Specialize narrow boundaries at the agent/tool edge with typed operations, explicit effects, structured errors and retry semantics.",
+      "ref_type": "pattern",
+      "ref_id": "agent-computer-interface"
+    }
+  ]
 }

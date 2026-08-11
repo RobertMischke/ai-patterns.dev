@@ -5,7 +5,7 @@
     {
       "text": "No gate infrastructure, no pattern. DORA's 2025 work reports that AI adoption raises throughput while stability degrades where validation systems lag behind the speed of the automation. Removing the human gate before the machine gates are trustworthy converts a review bottleneck into a change-failure problem.",
       "severity": "blocker",
-      "source_id": "s28"
+      "source_id": "s60"
     },
     {
       "text": "Regulated environments may require a named human approver or documented four-eyes segregation of duties. Keep the pull request where an external rule demands it, and run the gates in front of it; the verdict chain then shortens the human step instead of replacing it.",
@@ -18,7 +18,7 @@
     {
       "text": "Code review at scale mostly transports knowledge, ownership and norms rather than defect finds. In an agent-first team those functions must be re-homed into specs, decision records and the wiki; if nothing takes them over, the codebase drifts architecturally and stylistically while every gate stays green.",
       "severity": "warning",
-      "source_id": "s27"
+      "source_id": "s59"
     },
     {
       "text": "Gates erode under delivery pressure. When a gate blocks, the cheapest local fix is to weaken the gate — lower the coverage floor, skip the flaky suite, downgrade a finding to advisory. Treat gate configuration and review standards as a protected, separately reviewed surface with their own change history.",

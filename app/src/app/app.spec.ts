@@ -1,6 +1,30 @@
 import { TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
 import { App } from './app';
+import { PATTERN_BY_ID, patternAbstractionOf, type Pattern } from '../data';
+
+describe('patternAbstractionOf', () => {
+  it('defaults legacy records to pattern and preserves explicit values', () => {
+    expect(patternAbstractionOf({} as Pattern)).toBe('pattern');
+    expect(patternAbstractionOf({ abstraction: 'recipe' } as Pattern)).toBe('recipe');
+  });
+});
+
+describe('catalog data', () => {
+  it('contains the four boundary, interface, trace and proof patterns', () => {
+    const expected = new Map([
+      ['untrusted-content-boundary', 'P-51'],
+      ['agent-computer-interface', 'P-52'],
+      ['run-trace-evidence-envelope-replay', 'P-53'],
+      ['reproduce-patch-prove', 'P-54'],
+    ]);
+
+    for (const [id, num] of expected) {
+      expect(PATTERN_BY_ID.get(id)?.num).toBe(num);
+    }
+    expect(patternAbstractionOf(PATTERN_BY_ID.get('reproduce-patch-prove')!)).toBe('recipe');
+  });
+});
 
 describe('App', () => {
   beforeEach(async () => {

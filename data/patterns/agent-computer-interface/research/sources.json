@@ -1,0 +1,10 @@
+{
+  "summary": "MCP supplies direct implementation evidence for schema-described agent tools; the richer effect, retry and evidence contract is an engineering extension.",
+  "items": [
+    {
+      "text": "Model Context Protocol server concepts: named tools with schema-defined inputs and structured results.",
+      "ref_type": "source",
+      "ref_id": "s71"
+    }
+  ]
+}

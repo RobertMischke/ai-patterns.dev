@@ -1,5 +1,22 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "supports",
+  "summary": "Spec-driven work gives agents a durable intent and acceptance boundary, but the specification must remain testable, changeable and explicitly subordinate to validated stakeholder needs rather than becoming paperwork authority.",
+  "points": [
+    {
+      "text": "Clarification evidence supports resolving ambiguous intent before generation; retaining those decisions in a versioned specification prevents later agents from silently reinterpreting them.",
+      "severity": "info"
+    },
+    {
+      "text": "Separating desired behavior and constraints from the technical plan preserves design freedom while giving reviewers a stable basis for detecting scope substitution.",
+      "severity": "note"
+    },
+    {
+      "text": "Acceptance examples, contracts and tests should trace to specification clauses so completion can be checked by evidence rather than an agent's self-assessment.",
+      "severity": "warning"
+    },
+    {
+      "text": "Requirements-quality research does not support detail for its own sake; specifications should be calibrated for correctness, verifiability and decision value, with uncertain items marked explicitly.",
+      "severity": "warning"
+    }
+  ]
 }

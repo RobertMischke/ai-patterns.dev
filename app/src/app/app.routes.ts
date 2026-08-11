@@ -18,6 +18,12 @@ export const routes: Routes = [
     pathMatch: 'full',
   },
   {
+    // Preserve links to the pattern merged into Fire, Track, Review.
+    path: 'patterns/review-result',
+    redirectTo: 'patterns/fire-track-review',
+    pathMatch: 'full',
+  },
+  {
     path: 'patterns/:id',
     loadComponent: () => import('./pages/pattern-detail/pattern-detail.page').then(m => m.PatternDetailPage),
   },

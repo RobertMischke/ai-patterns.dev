@@ -1,4 +1,19 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Treat a worktree as part of a disposable task environment with explicit integration checkpoints.",
+  "items": [
+    {
+      "text": "Provision each task with a manifest of branch, worktree, runtime namespace, ports, secrets scope, owner and expiration time."
+    },
+    {
+      "text": "Use an overlap detector based on planned files, dependency graph and symbols to sequence high-conflict tasks before agents start editing."
+    },
+    {
+      "text": "Automate safe cleanup only after commits are integrated or archived and all untracked state has been surfaced for review."
+    },
+    {
+      "text": "See Agent-Workforce Management for the related use case or counterpoint: Manage agents like a workforce — roles, costs, allowances, escalation paths.",
+      "ref_type": "pattern",
+      "ref_id": "workforce"
+    }
+  ]
 }

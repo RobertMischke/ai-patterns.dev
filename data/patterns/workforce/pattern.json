@@ -4,6 +4,7 @@
   "category": "orch",
   "layer": "operating",
   "classify": "new",
+  "abstraction": "hub",
   "title": "Agent-Workforce Management",
   "one_liner": "Manage agents like a workforce — roles, costs, allowances, escalation paths.",
   "problem": "One agent for everything breaks at scale. Code, review, security, tests, docs and custody don't share one system prompt.",

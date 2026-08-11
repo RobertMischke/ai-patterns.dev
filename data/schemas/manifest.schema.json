@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ai-patterns.dev/schemas/manifest.schema.json",
+  "title": "CatalogManifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["generatedAt", "locale", "counts"],
+  "properties": {
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "locale": { "const": "en" },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["patterns", "categories", "concepts", "tools", "sources"],
+      "properties": {
+        "patterns": { "type": "integer", "minimum": 0 },
+        "categories": { "type": "integer", "minimum": 0 },
+        "concepts": { "type": "integer", "minimum": 0 },
+        "tools": { "type": "integer", "minimum": 0 },
+        "sources": { "type": "integer", "minimum": 0 }
+      }
+    }
+  }
+}

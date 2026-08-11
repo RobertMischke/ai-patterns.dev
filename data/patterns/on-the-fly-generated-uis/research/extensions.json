@@ -16,6 +16,16 @@
       "text": "Publish generated surfaces into the wiki-as-cognitive-interface with provenance and version history so humans and agents share the same navigable representation.",
       "ref_type": "pattern",
       "ref_id": "wiki-as-cognitive-interface"
+    },
+    {
+      "text": "See Companion App for the related use case or counterpoint: Give every fast-changing system a separate, navigable product surface through which people can catch up with, understand and care for what has been built.",
+      "ref_type": "pattern",
+      "ref_id": "companion-app"
+    },
+    {
+      "text": "See Sidecar Metadata for the related use case or counterpoint: Put rich artifact metadata in predictably named companion files beside the artifact so people and agents can see, diff and discover it without opening the content.",
+      "ref_type": "pattern",
+      "ref_id": "sidecar-metadata"
     }
   ]
 }

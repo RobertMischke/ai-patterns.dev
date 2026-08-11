@@ -1,0 +1,40 @@
+{
+  "summary": "Agent Studio supplies a concrete task/run/envelope implementation; observability and provenance standards provide adjacent evidence for correlation and artifact verification.",
+  "items": [
+    {
+      "text": "Agent Studio resource contracts and immutable result-envelope digest at a pinned public commit.",
+      "ref_type": "source",
+      "ref_id": "s72"
+    },
+    {
+      "text": "Agent Studio's per-task timeline record carries RunId correlation and payload references in a closed event model.",
+      "ref_type": "external",
+      "url": "https://github.com/agent-orc/agent-studio/blob/d85047ef266a575a5d3e6de7f75e5bf389f477b1/backend/Shared/Models/TimelineEvent.cs#L3-L53"
+    },
+    {
+      "text": "Agent Studio canonicalizes and hashes immutable result-envelope fields, including source attempt, repository commits and artifact-manifest identity.",
+      "ref_type": "external",
+      "url": "https://github.com/agent-orc/agent-studio/blob/d85047ef266a575a5d3e6de7f75e5bf389f477b1/contracts/TaskServer.Contracts/ResultEnvelopeDigest.cs#L15-L48"
+    },
+    {
+      "text": "Agent Studio durable handoff recovery replays journaled transfer facts idempotently before new claims without launching the coding agent again.",
+      "ref_type": "external",
+      "url": "https://github.com/agent-orc/agent-studio/blob/d85047ef266a575a5d3e6de7f75e5bf389f477b1/runner/DurableHandoffRecovery.cs#L7-L200"
+    },
+    {
+      "text": "OpenTelemetry Signals: traces, logs and their shared contextual correlation.",
+      "ref_type": "source",
+      "ref_id": "s74"
+    },
+    {
+      "text": "SLSA provenance and artifact verification connect build claims to immutable subjects and trusted provenance.",
+      "ref_type": "source",
+      "ref_id": "s21"
+    },
+    {
+      "text": "Langfuse prompt-to-trace links demonstrate how an exact prompt version remains addressable from an execution trace.",
+      "ref_type": "source",
+      "ref_id": "s40"
+    }
+  ]
+}

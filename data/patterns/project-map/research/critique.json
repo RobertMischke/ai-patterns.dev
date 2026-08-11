@@ -1,5 +1,22 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "supports",
+  "summary": "A small, versioned project map is a credible navigation aid when generated facts and human intent are separated, ownership is clear, and staleness is observable.",
+  "points": [
+    {
+      "text": "RepoCoder's gains from repository retrieval support the core mechanism: a model performs better when relevant cross-file relationships can be found rather than inferred from the current file alone.",
+      "severity": "info"
+    },
+    {
+      "text": "Ownership, dependency and lifecycle fields are operationally useful because they can drive routing, review requirements and impact analysis instead of serving only as prose documentation.",
+      "severity": "note"
+    },
+    {
+      "text": "The architecture-documentation experiment shows that structure does not automatically create understanding; the map needs precise semantics, examples and links to the actual code, not just a preferred serialization.",
+      "severity": "warning"
+    },
+    {
+      "text": "Derived facts such as dependency edges should be generated and diff-checked, while intent such as boundaries and conventions should remain human-reviewed; mixing both without provenance makes drift hard to diagnose.",
+      "severity": "warning"
+    }
+  ]
 }

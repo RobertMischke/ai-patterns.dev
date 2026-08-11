@@ -1,11 +1,10 @@
 {
   "id": "s11",
-  "title": "Coding Agents at Scale (talk)",
-  "author": "Cursor Conf '26",
-  "kind": "video",
-  "url": "#",
+  "title": "Amplitude ships 3x more production code with Cursor",
+  "author": "Cursor Team · Amplitude",
+  "kind": "post",
+  "url": "https://cursor.com/blog/amplitude",
   "patterns": [
-    "worktree",
-    "review-result"
+    "fire-track-review"
   ]
 }

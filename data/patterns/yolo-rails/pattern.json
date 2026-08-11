@@ -4,6 +4,7 @@
   "category": "guard",
   "layer": "operating",
   "classify": "new",
+  "abstraction": "recipe",
   "title": "YOLO with Rails",
   "one_liner": "Letting agents run is not reckless when work is bounded, observable, recoverable, reviewed.",
   "problem": "Either you babysit every tool-call (you become the bottleneck) or you let go and lose visibility — both kill the leverage.",

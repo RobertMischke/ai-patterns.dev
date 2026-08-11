@@ -1,4 +1,14 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Turn free-form speech into a reversible two-representation workflow: expressive capture followed by explicit confirmation.",
+  "items": [
+    {
+      "text": "Show a synchronized transcript and structured intent card, linking every normalized requirement back to the source span."
+    },
+    {
+      "text": "Use domain dictionaries and confidence markers, and block execution until critical names, quantities and negations are confirmed."
+    },
+    {
+      "text": "Offer text-only and ephemeral-audio modes so accessibility and privacy needs do not make voice a mandatory gateway."
+    }
+  ]
 }

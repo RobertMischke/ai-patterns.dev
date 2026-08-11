@@ -1,9 +1,10 @@
 {
   "id": "skip-the-pull-request",
-  "num": "P-44",
+  "num": "P-56",
   "category": "trust",
   "layer": "operating",
   "classify": "new",
+  "abstraction": "application",
   "title": "Skip the Pull Request",
   "one_liner": "In agent-first delivery, gates in front of the integration merge replace the human pull-request review — the operator reads verdicts, not diffs.",
   "problem": "Pull-request review was designed for a scarcity that no longer holds: a human wrote the change slowly, and a second human reading it was the cheapest additional check available. Agent pipelines invert both halves. Change volume rises far past the rate at which anyone can read diffs, the author is a machine that can explain itself on demand, and the reviewer rarely carries the task context that made the change necessary. The queue becomes the bottleneck: batches grow, review degrades into rubber-stamped approval, and the pull request produces a compliance record rather than defect detection. Meanwhile the checks that actually discriminate — build, test suite, static analysis, security rules, spec conformance, architecture rules — are available before the merge and cost machine time instead of human attention. Keeping the pull request as the gate spends the scarcest resource on the weakest check, and frequently runs the strong checks after the merge, or not at all.",

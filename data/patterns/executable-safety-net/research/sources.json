@@ -1,4 +1,25 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Evidence is direct for continuous integration and testing as useful engineering infrastructure, with positive but heterogeneous outcomes and real technical costs. It is adjacent for autonomous agents: no safety net proves semantic correctness, and effectiveness depends on suite quality and feedback speed.",
+  "items": [
+    {
+      "text": "Usage, Costs, and Benefits of Continuous Integration in Open-Source Projects — Michael Hilton, Timothy Tunnell, Kai Huang, Darko Marinov, and Danny Dig (2016). The study analyzes 34,544 repositories, 1,529,291 builds, and a survey of 442 developers, finding widespread adoption and evidence associated with more frequent releases while documenting costs. This directly supports repository CI but is observational.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1145/2970276.2970358"
+    },
+    {
+      "text": "Quality and Productivity Outcomes Relating to Continuous Integration in GitHub — Bogdan Vasilescu, Yue Yu, Huaimin Wang, Premkumar T. Devanbu, and Vladimir Filkov (2015). Historical GitHub analysis associates CI with integrating more outside contributions without observable reduction in code quality. This is direct field evidence with potential confounding rather than a randomized causal estimate.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1145/2786805.2786850"
+    },
+    {
+      "text": "The Effects of Continuous Integration on Software Development: A Systematic Literature Review — Eliezio Soares, Gustavo Sizilio, Jadson Santos, Daniel Alencar da Costa, and Uira Kulesza (2022). Reviewing 101 empirical studies, the authors find mostly positive effects across six themes alongside technical and process challenges and methodological gaps. This supports the pattern while cautioning against universal claims.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1007/s10664-021-10114-1"
+    },
+    {
+      "text": "Taming Google-Scale Continuous Testing — Atif Memon et al. (2017). An industrial study models code-test relationships to control workload and reduce feedback lag without indiscriminate execution; it reports that failing tests tend to be closer to the code they test. This supports fast, change-aware subsets, with limited generalizability beyond Google's environment.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1109/ICSE-SEIP.2017.16"
+    }
+  ]
 }

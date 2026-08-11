@@ -1,0 +1,11 @@
+{
+  "id": "s70",
+  "title": "LLM Prompt Injection Prevention Cheat Sheet",
+  "author": "OWASP Foundation",
+  "kind": "doc",
+  "url": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html",
+  "patterns": [
+    "untrusted-content-boundary",
+    "agent-fencing"
+  ]
+}

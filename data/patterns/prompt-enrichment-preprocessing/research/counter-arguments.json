@@ -1,0 +1,22 @@
+{
+  "stance": "mixed",
+  "summary": "A preprocessing layer can hide policy in routing code, add latency and create prompt monoculture; weak evaluation may turn it into an expensive source of correlated errors.",
+  "points": [
+    {
+      "text": "A misclassified task can receive confidently irrelevant or unsafe instructions, and a deterministic router simply makes that error reproducible rather than correct.",
+      "severity": "blocker"
+    },
+    {
+      "text": "Curated blocks decay as products, laws and repositories change; versioning preserves history but does not prove that the current version is valid.",
+      "severity": "warning"
+    },
+    {
+      "text": "Token, retrieval and rendering overhead can outweigh benefits for simple requests, while extra context may distract the model according to long-context evidence.",
+      "severity": "warning"
+    },
+    {
+      "text": "Central enrichment can force one organization's assumptions across diverse teams and reduce local experimentation unless users can inspect, remove and override non-mandatory blocks.",
+      "severity": "note"
+    }
+  ]
+}

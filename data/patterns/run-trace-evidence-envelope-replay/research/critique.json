@@ -1,0 +1,24 @@
+{
+  "stance": "supports",
+  "summary": "The pattern separates a reviewable proof surface from a deeper execution ledger while keeping both linked by stable identities and hashes.",
+  "points": [
+    {
+      "text": "Agent Studio provides direct implementation evidence: TaskKey and TaskId anchor history, RunId separates attempts, timeline events point to payloads, and a canonical digest binds the immutable result envelope.",
+      "severity": "info",
+      "source_id": "s72"
+    },
+    {
+      "text": "OpenTelemetry shows the value of correlating traces and logs through shared context; the evidence envelope adds task intent, artifacts, validators and acceptance state for agent delivery.",
+      "severity": "info",
+      "source_id": "s74"
+    },
+    {
+      "text": "A compact envelope is safe only when every claim drills down to a content-addressed artifact, event or validator record controlled by the platform rather than selected solely by the producing agent.",
+      "severity": "warning"
+    },
+    {
+      "text": "Replay levels must be named precisely: forensic inspection, idempotent control-plane re-drive and a new pinned execution have different safety and determinism guarantees.",
+      "severity": "note"
+    }
+  ]
+}

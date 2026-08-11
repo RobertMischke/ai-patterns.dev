@@ -1,4 +1,25 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Evidence supports information hiding and manageable API structure, but is adjacent to the pattern's strongest claim: no empirical basis was located for a universal one-screen or context-window interface threshold.",
+  "items": [
+    {
+      "text": "David L. Parnas, in 'On the Criteria to Be Used in Decomposing Systems into Modules' (Communications of the ACM, 1972), argues that modules should hide design decisions likely to change and expose assumptions through constrained interfaces. This directly grounds narrow stable boundaries, though it is analytical rather than a controlled usability experiment.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1145/361598.361623"
+    },
+    {
+      "text": "Piccioni, Furia, and Meyer, in 'An Empirical Study of API Usability' (ESEM, 2013), observe 25 programmers using APIs and identify naming, discovery of type relations, flexibility, and documentation as important usability factors. The study supports reducing discovery burden, but it does not isolate export count or interface width as the causal variable.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1109/ESEM.2013.14"
+    },
+    {
+      "text": "Rauf, Troubitsyna, and Porres, in 'A systematic mapping study of API usability evaluation methods' (Computer Science Review, 2019), synthesize 47 studies and find a fragmented, multidimensional evidence base spanning learnability, efficiency, errors, satisfaction, and cognitive dimensions. This cautions against treating small surface area as a complete definition of usability.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1016/j.cosrev.2019.05.001"
+    },
+    {
+      "text": "Rama and Kak, in 'Some structural measures of API usability' (Software: Practice and Experience, 2015), propose and examine metrics such as the number and complexity of publicly exposed declarations and parameter lists across APIs. The work provides a measurable proxy for interface burden, but structural metrics alone do not demonstrate task success.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1002/spe.2215"
+    }
+  ]
 }

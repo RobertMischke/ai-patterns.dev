@@ -1,4 +1,10 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "This application reuses the same effort fingerprint for contribution recognition; the core pattern uses it for trust calibration.",
+  "items": [
+    {
+      "text": "Use the effort fingerprint to calibrate scrutiny of an individual delivery rather than to describe the contribution itself.",
+      "ref_type": "pattern",
+      "ref_id": "compute-invest-as-quality-signal"
+    }
+  ]
 }

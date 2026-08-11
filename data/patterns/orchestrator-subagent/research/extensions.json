@@ -1,4 +1,20 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Delegation topology and model pairing are separate choices that compose.",
+  "items": [
+    {
+      "text": "Choose model size and plan, execute and verify role assignment within this delegation structure.",
+      "ref_type": "pattern",
+      "ref_id": "companion-model"
+    },
+    {
+      "text": "See Agent as a Process Actor for the related use case or counterpoint: Let agents own bounded process steps, never ambiguous process state.",
+      "ref_type": "pattern",
+      "ref_id": "process-actor"
+    },
+    {
+      "text": "See Agent-Workforce Management for the related use case or counterpoint: Manage agents like a workforce — roles, costs, allowances, escalation paths.",
+      "ref_type": "pattern",
+      "ref_id": "workforce"
+    }
+  ]
 }

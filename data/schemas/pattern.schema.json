@@ -7,15 +7,25 @@
   "additionalProperties": false,
   "required": ["id", "num", "category", "layer", "classify", "title", "one_liner", "problem", "solution", "keywords"],
   "properties": {
-    "id":        { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
-    "num":       { "type": "string", "description": "Display code, e.g. P-08 or A-01." },
-    "category":  { "type": "string", "description": "Category id; matches data/categories/<id>/." },
+    "id":        { "type": "string", "minLength": 1, "pattern": "^[a-z][a-z0-9-]*$" },
+    "num":       { "type": "string", "pattern": "^(P|A)-[0-9]{2,}$", "description": "Display code, e.g. P-08 or A-01." },
+    "category":  { "type": "string", "minLength": 1, "pattern": "^[a-z][a-z0-9-]*$", "description": "Category id; matches data/categories/<id>/." },
     "layer":     { "type": "string", "enum": ["operating", "infra"] },
     "classify":  { "type": "string", "enum": ["new", "intensified", "proven", "anti-pattern", "unknown"] },
-    "title":     { "type": "string" },
-    "one_liner": { "type": "string" },
-    "problem":   { "type": "string" },
-    "solution":  { "type": "string" },
-    "keywords":  { "type": "array", "items": { "type": "string" } }
+    "abstraction": {
+      "type": "string",
+      "enum": ["principle", "hub", "pattern", "variant", "recipe", "application"],
+      "description": "Optional abstraction kind. Omission is interpreted as pattern for backward compatibility."
+    },
+    "title":     { "type": "string", "minLength": 1 },
+    "one_liner": { "type": "string", "minLength": 1 },
+    "problem":   { "type": "string", "minLength": 1 },
+    "solution":  { "type": "string", "minLength": 1 },
+    "keywords":  {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 }
+    }
   }
 }

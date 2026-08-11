@@ -1,0 +1,20 @@
+{
+  "summary": "Agent Studio implements the full task/run/evidence chain; telemetry systems can carry lower-level traces but do not replace the delivery envelope.",
+  "items": [
+    {
+      "text": "Agent Studio uses TaskKey and TaskId as the correlation root, RunId for each execution, an ordered per-task timeline, payload references and a digest-bound immutable result envelope. Durable handoff recovery replays journaled transfer facts without restarting the coding agent.",
+      "ref_type": "tool",
+      "ref_id": "agent-studio"
+    },
+    {
+      "text": "OpenTelemetry provides interoperable trace and log correlation that can carry operation events beneath the task-level envelope.",
+      "ref_type": "external",
+      "url": "https://opentelemetry.io/docs/concepts/signals/"
+    },
+    {
+      "text": "SLSA provenance provides established vocabulary for binding immutable artifacts to a verifiable production process.",
+      "ref_type": "external",
+      "url": "https://slsa.dev/spec/v1.2/verifying-artifacts"
+    }
+  ]
+}

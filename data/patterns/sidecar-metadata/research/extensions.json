@@ -20,6 +20,26 @@
       "text": "Treat cached generated interfaces as fingerprinted, disposable sidecars whose source artifacts remain authoritative.",
       "ref_type": "pattern",
       "ref_id": "on-the-fly-generated-uis"
+    },
+    {
+      "text": "Use task, lifecycle, pipeline and result sidecars as a repository-local projection of the run trace; stable task and run identities keep the files correlated.",
+      "ref_type": "pattern",
+      "ref_id": "run-trace-evidence-envelope-replay"
+    },
+    {
+      "text": "See Companion App for the related use case or counterpoint: Give every fast-changing system a separate, navigable product surface through which people can catch up with, understand and care for what has been built.",
+      "ref_type": "pattern",
+      "ref_id": "companion-app"
+    },
+    {
+      "text": "See Continuous Two-Way Alignment for the related use case or counterpoint: Continuously reconcile system artifacts and their human-facing companion in both directions so neither machine progress nor human knowledge becomes an isolated, drifting truth.",
+      "ref_type": "pattern",
+      "ref_id": "continuous-two-way-alignment"
+    },
+    {
+      "text": "See Versioned Prompt Text for the related use case or counterpoint: Keep prompts as plain files in the code repository, and link every model call to the exact prompt version that produced it.",
+      "ref_type": "pattern",
+      "ref_id": "versioned-prompt-text"
     }
   ]
 }

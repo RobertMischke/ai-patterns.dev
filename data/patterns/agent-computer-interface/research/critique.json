@@ -1,0 +1,19 @@
+{
+  "stance": "supports",
+  "summary": "A typed, effect-aware tool contract removes guesswork at the model-to-computer boundary and produces evidence that orchestration can reason about.",
+  "points": [
+    {
+      "text": "MCP demonstrates the practical baseline: tools expose named operations with JSON-Schema-defined inputs and structured results instead of relying only on prose conventions.",
+      "severity": "info",
+      "source_id": "s71"
+    },
+    {
+      "text": "Schema validation is necessary but not sufficient. Effect class, idempotency, postconditions and stable error categories are what make retries and recovery safe.",
+      "severity": "warning"
+    },
+    {
+      "text": "Bounded observations and artifact references preserve the detail needed for audit without forcing every raw response into the active context window.",
+      "severity": "info"
+    }
+  ]
+}

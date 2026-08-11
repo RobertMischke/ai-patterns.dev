@@ -161,6 +161,14 @@ app-root { position: relative; z-index: 1; display: block; min-height: 100vh; }
 .chip.classify-intensified { background: color-mix(in oklab, var(--cat-orch) 22%, var(--paper));   border-color: color-mix(in oklab, var(--cat-orch) 50%, transparent);   color: var(--ink); }
 .chip.classify-proven      { background: color-mix(in oklab, var(--cat-trust) 22%, var(--paper));  border-color: color-mix(in oklab, var(--cat-trust) 50%, transparent);  color: var(--ink); }
 .chip-anti { background: #fff1ee; color: #b8442a; border-color: #f0c8bc; }
+.chip-abstraction {
+  background: color-mix(in oklab, var(--paper-3) 45%, var(--paper));
+  border-color: var(--line);
+  color: var(--ink-3);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
 
 .layer-badge {
   font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
@@ -396,7 +404,8 @@ app-root { position: relative; z-index: 1; display: block; min-height: 100vh; }
 .radar-tooltip-num   { font-size: 11px; color: var(--ink-2); }
 .radar-tooltip-ring  { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-2); }
 .radar-tooltip-title { font-family: var(--serif); font-weight: 700; font-size: 19px; line-height: 1.15; letter-spacing: -0.014em; }
-.radar-tooltip-cat   { font-size: 11px; color: var(--ink-2); margin-top: 4px; letter-spacing: 0.04em; }
+.radar-tooltip-meta  { display: flex; align-items: center; gap: 8px; margin-top: 4px; flex-wrap: wrap; }
+.radar-tooltip-cat   { font-size: 11px; color: var(--ink-2); letter-spacing: 0.04em; }
 .radar-tooltip-one   { margin-top: 8px; font-size: 13.5px; line-height: 1.45; color: var(--ink-2); }
 .radar-tooltip-hint  { margin-top: 10px; padding-top: 8px; border-top: 1px dashed var(--line); font-size: 12px; color: var(--ink-2); line-height: 1.45; }
 .radar-tooltip.radar-ring-adopt  { border-color: #c44a2e; }

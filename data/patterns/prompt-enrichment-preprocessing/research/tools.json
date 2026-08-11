@@ -1,0 +1,25 @@
+{
+  "summary": "Current retrieval, routing and prompt-management systems provide the primitives for selective enrichment: classify or route the request, render only chosen blocks, version the prompt, and record exactly which version entered a trace.",
+  "items": [
+    {
+      "text": "LlamaIndex RouterRetriever uses a selector over candidate retrievers and their metadata to choose which source should answer a query. That is the inspectable routing stage needed to avoid appending every available context block.",
+      "ref_type": "external",
+      "url": "https://docs.llamaindex.ai/en/stable/api_reference/retrievers/router/"
+    },
+    {
+      "text": "Haystack ConditionalRouter evaluates explicit Jinja conditions and routes pipeline data to named outputs. Teams can encode visible task, repository or sensitivity rules before a PromptBuilder assembles the final request.",
+      "ref_type": "external",
+      "url": "https://docs.haystack.deepset.ai/docs/conditionalrouter"
+    },
+    {
+      "text": "LangSmith prompt management stores prompts in a workspace, creates immutable commits for changes, supports tags and lets applications pull a named prompt version. These controls implement curated and versioned enrichment blocks rather than hidden mutable strings.",
+      "ref_type": "external",
+      "url": "https://docs.langchain.com/langsmith/manage-prompts"
+    },
+    {
+      "text": "Langfuse can link the exact prompt-management version used by a generation to its trace. That connection supplies provenance for an enrichment report and permits outcome analysis by block or version.",
+      "ref_type": "external",
+      "url": "https://langfuse.com/docs/prompt-management/features/link-to-traces"
+    }
+  ]
+}

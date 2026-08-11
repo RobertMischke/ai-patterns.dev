@@ -2,7 +2,7 @@
   "id": "worktree",
   "num": "P-11",
   "category": "orch",
-  "layer": "operating",
+  "layer": "infra",
   "classify": "new",
   "title": "Worktree Fan-Out",
   "one_liner": "Many agents, one repo, no collisions — each in its own worktree.",

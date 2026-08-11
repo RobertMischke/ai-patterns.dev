@@ -1,4 +1,30 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "This wiki-shaped variant is one concrete form of the broader Companion App comprehension product.",
+  "items": [
+    {
+      "text": "Use the broader comprehension-product pattern when the cognitive interface grows beyond a wiki into graphs, canvases or other navigable surfaces.",
+      "ref_type": "pattern",
+      "ref_id": "companion-app"
+    },
+    {
+      "text": "See Continuous Two-Way Alignment for the related use case or counterpoint: Continuously reconcile system artifacts and their human-facing companion in both directions so neither machine progress nor human knowledge becomes an isolated, drifting truth.",
+      "ref_type": "pattern",
+      "ref_id": "continuous-two-way-alignment"
+    },
+    {
+      "text": "See On-the-Fly Generated UIs (Usually Cached) for the related use case or counterpoint: Generate an interface from the artifact it fronts, cache and version the result against those inputs, and regenerate it when they change.",
+      "ref_type": "pattern",
+      "ref_id": "on-the-fly-generated-uis"
+    },
+    {
+      "text": "See Sidecar Metadata for the related use case or counterpoint: Put rich artifact metadata in predictably named companion files beside the artifact so people and agents can see, diff and discover it without opening the content.",
+      "ref_type": "pattern",
+      "ref_id": "sidecar-metadata"
+    },
+    {
+      "text": "See Versioned Prompt Text for the related use case or counterpoint: Keep prompts as plain files in the code repository, and link every model call to the exact prompt version that produced it.",
+      "ref_type": "pattern",
+      "ref_id": "versioned-prompt-text"
+    }
+  ]
 }

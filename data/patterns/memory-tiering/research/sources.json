@@ -1,4 +1,25 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Evidence is direct at the architecture and benchmark level but limited causally: tiered systems have promising evaluations, yet no broad controlled study establishes one four-tier taxonomy as optimal across agent tasks.",
+  "items": [
+    {
+      "text": "Sumers and colleagues, in 'Cognitive Architectures for Language Agents' (2023), propose the CoALA framework, organizing agent memory into working memory plus long-term semantic, episodic, and procedural stores and connecting them through decision procedures. It is the most direct conceptual basis for this pattern, but primarily a unifying framework rather than a controlled comparative experiment.",
+      "ref_type": "external",
+      "url": "https://arxiv.org/abs/2309.02427"
+    },
+    {
+      "text": "Packer and colleagues, in 'MemGPT: Towards LLMs as Operating Systems' (2023), treat the context window as scarce main memory and move information between in-context and external storage under model control. Evaluations cover multi-session chat and long-document analysis, supporting tiered virtual context; results are system- and task-specific and the paper is a preprint.",
+      "ref_type": "external",
+      "url": "https://arxiv.org/abs/2310.08560"
+    },
+    {
+      "text": "Park and colleagues, in 'Generative Agents: Interactive Simulacra of Human Behavior' (UIST, 2023), combine an episodic observation stream, higher-level reflections, and plans. Ablations and human evaluation show these components jointly affect believable behavior, providing direct evidence for differentiated memory operations in a simulated setting rather than a general production taxonomy.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1145/3586183.3606763"
+    },
+    {
+      "text": "Wu and colleagues, in 'LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory' (ICLR, 2025), distinguish extraction, multi-session reasoning, temporal reasoning, updates, and abstention. The benchmark supports tier-specific evaluation because failures are not interchangeable, but it compares systems and retrieval methods rather than fixed cognitive tiers.",
+      "ref_type": "external",
+      "url": "https://arxiv.org/abs/2410.10813"
+    }
+  ]
 }

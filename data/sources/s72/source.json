@@ -1,0 +1,14 @@
+{
+  "id": "s72",
+  "title": "Agent Studio task, run, event and immutable result-envelope contracts",
+  "author": "Agent Studio",
+  "kind": "doc",
+  "url": "https://github.com/agent-orc/agent-studio/blob/d85047ef266a575a5d3e6de7f75e5bf389f477b1/contracts/TaskServer.Contracts/ResourceContracts.cs#L20-L149",
+  "patterns": [
+    "run-trace-evidence-envelope-replay",
+    "process-actor",
+    "agent-fencing",
+    "sidecar-metadata",
+    "fire-track-review"
+  ]
+}

@@ -1,4 +1,40 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Trust Layer is the umbrella evidence surface; the linked patterns provide its concrete analysis, review, validation and governance mechanisms.",
+  "items": [
+    {
+      "text": "Interpret accumulated evidence with Analysis Report loops that calibrate findings and create follow-up work; Trust Layer remains the shared surface that supplies and receives that evidence.",
+      "ref_type": "pattern",
+      "ref_id": "analysis-report"
+    },
+    {
+      "text": "Use Fire, Track, Review as the human operating mode over trust evidence: inspect the artifact and its checks after the run instead of supervising the agent chat.",
+      "ref_type": "pattern",
+      "ref_id": "fire-track-review"
+    },
+    {
+      "text": "Generate named, structured pass, fail or advisory verdicts at delivery gates; Trust Layer aggregates and exposes those verdicts for review.",
+      "ref_type": "pattern",
+      "ref_id": "quality-gate-agents"
+    },
+    {
+      "text": "Extend the evidence stream with scheduled whole-system checks that catch drift and degradation outside an individual change.",
+      "ref_type": "pattern",
+      "ref_id": "scheduled-quality-sweeps"
+    },
+    {
+      "text": "Anchor model-generated evidence in deterministic builds, tests and checks that fail independently of a model's opinion.",
+      "ref_type": "pattern",
+      "ref_id": "executable-safety-net"
+    },
+    {
+      "text": "Make the evidence independently reconstructible through platform-owned history and bounded agent authority rather than agent self-reporting.",
+      "ref_type": "pattern",
+      "ref_id": "agent-fencing"
+    },
+    {
+      "text": "Consume digest-bound evidence envelopes across runs; Run Trace defines the underlying task, attempt, event and artifact lineage plus safe replay levels.",
+      "ref_type": "pattern",
+      "ref_id": "run-trace-evidence-envelope-replay"
+    }
+  ]
 }

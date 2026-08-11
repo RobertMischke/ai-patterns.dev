@@ -4,6 +4,7 @@
   "category": "sud",
   "layer": "operating",
   "classify": "new",
+  "abstraction": "variant",
   "title": "The Wiki as Cognitive Interface",
   "one_liner": "Describe the system at higher quality, from graphical overview to decision-level detail, so the wiki becomes the shared cognitive interface through which humans and agents understand, navigate and extend it.",
   "problem": "A higher abstraction level does not reduce the need for precise documentation; it raises it. Humans need a fast view of behavior and target versus current state, while agents need stable anchors, navigable paths and the reasoning behind the current design. Unstructured prose is as invisible to a grounding agent as it is to a newcomer, and documentation debt compounds at agent speed: agents re-discover paths, re-litigate settled decisions and repeat known failures. The common alternatives all break the interface: human-only prose lacks stable IDs, machine-only schemas lack explanatory narrative, and snapshots without decision history erase why the system became this way. Yet indiscriminate documentation also rots when nobody owns it.",

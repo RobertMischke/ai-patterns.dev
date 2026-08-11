@@ -1,4 +1,25 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Specification-oriented agent workflows, executable examples and consumer contracts can make intent an operational input rather than a pre-project document. The strongest implementations keep specification, plan, tasks, tests and code traceable and versioned together.",
+  "items": [
+    {
+      "text": "GitHub Spec Kit implements a Spec to Plan to Tasks to Implement workflow, with constitution, clarification, consistency analysis and convergence commands around those stages. Each Markdown artifact feeds the next, giving a coding agent an explicit source of intent and constraints.",
+      "ref_type": "external",
+      "url": "https://github.github.io/spec-kit/"
+    },
+    {
+      "text": "AWS Kiro turns an idea into structured requirements, design and implementation tasks and keeps those artifacts available to its coding agent. Its spec workflow provides an editable checkpoint between user intent and generated code.",
+      "ref_type": "external",
+      "url": "https://aws.amazon.com/documentation-overview/kiro/"
+    },
+    {
+      "text": "Cucumber Gherkin expresses behavior as Feature, Rule, Scenario, Given, When and Then statements that can bind to executable step definitions. It makes acceptance examples both stakeholder-readable and testable instead of leaving them as unverified prose.",
+      "ref_type": "external",
+      "url": "https://cucumber.io/docs/gherkin/reference/"
+    },
+    {
+      "text": "Pact provider verification runs consumer-defined interaction contracts against a provider and publishes verification status for deployment decisions. It turns a slice of the specification into a continuously checked compatibility gate.",
+      "ref_type": "external",
+      "url": "https://docs.pact.io/provider"
+    }
+  ]
 }

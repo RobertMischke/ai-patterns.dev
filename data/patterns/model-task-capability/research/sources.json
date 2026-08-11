@@ -1,4 +1,25 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Evidence is direct and growing: routing studies show task-conditional cost-quality gains, while holistic evaluation work shows why suitability must be multidimensional and local rather than a single global model rank.",
+  "items": [
+    {
+      "text": "Ong and colleagues, in 'RouteLLM: Learning to Route LLMs with Preference Data' (ICLR, 2025), train routers to choose between stronger and weaker models using human preference data and evaluate cost-quality tradeoffs on several benchmarks. Learned routing outperforms simple baselines in the studied pairs, but transfer depends on the available models, preference distribution, and task mix.",
+      "ref_type": "external",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/5503a7c69d48a2f86fc00b3dc09de686-Abstract-Conference.html"
+    },
+    {
+      "text": "Chen, Zaharia, and Zou, in 'FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance' (TMLR, 2024), evaluate learned LLM cascades and report that routing can match a strong model at substantially lower cost and sometimes improve accuracy at the same budget. Results depend on task-specific held-out data and do not imply one cascade works under distribution shift.",
+      "ref_type": "external",
+      "url": "https://openreview.net/forum?id=cSimKw5p6R"
+    },
+    {
+      "text": "Hu and colleagues, in 'RouterBench: A Benchmark for Multi-LLM Routing System' (2024 preprint), release more than 400,000 model responses across diverse tasks and compare routing methods under cost and performance objectives. It provides direct infrastructure for evaluating routers, while its fixed models and benchmarks cannot capture every private workflow or safety constraint.",
+      "ref_type": "external",
+      "url": "https://arxiv.org/abs/2403.12031"
+    },
+    {
+      "text": "Bommasani and colleagues, in 'Holistic Evaluation of Language Models' (Annals of the New York Academy of Sciences, 2023), evaluate 30 prominent models across 16 core scenarios and seven metric families. The work exposes substantial scenario and metric tradeoffs, supporting a multidimensional capability map rather than a leaderboard rank; it evaluates benchmark behavior, not deployment authority.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1111/nyas.15007"
+    }
+  ]
 }

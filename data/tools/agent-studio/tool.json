@@ -1,0 +1,16 @@
+{
+  "id": "agent-studio",
+  "name": "Agent Studio",
+  "vendor": "Agent Studio",
+  "kind": "framework",
+  "blurb": "Agent orchestration system whose stable TaskKey/TaskId, per-attempt RunId, ordered timeline, artifact references and digest-bound immutable result envelope implement task/run correlation, evidence envelopes and recovery replay.",
+  "url": "https://github.com/agent-orc/agent-studio",
+  "oss_url": "https://github.com/agent-orc/agent-studio",
+  "patterns": [
+    "run-trace-evidence-envelope-replay",
+    "process-actor",
+    "agent-fencing",
+    "sidecar-metadata",
+    "fire-track-review"
+  ]
+}

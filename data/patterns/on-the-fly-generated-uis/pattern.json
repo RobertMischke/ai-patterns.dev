@@ -2,7 +2,7 @@
   "id": "on-the-fly-generated-uis",
   "num": "P-39",
   "category": "sud",
-  "layer": "operating",
+  "layer": "infra",
   "classify": "new",
   "title": "On-the-Fly Generated UIs (Usually Cached)",
   "one_liner": "Generate an interface from the artifact it fronts, cache and version the result against those inputs, and regenerate it when they change.",

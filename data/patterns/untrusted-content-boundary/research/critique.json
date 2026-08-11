@@ -1,0 +1,19 @@
+{
+  "stance": "supports",
+  "summary": "The pattern closes the confused-authority gap between content the agent may inspect and instructions the system may obey.",
+  "points": [
+    {
+      "text": "OWASP identifies the absence of a clear instruction/data boundary as a root condition for prompt injection and combines separation with least privilege and independent tool-call validation.",
+      "severity": "info",
+      "source_id": "s70"
+    },
+    {
+      "text": "Provenance must survive retrieval, extraction and summarization. A trusted summarizer does not make attacker-controlled claims authoritative.",
+      "severity": "warning"
+    },
+    {
+      "text": "The enforceable control is outside the model: content may influence a proposal, but only host policy can grant a capability or approve a side effect.",
+      "severity": "info"
+    }
+  ]
+}

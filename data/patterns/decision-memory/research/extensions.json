@@ -1,4 +1,40 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Decision memory specializes the maintenance rules for durable shared memory to architectural decisions.",
+  "items": [
+    {
+      "text": "Apply indexing, recall transparency, staleness review and explicit supersession to ADR-based memory.",
+      "ref_type": "pattern",
+      "ref_id": "memory-management"
+    },
+    {
+      "text": "See Agent Pipelines & Triggered Roles for the related use case or counterpoint: Treat the agent workflow as a pipeline. Roles join at defined points or on triggers — not ad-hoc.",
+      "ref_type": "pattern",
+      "ref_id": "agent-pipelines"
+    },
+    {
+      "text": "See Context Compaction & JIT Retrieval for the related use case or counterpoint: Less context, retrieved on demand, beats more context dumped upfront.",
+      "ref_type": "pattern",
+      "ref_id": "context-compaction"
+    },
+    {
+      "text": "See Continuous Two-Way Alignment for the related use case or counterpoint: Continuously reconcile system artifacts and their human-facing companion in both directions so neither machine progress nor human knowledge becomes an isolated, drifting truth.",
+      "ref_type": "pattern",
+      "ref_id": "continuous-two-way-alignment"
+    },
+    {
+      "text": "See Council: Review Verdicts Need a Reaction for the related use case or counterpoint: Every named review finding gets an accountable decision: fix, accept with reasons, or escalate.",
+      "ref_type": "pattern",
+      "ref_id": "council"
+    },
+    {
+      "text": "See Sidecar Metadata for the related use case or counterpoint: Put rich artifact metadata in predictably named companion files beside the artifact so people and agents can see, diff and discover it without opening the content.",
+      "ref_type": "pattern",
+      "ref_id": "sidecar-metadata"
+    },
+    {
+      "text": "See Topic Switching in One Long Operator Context for the related use case or counterpoint: Keep a session warm while shared context saves orientation time; reset it when repair density shows that old topics have become interference.",
+      "ref_type": "pattern",
+      "ref_id": "topic-switching"
+    }
+  ]
 }

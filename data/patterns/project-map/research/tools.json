@@ -1,4 +1,25 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "A project map can be implemented with catalog descriptors, ownership rules, architecture-as-code and generated dependency graphs. The useful common denominator is versioned, machine-readable structure that remains close to the repository and can be checked in CI.",
+  "items": [
+    {
+      "text": "Backstage Software Catalog uses repository-owned catalog-info.yaml descriptors to model Components, Systems, Domains, APIs, owners, lifecycle and relations. Those fields provide a machine-readable project map that tooling can ingest and teams can review with code.",
+      "ref_type": "external",
+      "url": "https://backstage.io/docs/features/software-catalog/descriptor-format/"
+    },
+    {
+      "text": "GitHub CODEOWNERS maps repository path patterns to responsible people or teams and can require their review. It supplies the ownership layer of a project map in a native, version-controlled format.",
+      "ref_type": "external",
+      "url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners"
+    },
+    {
+      "text": "Structurizr DSL stores a C4 software architecture model as text, including people, software systems, containers, components, relationships, views and deployment environments. Its identifiers and includes make the map machine-readable and modular rather than a manually maintained picture.",
+      "ref_type": "external",
+      "url": "https://docs.structurizr.com/dsl"
+    },
+    {
+      "text": "Nx Project Graph derives projects and dependencies from workspace configuration and source analysis, exposes the graph visually and as data, and highlights affected projects. It can continuously regenerate the dependency portion of a project map instead of relying on hand-authored links.",
+      "ref_type": "external",
+      "url": "https://nx.dev/features/explore-graph"
+    }
+  ]
 }

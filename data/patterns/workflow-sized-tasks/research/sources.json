@@ -1,11 +1,6 @@
 {
-  "summary": "The accepted TE-23 analysis is the factual core; its measured Agent Studio evidence and vendor documentation establish the economic and capability boundaries.",
+  "summary": "Published Agent Studio evidence and vendor documentation establish the economic and capability boundaries.",
   "items": [
-    {
-      "text": "TE-23 — Dynamic Workflows as a Task-Cutting Strategy: accepted cost model, decision rubric, capability matrix and limitations.",
-      "ref_type": "source",
-      "ref_id": "s63"
-    },
     {
       "text": "Agent Studio pipeline-time-economy brief: corpus scope and aggregate coding/review token shares.",
       "ref_type": "source",

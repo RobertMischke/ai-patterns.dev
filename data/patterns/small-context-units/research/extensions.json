@@ -1,4 +1,10 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Small units bound local reasoning cost; Structure as Context coordinates that constraint with the rest of the repository shape.",
+  "items": [
+    {
+      "text": "Use Structure as Context to connect unit-size budgets with locality, interfaces and navigation instead of treating line limits as an isolated style rule.",
+      "ref_type": "pattern",
+      "ref_id": "structure-context"
+    }
+  ]
 }

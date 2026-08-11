@@ -1,0 +1,22 @@
+{
+  "stance": "supports",
+  "summary": "Selective, visible enrichment is better grounded than indiscriminate context stuffing, provided block selection, provenance and outcome measurement are treated as product behavior rather than hidden prompt craft.",
+  "points": [
+    {
+      "text": "Long-context evidence makes a concrete case for a token report and selection step: merely fitting more blocks into the window does not ensure the model will use the relevant one.",
+      "severity": "info"
+    },
+    {
+      "text": "Versioned blocks linked to traces make changes auditable and allow evaluation by block version, task class and outcome instead of relying on anecdotal prompt quality.",
+      "severity": "note"
+    },
+    {
+      "text": "Showing the classifier decision, sources and inserted text gives the operator a chance to catch wrong routing, sensitive-data leakage and obsolete guidance before execution.",
+      "severity": "note"
+    },
+    {
+      "text": "Retrieved or centrally curated content remains an instruction-injection surface; enrichment needs trust boundaries and instruction/data separation, not provenance labels alone.",
+      "severity": "warning"
+    }
+  ]
+}

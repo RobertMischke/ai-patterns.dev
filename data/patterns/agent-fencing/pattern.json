@@ -1,8 +1,8 @@
 {
   "id": "agent-fencing",
   "num": "P-41",
-  "category": "trust",
-  "layer": "operating",
+  "category": "guard",
+  "layer": "infra",
   "classify": "new",
   "title": "Agent Fencing",
   "one_liner": "The platform owns the durable history; agents receive bounded authority and oversight proportional to trust and risk.",

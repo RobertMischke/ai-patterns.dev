@@ -22,17 +22,12 @@
       "ref_id": "agent-fencing"
     },
     {
-      "text": "Give the verdict a stable shape — findings, severity, evidence pointers, follow-up tasks — so operators can triage a stream of them.",
-      "ref_type": "pattern",
-      "ref_id": "review-result"
-    },
-    {
       "text": "Cover what per-change gates structurally cannot see with periodic sweeps across the integrated codebase.",
       "ref_type": "pattern",
       "ref_id": "scheduled-quality-sweeps"
     },
     {
-      "text": "Keep human attention on results rather than on the working phase: the operator inspects the outcome, not the agent at work.",
+      "text": "Keep human attention on results rather than on the working phase: give the verdict a stable shape with findings, severity, evidence pointers and follow-up tasks, then let the operator inspect the outcome instead of the agent at work.",
       "ref_type": "pattern",
       "ref_id": "fire-track-review"
     },

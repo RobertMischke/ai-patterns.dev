@@ -25,6 +25,21 @@
       "text": "Agent Studio reference implementation, in progress: `prompts/runtime/*.md` and `RuntimePromptService` establish the file registry and single loader; the target line adds a call ledger, per-content-version counts and review sidecars at that prompt surface.",
       "ref_type": "external",
       "url": "https://github.com/agent-orc/agent-studio/tree/develop/prompts/runtime"
+    },
+    {
+      "text": "Bind the exact prompt content version to TaskId and RunId so an execution trace can reconstruct instructions without elevating a provider chat transcript to the system of record.",
+      "ref_type": "pattern",
+      "ref_id": "run-trace-evidence-envelope-replay"
+    },
+    {
+      "text": "See Prompt Enrichment Preprocessing for the related use case or counterpoint: Before execution, classify a generic request and visibly attach only the house context needed for that kind of work.",
+      "ref_type": "pattern",
+      "ref_id": "prompt-enrichment-preprocessing"
+    },
+    {
+      "text": "See Spec-Driven Development for the related use case or counterpoint: The spec is the source of truth, not the code.",
+      "ref_type": "pattern",
+      "ref_id": "spec-driven"
     }
   ]
 }

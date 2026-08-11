@@ -1,4 +1,10 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Memory tiers define purpose and lifetime; memory management keeps durable tiers inspectable and current.",
+  "items": [
+    {
+      "text": "Maintain durable semantic and procedural tiers as inspectable, versioned and reviewable repository artifacts.",
+      "ref_type": "pattern",
+      "ref_id": "memory-management"
+    }
+  ]
 }

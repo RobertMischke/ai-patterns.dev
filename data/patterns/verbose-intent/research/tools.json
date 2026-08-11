@@ -1,4 +1,20 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Voice-first and conversational products reduce capture friction, while coding tools can place transcripts directly into an agent session. Their output still needs a reviewable intent-normalization step.",
+  "items": [
+    {
+      "text": "Aider /voice: records speech, transcribes it and submits the resulting text into the coding conversation.",
+      "ref_type": "external",
+      "url": "https://aider.chat/docs/usage/commands.html"
+    },
+    {
+      "text": "Wispr Flow: voice dictation with editing commands, custom vocabulary and application-aware formatting can capture long-form technical intent.",
+      "ref_type": "external",
+      "url": "https://wisprflow.ai/"
+    },
+    {
+      "text": "Superwhisper: local and cloud transcription modes plus custom vocabulary provide a configurable speech-to-text front end.",
+      "ref_type": "external",
+      "url": "https://superwhisper.com/docs/get-started/introduction"
+    }
+  ]
 }

@@ -1,9 +1,9 @@
 {
   "id": "s4",
-  "title": "Plan Mode — Best Practices",
+  "title": "Claude Code: Plan before editing",
   "author": "Anthropic",
   "kind": "doc",
-  "url": "#",
+  "url": "https://code.claude.com/docs/en/common-workflows#plan-before-editing",
   "patterns": [
     "plan-mode"
   ]

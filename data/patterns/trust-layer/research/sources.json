@@ -1,4 +1,25 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Studies strongly motivate independent measurement and layered evidence. They do not validate one universal trust score; trust remains task-, environment- and consequence-specific.",
+  "items": [
+    {
+      "text": "METR's randomized trial with experienced open-source developers found that early-2025 AI tools made participants 19% slower on the studied tasks even though participants expected acceleration, illustrating why perceived productivity must be checked against measured outcomes; the setting and tool generation are narrow.",
+      "ref_type": "external",
+      "url": "https://arxiv.org/abs/2507.09089"
+    },
+    {
+      "text": "DORA's 2025 research reports that AI tends to amplify an organization's existing strengths and weaknesses, supporting a systems-level trust layer rather than tool adoption metrics alone.",
+      "ref_type": "external",
+      "url": "https://dora.dev/research/2025/dora-report/"
+    },
+    {
+      "text": "Can LLMs Replace Human Evaluators? (TOSEM 2025) examines agreement and reliability limits of LLM-as-judge methods, warning against treating automated evaluators as ground truth.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1145/3728963"
+    },
+    {
+      "text": "NIST AI RMF 1.0 (2023) provides governance guidance for valid and reliable measurement, transparency and risk management; it is a framework, not an effectiveness experiment.",
+      "ref_type": "external",
+      "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10"
+    }
+  ]
 }

@@ -1,5 +1,18 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "supports",
+  "summary": "A layered knowledge interface can reduce orientation cost, but it must distinguish generated views, authoritative records and unverified agent notes.",
+  "points": [
+    {
+      "text": "Assign an owner, source of truth and freshness signal to every high-level map; a plausible stale map is worse than an explicit gap.",
+      "severity": "warning"
+    },
+    {
+      "text": "Link overview nodes to code, decisions, incidents, current issues and runtime evidence so readers can descend from explanation to verification.",
+      "severity": "info"
+    },
+    {
+      "text": "Agent-authored changes should arrive as attributable proposals or pass domain-specific checks; write access alone does not make knowledge self-maintaining.",
+      "severity": "blocker"
+    }
+  ]
 }

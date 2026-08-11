@@ -1,0 +1,22 @@
+{
+  "id": "untrusted-content-boundary",
+  "num": "P-51",
+  "category": "guard",
+  "layer": "infra",
+  "classify": "intensified",
+  "title": "Untrusted-Content Boundary / Instruction–Data Separation",
+  "one_liner": "Treat retrieved text, files and tool output as provenance-carrying data—never as authority to change instructions or permissions.",
+  "problem": "Agents read issues, web pages, documents, source comments, logs and tool output while holding tools or sensitive context. Any of that content can contain text that looks like an instruction. When origin and trust are flattened during prompt assembly, attacker-controlled data can be mistaken for authority, causing scope expansion, disclosure or unsafe actions. Delimiters and warnings help interpretation but do not create an enforceable security boundary; forbidding external content removes much of the agent's value.",
+  "solution": "Assign every context block an origin, trust class and purpose before it reaches the model. Allow privileged instructions only from versioned, allowlisted task and policy sources; pass retrieved content and user-provided artifacts outside the authorized task instruction as typed, quoted data and never promote them because their wording claims authority. Preserve provenance through extraction and summarization. For sensitive workflows, inspect or transform untrusted material in a read-only stage before exposing it to an acting agent. Independently authorize every proposed tool call against task scope, data policy and side-effect class: instruction-looking content may become a finding, never a permission grant. Test the boundary with an adversarial injection corpus. This is not a delimiter trick: the host enforces authority and provenance. The boundary governs input interpretation; Agent Fencing governs authority, the Agent–Computer Interface carries trust metadata, and Sandbox contains resulting effects.",
+  "keywords": [
+    "prompt injection",
+    "indirect prompt injection",
+    "instruction-data separation",
+    "untrusted content",
+    "provenance",
+    "trust labels",
+    "content isolation",
+    "taint tracking",
+    "least privilege"
+  ]
+}

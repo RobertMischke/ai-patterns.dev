@@ -3,14 +3,17 @@
   "items": [
     {
       "text": "AI SDK UI for model-selected, streamed application components.",
+      "ref_type": "external",
       "url": "https://ai-sdk.dev/docs/ai-sdk-ui/generative-user-interfaces"
     },
     {
       "text": "JSON Forms for JSON Schema plus a separate UI schema and renderer set.",
+      "ref_type": "external",
       "url": "https://jsonforms.io/docs/"
     },
     {
       "text": "react-jsonschema-form for automatically generated React forms with schema validation.",
+      "ref_type": "external",
       "url": "https://rjsf-team.github.io/react-jsonschema-form/docs/"
     }
   ]

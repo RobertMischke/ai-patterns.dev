@@ -1,5 +1,34 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "mixed",
+  "summary": "Asynchronous result-first review can increase throughput while also creating review overload, stale work, automation complacency and polished packets that conceal uncertainty or omitted evidence.",
+  "points": [
+    {
+      "text": "Parallel agents can produce more diffs than humans can understand. The bottleneck moves from coding to review, encouraging shallow approval and weakening the very control the pattern is meant to provide."
+    },
+    {
+      "text": "Long-running tasks drift against a changing main branch, requirements, or dependency state. A polished artifact can be obsolete before review begins."
+    },
+    {
+      "text": "Green checks and fluent summaries can anchor reviewers. Tests may encode the agent's mistaken interpretation, omit important negative cases, or pass only in the agent's environment."
+    },
+    {
+      "text": "Review-after-completion is too late for irreversible external actions or a fundamentally wrong direction. Such tasks require constrained tools, staged approvals, or an approved plan before execution."
+    },
+    {
+      "text": "If the producing agent selects both evidence and summary, it can omit failed attempts, contradictory outputs or scope changes that would alter the verdict.",
+      "severity": "blocker"
+    },
+    {
+      "text": "An aggregate green status can hide skipped tests, flaky retries, weak coverage or a gate that never ran; absence and waiver states must be first-class.",
+      "severity": "blocker"
+    },
+    {
+      "text": "Reviewers may lose causal context for a non-obvious design choice when the conversational exploration is compressed into a confident one-line rationale.",
+      "severity": "warning"
+    },
+    {
+      "text": "Building and maintaining a common result schema across heterogeneous agents and tools creates adapter work and may flatten domain-specific evidence.",
+      "severity": "note"
+    }
+  ]
 }

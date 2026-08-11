@@ -1,5 +1,22 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "mixed",
+  "summary": "Context entry points are valuable as navigation and exception maps, but direct evidence rejects the idea that more repository overview automatically helps coding agents. Brevity, locality, and verification are central to the pattern.",
+  "points": [
+    {
+      "text": "Prioritize executable commands, non-obvious constraints, ownership, known traps, and links to authoritative artifacts; omit facts cheaply rediscovered from the tree or package metadata.",
+      "severity": "note"
+    },
+    {
+      "text": "Scope instructions to the narrowest directory or file pattern and define precedence. A root rule that applies everywhere consumes attention and can conflict with module reality.",
+      "severity": "warning"
+    },
+    {
+      "text": "Every command should state prerequisites and be exercised in CI or a documentation test. An unverified setup instruction is a repeatable failure generator.",
+      "severity": "warning"
+    },
+    {
+      "text": "Measure task success, failed commands, search steps, and inference cost before and after changes. Direct research shows instruction compliance can rise without end-to-end success.",
+      "severity": "note"
+    }
+  ]
 }

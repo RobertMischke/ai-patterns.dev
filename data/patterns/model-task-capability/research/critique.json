@@ -1,5 +1,18 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "supports",
+  "summary": "A task-scoped, versioned capability map is a sound basis for routing when it records uncertainty and is continuously checked against real outcomes.",
+  "points": [
+    {
+      "text": "Suitability must be conditional on task subtype, language, context length, tool set, latency, cost, privacy region, and required failure behavior; a single 'best model' field erases the variables routing research finds decisive."
+    },
+    {
+      "text": "Each entry should carry evidence: dataset version, prompt and tool configuration, sample size, confidence interval, observed incidents, and expiry date after provider or model changes."
+    },
+    {
+      "text": "Offline accuracy is insufficient. The map should include calibration, abstention, robustness to malformed input, structured-output validity, and the consequences of correlated failures in cascades."
+    },
+    {
+      "text": "Routing decisions and downstream review outcomes must be logged so production distribution shift can invalidate or narrow an approval instead of silently degrading quality."
+    }
+  ]
 }

@@ -4,6 +4,7 @@
   "category": "context",
   "layer": "infra",
   "classify": "intensified",
+  "abstraction": "principle",
   "title": "Structure as Context",
   "one_liner": "Clean architecture is context engineering for coding agents.",
   "problem": "Feature folders, layering, naming, ubiquitous language reduce load for humans — and even more for LLMs that have to navigate the codebase.",

@@ -1,4 +1,30 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Context entry points explain how to enter a structure; Structure as Context defines the broader shape they reveal.",
+  "items": [
+    {
+      "text": "Pair local README entry points with Structure as Context so navigation describes real feature boundaries, interfaces and architectural intent.",
+      "ref_type": "pattern",
+      "ref_id": "structure-context"
+    },
+    {
+      "text": "See Agent Pipelines & Triggered Roles for the related use case or counterpoint: Treat the agent workflow as a pipeline. Roles join at defined points or on triggers — not ad-hoc.",
+      "ref_type": "pattern",
+      "ref_id": "agent-pipelines"
+    },
+    {
+      "text": "See Context Compaction & JIT Retrieval for the related use case or counterpoint: Less context, retrieved on demand, beats more context dumped upfront.",
+      "ref_type": "pattern",
+      "ref_id": "context-compaction"
+    },
+    {
+      "text": "See Memory Management Is the New Code for the related use case or counterpoint: Treat shared memory as the maintained interface between human intent and model action.",
+      "ref_type": "pattern",
+      "ref_id": "memory-management"
+    },
+    {
+      "text": "See Topic Switching in One Long Operator Context for the related use case or counterpoint: Keep a session warm while shared context saves orientation time; reset it when repair density shows that old topics have become interference.",
+      "ref_type": "pattern",
+      "ref_id": "topic-switching"
+    }
+  ]
 }

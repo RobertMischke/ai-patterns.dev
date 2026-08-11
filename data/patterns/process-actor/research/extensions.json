@@ -30,6 +30,16 @@
       "text": "Escalation Cascade supplies bounded routing across accountable model and human actors when evidence says the current lane cannot finish safely.",
       "ref_type": "pattern",
       "ref_id": "escalation-cascade"
+    },
+    {
+      "text": "Use Agent–Computer Interface contracts for individual operations; Process Actor remains responsible for claims, leases, attempts and lifecycle verdicts across calls.",
+      "ref_type": "pattern",
+      "ref_id": "agent-computer-interface"
+    },
+    {
+      "text": "Project task, run, attempt, claim and verdict state into an append-only trace so the process path can be reconstructed and reviewed.",
+      "ref_type": "pattern",
+      "ref_id": "run-trace-evidence-envelope-replay"
     }
   ]
 }

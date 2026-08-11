@@ -1,4 +1,45 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Agent platforms, CI systems and reporting standards already expose the core primitives: asynchronous dispatch, observable task state, aggregate conclusions, annotations, test details and durable machine-readable artifacts.",
+  "items": [
+    {
+      "text": "GitHub Copilot's coding agent works in an ephemeral GitHub Actions environment, opens a pull request, records session logs, and requests human review. Repository rules and required checks can make the review checkpoint enforceable rather than ceremonial.",
+      "ref_type": "external",
+      "url": "https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent"
+    },
+    {
+      "text": "OpenAI Codex cloud tasks run in isolated environments in the background, expose progress and terminal evidence, and return changes that a developer can inspect, revise, or turn into a pull request. Multiple tasks can be delegated concurrently and reviewed when they finish.",
+      "ref_type": "external",
+      "url": "https://openai.com/index/introducing-codex/"
+    },
+    {
+      "text": "Cursor background agents clone a repository into an isolated remote environment, edit and run code asynchronously, stream status, and push changes on a branch for later review. The branch is the durable artifact connecting fire, track, and review.",
+      "ref_type": "external",
+      "url": "https://docs.cursor.com/background-agent"
+    },
+    {
+      "text": "Google Jules accepts a repository task, exposes a plan and execution progress, and finishes by presenting code changes and a pull request link for review. Its task UI separates autonomous execution from the user's acceptance decision.",
+      "ref_type": "external",
+      "url": "https://jules.google/docs/running-tasks/"
+    },
+    {
+      "text": "GitHub Checks API represents each check run with a status, conclusion, output title, summary, optional detailed text and line-level annotations. A result-review view can aggregate these objects without forcing users through every agent conversation.",
+      "ref_type": "external",
+      "url": "https://docs.github.com/en/rest/guides/using-the-rest-api-to-interact-with-checks"
+    },
+    {
+      "text": "GitHub code scanning accepts SARIF results and displays normalized alerts with file locations, rule metadata and fingerprints. This provides durable, deduplicated evidence links behind a security-review verdict.",
+      "ref_type": "external",
+      "url": "https://docs.github.com/en/code-security/how-tos/find-and-fix-code-vulnerabilities/integrate-with-existing-tools/upload-sarif-file"
+    },
+    {
+      "text": "GitLab Unit Test Reports parse JUnit artifacts and show summaries, failed cases, execution time and branch comparisons in merge requests and pipelines. They implement progressive disclosure from one result state to reproducible test evidence.",
+      "ref_type": "external",
+      "url": "https://docs.gitlab.com/ci/testing/unit_test_reports/"
+    },
+    {
+      "text": "Allure Reports attach screenshots, logs, files, tables and links to individual test results. These attachments let a compact verdict retain deep evidence without putting every diagnostic in the top-level review surface.",
+      "ref_type": "external",
+      "url": "https://allurereport.org/docs/attachments/"
+    }
+  ]
 }

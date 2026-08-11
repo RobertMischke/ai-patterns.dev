@@ -5,6 +5,7 @@
   "kind": "doc",
   "url": "https://langfuse.com/docs/prompt-management/features/link-to-traces",
   "patterns": [
-    "versioned-prompt-text"
+    "versioned-prompt-text",
+    "run-trace-evidence-envelope-replay"
   ]
 }

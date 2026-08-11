@@ -1,9 +1,9 @@
 {
   "id": "s6",
   "title": "Token Budget as Architecture Constraint",
-  "author": "tianpan.co",
+  "author": "Tian Pan",
   "kind": "post",
-  "url": "#",
+  "url": "https://tianpan.co/blog/2026-04-13-token-budget-as-architecture-constraint",
   "patterns": [
     "token-budget"
   ]

@@ -1,5 +1,18 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "mixed",
+  "summary": "Capability maps can become stale benchmark catalogs that add routing complexity without predicting production outcomes.",
+  "points": [
+    {
+      "text": "Provider updates, hidden system prompts, quantization, regional infrastructure, and tool changes can alter behavior without changing a public model name, invalidating old evaluations."
+    },
+    {
+      "text": "Task labels are often assigned from the same ambiguous user input the model must solve. Misclassification can route a hard or sensitive case to a cheap model with no chance to recover."
+    },
+    {
+      "text": "A router adds latency, cost, another model dependency, and new privacy exposure. For a narrow workload, one well-tested model plus deterministic fallbacks may be simpler and safer."
+    },
+    {
+      "text": "Benchmark optimization can hide rare but severe failures. Average quality and cost improvements do not establish acceptability for irreversible, regulated, or adversarial cases."
+    }
+  ]
 }

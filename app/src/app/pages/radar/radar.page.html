@@ -57,7 +57,12 @@
               <a [routerLink]="['/patterns', p.id]">
                 <span class="mono muted radar-ring-num">{{ p.num }}</span>
                 <span class="radar-ring-pattern">{{ p.title }}</span>
-                <span class="mono muted radar-ring-cat">{{ categoryName(p.category) }}</span>
+                <span class="mono muted radar-ring-cat">
+                  {{ categoryName(p.category) }}
+                  @if (p.abstraction && p.abstraction !== 'pattern') {
+                    &middot; {{ p.abstraction }}
+                  }
+                </span>
               </a>
             </li>
           }

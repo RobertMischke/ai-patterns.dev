@@ -1,9 +1,9 @@
 {
   "id": "s9",
   "title": "Evals Skills for Coding Agents",
-  "author": "Hamel Husain · hamel.dev",
+  "author": "Hamel Husain",
   "kind": "post",
-  "url": "#",
+  "url": "https://hamel.dev/blog/posts/evals-skills/index.html",
   "patterns": [
     "analysis-report"
   ]

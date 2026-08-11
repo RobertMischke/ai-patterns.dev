@@ -1,9 +1,9 @@
 {
   "id": "s2",
   "title": "Context Engineering for Coding Agents",
-  "author": "Martin Fowler",
+  "author": "Birgitta Böckeler",
   "kind": "post",
-  "url": "#",
+  "url": "https://martinfowler.com/articles/exploring-gen-ai/context-engineering-coding-agents.html",
   "patterns": [
     "context-compaction",
     "structure-context"

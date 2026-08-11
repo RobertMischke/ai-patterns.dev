@@ -4,12 +4,12 @@
     {
       "text": "DORA — Streamlining change approval: no evidence that formal external review lowers change fail rates; heavyweight approval slows delivery and enlarges batches.",
       "ref_type": "source",
-      "ref_id": "s26"
+      "ref_id": "s58"
     },
     {
       "text": "Sadowski et al. — Modern Code Review: A Case Study at Google: review at scale is lightweight and fast, and its main value is education, ownership and norm-keeping.",
       "ref_type": "source",
-      "ref_id": "s27"
+      "ref_id": "s59"
     },
     {
       "text": "NIST SSDF SP 800-218 PW.7: code review by a person and code analysis by tooling are selectable, combinable controls, with findings recorded and triaged.",
@@ -19,7 +19,7 @@
     {
       "text": "DORA — State of AI-assisted Software Development 2025: AI raises throughput while instability grows where validation systems lag the automation. The counter-case for skipping the gate before building one.",
       "ref_type": "source",
-      "ref_id": "s28"
+      "ref_id": "s60"
     }
   ]
 }

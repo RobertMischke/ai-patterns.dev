@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ai-patterns.dev/schemas/radar.schema.json",
+  "title": "RadarMetadata",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["rings", "sector_short", "positions"],
+  "properties": {
+    "rings": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "label", "color", "hint"],
+        "properties": {
+          "id": { "type": "string", "enum": ["adopt", "trial", "assess", "hold"] },
+          "label": { "type": "string", "minLength": 1 },
+          "color": { "type": "string", "minLength": 1 },
+          "hint": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "sector_short": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": { "pattern": "^[a-z][a-z0-9-]*$" },
+      "additionalProperties": { "type": "string", "minLength": 1 }
+    },
+    "positions": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": { "pattern": "^[a-z][a-z0-9-]*$" },
+      "additionalProperties": { "type": "string", "enum": ["adopt", "trial", "assess", "hold"] }
+    }
+  }
+}

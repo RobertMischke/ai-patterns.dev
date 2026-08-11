@@ -1,0 +1,10 @@
+{
+  "id": "s71",
+  "title": "Understanding MCP servers",
+  "author": "Model Context Protocol",
+  "kind": "doc",
+  "url": "https://modelcontextprotocol.io/docs/learn/server-concepts",
+  "patterns": [
+    "agent-computer-interface"
+  ]
+}

@@ -1,4 +1,20 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Token Budget supplies the hard resource ceiling inside the broader YOLO with Rails operating recipe.",
+  "items": [
+    {
+      "text": "Compose gateway-enforced ceilings with YOLO with Rails so cost control is joined by sandboxing, deterministic checks and an explicit review hand-off.",
+      "ref_type": "pattern",
+      "ref_id": "yolo-rails"
+    },
+    {
+      "text": "See Prompt Enrichment Preprocessing for the related use case or counterpoint: Before execution, classify a generic request and visibly attach only the house context needed for that kind of work.",
+      "ref_type": "pattern",
+      "ref_id": "prompt-enrichment-preprocessing"
+    },
+    {
+      "text": "See Agent-Workforce Management for the related use case or counterpoint: Manage agents like a workforce — roles, costs, allowances, escalation paths.",
+      "ref_type": "pattern",
+      "ref_id": "workforce"
+    }
+  ]
 }

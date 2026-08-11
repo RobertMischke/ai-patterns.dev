@@ -1,0 +1,10 @@
+{
+  "summary": "Established unit-testing practice supports the repeatable regression-test core; the explicit baseline/patch/proof ordering is the agent-operating recipe.",
+  "items": [
+    {
+      "text": "Microsoft .NET unit-testing best practices: regression protection through fast, isolated, repeatable and self-checking tests.",
+      "ref_type": "source",
+      "ref_id": "s73"
+    }
+  ]
+}

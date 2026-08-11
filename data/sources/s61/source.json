@@ -5,6 +5,8 @@
   "kind": "post",
   "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
   "patterns": [
-    "prompt-enrichment-preprocessing"
+    "prompt-enrichment-preprocessing",
+    "context-compaction",
+    "memory-tiering"
   ]
 }

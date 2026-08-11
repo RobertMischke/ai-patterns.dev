@@ -1,0 +1,22 @@
+{
+  "stance": "mixed",
+  "summary": "Not every production failure can be reduced to a deterministic unit test, and a faithful reproducer can still encode the wrong requirement.",
+  "points": [
+    {
+      "text": "Concurrency, timing, distributed state and third-party failures may resist deterministic local reproduction. Preserve the evidence and classify the uncertainty instead of fabricating a green unit test.",
+      "severity": "warning"
+    },
+    {
+      "text": "A regression test can faithfully reproduce a misunderstood report. Acceptance criteria and domain review are still needed to establish that the observed behavior is actually wrong.",
+      "severity": "blocker"
+    },
+    {
+      "text": "Running every check after every edit can make the loop unusably slow. Use the smallest reproducer during diagnosis, then widen to the relevant suite before claiming proof.",
+      "severity": "note"
+    },
+    {
+      "text": "A temporary revert or baseline checkout must not destroy unrelated work; use an isolated worktree, clean revision or equivalent controlled comparison.",
+      "severity": "warning"
+    }
+  ]
+}

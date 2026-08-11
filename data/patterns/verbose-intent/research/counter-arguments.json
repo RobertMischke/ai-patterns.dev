@@ -1,5 +1,18 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "mixed",
+  "summary": "Structured writing can force useful prioritization, is easier to scan and may be safer than retaining sensitive audio.",
+  "points": [
+    {
+      "text": "Long monologues often contain repeated, conflicting or speculative statements; an agent may anchor on a vivid aside rather than the actual requirement.",
+      "severity": "warning"
+    },
+    {
+      "text": "Speech recognition quality varies with language, accent, noise and technical vocabulary, creating unequal error rates and extra correction work.",
+      "severity": "warning"
+    },
+    {
+      "text": "Audio may capture bystanders, customer information or secrets. Recording, retention and third-party transcription require explicit privacy policy and consent.",
+      "severity": "blocker"
+    }
+  ]
 }

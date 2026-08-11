@@ -1,4 +1,20 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Provider trust governs the execution channel, independently of model capability and model-level authority.",
+  "items": [
+    {
+      "text": "Use task-specific capability evidence when selecting a model; an approved provider does not make every model suitable for every task.",
+      "ref_type": "pattern",
+      "ref_id": "model-task-capability"
+    },
+    {
+      "text": "Combine provider constraints with the model trust map so both the model and the channel are authorized.",
+      "ref_type": "pattern",
+      "ref_id": "model-trust-map"
+    },
+    {
+      "text": "See Agent Fencing for the related use case or counterpoint: The platform owns the durable history; agents receive bounded authority and oversight proportional to trust and risk.",
+      "ref_type": "pattern",
+      "ref_id": "agent-fencing"
+    }
+  ]
 }

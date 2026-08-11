@@ -1,4 +1,15 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "The same effort fingerprint supports two distinct readings: trust calibration and contribution recognition.",
+  "items": [
+    {
+      "text": "Present the same effort fingerprint as a contribution statement when compute and validation work should be visible at the project boundary.",
+      "ref_type": "pattern",
+      "ref_id": "compute-as-oss-contribution"
+    },
+    {
+      "text": "See Versioned Prompt Text for the related use case or counterpoint: Keep prompts as plain files in the code repository, and link every model call to the exact prompt version that produced it.",
+      "ref_type": "pattern",
+      "ref_id": "versioned-prompt-text"
+    }
+  ]
 }

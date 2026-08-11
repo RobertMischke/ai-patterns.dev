@@ -4,7 +4,8 @@
   "short": "The ability to see what an agent did, in what order, with what inputs and outputs.",
   "patterns": [
     "trust-layer",
-    "review-result",
-    "versioned-prompt-text"
+    "fire-track-review",
+    "versioned-prompt-text",
+    "run-trace-evidence-envelope-replay"
   ]
 }

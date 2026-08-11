@@ -1,5 +1,22 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "mixed",
+  "summary": "An analysis report can close the gap between scattered evidence and explicit follow-up work, but only if claims remain traceable and the report is judged by downstream decisions rather than prose quality.",
+  "points": [
+    {
+      "text": "Every finding should identify the queried time window, source artifact, stable link or digest, and confidence. Unsupported synthesis should be labeled as a hypothesis, not blended with observed facts.",
+      "severity": "warning"
+    },
+    {
+      "text": "Markdown serves reviewers while structured JSON enables deduplication, ownership, severity filtering, and longitudinal comparison; the two outputs should share stable finding IDs.",
+      "severity": "note"
+    },
+    {
+      "text": "The job needs a declared decision consumer and service level for follow-ups. Reports without owners, disposition states, or expiry dates become another unmaintained telemetry stream.",
+      "severity": "warning"
+    },
+    {
+      "text": "Prompt, model, query, evaluator, and schema versions are part of the report provenance because a changed synthesis stack can manufacture apparent trend changes.",
+      "severity": "note"
+    }
+  ]
 }

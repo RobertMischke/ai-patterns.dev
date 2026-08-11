@@ -1,5 +1,5 @@
 {
-  "summary": "The direction of the split can be reversed: small models may draft while a large model verifies or repairs.",
+  "summary": "This model-pairing variant specializes the Orchestrator / Subagent structure by assigning different model sizes to planning, execution and verification roles.",
   "items": [
     {
       "text": "Orchestrator / Subagent provides the delegation structure for role-separated agents.",

@@ -1,5 +1,22 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "mixed",
+  "summary": "Automatic drift detection can mistake intentional evolution or vague aspirations for defects, and maintaining trace links may cost more than updating the underlying documents.",
+  "points": [
+    {
+      "text": "Natural-language specifications are incomplete and often deliberately aspirational; semantic similarity cannot reliably determine whether a code difference is a violation or an accepted implementation choice.",
+      "severity": "blocker"
+    },
+    {
+      "text": "Specifications, tests and code can all be wrong, so declaring one artifact the comparison authority may synchronize the system to an obsolete requirement.",
+      "severity": "blocker"
+    },
+    {
+      "text": "Requirement-to-code links are costly to create and update across refactors, and stale links can produce more noise than having no automatic comparison.",
+      "severity": "warning"
+    },
+    {
+      "text": "Teams may optimize a drift score by deleting detailed commitments or adding vague documentation rather than resolving the underlying architectural disagreement.",
+      "severity": "warning"
+    }
+  ]
 }

@@ -1,0 +1,62 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - v*
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  quality:
+    name: Produce verified distribution
+    uses: ./.github/workflows/quality.yml
+    permissions:
+      contents: read
+
+  release:
+    name: Publish verified distribution
+    needs: quality
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - name: Download the exact verified artifact
+        uses: actions/download-artifact@70fc10c6e5e1ce46ad2ea6f2b72d43f7d47b13c3 # v8.0.0
+        with:
+          name: site-${{ github.sha }}
+          path: release/site
+
+      - name: Package distribution and checksum
+        shell: bash
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          safe_tag="${RELEASE_TAG//\//-}"
+          archive="release/ai-patterns-${safe_tag}.tar.gz"
+          tar --sort=name --mtime='UTC 1970-01-01' --owner=0 --group=0 --numeric-owner \
+            -C release -czf "$archive" site
+          sha256sum "$archive" > "${archive}.sha256"
+
+      - name: Create GitHub Release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          safe_tag="${RELEASE_TAG//\//-}"
+          archive="release/ai-patterns-${safe_tag}.tar.gz"
+          gh release create "$RELEASE_TAG" \
+            "$archive" "${archive}.sha256" \
+            --verify-tag \
+            --generate-notes \
+            --title "$RELEASE_TAG"

@@ -1,5 +1,18 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "supports",
+  "summary": "A worktree is a strong default for parallel repository mutation because it prevents agents from overwriting one checkout, but it is only the filesystem layer of isolation.",
+  "points": [
+    {
+      "text": "Give every task a unique branch, worktree path and ownership record, and integrate through reviewed commits rather than copying untracked files between trees.",
+      "severity": "info"
+    },
+    {
+      "text": "Allocate distinct ports, databases, caches, containers and test namespaces where concurrent runtimes could interfere.",
+      "severity": "blocker"
+    },
+    {
+      "text": "Merge or rebase frequently enough to surface overlap while context is still warm; isolation that delays all feedback until the end increases integration cost.",
+      "severity": "warning"
+    }
+  ]
 }

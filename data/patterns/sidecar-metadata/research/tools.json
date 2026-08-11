@@ -1,4 +1,25 @@
 {
-  "summary": "The pattern depends on ordinary filesystem, JSON, glob and review tooling rather than a specialized product.",
-  "items": []
+  "summary": "Several mature tools create or consume companion metadata files beside an artifact. They demonstrate concrete mechanisms for portable licensing, media metadata, signatures and provenance, while a general-purpose sidecar convention still needs project-specific schema and drift checks.",
+  "items": [
+    {
+      "text": "The REUSE tool checks repository licensing metadata and supports the REUSE convention in which an uncommentable file can have an adjacent same-name .license companion. It turns the sidecar into machine-verifiable SPDX evidence rather than an informal note.",
+      "ref_type": "external",
+      "url": "https://reuse.readthedocs.io/en/latest/readme.html"
+    },
+    {
+      "text": "darktable writes XMP sidecar files beside input images, storing editing history and metadata while keeping the source image untouched; it can synchronize those companions with its library database. This is a production example of visible, portable sidecars plus a rebuildable index.",
+      "ref_type": "external",
+      "url": "https://darktable-org.github.io/dtdocs/en/overview/sidecar-files/sidecar/"
+    },
+    {
+      "text": "Sigstore Cosign signs arbitrary blobs and writes a signature, certificate or verification bundle as separate output that can travel with the artifact. The companion contains cryptographic verification material without modifying the payload.",
+      "ref_type": "external",
+      "url": "https://docs.sigstore.dev/cosign/signing/signing_with_blobs/"
+    },
+    {
+      "text": "in-toto-record creates signed .link metadata describing a step's command, materials and products with hashes. Those sidecars make provenance and artifact drift independently verifiable across a supply-chain workflow.",
+      "ref_type": "external",
+      "url": "https://in-toto.readthedocs.io/en/stable/command-line-tools/in-toto-record.html"
+    }
+  ]
 }

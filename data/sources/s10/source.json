@@ -1,9 +1,9 @@
 {
   "id": "s10",
-  "title": "Build an Agent Workforce (talk)",
-  "author": "incident.io",
-  "kind": "video",
-  "url": "#",
+  "title": "How we're shipping faster with Claude Code and Git Worktrees",
+  "author": "Rory Bain · incident.io",
+  "kind": "post",
+  "url": "https://incident.io/blog/shipping-faster-with-claude-code-and-git-worktrees",
   "patterns": [
     "worktree",
     "workforce"

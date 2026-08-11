@@ -1,9 +1,9 @@
 {
   "id": "s57",
-  "title": "Agent Studio two-way alignment mechanisms — operational evidence, 24 July 2026",
+  "title": "Agent Studio AGENTS-to-wiki synchronization mechanism",
   "author": "Agent Studio",
   "kind": "other",
-  "url": "#",
+  "url": "https://github.com/agent-orc/agent-studio/blob/d85047ef266a575a5d3e6de7f75e5bf389f477b1/docs/system/domains/pipeline.md#L256-L266",
   "patterns": [
     "companion-app",
     "continuous-two-way-alignment"

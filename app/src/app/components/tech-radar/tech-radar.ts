@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { inject } from '@angular/core';
 import {
   PATTERNS, CATEGORIES, RADAR, radarRingOf,
-  type Pattern, type RadarRingId,
+  type Pattern, type PatternAbstraction, type RadarRingId,
 } from '../../../data';
 
 interface Dot {
@@ -14,6 +14,7 @@ interface Dot {
   ring:  RadarRingId;
   cat:   string;
   catName: string;
+  abstraction: PatternAbstraction | undefined;
   x:     number;
   y:     number;
   isHL:  boolean;
@@ -118,6 +119,7 @@ export class TechRadar {
         ring:    radarRingOf(p),
         cat:     p.category,
         catName: CATEGORIES.find(c => c.id === p.category)?.name ?? p.category,
+        abstraction: p.abstraction,
         x:       cx + Math.cos(ang) * rad,
         y:       cy + Math.sin(ang) * rad,
         isHL:    p.id === hl,

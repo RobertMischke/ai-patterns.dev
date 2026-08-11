@@ -1,6 +1,6 @@
 # Skip the Pull Request
 
-*Draft — thesis piece for the pattern P-44 "Skip the Pull Request". Status: unpublished.*
+*Draft — thesis piece for the pattern P-56 "Skip the Pull Request". Status: unpublished.*
 
 The pull request is not a quality control. It is a queue. In a team of humans that
 distinction rarely mattered, because the queue was short and the reviewer was the

@@ -1,0 +1,10 @@
+{
+  "id": "s74",
+  "title": "OpenTelemetry Signals",
+  "author": "OpenTelemetry",
+  "kind": "doc",
+  "url": "https://opentelemetry.io/docs/concepts/signals/",
+  "patterns": [
+    "run-trace-evidence-envelope-replay"
+  ]
+}

@@ -1,4 +1,56 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Artifact-first review combines the asynchronous operating loop with a common evidence envelope whose depth can be tuned to risk.",
+  "items": [
+    {
+      "text": "Consume diffs, checks, evidence and risk notes through Trust Layer; Fire, Track, Review defines when humans look, while the layer defines what trustworthy evidence is available.",
+      "ref_type": "pattern",
+      "ref_id": "trust-layer"
+    },
+    {
+      "text": "Compose the asynchronous review hand-off with YOLO with Rails so unattended execution ends at a deliberate artifact-and-evidence review point.",
+      "ref_type": "pattern",
+      "ref_id": "yolo-rails"
+    },
+    {
+      "text": "Review the compact evidence envelope first and drill into the raw run trace only when claims conflict, evidence is missing or the result is suspicious.",
+      "ref_type": "pattern",
+      "ref_id": "run-trace-evidence-envelope-replay"
+    },
+    {
+      "text": "For bug fixes, require the minimal patch together with its reproduced-red and proven-green unit-test evidence.",
+      "ref_type": "pattern",
+      "ref_id": "reproduce-patch-prove"
+    },
+    {
+      "text": "Require every quality-gate agent to emit the same verdict, evidence, confidence, waiver and remediation fields.",
+      "ref_type": "pattern",
+      "ref_id": "quality-gate-agents"
+    },
+    {
+      "text": "Render a compact top-level verdict from a richer machine-readable analysis report rather than duplicating evidence.",
+      "ref_type": "pattern",
+      "ref_id": "analysis-report"
+    },
+    {
+      "text": "Attach a risk class and review contract at dispatch: required tests, prohibited paths, evidence to capture, maximum cost, and the person or role authorized to accept."
+    },
+    {
+      "text": "Use bounded concurrency and review-queue backpressure so new work is not fired when completed artifacts already exceed reviewer capacity."
+    },
+    {
+      "text": "Route tasks using measured capability by task type, then feed accepted, revised, rejected and regressed outcomes back into that map.",
+      "ref_type": "pattern",
+      "ref_id": "model-task-capability"
+    },
+    {
+      "text": "See Plan-First Agents for the related use case or counterpoint: Plan first, type second. Expensive decisions live in the plan.",
+      "ref_type": "pattern",
+      "ref_id": "plan-mode"
+    },
+    {
+      "text": "See Skip the Pull Request for the related use case or counterpoint: In agent-first delivery, gates in front of the integration merge replace the human pull-request review — the operator reads verdicts, not diffs.",
+      "ref_type": "pattern",
+      "ref_id": "skip-the-pull-request"
+    }
+  ]
 }

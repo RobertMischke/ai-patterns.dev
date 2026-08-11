@@ -1,0 +1,35 @@
+{
+  "summary": "The Agent–Computer Interface specializes narrow interfaces at the action boundary and emits structured events for trace and recovery.",
+  "items": [
+    {
+      "text": "Narrow Interfaces supplies the general design rule; this pattern adds agent-facing schemas, effects, retry semantics and evidence.",
+      "ref_type": "pattern",
+      "ref_id": "narrow-interfaces"
+    },
+    {
+      "text": "Treat every returned observation as provenance-carrying data, even when the tool itself is trusted.",
+      "ref_type": "pattern",
+      "ref_id": "untrusted-content-boundary"
+    },
+    {
+      "text": "Declare capabilities in the contract and let Sandbox enforce the actual operating-system, filesystem and network rights.",
+      "ref_type": "pattern",
+      "ref_id": "sandbox"
+    },
+    {
+      "text": "Keep permission grants outside the descriptive interface: Agent Fencing decides which contracted operations this actor may invoke for this task.",
+      "ref_type": "pattern",
+      "ref_id": "agent-fencing"
+    },
+    {
+      "text": "Process Actor owns claims, leases and lifecycle verdicts across calls; a tool contract governs one action and its result.",
+      "ref_type": "pattern",
+      "ref_id": "process-actor"
+    },
+    {
+      "text": "Emit operation identity, contract version, request, result, side effects and evidence pointers into the run trace.",
+      "ref_type": "pattern",
+      "ref_id": "run-trace-evidence-envelope-replay"
+    }
+  ]
+}

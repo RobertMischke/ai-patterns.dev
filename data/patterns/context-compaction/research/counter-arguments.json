@@ -1,5 +1,22 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "challenges",
+  "summary": "Compaction can irreversibly omit an invariant, amplify a mistaken interpretation across generations of summaries, or make relevant evidence unreachable through a poor retrieval key.",
+  "points": [
+    {
+      "text": "A summary may drop a rare exception or negative requirement precisely because it looked unimportant before the later task made it decisive.",
+      "severity": "blocker"
+    },
+    {
+      "text": "Repeatedly summarizing prior summaries creates semantic drift and laundering: unsupported inferences become compacted facts that later models no longer question.",
+      "severity": "warning"
+    },
+    {
+      "text": "Just-in-time retrieval fails when filenames change, indexes lag, embeddings miss exact constraints, or the compact frame no longer contains the term needed to formulate the query.",
+      "severity": "warning"
+    },
+    {
+      "text": "Compression and retrieval add calls, latency, state management, and privacy exposure; short, well-scoped tasks may perform better with a deliberately small original context.",
+      "severity": "note"
+    }
+  ]
 }

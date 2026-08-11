@@ -1,5 +1,22 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "supports",
+  "summary": "Sandboxing is necessary for agents that execute code or tools, but the credible pattern is defense in depth: an isolation boundary plus least capability, hard quotas, network policy and audited export.",
+  "points": [
+    {
+      "text": "MicroVM and user-space-kernel systems provide stronger host separation than an unrestricted process and have production and measured systems evidence behind their designs.",
+      "severity": "info"
+    },
+    {
+      "text": "Isolation is not authorization: per-task filesystem roots, network destinations, credentials and tool operations must still be allowlisted and default-denied.",
+      "severity": "blocker"
+    },
+    {
+      "text": "CPU, memory, wall-clock, storage and external-spend ceilings prevent a compromised or looping agent from turning a contained incident into an availability or billing incident.",
+      "severity": "warning"
+    },
+    {
+      "text": "Only declared artifacts should cross the boundary, with malware or secret scanning and a manifest, because output is another exfiltration and persistence channel.",
+      "severity": "warning"
+    }
+  ]
 }

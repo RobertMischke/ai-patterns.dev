@@ -1,0 +1,25 @@
+{
+  "summary": "This bug-fix recipe orders deterministic validation into a causal red/green proof and hands the result to automated and human review.",
+  "items": [
+    {
+      "text": "Executable Safety Net provides the runnable checks; Reproduce–Patch–Prove orders them around one defect and requires a demonstrated red baseline.",
+      "ref_type": "pattern",
+      "ref_id": "executable-safety-net"
+    },
+    {
+      "text": "Store the baseline failure, patch identity, passing reproducer and wider regression results as one linked evidence envelope.",
+      "ref_type": "pattern",
+      "ref_id": "run-trace-evidence-envelope-replay"
+    },
+    {
+      "text": "Give quality-gate agents the deterministic red/green proof before asking for a semantic verdict on the repair.",
+      "ref_type": "pattern",
+      "ref_id": "quality-gate-agents"
+    },
+    {
+      "text": "Fire, Track, Review presents the minimal patch and its proof bundle instead of an unsupported success summary.",
+      "ref_type": "pattern",
+      "ref_id": "fire-track-review"
+    }
+  ]
+}

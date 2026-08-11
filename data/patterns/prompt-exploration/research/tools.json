@@ -1,4 +1,20 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Specification-oriented coding tools now expose clarification and planning as explicit stages. They implement the pattern best when questions, assumptions, non-goals and acceptance criteria remain editable artifacts before code generation begins.",
+  "items": [
+    {
+      "text": "GitHub Spec Kit defines a Spec-Driven Development workflow with commands for constitution, specification, clarification, planning, tasks and implementation. The clarification phase records answers in the specification before downstream design and code work.",
+      "ref_type": "external",
+      "url": "https://github.github.com/spec-kit/"
+    },
+    {
+      "text": "Cursor Plan Mode researches the codebase, asks clarifying questions and produces an editable Markdown plan with file paths and code references before implementation. Its handoff keeps intent exploration separate from execution.",
+      "ref_type": "external",
+      "url": "https://cursor.com/blog/plan-mode"
+    },
+    {
+      "text": "AWS Kiro converts a feature idea into structured requirements, design and implementation tasks, retaining the specification as the basis for agent work. This provides a concrete surface for resolving ambiguity and validating acceptance conditions before coding.",
+      "ref_type": "external",
+      "url": "https://aws.amazon.com/documentation-overview/kiro/"
+    }
+  ]
 }

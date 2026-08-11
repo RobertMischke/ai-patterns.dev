@@ -1,0 +1,26 @@
+{
+  "id": "run-trace-evidence-envelope-replay",
+  "num": "P-53",
+  "category": "trust",
+  "layer": "infra",
+  "classify": "intensified",
+  "title": "Run Trace, Evidence Envelope & Replay",
+  "one_liner": "Record each run as a provenance trace, then hand reviewers a compact evidence envelope instead of a chat log.",
+  "problem": "A final summary, diff or green badge cannot reconstruct what an agent actually received, attempted or changed. Chat transcripts are provider-specific, incomplete and too noisy for routine review; ordinary logs rarely bind instructions, tools, environment, artifacts and validation results into one run. Without those bindings, failures cannot be reconstructed, claims cannot be independently checked and reruns silently execute against different conditions.",
+  "solution": "Give every run a stable identity and an append-only, ordered trace. Record content-addressed references to task and instruction versions, selected context, source revision, model and provider settings, tool-contract versions, environment snapshot, authority grants, tool events, external effects, produced artifacts and validator results. Derive a compact evidence envelope containing acceptance criteria, artifact and diff hashes, checks and verdicts, evidence pointers, known gaps, risk notes and the trace reference. Redact at capture time and govern retention and access; secret-bearing raw transcripts are not the default evidence surface, and hidden chain-of-thought is never a replay requirement. Support three explicit levels: inspect recorded events, re-drive the control plane with recorded results, or re-execute inside a pinned sandbox as a new linked run. Never promise bit-for-bit model determinism or repeat irreversible effects; record divergence. Agent Studio is the reference implementation for task/run correlation, evidence envelopes and recovery replay: a stable TaskKey and TaskId form the correlation root, each attempt has its own RunId or RunAttemptId, ordered events point to artifacts, and an immutable result envelope binds repository, source attempt, base and result commits, artifact manifest and digest. The task ID groups history; it must never be confused with a particular run.",
+  "keywords": [
+    "run trace",
+    "evidence envelope",
+    "provenance",
+    "replay",
+    "task id",
+    "run id",
+    "content addressing",
+    "artifact hashes",
+    "execution lineage",
+    "reproducibility",
+    "divergence",
+    "audit trail",
+    "Agent Studio"
+  ]
+}

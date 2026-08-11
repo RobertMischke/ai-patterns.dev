@@ -1,4 +1,44 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Manage agents as a measured portfolio of capabilities and authorities rather than a static organization chart.",
+  "items": [
+    {
+      "text": "Maintain a role card with allowed tools, model, budget, evidence requirements, escalation path and recent calibrated performance by task class."
+    },
+    {
+      "text": "Route first to the smallest topology likely to succeed; add specialists only when an uncertainty, dependency or independent check warrants them."
+    },
+    {
+      "text": "Run periodic ablations against single-agent and human-assisted baselines to retire roles whose coordination cost exceeds their measured contribution."
+    },
+    {
+      "text": "Use Orchestrator / Subagent as the execution topology that assigns bounded jobs to roles selected from the workforce portfolio.",
+      "ref_type": "pattern",
+      "ref_id": "orchestrator-subagent"
+    },
+    {
+      "text": "Give concurrent implementation roles isolated Worktree Fan-Out workspaces so portfolio parallelism does not become repository contention.",
+      "ref_type": "pattern",
+      "ref_id": "worktree"
+    },
+    {
+      "text": "Place each role at a named Agent Pipelines & Triggered Roles stage instead of invoking an informal roster ad hoc.",
+      "ref_type": "pattern",
+      "ref_id": "agent-pipelines"
+    },
+    {
+      "text": "Qualify each role's model against its task classes with Model–Task Capability Mapping; a role name is not evidence of capability.",
+      "ref_type": "pattern",
+      "ref_id": "model-task-capability"
+    },
+    {
+      "text": "Allocate and observe per-role Token Budgets so the portfolio has explicit economic limits and comparable cost evidence.",
+      "ref_type": "pattern",
+      "ref_id": "token-budget"
+    },
+    {
+      "text": "Attach an Escalation Cascade to every role card so uncertainty, risk and exhausted attempts move through bounded capability tiers.",
+      "ref_type": "pattern",
+      "ref_id": "escalation-cascade"
+    }
+  ]
 }

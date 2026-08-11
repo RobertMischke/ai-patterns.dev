@@ -1,4 +1,15 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Feature locality is one concrete repository-layout implementation of the broader Structure as Context principle.",
+  "items": [
+    {
+      "text": "Apply Structure as Context beyond folder placement as well: combine feature locality with bounded units, narrow interfaces, entry points and project maps.",
+      "ref_type": "pattern",
+      "ref_id": "structure-context"
+    },
+    {
+      "text": "See Sidecar Metadata for the related use case or counterpoint: Put rich artifact metadata in predictably named companion files beside the artifact so people and agents can see, diff and discover it without opening the content.",
+      "ref_type": "pattern",
+      "ref_id": "sidecar-metadata"
+    }
+  ]
 }

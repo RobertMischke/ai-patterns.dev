@@ -1,4 +1,20 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Repository-level coding studies consistently find that relevant cross-file context helps, while also showing that selection quality and retrieval cost matter. They support the mechanism behind structured context, not the stronger claim that any particular folder scheme is universally optimal.",
+  "items": [
+    {
+      "text": "RepoCoder (EMNLP 2023) evaluated iterative retrieval plus generation on repository-level completion and reported gains over an in-file baseline; this is direct evidence for selecting repository context, not for one naming convention.",
+      "ref_type": "external",
+      "url": "https://aclanthology.org/2023.emnlp-main.151/"
+    },
+    {
+      "text": "RepoBench (ICLR 2024) introduced three repository-level benchmarks and documents the difficulty of retrieving and using cross-file context; benchmark construction limits direct organizational conclusions.",
+      "ref_type": "external",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/d191ba4c8923ed8fd8935b7c98658b5f-Abstract-Conference.html"
+    },
+    {
+      "text": "Repoformer (ICML 2024) found that selective retrieval can improve repository-level completion while avoiding unnecessary context, supporting an explicit relevance gate rather than maximal context injection.",
+      "ref_type": "external",
+      "url": "https://proceedings.mlr.press/v235/wu24a.html"
+    }
+  ]
 }

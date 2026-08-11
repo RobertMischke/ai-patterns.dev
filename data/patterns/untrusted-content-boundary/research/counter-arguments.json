@@ -1,0 +1,18 @@
+{
+  "stance": "mixed",
+  "summary": "Labels and delimiters reduce ambiguity but remain soft controls unless authority and effects are enforced by the host.",
+  "points": [
+    {
+      "text": "A model can still follow malicious text inside a correctly labeled data block. Treat separation as a defense layer, not as proof that prompt injection is solved.",
+      "severity": "blocker"
+    },
+    {
+      "text": "Aggressive sanitization can remove legitimate code, commands or quoted instructions that the task is meant to analyze; preserve the original artifact behind an auditable reference.",
+      "severity": "warning"
+    },
+    {
+      "text": "Trust labels become stale when derived content is copied into a new store or summary. Taint propagation and source-version checks add real implementation cost.",
+      "severity": "note"
+    }
+  ]
+}

@@ -1,5 +1,22 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "challenges",
+  "summary": "Agent gates can create an expensive illusion of independent assurance when they share models, context and blind spots, and blocking errors can overwhelm delivery.",
+  "points": [
+    {
+      "text": "Several named agents backed by the same model family and prompt corpus produce correlated judgments, so consensus is not equivalent to independent evidence.",
+      "severity": "blocker"
+    },
+    {
+      "text": "False rejections accumulate across serial gates: even individually acceptable error rates can make the overall pipeline reject a large share of correct changes.",
+      "severity": "blocker"
+    },
+    {
+      "text": "Agents may optimize visible criteria while missing integration, operational and organizational risks that are absent from their context window.",
+      "severity": "warning"
+    },
+    {
+      "text": "Gate latency, model cost and noisy remediation loops can exceed the value of reviewing low-risk changes unless checks are risk-tiered and cached.",
+      "severity": "warning"
+    }
+  ]
 }

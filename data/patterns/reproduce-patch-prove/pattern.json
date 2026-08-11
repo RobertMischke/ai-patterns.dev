@@ -1,0 +1,25 @@
+{
+  "id": "reproduce-patch-prove",
+  "num": "P-54",
+  "category": "trust",
+  "layer": "operating",
+  "classify": "proven",
+  "abstraction": "recipe",
+  "title": "Reproduce–Patch–Prove",
+  "one_liner": "Make the failure executable before changing code, then prove the smallest patch turns that same failure—and the surrounding checks—green.",
+  "problem": "An agent given an error report can quickly produce a plausible patch without showing that it observed the defect. A green suite may never exercise the failure, and apparent fixes may merely weaken an assertion, mask a symptom or depend on a different environment. Reviewers then receive a change without causal evidence that it fixes the reported problem.",
+  "solution": "Before editing, reproduce the failure in a clean, pinned environment with the smallest deterministic command or unit test available, and capture its expected failure signature. If it cannot be reproduced, stop guessing: collect missing inputs, improve observability or classify the case as environmental, intermittent or blocked. Turn the reproducer into a regression test when practical and verify that it fails for the intended reason on the unpatched baseline. Patch the smallest causal surface, then run the identical reproducer, the relevant regression suite and required static checks. Prove test sensitivity against the unpatched baseline, a temporary patch revert or an equivalent controlled comparison. Preserve the before-and-after commands, environment, outputs and artifact hashes in the evidence envelope. This is the classic red-to-green unit-test loop applied as a bug-fix recipe, not a general replacement for TDD. Without a demonstrated red baseline, do not claim fixed. Never reproduce destructive production behavior without isolation, simulation or explicit authority.",
+  "keywords": [
+    "minimal reproducer",
+    "unit test",
+    "regression test",
+    "baseline failure",
+    "causal proof",
+    "test sensitivity",
+    "red green",
+    "debugging loop",
+    "before-and-after evidence",
+    "flaky failure",
+    "minimal patch"
+  ]
+}

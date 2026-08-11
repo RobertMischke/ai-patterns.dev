@@ -1,4 +1,25 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Evidence is direct but system-specific and mixed: multi-agent frameworks can solve complex tasks, yet controlled analyses show modest gains, coordination failures, and new communication attack surfaces. No general study proves fresh subcontexts are universally superior.",
+  "items": [
+    {
+      "text": "Wu and colleagues, in 'AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation' (2023), present a framework for customizable conversable agents and evaluate applications including math, coding, question answering, decision making, and tool use. The case studies support orchestration feasibility but do not isolate manager-plus-specialist delegation against equally resourced single-agent baselines.",
+      "ref_type": "external",
+      "url": "https://arxiv.org/abs/2308.08155"
+    },
+    {
+      "text": "Qian and colleagues, in 'ChatDev: Communicative Agents for Software Development' (ACL, 2024), organize specialized agents into design, coding, testing, and documentation phases and evaluate generated software tasks, including ablations of communication mechanisms. Results demonstrate a concrete role pipeline, but the synthetic task setting and shared underlying model limit generalization to production teams.",
+      "ref_type": "external",
+      "url": "https://aclanthology.org/2024.acl-long.810/"
+    },
+    {
+      "text": "Cemri and colleagues, in 'Why Do Multi-Agent LLM Systems Fail?' (2025 preprint), have six expert annotators analyze five popular frameworks on more than 150 tasks and derive 14 failure modes across system design, inter-agent misalignment, and verification or termination. They report minimal benchmark gains over single-agent systems, directly challenging orchestration-by-default.",
+      "ref_type": "external",
+      "url": "https://arxiv.org/abs/2503.13657"
+    },
+    {
+      "text": "He and colleagues, in 'Red-Teaming LLM Multi-Agent Systems via Communication Attacks' (Findings of ACL, 2025), demonstrate Agent-in-the-Middle attacks that manipulate messages between agents across frameworks, topologies, and applications. This directly shows that delegation messages are a security boundary; attack setups are adversarial evaluations, not estimates of normal-world prevalence.",
+      "ref_type": "external",
+      "url": "https://aclanthology.org/2025.findings-acl.349/"
+    }
+  ]
 }

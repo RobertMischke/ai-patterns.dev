@@ -1,4 +1,25 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "YOLO with Rails is the operating recipe; the linked patterns provide its isolation, budget, deterministic-check and review rails.",
+  "items": [
+    {
+      "text": "Run autonomous work inside a sandbox so the allowed capabilities and audit boundary remain enforceable even when nobody watches the tool calls.",
+      "ref_type": "pattern",
+      "ref_id": "sandbox"
+    },
+    {
+      "text": "Enforce token and cost ceilings outside the prompt so an unattended run stops at a hard resource boundary.",
+      "ref_type": "pattern",
+      "ref_id": "token-budget"
+    },
+    {
+      "text": "Require deterministic builds, tests and checks as hard postconditions before autonomous work can be accepted.",
+      "ref_type": "pattern",
+      "ref_id": "executable-safety-net"
+    },
+    {
+      "text": "End unattended execution with an artifact-first review hand-off rather than continuous observation of the agent's working phase.",
+      "ref_type": "pattern",
+      "ref_id": "fire-track-review"
+    }
+  ]
 }

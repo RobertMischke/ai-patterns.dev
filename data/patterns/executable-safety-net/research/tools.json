@@ -1,4 +1,35 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "A useful safety net layers fast local hooks with repository tests, static analysis, security and policy checks, then makes the same named results mandatory in CI. Tools provide signals; branch policy turns them into a gate.",
+  "items": [
+    {
+      "text": "GitHub protected branches can require uniquely identified status checks, up-to-date branches, reviews, conversation resolution, and merge-queue validation before code reaches a protected branch.",
+      "ref_type": "external",
+      "url": "https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches"
+    },
+    {
+      "text": "pre-commit installs repository-configured, language-independent hooks and runs them consistently before commits or across all files, providing a fast local lint, format, and policy layer.",
+      "ref_type": "external",
+      "url": "https://pre-commit.com/"
+    },
+    {
+      "text": "pytest provides automatic test discovery, fixtures, parametrization, markers, and selectable subsets, supporting one-command local checks plus focused feature suites.",
+      "ref_type": "external",
+      "url": "https://docs.pytest.org/en/stable/"
+    },
+    {
+      "text": "mypy performs configurable static type checking and can run incrementally locally or as a strict CI gate, catching interface inconsistencies without executing the changed path.",
+      "ref_type": "external",
+      "url": "https://mypy.readthedocs.io/en/stable/"
+    },
+    {
+      "text": "Semgrep CI scans changed code with versioned static-analysis and security rules and can block findings according to rule and policy configuration.",
+      "ref_type": "external",
+      "url": "https://semgrep.dev/docs/semgrep-ci/overview/"
+    },
+    {
+      "text": "Conftest evaluates configuration files against Rego policies from a repository, making infrastructure, deployment, and governance constraints executable in local and CI workflows.",
+      "ref_type": "external",
+      "url": "https://www.conftest.dev/"
+    }
+  ]
 }

@@ -1,4 +1,25 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Evidence is direct for agent tool risks and prompt-injection failures and adjacent for authorization design: studies support least privilege and independent enforcement, but no controlled study validates one complete model-trust-map schema.",
+  "items": [
+    {
+      "text": "Ruan and colleagues, in 'Identifying the Risks of LM Agents with an LM-Emulated Sandbox' (ICLR, 2024), introduce ToolEmu, with 144 risky test cases across 36 high-stakes toolkits, and find substantial real-world harm potential in leading LM agents. The results directly motivate action-specific limits and recovery analysis, while the emulator and curated cases cannot estimate field incident rates.",
+      "ref_type": "external",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/7274ed909a312d4d869cc328ad1c5f04-Abstract-Conference.html"
+    },
+    {
+      "text": "Zhan and colleagues, in 'InjecAgent: Benchmarking Indirect Prompt Injections in Tool-Integrated Large Language Model Agents' (Findings of ACL, 2024), construct 1,054 test cases spanning tools and user tasks and show that untrusted external content can induce harmful tool actions. This directly supports separating read access from action authority and mediating every effect.",
+      "ref_type": "external",
+      "url": "https://aclanthology.org/2024.findings-acl.624/"
+    },
+    {
+      "text": "Jerome Saltzer and Michael Schroeder, in 'The Protection of Information in Computer Systems' (Proceedings of the IEEE, 1975), formulate least privilege, complete mediation, fail-safe defaults, and separation of privilege. These are foundational adjacent principles for a multidimensional trust map, not empirical findings about LLM behavior.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1109/PROC.1975.9939"
+    },
+    {
+      "text": "NIST's 'Artificial Intelligence Risk Management Framework (AI RMF 1.0)' (2023) organizes governance around Govern, Map, Measure, and Manage and emphasizes context-dependent, documented risk decisions. It supports explicit trust records and monitoring as a consensus framework, but it neither prescribes tool-level permissions nor evaluates agent authorization.",
+      "ref_type": "external",
+      "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10"
+    }
+  ]
 }

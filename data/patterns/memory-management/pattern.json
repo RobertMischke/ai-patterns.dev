@@ -4,6 +4,7 @@
   "category": "context",
   "layer": "operating",
   "classify": "new",
+  "abstraction": "hub",
   "title": "Memory Management Is the New Code",
   "one_liner": "Treat shared memory as the maintained interface between human intent and model action.",
   "problem": "Persisting agent memory is no longer the difficult part. A folder in a Git repository already provides a strong default: it is versioned, diffable, reviewable and portable. The harder problems appear after memories accumulate. A human may not be able to see what the agent currently believes; an initially clear structure may decay as entries and links multiply; and obsolete guidance may remain plausible enough to be recalled. These failures are operational, not merely archival: an invisible or stale belief can steer the next action.",

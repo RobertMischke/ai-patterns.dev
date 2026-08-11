@@ -1,4 +1,25 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Meta-analysis interprets evidence; a scheduled sweep supplies the repeatable cadence and evidence shape.",
+  "items": [
+    {
+      "text": "When the meta-analysis runs on a cadence, give it a named schedule, a gate-compatible evidence shape and a shared trust-layer queue.",
+      "ref_type": "pattern",
+      "ref_id": "scheduled-quality-sweeps"
+    },
+    {
+      "text": "Publish calibrated findings and follow-up tasks into Trust Layer; the report interprets evidence, while the layer owns the broader review and evidence surface.",
+      "ref_type": "pattern",
+      "ref_id": "trust-layer"
+    },
+    {
+      "text": "See Context Compaction & JIT Retrieval for the related use case or counterpoint: Less context, retrieved on demand, beats more context dumped upfront.",
+      "ref_type": "pattern",
+      "ref_id": "context-compaction"
+    },
+    {
+      "text": "See Fire, Track, Review for the related use case or counterpoint: Review the artifact, not the agent. Dispatch the task, track the output, inspect the result.",
+      "ref_type": "pattern",
+      "ref_id": "fire-track-review"
+    }
+  ]
 }

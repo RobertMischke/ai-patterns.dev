@@ -1,4 +1,15 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Specification drift is the narrower detector; continuous alignment adds companion freshness and bidirectional reconciliation.",
+  "items": [
+    {
+      "text": "Extend specification-versus-code drift control to companion-versus-artifact freshness and reviewable human-to-system write-back.",
+      "ref_type": "pattern",
+      "ref_id": "continuous-two-way-alignment"
+    },
+    {
+      "text": "See Spec-Driven Development for the related use case or counterpoint: The spec is the source of truth, not the code.",
+      "ref_type": "pattern",
+      "ref_id": "spec-driven"
+    }
+  ]
 }

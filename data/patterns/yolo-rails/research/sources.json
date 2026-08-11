@@ -1,4 +1,20 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Agent-safety benchmarks demonstrate substantial failures and attack success in tool-using settings. They strongly support hard boundaries, but benchmark attack rates should not be read as incident rates for a specific production deployment.",
+  "items": [
+    {
+      "text": "ToolEmu (ICLR 2024) emulates risky tool-use scenarios; human evaluation judged 68.8% of the generated failure cases to be valid and realistic, motivating adversarial evaluation before granting broad action authority. This percentage is a validity judgment on discovered failures, not an overall agent failure rate.",
+      "ref_type": "external",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/7274ed909a312d4d869cc328ad1c5f04-Abstract-Conference.html"
+    },
+    {
+      "text": "AgentDojo (NeurIPS 2024) benchmarks prompt-injection attacks and defenses in realistic tool-using tasks, showing the tension between utility and security under untrusted data.",
+      "ref_type": "external",
+      "url": "https://proceedings.nips.cc/paper_files/paper/2024/hash/97091a5177d8dc64b1da8bf3e1f6fb54-Abstract-Datasets_and_Benchmarks_Track.html"
+    },
+    {
+      "text": "Agent Security Bench (ICLR 2025) evaluates multiple attack and defense categories and reports high attack success for evaluated agents, while noting limited defense effectiveness.",
+      "ref_type": "external",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/5750f91d8fb9d5c02bd8ad2c3b44456b-Abstract-Conference.html"
+    }
+  ]
 }

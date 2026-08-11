@@ -1,0 +1,15 @@
+{
+  "summary": "The recipe is runner-agnostic: the essential tool property is a deterministic command that can prove the same case red before and green after the patch.",
+  "items": [
+    {
+      "text": "Use the repository's native unit-test runner to capture one minimal named regression case and execute it identically on baseline and patched revisions.",
+      "ref_type": "external",
+      "url": "https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-best-practices"
+    },
+    {
+      "text": "Mutation testing can provide additional sensitivity evidence when the defect class is subtle and a simple baseline comparison is insufficient.",
+      "ref_type": "external",
+      "url": "https://stryker-mutator.io/docs/"
+    }
+  ]
+}

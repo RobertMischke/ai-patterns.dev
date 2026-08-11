@@ -5,7 +5,7 @@
     {
       "text": "Agent Studio's measured corpus places 98.1% of recorded tokens in coding runs and about 1.9% in four review aspects. Avoiding repeated reviews has a bounded visible token benefit; avoiding coding setup, retries and duplicated context is what can change the result materially.",
       "severity": "info",
-      "source_id": "s63"
+      "source_id": "s65"
     },
     {
       "text": "The same corpus reports 4,949 minutes, or 16.6% of compute, in deterministic test gates while their model-token count is zero. Gate repetition matters for latency and throughput, but it is not evidence that collapsing cards saves model spend.",
@@ -14,13 +14,11 @@
     },
     {
       "text": "A workflow is strongest when at least three slices are independent, bounded and path-disjoint, and one end-to-end gate can validate the combined delivery. Sequential API, schema or migration decisions are durable card boundaries, not workflow fan-out opportunities.",
-      "severity": "note",
-      "source_id": "s63"
+      "severity": "note"
     },
     {
       "text": "No controlled Agent Studio experiment has run the same task both ways. The break-even formulas are a decision model and must be updated with per-agent tokens, attempts, diff size and review findings from the first workflow cohort.",
-      "severity": "warning",
-      "source_id": "s63"
+      "severity": "warning"
     }
   ]
 }

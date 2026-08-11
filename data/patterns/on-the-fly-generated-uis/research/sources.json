@@ -4,26 +4,22 @@
     {
       "text": "AI SDK UI: Generative User Interfaces",
       "ref_type": "source",
-      "ref_id": "s20",
-      "url": "https://ai-sdk.dev/docs/ai-sdk-ui/generative-user-interfaces"
+      "ref_id": "s75"
     },
     {
       "text": "JSON Forms: What is JSON Forms?",
       "ref_type": "source",
-      "ref_id": "s21",
-      "url": "https://jsonforms.io/docs/"
+      "ref_id": "s76"
     },
     {
       "text": "react-jsonschema-form: Introduction and philosophy",
       "ref_type": "source",
-      "ref_id": "s22",
-      "url": "https://rjsf-team.github.io/react-jsonschema-form/docs/"
+      "ref_id": "s22"
     },
     {
       "text": "OWASP: Cross Site Scripting Prevention Cheat Sheet",
       "ref_type": "source",
-      "ref_id": "s23",
-      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html"
+      "ref_id": "s23"
     }
   ]
 }

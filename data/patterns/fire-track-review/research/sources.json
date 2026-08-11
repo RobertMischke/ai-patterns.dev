@@ -1,4 +1,35 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Evidence combines modern agent pull-request data, human-factors research, empirical code-review studies, secure-development guidance and interoperable result standards. It supports asynchronous artifact review and a compact evidence-first result surface, while direct controlled comparisons with transcript-first review remain open.",
+  "items": [
+    {
+      "text": "Alberto Bacchelli and Christian Bird, in 'Expectations, Outcomes, and Challenges of Modern Code Review' (ICSE, 2013), combine observation, interviews, a survey, and review-comment analysis at Microsoft. They find that understanding changes, knowledge transfer, awareness, and alternative solutions are major review outcomes beyond defect finding. This supports reviewing a durable artifact, but the work predates autonomous coding agents.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1109/ICSE.2013.6606617"
+    },
+    {
+      "text": "Pinna and colleagues, in 'Comparing AI Coding Agents: A Task-Stratified Analysis of Pull Request Acceptance' (2026 preprint), analyze 7,156 pull requests attributed to Codex, Copilot, Devin, Cursor, and Claude Code. Acceptance varies strongly by task type and no agent dominates every stratum, supporting routing and review rather than unconditional trust. Acceptance is an observational proxy, not a controlled measure of correctness.",
+      "ref_type": "external",
+      "url": "https://arxiv.org/abs/2602.08915"
+    },
+    {
+      "text": "Gouraud, Delorme, and Berberian, in 'Autopilot, Mind Wandering, and the Out of the Loop Performance Problem' (Frontiers in Neuroscience, 2017), synthesize evidence that sustained automation can reduce attention and degrade recovery when people must retake control. This is adjacent aviation and human-factors evidence: it motivates meaningful checkpoints and active evidence review, but does not test coding-agent workflows.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.3389/fnins.2017.00541"
+    },
+    {
+      "text": "Sadowski, Soderberg, Church, Sipko and Bacchelli, Modern Code Review: A Case Study at Google (2018), combined interviews, a survey and analysis of millions of reviews and found that small, understandable changes and rapid feedback are central to the process. It is adjacent evidence for compact result packets and progressive disclosure, not a test of agent-chat omission.",
+      "ref_type": "external",
+      "url": "https://research.google/pubs/modern-code-review-a-case-study-at-google/"
+    },
+    {
+      "text": "Souppaya, Scarfone and Dodson, NIST SP 800-218 Secure Software Development Framework (2022), calls for code-analysis findings to be recorded, triaged and tracked through remediation. This directly supports durable evidence and status fields, but is normative secure-development guidance rather than a user-interface experiment.",
+      "ref_type": "external",
+      "url": "https://csrc.nist.gov/pubs/sp/800/218/final"
+    },
+    {
+      "text": "OASIS, Static Analysis Results Interchange Format Version 2.1.0 (2020), standardizes tool, rule, location, result, severity, fingerprint and artifact metadata across analyzers. It is strong implementation evidence for interoperable review results, but provides no empirical claim that a particular summary design improves review accuracy.",
+      "ref_type": "external",
+      "url": "https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html"
+    }
+  ]
 }

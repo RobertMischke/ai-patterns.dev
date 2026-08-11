@@ -1,0 +1,30 @@
+{
+  "summary": "Variants should make selection narrower, policy clearer and effectiveness measurable.",
+  "items": [
+    {
+      "text": "Place enrichment behind an intake classifier that emits task class, confidence and required clarifications before selecting blocks.",
+      "ref_type": "pattern",
+      "ref_id": "task-intake-proxy"
+    },
+    {
+      "text": "Render each selected block as a typed section with source, trust level, version and removal control.",
+      "ref_type": "pattern",
+      "ref_id": "structure-context"
+    },
+    {
+      "text": "Treat every block as versioned prompt text and compare outcome metrics across versions before promotion.",
+      "ref_type": "pattern",
+      "ref_id": "versioned-prompt-text"
+    },
+    {
+      "text": "Allocate a per-category token budget and skip enrichment entirely below a measured usefulness threshold.",
+      "ref_type": "pattern",
+      "ref_id": "token-budget"
+    },
+    {
+      "text": "Keep selected context in the data lane with explicit origin and trust; enrichment may add relevant material but must not grant it instructional authority.",
+      "ref_type": "pattern",
+      "ref_id": "untrusted-content-boundary"
+    }
+  ]
+}

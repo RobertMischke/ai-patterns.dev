@@ -1,0 +1,10 @@
+{
+  "summary": "The strongest current guidance treats instruction/data separation as one layer in a broader prompt-injection defense, not as a complete boundary by itself.",
+  "items": [
+    {
+      "text": "OWASP Prompt Injection Prevention Cheat Sheet: structured separation, remote-content controls, least privilege and tool-call validation.",
+      "ref_type": "source",
+      "ref_id": "s70"
+    }
+  ]
+}

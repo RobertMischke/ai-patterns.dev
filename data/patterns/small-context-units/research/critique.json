@@ -1,5 +1,22 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "supports",
+  "summary": "Bounded units improve reviewability and model-context selection when budgets act as prompts for cohesion rather than arbitrary style law.",
+  "points": [
+    {
+      "text": "Readability and smell studies consistently associate local code shape, size and complexity with human judgments and maintenance outcomes, providing a reasonable basis for measurement.",
+      "severity": "info"
+    },
+    {
+      "text": "Function-, class- and file-level budgets catch different failure modes; a small function inside a sprawling class does not create a small semantic context.",
+      "severity": "note"
+    },
+    {
+      "text": "Repository-completion evidence favors pruning irrelevant context, so the goal should be cohesive dependency closure rather than merely fewer physical lines.",
+      "severity": "note"
+    },
+    {
+      "text": "Thresholds need local calibration by language and outcome, with generated code and declarative tables handled separately; the literature does not validate universal numbers.",
+      "severity": "warning"
+    }
+  ]
 }

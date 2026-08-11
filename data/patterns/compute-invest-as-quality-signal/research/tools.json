@@ -1,4 +1,25 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Tracing tools can construct an effort fingerprint from model calls, retries, evaluation passes, and infrastructure use. They measure process, not quality; the signal becomes useful only after calibration against independent outcomes for comparable tasks.",
+  "items": [
+    {
+      "text": "MLflow Tracing exposes token usage and estimated cost per LLM span and aggregated trace, allowing productive calls, evaluator calls, and repeated attempts to be analyzed separately.",
+      "ref_type": "external",
+      "url": "https://mlflow.org/docs/latest/genai/tracing/token-usage-cost/"
+    },
+    {
+      "text": "LangSmith's trace tree breaks usage and cost into input, output, reasoning, tool, and retrieval runs and aggregates by project or thread; this supports a structured effort fingerprint rather than one spend number.",
+      "ref_type": "external",
+      "url": "https://docs.langchain.com/langsmith/cost-tracking"
+    },
+    {
+      "text": "OpenTelemetry generative-AI attributes standardize operation, provider, model, and token-usage fields across instrumentation, making longitudinal calibration less dependent on one observability vendor.",
+      "ref_type": "external",
+      "url": "https://opentelemetry.io/docs/specs/semconv/registry/attributes/gen-ai/"
+    },
+    {
+      "text": "OpenCost allocates Kubernetes resource use and cost by workload and labels, so self-hosted inference, evaluation workers, and accelerator time can join the fingerprint even when no provider token bill exists.",
+      "ref_type": "external",
+      "url": "https://opencost.io/docs/"
+    }
+  ]
 }

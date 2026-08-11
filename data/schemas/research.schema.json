@@ -12,17 +12,19 @@
       "required": ["stance", "summary", "points"],
       "properties": {
         "stance":  { "type": "string", "enum": ["supports", "challenges", "mixed", "unknown"] },
-        "summary": { "type": "string" },
+        "summary": { "type": "string", "minLength": 1 },
         "points":  {
           "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
           "items": {
             "type": "object",
             "additionalProperties": false,
             "required": ["text"],
             "properties": {
-              "text":      { "type": "string" },
+              "text":      { "type": "string", "minLength": 1 },
               "severity":  { "type": "string", "enum": ["info", "note", "warning", "blocker"] },
-              "source_id": { "type": "string", "description": "Optional reference to data/sources/<id>/." }
+              "source_id": { "type": "string", "pattern": "^s[1-9][0-9]*$", "description": "Optional reference to data/sources/<id>/." }
             }
           }
         }
@@ -35,19 +37,54 @@
       "additionalProperties": false,
       "required": ["summary", "items"],
       "properties": {
-        "summary": { "type": "string" },
+        "summary": { "type": "string", "minLength": 1 },
         "items": {
           "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
           "items": {
             "type": "object",
             "additionalProperties": false,
             "required": ["text"],
             "properties": {
-              "text":       { "type": "string" },
+              "text":       { "type": "string", "minLength": 1 },
               "ref_type":   { "type": "string", "enum": ["tool", "pattern", "source", "concept", "external"] },
-              "ref_id":     { "type": "string", "description": "Id within the chosen ref_type's folder." },
-              "url":        { "type": "string", "description": "External URL when ref_type = external." }
-            }
+              "ref_id":     { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$", "description": "Id within the chosen ref_type's folder." },
+              "url":        { "type": "string", "format": "uri", "pattern": "^https://", "description": "External URL when ref_type = external." }
+            },
+            "allOf": [
+              {
+                "if": {
+                  "required": ["ref_type"],
+                  "properties": { "ref_type": { "const": "external" } }
+                },
+                "then": {
+                  "required": ["url"],
+                  "not": { "required": ["ref_id"] }
+                }
+              },
+              {
+                "if": {
+                  "required": ["ref_type"],
+                  "properties": { "ref_type": { "enum": ["tool", "pattern", "source", "concept"] } }
+                },
+                "then": {
+                  "required": ["ref_id"],
+                  "not": { "required": ["url"] }
+                }
+              },
+              {
+                "if": { "not": { "required": ["ref_type"] } },
+                "then": {
+                  "not": {
+                    "anyOf": [
+                      { "required": ["ref_id"] },
+                      { "required": ["url"] }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }

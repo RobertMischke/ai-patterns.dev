@@ -9,12 +9,12 @@
     {
       "text": "DORA finds no evidence that a more formal, external review process is associated with lower change fail rates, and reports that heavyweight approval slows delivery into larger, riskier batches. That weakens the assumption that removing a human approval step must cost stability.",
       "severity": "info",
-      "source_id": "s26"
+      "source_id": "s58"
     },
     {
       "text": "The Google study of nine million reviewed changes describes modern code review as fast, lightweight and usually single-reviewer, with its dominant value in education, ownership and norm-keeping rather than in finding defects. Naming those functions is what makes the substitution honest: they must move somewhere, they do not disappear with the pull request.",
       "severity": "info",
-      "source_id": "s27"
+      "source_id": "s59"
     },
     {
       "text": "SSDF PW.7 treats human code review and tool-based code analysis as selectable and combinable controls, and PW.7.2 requires that discovered issues be recorded and triaged in the team's workflow. An automated path can satisfy the practice if its standard is documented and its findings are tracked — which is exactly what a structured verdict provides.",

@@ -1,4 +1,25 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Scheduled sweeps produce recurring evidence; meta-analysis interprets findings across reports and time.",
+  "items": [
+    {
+      "text": "Use a meta-review loop when sweep findings need cross-report interpretation, severity calibration and generated follow-up tasks.",
+      "ref_type": "pattern",
+      "ref_id": "analysis-report"
+    },
+    {
+      "text": "Publish recurring whole-system verdicts into Trust Layer so scheduled and per-change evidence share one review surface.",
+      "ref_type": "pattern",
+      "ref_id": "trust-layer"
+    },
+    {
+      "text": "See Continuous Two-Way Alignment for the related use case or counterpoint: Continuously reconcile system artifacts and their human-facing companion in both directions so neither machine progress nor human knowledge becomes an isolated, drifting truth.",
+      "ref_type": "pattern",
+      "ref_id": "continuous-two-way-alignment"
+    },
+    {
+      "text": "See Skip the Pull Request for the related use case or counterpoint: In agent-first delivery, gates in front of the integration merge replace the human pull-request review — the operator reads verdicts, not diffs.",
+      "ref_type": "pattern",
+      "ref_id": "skip-the-pull-request"
+    }
+  ]
 }

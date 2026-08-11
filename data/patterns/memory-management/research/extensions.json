@@ -16,6 +16,11 @@
       "ref_id": "decision-memory"
     },
     {
+      "text": "Classify an assertion as working, episodic, semantic or procedural memory before applying durable-memory maintenance rules.",
+      "ref_type": "pattern",
+      "ref_id": "memory-tiering"
+    },
+    {
       "text": "Load memory through small, explicit context entry points instead of injecting the whole folder into every run.",
       "ref_type": "pattern",
       "ref_id": "context-entry-points"

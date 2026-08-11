@@ -1,5 +1,22 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "supports",
+  "summary": "Exploring intent before implementation is well motivated for ambiguous work, but it should be adaptive: ask only questions whose answers can change scope, design or acceptance.",
+  "points": [
+    {
+      "text": "ClarifyGPT supplies direct evidence that targeted questions can improve code-generation accuracy when the initial request admits multiple interpretations.",
+      "severity": "info"
+    },
+    {
+      "text": "Writing resolved assumptions, non-goals and acceptance criteria creates a reviewable contract and prevents the implementation agent from silently choosing an interpretation.",
+      "severity": "note"
+    },
+    {
+      "text": "Question value should be decision-based: if no plausible answer changes the plan or test oracle, asking adds friction without reducing risk.",
+      "severity": "warning"
+    },
+    {
+      "text": "Requirements-quality research is heterogeneous, so teams should measure rework, clarification latency and escaped expectation defects instead of assuming a longer specification is better.",
+      "severity": "warning"
+    }
+  ]
 }

@@ -1,4 +1,15 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "A trust map grants authority only after capability is demonstrated and within an approved execution channel.",
+  "items": [
+    {
+      "text": "Use measured task capability to determine what a model can do before deciding what it may do.",
+      "ref_type": "pattern",
+      "ref_id": "model-task-capability"
+    },
+    {
+      "text": "Apply provider-specific data, tool and policy constraints after granting model-level authority.",
+      "ref_type": "pattern",
+      "ref_id": "provider-trust-map"
+    }
+  ]
 }

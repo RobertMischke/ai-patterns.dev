@@ -8,12 +8,14 @@
     "executable-safety-net",
     "quality-gate-agents",
     "scheduled-quality-sweeps",
-    "review-result",
+    "fire-track-review",
     "orchestrator-subagent",
     "escalation-cascade",
     "companion-model",
     "compute-invest-as-quality-signal",
     "skip-the-pull-request",
-    "workflow-sized-tasks"
+    "workflow-sized-tasks",
+    "run-trace-evidence-envelope-replay",
+    "reproduce-patch-prove"
   ]
 }

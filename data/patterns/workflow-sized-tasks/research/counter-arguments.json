@@ -4,13 +4,11 @@
   "points": [
     {
       "text": "Every workflow worker performs its own model and tool work. Planning, duplicated worker context and synthesis can cost more than the repeated setup and outer review that the large card removes.",
-      "severity": "warning",
-      "source_id": "s63"
+      "severity": "warning"
     },
     {
       "text": "A failed outer gate or cross-slice regression can reopen the entire combined task. Small cards keep already accepted dependencies durable and retry only the failed slice.",
-      "severity": "warning",
-      "source_id": "s63"
+      "severity": "warning"
     },
     {
       "text": "Claude workflow children in headless execution use acceptEdits and inherit the configured tool allowlist. A project that has not smoke-tested its activation and permissions does not have a qualified workflow route, even if ordinary edits appear to work.",
@@ -24,8 +22,7 @@
     },
     {
       "text": "One outer task ledger and one combined diff obscure which worker caused a finding. When auditability, steering or review precision matters, card boundaries are part of the evidence model and should not be optimized away.",
-      "severity": "warning",
-      "source_id": "s63"
+      "severity": "warning"
     }
   ]
 }

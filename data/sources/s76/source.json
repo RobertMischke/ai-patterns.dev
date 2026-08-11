@@ -1,0 +1,10 @@
+{
+  "id": "s76",
+  "title": "JSON Forms documentation",
+  "author": "EclipseSource",
+  "kind": "doc",
+  "url": "https://jsonforms.io/docs/",
+  "patterns": [
+    "on-the-fly-generated-uis"
+  ]
+}

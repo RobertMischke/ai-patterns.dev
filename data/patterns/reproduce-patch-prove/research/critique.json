@@ -1,0 +1,19 @@
+{
+  "stance": "supports",
+  "summary": "The recipe turns a plausible repair into a causal, reviewable claim by preserving the same failing observation across the patch boundary.",
+  "points": [
+    {
+      "text": "Unit-test guidance emphasizes isolated, repeatable and self-checking tests that protect against regression; those properties make the reproducer a durable defect contract.",
+      "severity": "info",
+      "source_id": "s73"
+    },
+    {
+      "text": "Running the new regression test against the unpatched baseline guards against a common false proof: a test that passes both before and after the change.",
+      "severity": "warning"
+    },
+    {
+      "text": "Keeping the patch small is not aesthetic minimalism; it narrows the causal explanation and the regression surface a reviewer must evaluate.",
+      "severity": "info"
+    }
+  ]
+}

@@ -1,5 +1,22 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "mixed",
+  "summary": "Periodic scans can create alert fatigue, delayed detection and large unowned repair batches; continuous or event-driven controls may be better for fast-moving risks.",
+  "points": [
+    {
+      "text": "A weekly or monthly schedule leaves a known exposure window; critical advisory, credential and policy events need immediate triggers rather than waiting for cron.",
+      "severity": "blocker"
+    },
+    {
+      "text": "Repeatedly reporting the same accepted debt inflates dashboards and teaches teams to ignore the sweep unless fingerprints, suppressions and expiry are first-class.",
+      "severity": "warning"
+    },
+    {
+      "text": "Whole-repository analysis can consume substantial CI capacity and model budget, especially when every run re-analyzes unchanged components.",
+      "severity": "warning"
+    },
+    {
+      "text": "Batching findings into scheduled campaigns creates larger, riskier remediation changes than continuously updating small dependencies or constraints.",
+      "severity": "note"
+    }
+  ]
 }

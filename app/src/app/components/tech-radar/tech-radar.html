@@ -48,7 +48,12 @@
         </span>
       </div>
       <div class="radar-tooltip-title">{{ h.d.title }}</div>
-      <div class="radar-tooltip-cat mono">{{ h.d.catName }}</div>
+      <div class="radar-tooltip-meta">
+        <div class="radar-tooltip-cat mono">{{ h.d.catName }}</div>
+        @if (h.d.abstraction && h.d.abstraction !== 'pattern') {
+          <span class="chip chip-abstraction">{{ h.d.abstraction }}</span>
+        }
+      </div>
       <div class="radar-tooltip-one">{{ h.d.one }}</div>
       <div class="radar-tooltip-hint">&nearr; {{ ringHint(h.d.ring) }}</div>
     </div>

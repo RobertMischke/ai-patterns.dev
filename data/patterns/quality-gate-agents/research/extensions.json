@@ -1,4 +1,35 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Quality gate agents produce one concrete class of structured evidence consumed by the broader trust surface.",
+  "items": [
+    {
+      "text": "Send named gate verdicts and evidence pointers into Trust Layer; gates decide at fixed stages, while the layer unifies evidence and review across the delivery system.",
+      "ref_type": "pattern",
+      "ref_id": "trust-layer"
+    },
+    {
+      "text": "Consume the deterministic red/green bundle from Reproduce–Patch–Prove before issuing a model-based semantic verdict on a bug fix.",
+      "ref_type": "pattern",
+      "ref_id": "reproduce-patch-prove"
+    },
+    {
+      "text": "See Agent Fencing for the related use case or counterpoint: The platform owns the durable history; agents receive bounded authority and oversight proportional to trust and risk.",
+      "ref_type": "pattern",
+      "ref_id": "agent-fencing"
+    },
+    {
+      "text": "See Fire, Track, Review for the related use case or counterpoint: Review the artifact, not the agent. Dispatch the task, track the output, inspect the result.",
+      "ref_type": "pattern",
+      "ref_id": "fire-track-review"
+    },
+    {
+      "text": "See Skip the Pull Request for the related use case or counterpoint: In agent-first delivery, gates in front of the integration merge replace the human pull-request review — the operator reads verdicts, not diffs.",
+      "ref_type": "pattern",
+      "ref_id": "skip-the-pull-request"
+    },
+    {
+      "text": "See Switching Abstraction Layers for the related use case or counterpoint: Move from code and prompts to tasks, pipelines, reviews and capacity only when evidence makes the lower layer trustworthy enough to manage by signals.",
+      "ref_type": "pattern",
+      "ref_id": "switching-abstraction-layers"
+    }
+  ]
 }

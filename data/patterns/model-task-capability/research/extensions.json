@@ -1,4 +1,35 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Capability, model authority and provider authority are separate decisions that must agree before dispatch.",
+  "items": [
+    {
+      "text": "After measuring whether a model can perform the task, consult the trust map to decide whether that model may perform it in the current context.",
+      "ref_type": "pattern",
+      "ref_id": "model-trust-map"
+    },
+    {
+      "text": "Verify that the selected execution provider is approved for the task's data, tools and side effects; model fitness alone does not approve the channel.",
+      "ref_type": "pattern",
+      "ref_id": "provider-trust-map"
+    },
+    {
+      "text": "See Escalation Cascade for the related use case or counterpoint: Start with the smallest model that may succeed; pay for a larger one only when evidence says it will not.",
+      "ref_type": "pattern",
+      "ref_id": "escalation-cascade"
+    },
+    {
+      "text": "See Not framing the agent as a pro for the related use case or counterpoint: Treating the agent like a generic chatbot — no role, no standards — invites confident hallucination.",
+      "ref_type": "pattern",
+      "ref_id": "no-pro-framing"
+    },
+    {
+      "text": "See Agent-Workforce Management for the related use case or counterpoint: Manage agents like a workforce — roles, costs, allowances, escalation paths.",
+      "ref_type": "pattern",
+      "ref_id": "workforce"
+    },
+    {
+      "text": "Feed accepted, revised, rejected and later-regressed asynchronous results back from Fire, Track, Review so task-specific capability estimates improve with observed outcomes.",
+      "ref_type": "pattern",
+      "ref_id": "fire-track-review"
+    }
+  ]
 }

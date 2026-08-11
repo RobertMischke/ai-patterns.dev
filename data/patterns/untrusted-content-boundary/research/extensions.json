@@ -1,0 +1,25 @@
+{
+  "summary": "Instruction–data separation composes with context selection, explicit tool contracts and host-enforced authority boundaries.",
+  "items": [
+    {
+      "text": "Prompt Enrichment Preprocessing chooses context; the boundary preserves each selected block's origin and prevents retrieved context from becoming policy.",
+      "ref_type": "pattern",
+      "ref_id": "prompt-enrichment-preprocessing"
+    },
+    {
+      "text": "Carry provenance and trust class through every tool result so computer observations remain data rather than new instructions.",
+      "ref_type": "pattern",
+      "ref_id": "agent-computer-interface"
+    },
+    {
+      "text": "Use Sandbox to contain consequences when hostile content still influences an action proposal.",
+      "ref_type": "pattern",
+      "ref_id": "sandbox"
+    },
+    {
+      "text": "Use Agent Fencing so no content block can expand the task's platform-owned authority grant.",
+      "ref_type": "pattern",
+      "ref_id": "agent-fencing"
+    }
+  ]
+}

@@ -7,16 +7,18 @@
   "additionalProperties": false,
   "required": ["lede", "body"],
   "properties": {
-    "lede": { "type": "string" },
+    "lede": { "type": "string", "minLength": 1 },
     "body": {
       "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
       "items": {
         "type": "object",
         "additionalProperties": false,
         "required": ["h", "p"],
         "properties": {
-          "h": { "type": "string", "description": "Section heading." },
-          "p": { "type": "string", "description": "Section paragraph." }
+          "h": { "type": "string", "minLength": 1, "description": "Section heading." },
+          "p": { "type": "string", "minLength": 1, "description": "Section paragraph." }
         }
       }
     }

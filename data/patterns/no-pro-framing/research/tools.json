@@ -1,4 +1,30 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Major model APIs support system-level role and behavior instructions, while validator and evaluation frameworks can test the standards that matter; the latter are more reliable than an unverified expert persona alone.",
+  "items": [
+    {
+      "text": "Anthropic system prompts assign Claude a role and persistent behavioral context before user messages. The documentation recommends role prompting for focus and tone, but the application must state concrete constraints, evidence requirements, and refusal behavior rather than assume the role adds expertise.",
+      "ref_type": "external",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/system-prompts"
+    },
+    {
+      "text": "Google Gemini system instructions can define persona, format, goals, rules, and context across a request. This implements professional framing at the instruction boundary, while leaving factual capability and policy enforcement to evaluation and application controls.",
+      "ref_type": "external",
+      "url": "https://ai.google.dev/gemini-api/docs/system-instructions"
+    },
+    {
+      "text": "OpenAI's prompt-engineering guide distinguishes higher-authority developer instructions from user input and recommends explicit identity, instructions, examples, and context. Versioned prompts can encode review standards and uncertainty expectations without presenting a fictitious biography as evidence.",
+      "ref_type": "external",
+      "url": "https://platform.openai.com/docs/guides/prompt-engineering"
+    },
+    {
+      "text": "Guardrails AI validators check model inputs or outputs against concrete criteria and can re-ask, filter, fix, refrain, or raise on failure. Validators turn parts of a professional standard into observable controls rather than relying solely on persona language.",
+      "ref_type": "external",
+      "url": "https://guardrailsai.com/guardrails/docs/concepts/validators"
+    },
+    {
+      "text": "Promptfoo runs prompts and models against versioned test cases, assertions, and red-team probes. It can directly compare a neutral instruction, an expert role, and a behavior contract on the target task before institutionalizing any framing.",
+      "ref_type": "external",
+      "url": "https://www.promptfoo.dev/docs/intro/"
+    }
+  ]
 }

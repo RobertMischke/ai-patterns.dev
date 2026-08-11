@@ -1,165 +1,205 @@
 #!/usr/bin/env node
 /**
- * Build step: read data/ → produce two artifacts the Angular app consumes.
- *
- *   1. app/src/data/index.ts
- *      A TypeScript module exporting strongly-typed, eagerly-loaded
- *      arrays/maps. Used at prerender time so every page can render
- *      to static HTML without a runtime fetch.
- *
- *   2. app/public/data/
- *      A copy of all canonical JSON files, served as static assets.
- *      Used at runtime for incremental research updates (pattern/<id>/research/*)
- *      without rebuilding the bundle.
- *
- * Run this before `ng build` / `ng serve`. The npm scripts in app/package.json
- * wire it as a `prebuild`/`prestart` step.
+ * Validate data/, then generate the TypeScript catalogue and public JSON assets.
+ * All output is prepared in sibling staging directories before the existing
+ * generated directories are swapped. Canonical data/ is read-only here.
  */
 
 import {
-  readFileSync, writeFileSync, mkdirSync,
-  readdirSync, statSync, existsSync, rmSync, copyFileSync,
+  copyFileSync,
+  existsSync,
+  mkdirSync,
+  mkdtempSync,
+  readdirSync,
+  renameSync,
+  rmSync,
+  statSync,
+  writeFileSync,
 } from 'node:fs';
-import { join, dirname, resolve, relative } from 'node:path';
+import { randomUUID } from 'node:crypto';
+import { basename, dirname, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import {
+  formatValidationResult,
+  validateCatalog,
+} from './lib/catalog.mjs';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const ROOT      = resolve(__dirname, '..');
-const DATA      = join(ROOT, 'data');
-const APP       = join(ROOT, 'app');
-const OUT_TS    = join(APP, 'src', 'data');
-const OUT_ASSET = join(APP, 'public', 'data');
+const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
+const ROOT = resolve(SCRIPT_DIR, '..');
+const DATA = join(ROOT, 'data');
+const APP = join(ROOT, 'app');
+const OUT_TS = resolve(APP, 'src', 'data');
+const OUT_ASSET = resolve(APP, 'public', 'data');
+const ALLOWED_TARGETS = new Set([OUT_TS, OUT_ASSET]);
 
-/* ─────────────────── helpers ─────────────────── */
-
-function readJson(absPath) {
-  return JSON.parse(readFileSync(absPath, 'utf8'));
+function compareText(a, b) {
+  return a < b ? -1 : a > b ? 1 : 0;
 }
 
-function listDirs(absPath) {
-  if (!existsSync(absPath)) return [];
-  return readdirSync(absPath)
-    .filter(name => !name.startsWith('_') && statSync(join(absPath, name)).isDirectory())
-    .sort();
+function portableRelative(path) {
+  return relative(ROOT, path).split(sep).join('/');
 }
 
-function copyTree(srcDir, destDir) {
-  if (!existsSync(srcDir)) return;
-  mkdirSync(destDir, { recursive: true });
-  for (const entry of readdirSync(srcDir)) {
-    const src  = join(srcDir, entry);
-    const dest = join(destDir, entry);
-    const st   = statSync(src);
-    if (st.isDirectory()) copyTree(src, dest);
-    else copyFileSync(src, dest);
+function copyTree(source, destination) {
+  mkdirSync(destination, { recursive: true });
+  for (const entry of readdirSync(source).sort(compareText)) {
+    const sourcePath = join(source, entry);
+    const destinationPath = join(destination, entry);
+    if (statSync(sourcePath).isDirectory()) copyTree(sourcePath, destinationPath);
+    else copyFileSync(sourcePath, destinationPath);
   }
 }
 
-/* ─────────────────── load ─────────────────── */
+function patternNumber(record) {
+  const match = /^(P|A)-(\d+)$/.exec(record.num);
+  return match
+    ? { family: match[1] === 'P' ? 0 : 1, value: Number(match[2]) }
+    : { family: 2, value: Number.MAX_SAFE_INTEGER };
+}
 
-console.log('Loading data/…');
-
-const patterns   = listDirs(join(DATA, 'patterns'))
-  .map(id => readJson(join(DATA, 'patterns', id, 'pattern.json')));
-
-const categories = listDirs(join(DATA, 'categories'))
-  .map(id => readJson(join(DATA, 'categories', id, 'category.json')));
-
-const concepts   = listDirs(join(DATA, 'concepts'))
-  .map(id => {
-    const concept = readJson(join(DATA, 'concepts', id, 'concept.json'));
-    const articlePath = join(DATA, 'concepts', id, 'article.json');
-    return existsSync(articlePath)
-      ? { ...concept, has_article: true }
-      : { ...concept, has_article: false };
+function sortPatterns(records) {
+  return [...records].sort((left, right) => {
+    const a = patternNumber(left);
+    const b = patternNumber(right);
+    return a.family - b.family || a.value - b.value || compareText(left.id, right.id);
   });
-
-const tools      = listDirs(join(DATA, 'tools'))
-  .map(id => readJson(join(DATA, 'tools', id, 'tool.json')));
-
-const sources    = listDirs(join(DATA, 'sources'))
-  .map(id => readJson(join(DATA, 'sources', id, 'source.json')));
-
-const toolKinds  = readJson(join(DATA, '_meta', 'tool-kinds.json'));
-const radarMeta  = readJson(join(DATA, '_meta', 'radar.json'));
-
-/* ─────────────────── cross-reference check ─────────────────── */
-
-const patternIds = new Set(patterns.map(p => p.id));
-const categoryIds = new Set(categories.map(c => c.id));
-const conceptIds = new Set(concepts.map(c => c.id));
-const toolIds = new Set(tools.map(t => t.id));
-const sourceIds = new Set(sources.map(s => s.id));
-const errors = [];
-
-for (const p of patterns) {
-  if (!categoryIds.has(p.category)) {
-    errors.push(`pattern ${p.id} references missing category ${p.category}`);
-  }
 }
-for (const c of concepts) {
-  for (const ref of c.patterns) {
-    if (!patternIds.has(ref)) errors.push(`concept ${c.id} references missing pattern ${ref}`);
-  }
+
+function sortCategories(records) {
+  return [...records].sort((left, right) => Number(left.num) - Number(right.num) || compareText(left.id, right.id));
 }
-for (const t of tools) {
-  for (const ref of t.patterns) {
-    if (!patternIds.has(ref)) errors.push(`tool ${t.id} references missing pattern ${ref}`);
-  }
+
+function sortBy(field, records) {
+  return [...records].sort((left, right) => compareText(left[field], right[field]) || compareText(left.id, right.id));
 }
-for (const s of sources) {
-  for (const ref of s.patterns) {
-    if (!patternIds.has(ref)) errors.push(`source ${s.id} references missing pattern ${ref}`);
+
+function sortSources(records) {
+  return [...records].sort((left, right) => {
+    const a = /^s(\d+)$/.exec(left.id);
+    const b = /^s(\d+)$/.exec(right.id);
+    return Number(a?.[1] ?? Number.MAX_SAFE_INTEGER) - Number(b?.[1] ?? Number.MAX_SAFE_INTEGER)
+      || compareText(left.id, right.id);
+  });
+}
+
+function assertGeneratedPath(path, kind) {
+  const resolved = resolve(path);
+  if (kind === 'target') {
+    if (!ALLOWED_TARGETS.has(resolved)) throw new Error(`Refusing unexpected generated target: ${resolved}`);
+    return;
+  }
+  const parent = dirname(resolved);
+  const target = [...ALLOWED_TARGETS].find(candidate => dirname(candidate) === parent);
+  const expectedPrefix = target ? `.${basename(target)}.${kind}-` : '';
+  if (!target || !basename(resolved).startsWith(expectedPrefix)) {
+    throw new Error(`Refusing unexpected generated ${kind} path: ${resolved}`);
   }
 }
 
-const researchTargets = {
-  pattern: patternIds,
-  concept: conceptIds,
-  tool: toolIds,
-  source: sourceIds,
-};
-for (const p of patterns) {
-  const researchDir = join(DATA, 'patterns', p.id, 'research');
-  for (const file of ['sources.json', 'extensions.json', 'tools.json']) {
-    const absPath = join(researchDir, file);
-    if (!existsSync(absPath)) continue;
-    const research = readJson(absPath);
-    for (const item of research.items ?? []) {
-      if (!item.ref_type || item.ref_type === 'external') continue;
-      const targets = researchTargets[item.ref_type];
-      if (!targets) {
-        errors.push(`pattern ${p.id} ${file} uses unknown ref_type ${item.ref_type}`);
-      } else if (!item.ref_id || !targets.has(item.ref_id)) {
-        errors.push(`pattern ${p.id} ${file} references missing ${item.ref_type} ${item.ref_id ?? '(empty)'}`);
-      }
+function removeGenerated(path, kind) {
+  assertGeneratedPath(path, kind);
+  if (existsSync(path)) rmSync(path, { recursive: true, force: true });
+}
+
+function createStage(target) {
+  assertGeneratedPath(target, 'target');
+  mkdirSync(dirname(target), { recursive: true });
+  return mkdtempSync(join(dirname(target), `.${basename(target)}.stage-`));
+}
+
+function renameWithRetry(source, destination) {
+  let lastError;
+  for (let attempt = 0; attempt < 4; attempt += 1) {
+    try {
+      renameSync(source, destination);
+      return;
+    } catch (error) {
+      lastError = error;
+      if (!['EACCES', 'EBUSY', 'EPERM'].includes(error.code) || attempt === 3) break;
+      Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 50 * (attempt + 1));
     }
   }
-  for (const file of ['critique.json', 'counter-arguments.json']) {
-    const absPath = join(researchDir, file);
-    if (!existsSync(absPath)) continue;
-    const research = readJson(absPath);
-    for (const point of research.points ?? []) {
-      if (point.source_id && !sourceIds.has(point.source_id)) {
-        errors.push(`pattern ${p.id} ${file} references missing source ${point.source_id}`);
+  throw lastError;
+}
+
+function installStage(entry) {
+  entry.installStarted = true;
+  try {
+    renameWithRetry(entry.stage, entry.target);
+  } catch (error) {
+    if (process.platform !== 'win32' || !['EACCES', 'EBUSY', 'EPERM'].includes(error.code)) throw error;
+    // Windows can reject a directory rename while a descendant was recently
+    // scanned. The fully prepared stage is still copied as one guarded unit;
+    // rollback removes a partial target if this fallback itself fails.
+    copyTree(entry.stage, entry.target);
+  }
+  entry.installed = true;
+}
+
+function installStages(entries) {
+  for (const entry of entries) {
+    assertGeneratedPath(entry.target, 'target');
+    assertGeneratedPath(entry.stage, 'stage');
+    assertGeneratedPath(entry.backup, 'backup');
+  }
+
+  let completed = false;
+  try {
+    for (const entry of entries) {
+      entry.hadTarget = existsSync(entry.target);
+      if (entry.hadTarget) {
+        renameWithRetry(entry.target, entry.backup);
+        entry.backedUp = true;
       }
+      installStage(entry);
+    }
+    completed = true;
+  } catch (installError) {
+    const rollbackErrors = [];
+    for (const entry of [...entries].reverse()) {
+      try {
+        if (entry.installStarted && existsSync(entry.target)) removeGenerated(entry.target, 'target');
+        if (entry.backedUp && existsSync(entry.backup)) renameWithRetry(entry.backup, entry.target);
+      } catch (rollbackError) {
+        rollbackErrors.push(`${portableRelative(entry.target)}: ${rollbackError.message}`);
+      }
+    }
+    if (rollbackErrors.length) {
+      throw new Error(`${installError.message}; rollback also failed: ${rollbackErrors.join('; ')}`);
+    }
+    throw installError;
+  } finally {
+    for (const entry of entries) {
+      if (existsSync(entry.stage)) removeGenerated(entry.stage, 'stage');
+      if (completed && existsSync(entry.backup)) removeGenerated(entry.backup, 'backup');
     }
   }
 }
-if (errors.length) {
-  console.error('\nCross-reference errors:');
-  for (const e of errors) console.error(`  ${e}`);
+
+console.log('Validating canonical data...');
+const validation = validateCatalog({ dataRoot: DATA, strict: true });
+if (!validation.valid) {
+  console.error(formatValidationResult(validation));
   process.exit(1);
 }
 
-/* ─────────────────── emit TS module ─────────────────── */
-
-mkdirSync(OUT_TS, { recursive: true });
+const { catalog } = validation;
+const patterns = sortPatterns(catalog.patterns);
+const categories = sortCategories(catalog.categories);
+const concepts = sortBy('id', catalog.concepts).map(concept => ({
+  ...concept,
+  has_article: catalog.articles.has(concept.id),
+}));
+const tools = sortBy('id', catalog.tools);
+const sources = sortSources(catalog.sources);
+const toolKinds = catalog.toolKinds;
+const radarMeta = catalog.radar;
 
 const typesSource = `// AUTO-GENERATED by scripts/build-data.mjs — do not edit by hand.
 
-export type PatternClassify = 'new' | 'intensified' | 'proven' | 'trial' | 'assess' | 'anti-pattern' | 'unknown';
+export type PatternClassify = 'new' | 'intensified' | 'proven' | 'anti-pattern' | 'unknown';
 export type PatternLayer    = 'operating' | 'infra';
+export type PatternAbstraction = 'principle' | 'hub' | 'pattern' | 'variant' | 'recipe' | 'application';
 
 export interface Pattern {
   id: string;
@@ -167,6 +207,7 @@ export interface Pattern {
   category: string;
   layer: PatternLayer;
   classify: PatternClassify;
+  abstraction?: PatternAbstraction;
   title: string;
   one_liner: string;
   problem: string;
@@ -219,61 +260,87 @@ export interface ToolKind {
 
 export type RadarRingId = 'adopt' | 'trial' | 'assess' | 'hold';
 export interface RadarRing {
-  id:    RadarRingId;
+  id: RadarRingId;
   label: string;
   color: string;
-  hint:  string;
+  hint: string;
 }
 export interface RadarMeta {
-  rings:        readonly RadarRing[];
+  rings: readonly RadarRing[];
   sector_short: Readonly<Record<string, string>>;
-  positions:    Readonly<Record<string, RadarRingId>>;
+  positions: Readonly<Record<string, RadarRingId>>;
 }
 `;
 
-writeFileSync(join(OUT_TS, 'types.ts'), typesSource);
-
 const indexSource = `// AUTO-GENERATED by scripts/build-data.mjs — do not edit by hand.
 
-import type { Pattern, Category, Concept, Tool, Source, ToolKind, RadarMeta, RadarRingId } from './types';
+import type { Pattern, PatternAbstraction, Category, Concept, Tool, Source, ToolKind, RadarMeta, RadarRingId } from './types';
 
-export const PATTERNS:   readonly Pattern[]   = ${JSON.stringify(patterns,   null, 2)} as const;
+export const PATTERNS:   readonly Pattern[]   = ${JSON.stringify(patterns, null, 2)} as const;
 export const CATEGORIES: readonly Category[]  = ${JSON.stringify(categories, null, 2)} as const;
-export const CONCEPTS:   readonly Concept[]   = ${JSON.stringify(concepts,   null, 2)} as const;
-export const TOOLS:      readonly Tool[]      = ${JSON.stringify(tools,      null, 2)} as const;
-export const SOURCES:    readonly Source[]    = ${JSON.stringify(sources,    null, 2)} as const;
-export const TOOL_KINDS: readonly ToolKind[]  = ${JSON.stringify(toolKinds,  null, 2)} as const;
-export const RADAR:      RadarMeta            = ${JSON.stringify(radarMeta,  null, 2)} as const;
+export const CONCEPTS:   readonly Concept[]   = ${JSON.stringify(concepts, null, 2)} as const;
+export const TOOLS:      readonly Tool[]      = ${JSON.stringify(tools, null, 2)} as const;
+export const SOURCES:    readonly Source[]    = ${JSON.stringify(sources, null, 2)} as const;
+export const TOOL_KINDS: readonly ToolKind[]  = ${JSON.stringify(toolKinds, null, 2)} as const;
+export const RADAR:      RadarMeta            = ${JSON.stringify(radarMeta, null, 2)} as const;
 
-export const PATTERN_BY_ID:   ReadonlyMap<string, Pattern>  = new Map(PATTERNS.map(p => [p.id, p]));
-export const CATEGORY_BY_ID:  ReadonlyMap<string, Category> = new Map(CATEGORIES.map(c => [c.id, c]));
-export const CONCEPT_BY_ID:   ReadonlyMap<string, Concept>  = new Map(CONCEPTS.map(c => [c.id, c]));
-export const TOOL_BY_ID:      ReadonlyMap<string, Tool>     = new Map(TOOLS.map(t => [t.id, t]));
-export const SOURCE_BY_ID:    ReadonlyMap<string, Source>   = new Map(SOURCES.map(s => [s.id, s]));
+export const PATTERN_BY_ID:  ReadonlyMap<string, Pattern>  = new Map(PATTERNS.map(p => [p.id, p]));
+export const CATEGORY_BY_ID: ReadonlyMap<string, Category> = new Map(CATEGORIES.map(c => [c.id, c]));
+export const CONCEPT_BY_ID:  ReadonlyMap<string, Concept>  = new Map(CONCEPTS.map(c => [c.id, c]));
+export const TOOL_BY_ID:     ReadonlyMap<string, Tool>     = new Map(TOOLS.map(t => [t.id, t]));
+export const SOURCE_BY_ID:   ReadonlyMap<string, Source>   = new Map(SOURCES.map(s => [s.id, s]));
+
+/** Explicit abstraction kind, with legacy records treated as regular patterns. */
+export function patternAbstractionOf(p: Pattern): PatternAbstraction {
+  return p.abstraction ?? 'pattern';
+}
 
 /** Curated radar position for a pattern, falling back to the classify-derived ring. */
 export function radarRingOf(p: Pattern): RadarRingId {
   const curated = RADAR.positions[p.id];
   if (curated) return curated;
   if (p.classify === 'anti-pattern') return 'hold';
-  if (p.classify === 'proven')       return 'adopt';
-  if (p.classify === 'intensified')  return 'trial';
+  if (p.classify === 'proven') return 'adopt';
+  if (p.classify === 'intensified') return 'trial';
   return 'assess';
 }
 
-export type { Pattern, Category, Concept, Tool, Source, ToolKind, RadarMeta, RadarRingId, RadarRing } from './types';
+export type { Pattern, PatternAbstraction, Category, Concept, Tool, Source, ToolKind, RadarMeta, RadarRingId, RadarRing } from './types';
 `;
 
-writeFileSync(join(OUT_TS, 'index.ts'), indexSource);
-console.log(`  wrote ${relative(ROOT, join(OUT_TS, 'index.ts'))}`);
-
-/* ─────────────────── copy assets ─────────────────── */
-
-if (existsSync(OUT_ASSET)) rmSync(OUT_ASSET, { recursive: true, force: true });
-for (const sub of ['patterns', 'categories', 'concepts', 'tools', 'sources', '_meta']) {
-  copyTree(join(DATA, sub), join(OUT_ASSET, sub));
+let tsStage;
+let assetStage;
+let entries = [];
+try {
+  tsStage = createStage(OUT_TS);
+  assetStage = createStage(OUT_ASSET);
+  entries = [
+    {
+      target: OUT_TS,
+      stage: tsStage,
+      backup: join(dirname(OUT_TS), `.${basename(OUT_TS)}.backup-${randomUUID()}`),
+    },
+    {
+      target: OUT_ASSET,
+      stage: assetStage,
+      backup: join(dirname(OUT_ASSET), `.${basename(OUT_ASSET)}.backup-${randomUUID()}`),
+    },
+  ];
+  writeFileSync(join(tsStage, 'types.ts'), typesSource, 'utf8');
+  writeFileSync(join(tsStage, 'index.ts'), indexSource, 'utf8');
+  for (const subdirectory of ['_meta', 'categories', 'concepts', 'patterns', 'sources', 'tools']) {
+    copyTree(join(DATA, subdirectory), join(assetStage, subdirectory));
+  }
+  installStages(entries);
+} catch (error) {
+  if (tsStage && existsSync(tsStage)) removeGenerated(tsStage, 'stage');
+  if (assetStage && existsSync(assetStage)) removeGenerated(assetStage, 'stage');
+  console.error(`Generation failed: ${error.message}`);
+  process.exit(1);
 }
-console.log(`  copied data tree → ${relative(ROOT, OUT_ASSET)}`);
 
-console.log('\nSummary:');
-console.log(`  ${patterns.length} patterns, ${categories.length} categories, ${concepts.length} concepts, ${tools.length} tools, ${sources.length} sources`);
+console.log(`Generated ${portableRelative(OUT_TS)} and ${portableRelative(OUT_ASSET)}.`);
+console.log(
+  `Summary: ${patterns.length} patterns, ${categories.length} categories, ` +
+  `${concepts.length} concepts, ${tools.length} tools, ${sources.length} sources`,
+);

@@ -1,4 +1,25 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Evidence strength: direct but mixed for LLM code review, and adjacent for established review and secure-development gates. Automated reviewers can improve targeted feedback, but recent controlled benchmark evidence shows severe false-rejection and false-acceptance risks; no direct controlled study located validates a fully autonomous multi-agent gate pipeline in production.",
+  "items": [
+    {
+      "text": "Yu, Rong, Shen and colleagues, Fine-Tuning Large Language Models to Improve Accuracy and Comprehensibility of Automated Code Review (ACM Transactions on Software Engineering and Methodology, 2025; published online 2024), reported that the specialized CarLLM approach improved review accuracy and comprehensibility over pretrained and general-purpose model baselines. It is direct evidence for tuned review agents, but not for authoritative merge blocking across arbitrary repositories.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1145/3695993"
+    },
+    {
+      "text": "Jin and Chen, Are LLMs reliable code reviewers? systematic overcorrection in requirement conformance judgement (Automated Software Engineering, 2026), tested five models on paired correct and buggy solutions from three benchmarks. It found both unsafe acceptance and high false rejection; for GPT-4o on MBPP, richer prompts raised the false-negative rate from 35.9% to 87.9%. This directly argues for executable evidence and calibrated escalation rather than model verdicts alone.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1007/s10515-026-00638-5"
+    },
+    {
+      "text": "Souppaya, Scarfone and Dodson, NIST SP 800-218 Secure Software Development Framework (2022), recommends human review and/or automated code analysis, with findings recorded, triaged and remediated. It directly supports explicit gates and evidence retention, but is a consensus standard rather than a comparison of AI agents.",
+      "ref_type": "external",
+      "url": "https://csrc.nist.gov/pubs/sp/800/218/final"
+    },
+    {
+      "text": "Sadowski, Soderberg, Church, Sipko and Bacchelli, Modern Code Review: A Case Study at Google (ICSE Software Engineering in Practice, 2018), combined 12 interviews, a 44-person survey and analysis of millions of reviews, finding quality, knowledge transfer and maintainability benefits as well as process tradeoffs. This is adjacent evidence that a gate standard is socio-technical, not only defect classification.",
+      "ref_type": "external",
+      "url": "https://research.google/pubs/modern-code-review-a-case-study-at-google/"
+    }
+  ]
 }

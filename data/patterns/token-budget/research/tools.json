@@ -1,4 +1,20 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "AI gateways and observability products expose token and cost accounting, but a robust budget also needs task-aware reservations, hard enforcement and an explicit degraded path when the allowance is exhausted.",
+  "items": [
+    {
+      "text": "Portkey AI Gateway budget limits: API keys can enforce cost or token ceilings with alert thresholds and periodic resets; provider integrations and workspaces have related budget controls.",
+      "ref_type": "external",
+      "url": "https://portkey.ai/docs/product/administration/enforce-budget-and-rate-limit"
+    },
+    {
+      "text": "LiteLLM Proxy: central spend tracking, budgets and rate limits can apply policy across model providers.",
+      "ref_type": "external",
+      "url": "https://docs.litellm.ai/"
+    },
+    {
+      "text": "Langfuse token and cost tracking: trace-level usage makes budget consumption observable and supports model-specific pricing configuration.",
+      "ref_type": "external",
+      "url": "https://langfuse.com/docs/observability/features/token-and-cost-tracking"
+    }
+  ]
 }

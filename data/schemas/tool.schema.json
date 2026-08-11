@@ -4,15 +4,25 @@
   "title": "Tool",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "name", "vendor", "kind", "blurb", "url", "patterns"],
+  "required": ["id", "name", "vendor", "kind", "blurb", "url", "oss_url", "patterns"],
   "properties": {
-    "id":       { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
-    "name":     { "type": "string" },
-    "vendor":   { "type": "string" },
-    "kind":     { "type": "string", "description": "Tool-kind id; matches data/_meta/tool-kinds.json." },
-    "blurb":    { "type": "string" },
-    "url":      { "type": "string", "format": "uri" },
-    "oss_url":  { "type": ["string", "null"], "format": "uri" },
-    "patterns": { "type": "array", "items": { "type": "string" } }
+    "id":       { "type": "string", "minLength": 1, "pattern": "^[a-z][a-z0-9-]*$" },
+    "name":     { "type": "string", "minLength": 1 },
+    "vendor":   { "type": "string", "minLength": 1 },
+    "kind":     { "type": "string", "minLength": 1, "pattern": "^[a-z][a-z0-9-]*$", "description": "Tool-kind id; matches data/_meta/tool-kinds.json." },
+    "blurb":    { "type": "string", "minLength": 1 },
+    "url":      { "type": "string", "format": "uri", "pattern": "^https://" },
+    "oss_url":  {
+      "anyOf": [
+        { "type": "string", "format": "uri", "pattern": "^https://" },
+        { "type": "null" }
+      ]
+    },
+    "patterns": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" }
+    }
   }
 }

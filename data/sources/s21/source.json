@@ -6,6 +6,7 @@
   "url": "https://slsa.dev/spec/v1.2/verifying-artifacts",
   "patterns": [
     "executable-safety-net",
-    "quality-gate-agents"
+    "quality-gate-agents",
+    "run-trace-evidence-envelope-replay"
   ]
 }

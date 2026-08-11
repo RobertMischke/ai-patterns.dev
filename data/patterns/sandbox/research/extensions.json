@@ -1,4 +1,25 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Sandbox supplies the enforceable isolation and capability boundary inside the broader YOLO with Rails operating recipe.",
+  "items": [
+    {
+      "text": "Compose isolation with YOLO with Rails so bounded authority is joined by explicit budgets, deterministic checks and an artifact-first review hand-off.",
+      "ref_type": "pattern",
+      "ref_id": "yolo-rails"
+    },
+    {
+      "text": "Contain the effects of action proposals influenced by untrusted content; instruction–data separation governs interpretation, while Sandbox enforces the available capabilities.",
+      "ref_type": "pattern",
+      "ref_id": "untrusted-content-boundary"
+    },
+    {
+      "text": "Enforce the filesystem, process and network rights declared by the Agent–Computer Interface; the tool contract describes authority but does not create it.",
+      "ref_type": "pattern",
+      "ref_id": "agent-computer-interface"
+    },
+    {
+      "text": "See Agent Fencing for the related use case or counterpoint: The platform owns the durable history; agents receive bounded authority and oversight proportional to trust and risk.",
+      "ref_type": "pattern",
+      "ref_id": "agent-fencing"
+    }
+  ]
 }

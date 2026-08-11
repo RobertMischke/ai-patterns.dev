@@ -1,4 +1,50 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Extensions should make the pipeline discoverable, gate transitions with executable evidence, and preserve durable rationale when the normal path is overridden.",
+  "items": [
+    {
+      "text": "Publish a concise pipeline entry point beside the workflow code: task class, graph, artifacts, tool scopes, budgets, and the command for a local dry run.",
+      "ref_type": "pattern",
+      "ref_id": "context-entry-points"
+    },
+    {
+      "text": "Attach machine-checkable contracts to every handoff and require the safety-net result before a pipeline can advance from implementation to review.",
+      "ref_type": "pattern",
+      "ref_id": "executable-safety-net"
+    },
+    {
+      "text": "Add a bounded exception edge: unresolved or high-impact failures leave a decision record and escalate to a named human rather than looping or silently accepting.",
+      "ref_type": "pattern",
+      "ref_id": "decision-memory"
+    },
+    {
+      "text": "See Continuous Two-Way Alignment for the related use case or counterpoint: Continuously reconcile system artifacts and their human-facing companion in both directions so neither machine progress nor human knowledge becomes an isolated, drifting truth.",
+      "ref_type": "pattern",
+      "ref_id": "continuous-two-way-alignment"
+    },
+    {
+      "text": "See On-the-Fly Generated UIs (Usually Cached) for the related use case or counterpoint: Generate an interface from the artifact it fronts, cache and version the result against those inputs, and regenerate it when they change.",
+      "ref_type": "pattern",
+      "ref_id": "on-the-fly-generated-uis"
+    },
+    {
+      "text": "See Agent as a Process Actor for the related use case or counterpoint: Let agents own bounded process steps, never ambiguous process state.",
+      "ref_type": "pattern",
+      "ref_id": "process-actor"
+    },
+    {
+      "text": "See Skip the Pull Request for the related use case or counterpoint: In agent-first delivery, gates in front of the integration merge replace the human pull-request review — the operator reads verdicts, not diffs.",
+      "ref_type": "pattern",
+      "ref_id": "skip-the-pull-request"
+    },
+    {
+      "text": "See Switching Abstraction Layers for the related use case or counterpoint: Move from code and prompts to tasks, pipelines, reviews and capacity only when evidence makes the lower layer trustworthy enough to manage by signals.",
+      "ref_type": "pattern",
+      "ref_id": "switching-abstraction-layers"
+    },
+    {
+      "text": "See Agent-Workforce Management for the related use case or counterpoint: Manage agents like a workforce — roles, costs, allowances, escalation paths.",
+      "ref_type": "pattern",
+      "ref_id": "workforce"
+    }
+  ]
 }

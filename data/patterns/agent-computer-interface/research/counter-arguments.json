@@ -1,0 +1,18 @@
+{
+  "stance": "mixed",
+  "summary": "A contract can make a tool legible without making its implementation correct, secure or easy for a model to use.",
+  "points": [
+    {
+      "text": "JSON Schema describes shape, not the full semantics of side effects, race conditions or domain invariants; executable contract tests and runtime policy remain necessary.",
+      "severity": "blocker"
+    },
+    {
+      "text": "Too many tiny operations create long plans and partial-failure states, while one giant operation hides control. The interface needs task-shaped granularity, not maximal decomposition.",
+      "severity": "warning"
+    },
+    {
+      "text": "Versioning contracts and maintaining adapters adds cost, especially when upstream CLIs or web interfaces change without machine-readable compatibility guarantees.",
+      "severity": "note"
+    }
+  ]
+}

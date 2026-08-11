@@ -1,5 +1,22 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "supports",
+  "summary": "The council pattern closes a common governance gap: review output has no value if findings vanish without disposition. It works only when findings are scoped, evidence-linked, and resolved by an accountable authority.",
+  "points": [
+    {
+      "text": "Each finding needs a stable ID, affected artifact and revision, evidence, severity, concrete risk, proposed check or remedy, owner, and state. Free-form reviewer prose cannot support a reliable loop.",
+      "severity": "note"
+    },
+    {
+      "text": "Acceptance must record who accepted which residual risk, why, for how long, and under what compensating control. Marking a thread resolved is not equivalent to a reasoned exception.",
+      "severity": "warning"
+    },
+    {
+      "text": "A loop budget should cap rounds, elapsed time, and compute, then escalate remaining high-severity disagreements; it must not auto-accept merely because the budget expired.",
+      "severity": "blocker"
+    },
+    {
+      "text": "Council performance should be evaluated by confirmed-finding precision, escaped-defect recall, time to disposition, reopen rate, and reviewer burden, not comment count.",
+      "severity": "note"
+    }
+  ]
 }

@@ -1,5 +1,22 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "challenges",
+  "summary": "Effort is an unreliable proxy: excellent work can be cheap, poor work can consume vast compute, and visible spend creates incentives that conflict with efficiency and equal participation.",
+  "points": [
+    {
+      "text": "A hard problem can remain unsolved after enormous search, while a familiar or well-specified problem may be solved correctly in one pass. Compute confounds difficulty, inefficiency, and quality.",
+      "severity": "blocker"
+    },
+    {
+      "text": "Once maintainers reward a high fingerprint, agents can pad reasoning tokens, ensemble size, retries, or evaluator calls, producing Goodhart's-law behavior.",
+      "severity": "warning"
+    },
+    {
+      "text": "The metric disadvantages efficient workflows, local models, donated hardware with poor cost accounting, and contributors unable to purchase premium inference.",
+      "severity": "warning"
+    },
+    {
+      "text": "Detailed traces can reveal prompts, code, model-provider contracts, and failed security checks; privacy-preserving aggregation removes precisely the context needed to interpret the signal.",
+      "severity": "warning"
+    }
+  ]
 }

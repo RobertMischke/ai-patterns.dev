@@ -1,0 +1,15 @@
+{
+  "summary": "Protocols and interface-description formats provide the schema substrate; applications must still declare agent-relevant effects and recovery behavior.",
+  "items": [
+    {
+      "text": "Model Context Protocol standardizes discovery and invocation of schema-described tools across hosts and servers.",
+      "ref_type": "external",
+      "url": "https://modelcontextprotocol.io/docs/learn/server-concepts"
+    },
+    {
+      "text": "OpenAPI can generate typed adapters for HTTP operations, but side-effect and idempotency semantics still need deliberate modeling.",
+      "ref_type": "external",
+      "url": "https://spec.openapis.org/oas/latest.html"
+    }
+  ]
+}

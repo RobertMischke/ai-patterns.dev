@@ -7,7 +7,7 @@
   "url": "https://aider.chat",
   "oss_url": "https://github.com/Aider-AI/aider",
   "patterns": [
-    "review-result",
+    "fire-track-review",
     "structure-context"
   ]
 }

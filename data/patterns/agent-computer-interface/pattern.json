@@ -1,0 +1,23 @@
+{
+  "id": "agent-computer-interface",
+  "num": "P-52",
+  "category": "guard",
+  "layer": "infra",
+  "classify": "intensified",
+  "title": "Agent–Computer Interface / Tool Contract",
+  "one_liner": "Treat every tool as a versioned protocol between agent and computer, with typed inputs, explicit effects, bounded outputs and recoverable errors.",
+  "problem": "Tools designed for humans often expose free-form commands, hidden state, oversized output and ambiguous success signals. An agent must infer syntax, side effects and recovery rules from prose, then guess whether a retry is safe. Small misunderstandings become duplicated writes, incorrect targets or false success, while raw output consumes the context needed to reason about the task.",
+  "solution": "Design the tool surface as an explicit contract. Give every operation a stable name and version; typed request and response schemas; a declared read, write or external-effect class; required capability; preconditions and postconditions; timeout and cancellation behavior; and idempotency or retry semantics. Separate inspect or preview from commit for risky actions. Return structured errors that distinguish invalid input, stale state, policy denial, transient infrastructure failure and product failure. Bound and paginate observations, placing large raw results behind stable artifact references. Report what was observed, what changed and which evidence proves the postcondition. Contract-test tools against representative agent mistakes and version breaking changes deliberately. This is not a transport protocol or a sandbox: the contract makes actions legible, Agent Fencing grants authority, Sandbox enforces it, and Process Actor owns workflow state.",
+  "keywords": [
+    "agent-computer interface",
+    "tool contract",
+    "structured tools",
+    "typed schemas",
+    "side effects",
+    "idempotency",
+    "preview and commit",
+    "structured errors",
+    "tool versioning",
+    "error recovery"
+  ]
+}

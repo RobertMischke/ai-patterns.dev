@@ -1,9 +1,9 @@
 {
   "id": "s17",
-  "title": "Agent Studio council loop — reference implementation, in progress",
+  "title": "Agent Studio bounded council review reaction",
   "author": "Agent Studio",
   "kind": "other",
-  "url": "#",
+  "url": "https://github.com/agent-orc/agent-studio/blob/d85047ef266a575a5d3e6de7f75e5bf389f477b1/backend/Features/Review/CouncilReviewReaction.cs#L62-L110",
   "patterns": [
     "council"
   ]

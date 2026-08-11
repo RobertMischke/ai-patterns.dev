@@ -1,5 +1,22 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "mixed",
+  "summary": "Compute investment can be a weak process signal for allocating review attention, especially when it records search and verification. It is not proof of correctness and is meaningful only after task-normalized, outcome-based calibration.",
+  "points": [
+    {
+      "text": "Normalize by task class, difficulty proxy, model and revision, workflow, cache use, tool calls, hardware, and pricing date. Tokens or dollars across unlike tasks and providers are not comparable.",
+      "severity": "warning"
+    },
+    {
+      "text": "Separate generation, search, repair, independent evaluation, and failed attempts. Ten retries after the same failure have a different quality implication from ten diverse candidates checked by an external oracle.",
+      "severity": "warning"
+    },
+    {
+      "text": "Calibrate the fingerprint against held-out tests, defect escape, reviewer findings, rework, and rollback rates. If it does not improve review triage beyond those signals, remove it.",
+      "severity": "note"
+    },
+    {
+      "text": "Use the signal to increase or decrease scrutiny within bounded bands, never to waive mandatory checks or rank contributors by spend.",
+      "severity": "warning"
+    }
+  ]
 }

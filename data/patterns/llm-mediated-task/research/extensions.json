@@ -1,4 +1,15 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Task drafting starts after the intent and relevant solution space are sufficiently clear.",
+  "items": [
+    {
+      "text": "When intent or the solution space is still ambiguous, explore and clarify it before drafting the task.",
+      "ref_type": "pattern",
+      "ref_id": "prompt-exploration"
+    },
+    {
+      "text": "See Agent as a Process Actor for the related use case or counterpoint: Let agents own bounded process steps, never ambiguous process state.",
+      "ref_type": "pattern",
+      "ref_id": "process-actor"
+    }
+  ]
 }

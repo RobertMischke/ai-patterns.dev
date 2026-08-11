@@ -15,6 +15,46 @@
       "text": "Select model and execution channel separately; a trusted model through an unsuitable provider is still outside the fence.",
       "ref_type": "pattern",
       "ref_id": "provider-trust-map"
+    },
+    {
+      "text": "Supply Trust Layer with platform-owned authority, action and artifact history; fencing establishes provenance, while the layer combines it with validation and review evidence.",
+      "ref_type": "pattern",
+      "ref_id": "trust-layer"
+    },
+    {
+      "text": "Prevent retrieved content from expanding platform-owned authority: instruction-looking data may influence a proposal but cannot mint a grant.",
+      "ref_type": "pattern",
+      "ref_id": "untrusted-content-boundary"
+    },
+    {
+      "text": "Grant capabilities independently from the Agent–Computer Interface that describes operations, effects and evidence.",
+      "ref_type": "pattern",
+      "ref_id": "agent-computer-interface"
+    },
+    {
+      "text": "Write task, authority, tool and artifact history into a platform-owned run trace and expose a digest-bound evidence envelope for review.",
+      "ref_type": "pattern",
+      "ref_id": "run-trace-evidence-envelope-replay"
+    },
+    {
+      "text": "See Context Compaction & JIT Retrieval for the related use case or counterpoint: Less context, retrieved on demand, beats more context dumped upfront.",
+      "ref_type": "pattern",
+      "ref_id": "context-compaction"
+    },
+    {
+      "text": "See Council: Review Verdicts Need a Reaction for the related use case or counterpoint: Every named review finding gets an accountable decision: fix, accept with reasons, or escalate.",
+      "ref_type": "pattern",
+      "ref_id": "council"
+    },
+    {
+      "text": "See Skip the Pull Request for the related use case or counterpoint: In agent-first delivery, gates in front of the integration merge replace the human pull-request review — the operator reads verdicts, not diffs.",
+      "ref_type": "pattern",
+      "ref_id": "skip-the-pull-request"
+    },
+    {
+      "text": "See Switching Abstraction Layers for the related use case or counterpoint: Move from code and prompts to tasks, pipelines, reviews and capacity only when evidence makes the lower layer trustworthy enough to manage by signals.",
+      "ref_type": "pattern",
+      "ref_id": "switching-abstraction-layers"
     }
   ]
 }

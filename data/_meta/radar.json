@@ -52,7 +52,6 @@
     "task-intake-proxy": "assess",
     "trust-layer": "trial",
     "analysis-report": "assess",
-    "review-result": "trial",
     "fire-track-review": "trial",
     "sandbox": "adopt",
     "token-budget": "trial",
@@ -83,6 +82,15 @@
     "continuous-two-way-alignment": "trial",
     "skip-the-pull-request": "assess",
     "workflow-sized-tasks": "assess",
-    "prompt-enrichment-preprocessing": "assess"
+    "prompt-enrichment-preprocessing": "assess",
+    "untrusted-content-boundary": "adopt",
+    "agent-computer-interface": "trial",
+    "run-trace-evidence-envelope-replay": "trial",
+    "reproduce-patch-prove": "adopt",
+    "compute-invest-as-quality-signal": "assess",
+    "wiki-as-cognitive-interface": "trial",
+    "compute-as-oss-contribution": "assess",
+    "memory-management": "assess",
+    "sidecar-metadata": "trial"
   }
 }
