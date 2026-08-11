@@ -1,25 +1,20 @@
 {
-  "summary": "Published work establishes living, repository-local knowledge practices; Agent Studio supplies the current operational evidence for the explicit two-way loop.",
+  "summary": "Evidence is adjacent: software-traceability studies support maintaining links among artifacts and show potential maintenance benefits, but empirical quality is uneven. No direct controlled study located evaluates a full companion-to-source write-back loop with semantic conflict resolution.",
   "items": [
     {
-      "text": "Cyrille Martraire, Living Documentation — documentation should evolve with the code through continuous investment and automation.",
-      "ref_type": "source",
-      "ref_id": "s51"
+      "text": "Tracing Requirements and Source Code during Software Development: An Empirical Study — Alexander Delater and Barbara Paech (2013). Three student software projects used work items to capture requirements-to-code links with high reported precision and recall, and participants found the tool easy to use. This supports continuous link creation, but the setting is small and does not include generated companion write-back.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1109/ESEM.2013.16"
     },
     {
-      "text": "Write the Docs, Docs as Code — shared version-control and review workflows make documentation changes traceable and automatable.",
-      "ref_type": "source",
-      "ref_id": "s52"
+      "text": "Empirical Studies on Software Traceability: A Mapping Study — Sofia Charalampidou, Apostolos Ampatzoglou, Eirini Karountzos, and Paris Avgeriou (2021). The review maps 155 empirical studies and finds requirements and code dominate, with maintainability and correctness common intended benefits, while calling for stronger methods and industrial datasets. This is adjacent support with explicit evidence-quality limitations.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1002/smr.2294"
     },
     {
-      "text": "Michael Nygard, Documenting Architecture Decisions — changing context and superseded decisions remain visible rather than being overwritten.",
-      "ref_type": "source",
-      "ref_id": "s56"
-    },
-    {
-      "text": "Agent Studio field evidence — Wiki Pulse, commits-behind drift grading, Quality Review and the 24 July target-state consolidation.",
-      "ref_type": "source",
-      "ref_id": "s57"
+      "text": "Ontology-Based NLP Tool for Tracing Software Requirements and Conceptual Models: An Empirical Study — David Mosquera, Marcela Ruiz, and Oscar Pastor (2025). Three quasi-experiments with 70 subjects evaluate ontology-assisted trace-link work and report benefits with acknowledged sample limitations. It supports assisted reconciliation between artifact types, not automatic bidirectional mutation.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1007/s00766-025-00447-4"
     }
   ]
 }

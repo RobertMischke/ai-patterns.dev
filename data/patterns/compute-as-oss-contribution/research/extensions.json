@@ -1,4 +1,25 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Extensions should couple compute disclosure to requested work, signed provenance, external validation, and efficiency rather than celebrate the largest number.",
+  "items": [
+    {
+      "text": "Create maintainer-approved compute grants for a specific issue, benchmark, or release question, with a budget ceiling, expected artifacts, expiry, and named reviewer.",
+      "ref_type": "pattern",
+      "ref_id": "analysis-report"
+    },
+    {
+      "text": "Sign the contribution statement and bind it to the source revision, workflow, generated artifacts, and validation results; archive the acceptance rationale with the project decision history.",
+      "ref_type": "pattern",
+      "ref_id": "decision-memory"
+    },
+    {
+      "text": "Report an efficiency-normalized effort fingerprint beside raw compute so maintainers can compare equivalent task classes without treating larger spend as better.",
+      "ref_type": "pattern",
+      "ref_id": "compute-invest-as-quality-signal"
+    },
+    {
+      "text": "Require sponsored outputs to pass the same public tests and policy checks as all other contributions, and publish failed validation rather than only successful runs.",
+      "ref_type": "pattern",
+      "ref_id": "executable-safety-net"
+    }
+  ]
 }

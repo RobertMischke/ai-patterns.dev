@@ -1,5 +1,18 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "mixed",
+  "summary": "A separate wiki can duplicate source code and issue trackers, creating another surface that inevitably drifts.",
+  "points": [
+    {
+      "text": "Language-server navigation, generated API docs and repository search may answer implementation questions more accurately than prose copied into a portal.",
+      "severity": "note"
+    },
+    {
+      "text": "Graph visualizations become hairballs at scale and can privilege visually connected artifacts over the most consequential ones.",
+      "severity": "warning"
+    },
+    {
+      "text": "Documentation maintenance competes with delivery time; without workflow triggers and accountable owners, initial enthusiasm decays into stale content.",
+      "severity": "warning"
+    }
+  ]
 }

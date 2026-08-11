@@ -1,9 +1,21 @@
 {
   "stance": "challenges",
-  "summary": "The added attempt can increase latency and cost for tasks that usually need the larger model.",
+  "summary": "Routing mistakes are often silent: an easy-looking request can be the dangerous one, and an early low-quality artifact can anchor every later stage. Cascades also add tail latency and a new control-plane dependency.",
   "points": [
     {
-      "text": "Do not cascade latency-sensitive or high-complexity tasks without evidence that the small model succeeds often enough.",
+      "text": "A false-negative trigger returns the cheap model's wrong answer without escalation. Average benchmark quality can hide rare, high-cost routing misses.",
+      "severity": "blocker"
+    },
+    {
+      "text": "Passing the first model's plan or answer to a stronger model creates anchoring and shared-context error; escalation may polish rather than independently reassess the result.",
+      "severity": "warning"
+    },
+    {
+      "text": "Multiple sequential calls worsen tail latency and may exceed the cost of calling the stronger model once for tasks that frequently escalate.",
+      "severity": "note"
+    },
+    {
+      "text": "Provider fallbacks can change tool support, context limits, privacy jurisdiction, safety behavior, and output semantics. Availability is not semantic equivalence.",
       "severity": "warning"
     }
   ]

@@ -1,4 +1,25 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Useful variants combine scheduled coverage with incremental analysis and event-triggered urgent checks.",
+  "items": [
+    {
+      "text": "Reuse the same named standards and verdict schema as per-change quality-gate agents.",
+      "ref_type": "pattern",
+      "ref_id": "quality-gate-agents"
+    },
+    {
+      "text": "Schedule a specification-to-code drift sweep with component-level fingerprints so unchanged areas can be skipped.",
+      "ref_type": "pattern",
+      "ref_id": "spec-drift"
+    },
+    {
+      "text": "Publish each run as a trendable analysis report with new, resolved, suppressed and overdue findings.",
+      "ref_type": "pattern",
+      "ref_id": "analysis-report"
+    },
+    {
+      "text": "Model scheduled, event-driven and manual sweeps as one pipeline with different triggers but identical evidence outputs.",
+      "ref_type": "pattern",
+      "ref_id": "agent-pipelines"
+    }
+  ]
 }

@@ -1,4 +1,19 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Useful variants preserve feature ownership while acknowledging shared infrastructure and enforcing the intended boundaries.",
+  "items": [
+    {
+      "text": "Use a hybrid tree: product features own vertical slices, while a small platform area owns deliberately shared runtime, design-system, and observability capabilities."
+    },
+    {
+      "text": "Generate or test an ownership manifest that maps each feature folder to maintainers, public entry points, and allowed dependencies."
+    },
+    {
+      "text": "Use co-change history to suggest misplaced files or emerging feature boundaries, but require human review before moving code because co-change can also reflect temporary migrations."
+    },
+    {
+      "text": "Expose one narrow package entry point per feature and keep implementation files private, combining locality with an enforceable public surface.",
+      "ref_type": "pattern",
+      "ref_id": "narrow-interfaces"
+    }
+  ]
 }

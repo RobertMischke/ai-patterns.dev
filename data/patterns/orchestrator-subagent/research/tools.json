@@ -1,4 +1,25 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Current agent frameworks support manager-controlled delegation, specialist roles, constrained tool sets, termination rules, and compact handoffs, but applications must design the contracts and verification.",
+  "items": [
+    {
+      "text": "OpenAI Agents SDK documents a manager pattern in which one agent retains control and invokes specialist agents as tools, alongside handoffs that transfer control. Tool schemas, input filters, output types, guardrails, and tracing support narrow subagent contracts and observable orchestration.",
+      "ref_type": "external",
+      "url": "https://openai.github.io/openai-agents-js/guides/multi-agent/"
+    },
+    {
+      "text": "Microsoft AutoGen SelectorGroupChat uses model-based speaker selection over agents with explicit names and role descriptions, supports candidate filtering, custom selection, termination conditions, and repeated-speaker controls. These mechanisms implement centralized coordination while bounding who may act next.",
+      "ref_type": "external",
+      "url": "https://microsoft.github.io/autogen/dev/user-guide/agentchat-user-guide/selector-group-chat.html"
+    },
+    {
+      "text": "LangGraph Supervisor creates a central supervisor with handoff tools and configurable worker history, output mode, state schema, and tool behavior. Returning only the last worker message rather than full history directly supports compact summaries and context isolation.",
+      "ref_type": "external",
+      "url": "https://reference.langchain.com/python/langgraph-supervisor/supervisor/"
+    },
+    {
+      "text": "CrewAI provides hierarchical processes with a manager agent, delegated crews and tasks, tool assignments, guardrails, memory, human-in-the-loop triggers, and observability. Its structured task outputs can serve as reviewable subagent handoffs.",
+      "ref_type": "external",
+      "url": "https://docs.crewai.com/"
+    }
+  ]
 }

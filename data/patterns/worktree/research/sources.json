@@ -1,4 +1,25 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Large empirical studies show that parallel development creates frequent, partly predictable merge conflicts. Worktrees remove checkout interference but do not reduce semantic overlap or prove conflict-free integration.",
+  "items": [
+    {
+      "text": "AgenticFlict (2026 preprint) studies more than 29,000 agentic pull requests and reports a 27.67% conflict rate in its dataset, providing direct but very recent evidence that agent parallelism shifts rather than removes integration risk.",
+      "ref_type": "external",
+      "url": "https://arxiv.org/abs/2604.03551"
+    },
+    {
+      "text": "Owhadi-Kareshk et al. (2019) analyze 267,657 merge scenarios from 744 repositories and study predictors of merge conflicts; observational repository data supports risk prediction, not a causal worktree benefit.",
+      "ref_type": "external",
+      "url": "https://arxiv.org/abs/1907.06274"
+    },
+    {
+      "text": "ConflictBench (Journal of Systems and Software 2024) provides a benchmark for realistic merge-conflict resolution and demonstrates that conflict handling remains a distinct technical task.",
+      "ref_type": "external",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0164121224001298"
+    },
+    {
+      "text": "A 2020 empirical study of software modularity and merge conflicts identifies structural factors associated with conflicts, supporting ownership and dependency planning alongside workspace isolation.",
+      "ref_type": "external",
+      "url": "https://www.sciencedirect.com/science/article/pii/S095058492030001X"
+    }
+  ]
 }

@@ -1,4 +1,25 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Extensions should connect decisions to executable assumptions, searchable companion views, aging analysis, and the review finding that prompted the decision.",
+  "items": [
+    {
+      "text": "Attach confirmation checks to decisions where possible: architecture rules, contract tests, dependency policies, budgets, or observability thresholds that fail when an assumption no longer holds.",
+      "ref_type": "pattern",
+      "ref_id": "executable-safety-net"
+    },
+    {
+      "text": "Render decision timelines and affected-system links in the companion while preserving the ADR file and Git history as authoritative.",
+      "ref_type": "pattern",
+      "ref_id": "companion-app"
+    },
+    {
+      "text": "Run an aging report for broken links, missing owners, expired review dates, contradicted assumptions, and decisions frequently bypassed in current work.",
+      "ref_type": "pattern",
+      "ref_id": "analysis-report"
+    },
+    {
+      "text": "When a review finding is accepted rather than fixed, create or link a decision record containing the residual risk, authority, expiry, and compensating controls.",
+      "ref_type": "pattern",
+      "ref_id": "council"
+    }
+  ]
 }

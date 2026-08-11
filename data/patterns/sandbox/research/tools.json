@@ -1,4 +1,30 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Agent sandboxes can combine disposable virtual machines, syscall interception, privilege reduction and explicit resource limits. No single mechanism covers isolation, capabilities, cost and audit, so production deployments normally layer them.",
+  "items": [
+    {
+      "text": "E2B creates isolated on-demand Linux sandboxes for AI agents, exposes filesystem and process APIs, supports templates and lifecycle timeouts, and can discard the environment after the task. It provides a concrete disposable execution boundary for untrusted generated code.",
+      "ref_type": "external",
+      "url": "https://www.e2b.dev/docs"
+    },
+    {
+      "text": "Firecracker's jailer starts a microVM process with a changed root, Linux namespaces, cgroups, dropped privileges and a restricted file-descriptor set. Combined with Firecracker's seccomp filters, it narrows both host exposure and resource access for each execution.",
+      "ref_type": "external",
+      "url": "https://github.com/firecracker-microvm/firecracker/blob/main/docs/jailer.md"
+    },
+    {
+      "text": "gVisor runs a user-space application kernel that intercepts guest system calls before they reach the host kernel and can add a second isolation layer with platform backends. This is useful where container compatibility is needed but direct host syscall exposure is unacceptable.",
+      "ref_type": "external",
+      "url": "https://gvisor.dev/docs/architecture_guide/security/"
+    },
+    {
+      "text": "Docker rootless mode runs the daemon and containers without root privileges by using a user namespace. It reduces the consequence of a daemon or runtime escape, although it is only one layer and does not by itself impose task-specific capabilities.",
+      "ref_type": "external",
+      "url": "https://docs.docker.com/engine/security/rootless/"
+    },
+    {
+      "text": "Docker resource constraints set CPU, memory and related cgroup limits; the documentation notes that containers otherwise have no resource constraints by default. These controls implement hard cost and denial-of-service bounds around agent execution.",
+      "ref_type": "external",
+      "url": "https://docs.docker.com/engine/containers/resource_constraints/"
+    }
+  ]
 }

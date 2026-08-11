@@ -1,5 +1,18 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "mixed",
+  "summary": "Verbose capture is valuable when it surfaces constraints and motivation that a short ticket would omit; verbosity by itself can also bury priorities and contradictions.",
+  "points": [
+    {
+      "text": "Preserve the recording or raw transcript as evidence, but require the system to produce a compact intent contract containing goal, non-goals, constraints, acceptance evidence and unresolved questions.",
+      "severity": "info"
+    },
+    {
+      "text": "Do not silently repair domain terms, numbers or negation. Highlight uncertain transcription spans and ask for confirmation when they affect implementation.",
+      "severity": "blocker"
+    },
+    {
+      "text": "Compare clarification rounds, changed requirements, task success and review corrections against typed intake; words per request is not a success metric.",
+      "severity": "note"
+    }
+  ]
 }

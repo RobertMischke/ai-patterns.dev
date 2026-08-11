@@ -1,4 +1,25 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Mainstream application frameworks and architecture-testing tools support feature-local organization, although each enforces a different part of the pattern.",
+  "items": [
+    {
+      "text": "Angular's official style guide says to group closely related files in the same directory, keep tests beside the code they test, organize a project by feature area, and avoid top-level directories named only by artifact type such as components or services. This is an explicit implementation of feature-folder locality.",
+      "ref_type": "external",
+      "url": "https://angular.dev/style-guide"
+    },
+    {
+      "text": "Next.js App Router treats folders as route segments while allowing project files to be safely colocated inside route folders; private folders and route groups provide non-routable organization boundaries. A feature can therefore own its UI, loading/error states, tests, and helpers without exposing every file as a route.",
+      "ref_type": "external",
+      "url": "https://nextjs.org/docs/app/getting-started/project-structure"
+    },
+    {
+      "text": "Nx documents organizing workspace libraries by scope and grouping projects into folders, then uses tags and module-boundary rules to constrain dependencies between those feature or domain units. It supplements physical locality with an enforceable dependency model.",
+      "ref_type": "external",
+      "url": "https://nx.dev/features/enforce-module-boundaries"
+    },
+    {
+      "text": "NestJS modules encapsulate related providers and expose only explicitly exported providers. Keeping a module's controllers, services, tests, and configuration together gives a framework-level feature boundary rather than a directory convention alone.",
+      "ref_type": "external",
+      "url": "https://docs.nestjs.com/modules"
+    }
+  ]
 }

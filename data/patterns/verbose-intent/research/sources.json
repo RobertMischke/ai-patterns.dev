@@ -1,4 +1,25 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Research shows that speech and text elicit different content and that prompt detail can matter, but there is not yet strong controlled evidence that verbose spoken intent reliably improves software-agent outcomes over careful typed requests.",
+  "items": [
+    {
+      "text": "Speech vs Transcript in Automatic Summarization (ACL 2024) found modality-dependent differences in human summaries, with speech-based references more selective and factually consistent in the studied setting; this is adjacent evidence about capture modality, not a coding-agent trial.",
+      "ref_type": "external",
+      "url": "https://aclanthology.org/2024.acl-long.790/"
+    },
+    {
+      "text": "A 2004 comparative study of spoken and written natural-language interaction reports systematic modality differences; its older dialogue/search setting limits transfer to modern LLM task intake.",
+      "ref_type": "external",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0003687004000961"
+    },
+    {
+      "text": "A 2026 experience report on voice-based requirements elicitation with LLMs discusses practical opportunities and transcription risks; it is qualitative evidence rather than a controlled productivity study.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1145/3786167.3788420"
+    },
+    {
+      "text": "More than a Score (IJCNLP-AACL 2025) studies instruction quality in detail and supports treating specificity as multidimensional, while not testing voice input itself.",
+      "ref_type": "external",
+      "url": "https://aclanthology.org/2025.ijcnlp-long.128/"
+    }
+  ]
 }

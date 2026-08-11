@@ -1,5 +1,22 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "challenges",
+  "summary": "Pipelines can hard-code a bad decomposition, amplify handoff loss, and turn model uncertainty into a brittle distributed system whose apparent determinism exceeds its actual reliability.",
+  "points": [
+    {
+      "text": "Information omitted from an upstream artifact cannot be recovered by a downstream specialist; repeated summarization and schema coercion can systematically erase caveats.",
+      "severity": "warning"
+    },
+    {
+      "text": "Parallel agents may write against stale shared state or produce mutually incompatible patches. A final merge node cannot reliably resolve conflicts it was not given evidence to understand.",
+      "severity": "warning"
+    },
+    {
+      "text": "Retry policies can repeat non-idempotent tool effects, while permissive loops consume budget without improving the answer. Durable orchestration does not make side effects safe by itself.",
+      "severity": "blocker"
+    },
+    {
+      "text": "A fixed pipeline can underperform one capable agent on novel tasks while adding latency, inference cost, trace volume, and maintenance burden.",
+      "severity": "note"
+    }
+  ]
 }

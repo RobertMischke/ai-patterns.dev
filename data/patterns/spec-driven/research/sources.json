@@ -1,4 +1,25 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Evidence strength: moderate and mostly adjacent. Requirements quality, clarification and requirements-test alignment studies support explicit intent and executable acceptance, but no direct controlled study located compares a complete agentic spec-driven lifecycle with an otherwise matched prompt-driven production workflow.",
+  "items": [
+    {
+      "text": "Mu et al., ClarifyGPT: Empowering LLM-based Code Generation with Intention Clarification (PACM Software Engineering/FSE 2024), reported that clarification raised GPT-4 Pass@1 from 70.96% to 80.80% on its sanitized MBPP setting and included a small human evaluation. This directly supports refining intent before generation, but not a full versioned specification lifecycle.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1145/3660810"
+    },
+    {
+      "text": "Montgomery, Fucci, Bouraffa, Scholz and Maalej, Empirical Research on Requirements Quality: A Systematic Mapping Study (Requirements Engineering, 2022), found a heterogeneous evidence base and only a subset of quality factors repeatedly connected to downstream outcomes. It supports explicit quality criteria while warning that specification volume alone is not evidence of quality.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1007/s00766-021-00367-z"
+    },
+    {
+      "text": "Wang, Zhao, Wang and Sun, The Role of Requirements Engineering Practices in Agile Development: An Empirical Study (APRES 2014), surveyed 108 practitioners across agile groups and organizations and found requirements practices remained an important prerequisite in agile development. The self-reported, small organizational sample is adjacent evidence, not a causal comparison of agent methods.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1007/978-3-662-43610-3_15"
+    },
+    {
+      "text": "Bjarnason, Sharp and Regnell, Improving Requirements-Test Alignment by Prescribing Practices that Mitigate Communication Gaps (Empirical Software Engineering, 2019), grounded Gap Finder in evidence from five companies and evaluated it in an ongoing project; seven of nine prescribed practices were judged relevant. It supports linking requirements and tests, while the formative case study does not establish a universal process.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1007/s10664-019-09698-6"
+    }
+  ]
 }

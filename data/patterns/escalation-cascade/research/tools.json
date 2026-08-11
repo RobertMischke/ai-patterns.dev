@@ -1,4 +1,25 @@
 {
-  "summary": "No tool is prescribed; routing requires task-specific evaluation and acceptance signals.",
-  "items": []
+  "summary": "Model routers and AI gateways can select a low-cost model first, estimate quality or confidence, and apply bounded fallbacks. Quality-based escalation must be distinguished from availability retries, which only prove that another endpoint answered.",
+  "items": [
+    {
+      "text": "Amazon Bedrock intelligent prompt routing predicts response-quality differences among configured models, balances quality against cost, and uses a specified fallback model when routing criteria are not met.",
+      "ref_type": "external",
+      "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-routing.html"
+    },
+    {
+      "text": "RouteLLM provides learned routers trained from preference data, an OpenAI-compatible serving layer, and evaluation scripts for measuring quality and cost when selecting between stronger and weaker models.",
+      "ref_type": "external",
+      "url": "https://github.com/lm-sys/routellm"
+    },
+    {
+      "text": "Cloudflare AI Gateway Dynamic Routing defines versioned JSON or visual flows with conditional model selection, quotas, spend limits, and fallbacks, enabling an explicit bounded cascade at the gateway.",
+      "ref_type": "external",
+      "url": "https://developers.cloudflare.com/ai-gateway/features/dynamic-routing/"
+    },
+    {
+      "text": "LiteLLM Proxy reliability controls configure retries and ordered model fallbacks across providers; these handle errors, rate limits, and outages, but require a separate evaluator for quality-triggered escalation.",
+      "ref_type": "external",
+      "url": "https://docs.litellm.ai/docs/proxy/reliability"
+    }
+  ]
 }

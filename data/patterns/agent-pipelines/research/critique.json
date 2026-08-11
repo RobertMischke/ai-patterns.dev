@@ -1,5 +1,22 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "supports",
+  "summary": "A repository-owned pipeline turns implicit agent choreography into inspectable software. It is most defensible when every transition has typed artifacts, bounded authority, and executable acceptance conditions.",
+  "points": [
+    {
+      "text": "Roles should be defined by inputs, permitted tools, outputs, and stop conditions rather than persona prose. This makes a handoff testable and limits accidental authority inheritance.",
+      "severity": "note"
+    },
+    {
+      "text": "Every branch and loop needs an explicit termination rule and budget. Multi-agent studies identify verification and termination failures even when roles appear reasonable.",
+      "severity": "warning"
+    },
+    {
+      "text": "Pipeline version, model and prompt versions, inputs, outputs, and transition decisions should be recorded together; otherwise a successful run cannot be reproduced or compared.",
+      "severity": "note"
+    },
+    {
+      "text": "A pipeline should be selected only where task decomposition or independent verification adds measurable value. A graph is operational complexity, not evidence of better reasoning.",
+      "severity": "info"
+    }
+  ]
 }

@@ -1,4 +1,20 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Extensions should make the pipeline discoverable, gate transitions with executable evidence, and preserve durable rationale when the normal path is overridden.",
+  "items": [
+    {
+      "text": "Publish a concise pipeline entry point beside the workflow code: task class, graph, artifacts, tool scopes, budgets, and the command for a local dry run.",
+      "ref_type": "pattern",
+      "ref_id": "context-entry-points"
+    },
+    {
+      "text": "Attach machine-checkable contracts to every handoff and require the safety-net result before a pipeline can advance from implementation to review.",
+      "ref_type": "pattern",
+      "ref_id": "executable-safety-net"
+    },
+    {
+      "text": "Add a bounded exception edge: unresolved or high-impact failures leave a decision record and escalate to a named human rather than looping or silently accepting.",
+      "ref_type": "pattern",
+      "ref_id": "decision-memory"
+    }
+  ]
 }

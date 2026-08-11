@@ -1,4 +1,25 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Variants should distinguish continuous executable conformance from slower semantic review and keep the authority decision explicit.",
+  "items": [
+    {
+      "text": "Run cheap contract and architecture checks per change, then a broader prose and roadmap comparison as a scheduled sweep.",
+      "ref_type": "pattern",
+      "ref_id": "scheduled-quality-sweeps"
+    },
+    {
+      "text": "When implementation changes intentionally, propose the reciprocal specification update in the same delivery unit.",
+      "ref_type": "pattern",
+      "ref_id": "continuous-two-way-alignment"
+    },
+    {
+      "text": "Link accepted divergences to a versioned decision record with owner and expiry rather than suppressing them silently.",
+      "ref_type": "pattern",
+      "ref_id": "decision-memory"
+    },
+    {
+      "text": "Emit high-confidence drift as a blocking gate and ambiguous semantic drift as an advisory review result.",
+      "ref_type": "pattern",
+      "ref_id": "quality-gate-agents"
+    }
+  ]
 }

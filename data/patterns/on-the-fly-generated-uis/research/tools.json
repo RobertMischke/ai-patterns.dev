@@ -1,16 +1,29 @@
 {
-  "summary": "Use constrained component and schema-rendering systems as implementation substrates; add model generation only where it improves the mapping from source artifact to task surface.",
+  "summary": "Production libraries now generate interfaces from schemas, tool calls, and declarative component streams; safer implementations keep rendering inside a typed, allowlisted component system.",
   "items": [
     {
-      "text": "AI SDK UI for model-selected, streamed application components.",
-      "url": "https://ai-sdk.dev/docs/ai-sdk-ui/generative-user-interfaces"
+      "text": "Vercel AI SDK supports generative user interfaces in which model tool calls stream structured arguments that the application renders as rich interactive components. The application owns the tool schema and component mapping, avoiding unrestricted model-authored browser code.",
+      "ref_type": "external",
+      "url": "https://vercel.com/docs/ai-sdk"
     },
     {
-      "text": "JSON Forms for JSON Schema plus a separate UI schema and renderer set.",
+      "text": "CopilotKit Generative UI maps typed actions and agent state to application-defined React components and documents static, declarative, and agent-native UI patterns. Typed props and registered renderers give the host control over which interface behaviors may be generated.",
+      "ref_type": "external",
+      "url": "https://docs.copilotkit.ai/a2a/concepts/generative-ui-overview"
+    },
+    {
+      "text": "Google's A2UI project defines a declarative, cross-platform format for agents to send component descriptions and data while clients render trusted native components. Separating agent intent from executable UI code directly implements an allowlisted generation boundary.",
+      "ref_type": "external",
+      "url": "https://developers.googleblog.com/introducing-a2ui-an-open-project-for-agent-driven-interfaces/"
+    },
+    {
+      "text": "JSON Forms generates forms from JSON Schema and a separate UI schema, with validation, rules, and replaceable renderers. The schema plus renderer version can be hashed and cached, making regeneration deterministic and reviewable.",
+      "ref_type": "external",
       "url": "https://jsonforms.io/docs/"
     },
     {
-      "text": "react-jsonschema-form for automatically generated React forms with schema validation.",
+      "text": "react-jsonschema-form renders React forms from JSON Schema, supports validation and custom widgets, and centralizes field behavior in a component registry. It is a mature non-LLM baseline for artifact-derived UI generation.",
+      "ref_type": "external",
       "url": "https://rjsf-team.github.io/react-jsonschema-form/docs/"
     }
   ]

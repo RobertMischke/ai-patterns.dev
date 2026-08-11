@@ -1,20 +1,20 @@
 {
-  "summary": "Agent fencing combines existing platform patterns into a single authority-and-history boundary.",
+  "summary": "Useful extensions make authority temporary, couple each decision to durable rationale, and exercise the fence under realistic failure conditions.",
   "items": [
     {
-      "text": "Use named, structured review verdicts as the evidence consumed by escalation decisions.",
+      "text": "Issue risk-adaptive capability leases that expire after one run, tool, resource scope, or time window; low-confidence and irreversible actions enter the escalation path.",
       "ref_type": "pattern",
-      "ref_id": "quality-gate-agents"
+      "ref_id": "escalation-cascade"
     },
     {
-      "text": "Run work in sandboxed environments so the authority recorded by the platform matches the authority available at runtime.",
+      "text": "Persist policy version, approval rationale, rejected alternatives, and outcome as a compact decision record so later audits can distinguish a justified exception from silent drift.",
       "ref_type": "pattern",
-      "ref_id": "sandbox"
+      "ref_id": "decision-memory"
     },
     {
-      "text": "Select model and execution channel separately; a trusted model through an unsuitable provider is still outside the fence.",
+      "text": "Run new agents in shadow or sandbox mode and promote privileges only after adversarial scenarios and repository checks pass; revoke the tier automatically after material configuration changes.",
       "ref_type": "pattern",
-      "ref_id": "provider-trust-map"
+      "ref_id": "executable-safety-net"
     }
   ]
 }

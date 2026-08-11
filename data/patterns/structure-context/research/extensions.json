@@ -1,4 +1,14 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Treat structure as a maintained, testable context index rather than a one-time cleanup exercise.",
+  "items": [
+    {
+      "text": "Generate a repository map from dependency and ownership data, then permit short human annotations for relationships that static analysis cannot infer."
+    },
+    {
+      "text": "Add freshness owners and executable link checks to project maps, ADR indexes and agent instruction files."
+    },
+    {
+      "text": "Log retrieved files and compare successful versus failed tasks to tune path rules and remove context that is frequently loaded but rarely useful."
+    }
+  ]
 }

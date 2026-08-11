@@ -1,4 +1,14 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Combine deterministic intake contracts with reversible AI suggestions and feedback from downstream outcomes.",
+  "items": [
+    {
+      "text": "Store raw request, normalized version, model/version, confidence, accepted edits and final routing as one auditable intake record."
+    },
+    {
+      "text": "Learn from corrected owners, reopened duplicates and rejected classifications, but require review before taxonomy changes affect routing."
+    },
+    {
+      "text": "Use risk-tiered intake: auto-route routine work, request clarification for incomplete work and escalate security, legal or production-impacting reports."
+    }
+  ]
 }

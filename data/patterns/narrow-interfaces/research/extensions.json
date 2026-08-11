@@ -1,4 +1,19 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Extensions measure the consumer burden and allow controlled evolution without exposing the implementation graph.",
+  "items": [
+    {
+      "text": "Commit a generated public-surface report and set a review budget for new exports, parameters, error variants, and required call-order steps."
+    },
+    {
+      "text": "Use consumer-driven contract tests that exercise real tasks, including invalid inputs and recovery, so narrowing does not silently remove needed affordances."
+    },
+    {
+      "text": "Provide a stable task-level facade plus an explicitly experimental advanced interface with separate compatibility guarantees and telemetry."
+    },
+    {
+      "text": "Align each feature folder with one public entry point and enforce that cross-feature imports cannot reach its implementation files.",
+      "ref_type": "pattern",
+      "ref_id": "feature-folder-locality"
+    }
+  ]
 }

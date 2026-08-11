@@ -1,4 +1,25 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Multi-agent software-engineering studies show promising role specialization on benchmark and prototype tasks. They do not yet demonstrate that organization-like agent workforces reliably outperform simpler agents under real maintenance costs and shared failure modes.",
+  "items": [
+    {
+      "text": "ChatDev (ACL 2024) evaluates a role-playing multi-agent software company on generated software tasks and reports improvements over several baselines; synthetic tasks and framework-specific choices limit production claims.",
+      "ref_type": "external",
+      "url": "https://aclanthology.org/2024.acl-long.810/"
+    },
+    {
+      "text": "MetaGPT (ICLR 2024) encodes standardized operating procedures into role-specialized agents and evaluates collaborative software generation; results support structured roles but not arbitrary workforce scaling.",
+      "ref_type": "external",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/6507b115562bb0a305f1958ccc87355a-Abstract-Conference.html"
+    },
+    {
+      "text": "A 2025 systematic literature review in ACM TOSEM synthesizes LLM-based multi-agent systems for software engineering and identifies evaluation, coordination and reproducibility gaps.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1145/3712003"
+    },
+    {
+      "text": "AutoGen (2023 preprint) presents a programmable multi-agent conversation framework and case studies; it is foundational system evidence, not an independent causal productivity trial.",
+      "ref_type": "external",
+      "url": "https://arxiv.org/abs/2308.08155"
+    }
+  ]
 }

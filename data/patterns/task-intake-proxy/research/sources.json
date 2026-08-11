@@ -1,4 +1,20 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Empirical issue-tracking research supports structured, complete intake and shows associations with better handling. It does not establish that an autonomous LLM proxy improves outcomes; that part requires local comparison against human triage.",
+  "items": [
+    {
+      "text": "Zhang et al. (2024) analyzed bug-report templates across 3,194 GitHub projects and associated templates with fewer comments overall and a greater likelihood of reports being addressed; the observational design does not prove causality or show that every removed comment was clarification.",
+      "ref_type": "external",
+      "url": "https://openresearch-repository.anu.edu.au/entities/publication/0e7fdcd0-ead5-4e2d-a06c-064bddab228d"
+    },
+    {
+      "text": "Bettenburg et al., What Makes a Good Bug Report? (2008), combined repository analysis with developer surveys and found reproducibility information, stack traces and test cases especially useful.",
+      "ref_type": "external",
+      "url": "https://www.st.cs.uni-saarland.de/publications/details/bettenburg-tr-2008/"
+    },
+    {
+      "text": "A 2022 systematic mapping study of requirements-quality research catalogs ambiguity, incompleteness and inconsistency as recurring concerns; it offers adjacent evidence for normalization rules rather than a trial of AI intake proxies.",
+      "ref_type": "external",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9110500/"
+    }
+  ]
 }

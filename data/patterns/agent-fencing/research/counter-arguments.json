@@ -1,18 +1,22 @@
 {
-  "stance": "mixed",
-  "summary": "Fencing improves accountability, but can become costly bureaucracy or false assurance if its record and checks are incomplete.",
+  "stance": "challenges",
+  "summary": "A nominal fence can create false assurance: broad credentials, stale trust classifications, approval fatigue, and sensitive logs can leave the underlying risk unchanged or introduce new risk.",
   "points": [
     {
-      "text": "Logging every event can expose sensitive inputs or create retention obligations. Apply data minimization, access controls and retention limits to the history itself.",
+      "text": "If the execution gateway ultimately holds a broad cloud or database credential, fine-grained model-side labels do not prevent confused-deputy actions or lateral movement.",
+      "severity": "blocker"
+    },
+    {
+      "text": "Trust earned on one model snapshot or read-only tool set can be wrongly carried into a new provider, prompt, plugin, or write-capable environment.",
       "severity": "warning"
     },
     {
-      "text": "A trust score is a decision aid, not a safety proof. It must be recalibrated from outcomes and must never silently widen authority after a model or provider changes.",
+      "text": "Sending every uncertain action to a human produces approval fatigue; reviewers learn to approve opaque requests, shifting liability without improving control.",
       "severity": "warning"
     },
     {
-      "text": "Too many approval gates slow safe work and encourage bypasses. Keep escalation targeted to irreversible effects, sensitive data and missing or conflicting evidence.",
-      "severity": "note"
+      "text": "Full prompts, tool arguments, and outputs can contain credentials, personal data, or proprietary code. Centralizing them in an audit store expands the breach surface unless fields are minimized, redacted, and access-controlled.",
+      "severity": "warning"
     }
   ]
 }

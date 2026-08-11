@@ -1,4 +1,20 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Evidence is adjacent but strong for review as a socio-technical quality process and for the importance of useful, comprehensible findings. No direct controlled study located tests an LLM council in which every finding must be fixed, explicitly accepted, or escalated under a loop budget.",
+  "items": [
+    {
+      "text": "Expectations, Outcomes, and Challenges of Modern Code Review — Alberto Bacchelli and Christian Bird (2013). Observations, interviews, surveys, and manual comment classification at Microsoft found review benefits beyond defect detection, including knowledge transfer, team awareness, and alternative solutions, while change understanding remained a central challenge. This supports explicit disposition, but the reviewers were human.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1109/ICSE.2013.6606617"
+    },
+    {
+      "text": "Characteristics of Useful Code Reviews: An Empirical Study at Microsoft — Amiangshu Bosu, Michaela Greiler, and Christian Bird (2015). A mixed-methods study and classification of roughly 1.5 million comments from five projects identified factors associated with useful feedback; usefulness fell as changes spanned more files. This supports scoped councils and finding quality controls, not mandatory action on machine findings.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1109/MSR.2015.21"
+    },
+    {
+      "text": "What Makes a Code Review Useful to OpenDev Developers? An Empirical Investigation — Asif Kamal Turzo and Amiangshu Bosu (2023). The study finds usefulness depends on technical contribution as well as comprehensibility and politeness. This is adjacent evidence that a council finding needs actionable communication, while it does not establish LLM reviewer accuracy.",
+      "ref_type": "external",
+      "url": "https://arxiv.org/abs/2302.11686"
+    }
+  ]
 }

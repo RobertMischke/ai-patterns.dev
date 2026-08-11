@@ -1,10 +1,25 @@
 {
-  "summary": "The direction of the split can be reversed: small models may draft while a large model verifies or repairs.",
+  "summary": "Useful variants reverse the roles, escalate adaptively, and add verification that is structurally independent of the model pair.",
   "items": [
     {
-      "text": "Orchestrator / Subagent provides the delegation structure for role-separated agents.",
+      "text": "Use a cheap model to draft multiple bounded candidates and a stronger model to compare them against primary evidence and a fixed acceptance rubric.",
       "ref_type": "pattern",
-      "ref_id": "orchestrator-subagent"
+      "ref_id": "council"
+    },
+    {
+      "text": "Start with the smaller model for both planning and execution, escalating only the failing stage when calibrated uncertainty or an external check crosses a threshold.",
+      "ref_type": "pattern",
+      "ref_id": "escalation-cascade"
+    },
+    {
+      "text": "Require executor outputs to pass tests, type checks, policy checks, or domain validators before the planning model's review can approve them.",
+      "ref_type": "pattern",
+      "ref_id": "executable-safety-net"
+    },
+    {
+      "text": "Persist plan revisions, rejected approaches, model versions, validation results, and final rationale so later runs can learn from the actual handoff failure.",
+      "ref_type": "pattern",
+      "ref_id": "decision-memory"
     }
   ]
 }

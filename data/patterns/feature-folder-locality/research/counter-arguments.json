@@ -1,5 +1,18 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "mixed",
+  "summary": "Feature locality can trade one navigation problem for duplication, ambiguous ownership, and harder platform-wide work.",
+  "points": [
+    {
+      "text": "Cross-cutting capabilities such as authentication, observability, design systems, and persistence rarely belong cleanly to one feature; forcing them into feature folders can duplicate logic or hide shared ownership."
+    },
+    {
+      "text": "Layer-oriented work remains common. A security review of every data-access adapter or a framework migration across all controllers may be easier when comparable artifacts have an explicit shared boundary and search convention."
+    },
+    {
+      "text": "Small projects can acquire needless nesting and boilerplate. When a feature has only one or two files, the extra hierarchy may slow navigation without delivering meaningful encapsulation."
+    },
+    {
+      "text": "Moving code to match changing product terminology creates import churn and history noise; repository-wide tools and stable module APIs may provide more value than strict physical proximity."
+    }
+  ]
 }

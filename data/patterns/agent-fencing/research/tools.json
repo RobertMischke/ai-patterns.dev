@@ -1,4 +1,30 @@
 {
-  "summary": "This is a platform architecture pattern rather than a feature of a single agent tool.",
-  "items": []
+  "summary": "The strongest implementations combine authorization at the tool boundary, short-lived credentials, durable state outside the agent's control, and reviewable approval checkpoints. No single framework supplies the whole fence.",
+  "items": [
+    {
+      "text": "Amazon Bedrock AgentCore Policy intercepts every AgentCore Gateway tool request and evaluates Cedar policies before the tool is invoked; policy-engine decisions are logged, so enforcement is outside the model's prompt.",
+      "ref_type": "external",
+      "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/policy.html"
+    },
+    {
+      "text": "Open Policy Agent exposes a general policy-decision API, distributes versioned Rego bundles, and can emit decision logs; an agent can propose an action while OPA independently decides whether the action is allowed.",
+      "ref_type": "external",
+      "url": "https://www.openpolicyagent.org/docs"
+    },
+    {
+      "text": "HashiCorp Vault dynamic secrets provide short-lived, revocable credentials generated on demand; issuing a credential per run or tool sharply limits the damage of an overreaching agent.",
+      "ref_type": "external",
+      "url": "https://developer.hashicorp.com/vault/docs/secrets"
+    },
+    {
+      "text": "Temporal Workflows persist an event history and reconstruct workflow state by replay, giving the platform durable execution records that a model turn cannot silently rewrite.",
+      "ref_type": "external",
+      "url": "https://docs.temporal.io/workflows"
+    },
+    {
+      "text": "LangGraph interrupts pause a graph, persist state through a checkpointer, and resume from a supplied command; this supports explicit human approval before a high-impact tool node executes.",
+      "ref_type": "external",
+      "url": "https://docs.langchain.com/oss/python/langgraph/interrupts"
+    }
+  ]
 }

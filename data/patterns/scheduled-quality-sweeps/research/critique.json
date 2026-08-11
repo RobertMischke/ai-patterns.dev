@@ -1,5 +1,22 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "supports",
+  "summary": "Scheduled sweeps complement change-local gates by detecting accumulated, external and cross-cutting risk, provided results are comparable, owned and connected to remediation.",
+  "points": [
+    {
+      "text": "Dependency-network research shows that exposure can change without a repository commit, so event-only checks cannot cover newly disclosed vulnerabilities or newly available fixes.",
+      "severity": "info"
+    },
+    {
+      "text": "Whole-system sweeps can find erosion, orphaned ownership, stale documentation and policy drift that no single pull request crosses visibly.",
+      "severity": "note"
+    },
+    {
+      "text": "Using the same verdict, evidence, severity and waiver schema as per-change gates enables trend comparison and avoids a second remediation workflow.",
+      "severity": "note"
+    },
+    {
+      "text": "A sweep without an owner, service-level target and deduplication merely produces a recurring backlog; completion means triage and closure, not successful execution.",
+      "severity": "warning"
+    }
+  ]
 }

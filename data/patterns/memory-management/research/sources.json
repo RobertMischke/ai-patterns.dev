@@ -1,17 +1,25 @@
 {
-  "summary": "The operational evidence for this pattern comes from an anonymized production agent workspace. It used file-based memory with an index and exposed both the value of simple storage and the failure modes that remain after storage is solved.",
+  "summary": "Evidence is direct for long-term-memory failure modes and retrieval requirements, but limited for the proposed Git-backed file architecture: no controlled comparison of versioned small files against vector, graph, or database stores was located.",
   "items": [
     {
-      "text": "Durable facts were stored one per file, indexed from a small entry point and connected with explicit links. Operators could review changes with the same diff and history tools used for code."
+      "text": "Maharana and colleagues, in 'Evaluating Very Long-Term Conversational Memory of LLM Agents' (ACL, 2024), introduce LoCoMo, conversations spanning many sessions and roughly 16,000 tokens, and evaluate long-context and retrieval-augmented systems. Retrieval improves some results, yet systems remain well below human performance on long-range and temporal questions. This directly supports inspectable retrieval and evaluation, not a particular storage substrate.",
+      "ref_type": "external",
+      "url": "https://aclanthology.org/2024.acl-long.747/"
     },
     {
-      "text": "Corrections were written as successors to older entries. Keeping the supersession link preserved provenance while giving recall a clear current answer."
+      "text": "Wu and colleagues, in 'LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory' (ICLR, 2025), evaluate information extraction, multi-session reasoning, temporal reasoning, knowledge updates, and abstention. The benchmark makes stale-fact replacement and not-found behavior first-class capabilities; it does not test Git-backed records or human maintenance workflows.",
+      "ref_type": "external",
+      "url": "https://arxiv.org/abs/2410.10813"
     },
     {
-      "text": "Recall became debuggable when the system displayed the selected memory paths and relevant excerpts. Before that change, operators could observe an answer but not the beliefs that shaped it."
+      "text": "Park and colleagues, in 'Generative Agents: Interactive Simulacra of Human Behavior' (UIST, 2023), implement an observation stream with retrieval, reflection, and planning for 25 simulated agents. Ablations and human evaluations show each memory component contributes to believable behavior, while also revealing retrieval and fabrication errors. The environment is a simulation, so production governance conclusions remain limited.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1145/3586183.3606763"
     },
     {
-      "text": "Three recurring incidents remained: stale memory recommended command-line flags that no longer existed, beliefs used during a run were invisible to the operator, and the index drifted away from the files it was meant to expose."
+      "text": "Rasmussen and colleagues, in 'Zep: A Temporal Knowledge Graph Architecture for Agent Memory' (2025 preprint), evaluate a temporal graph intended to preserve changing facts and report gains on long-term conversational-memory benchmarks. It is directly relevant to invalidation and history, but is a product-affiliated preprint and does not compare against a reviewable Git event log.",
+      "ref_type": "external",
+      "url": "https://arxiv.org/abs/2501.13956"
     }
   ]
 }

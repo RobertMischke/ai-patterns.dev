@@ -1,23 +1,22 @@
 {
-  "stance": "supports",
-  "summary": "The pattern addresses a real comprehension bottleneck, provided the companion is treated as a selective, evidence-linked product rather than a prettier copy of the repository.",
+  "stance": "mixed",
+  "summary": "A companion app can materially lower the cost of system comprehension when it unifies static, runtime, and decision evidence. It should be treated as a derived interface with explicit provenance, never as an unqualified second source of truth.",
   "points": [
     {
-      "text": "The smallest useful implementation may be generated static HTML. Interactivity, graph navigation and a large canvas should be added only when concrete comprehension tasks require them.",
-      "severity": "info"
+      "text": "Every claim, diagram element, metric, and decision should link to its source artifact or query, generation time, and source revision. Without provenance, a polished view obscures uncertainty.",
+      "severity": "warning"
     },
     {
-      "text": "A companion earns trust through provenance, explicit current-versus-target semantics and visible freshness, not through visual polish.",
+      "text": "Layered navigation should follow real comprehension questions: system boundary, component responsibility, dependency, runtime behavior, recent change, and rationale. A graph of everything is not a useful information architecture.",
       "severity": "note"
     },
     {
-      "text": "The pattern generalizes wiki-as-cognitive-interface; it should reuse that pattern's layered pages, decision history and task links rather than duplicate them under a new name.",
-      "severity": "info"
+      "text": "Static intent and observed runtime behavior must be visually distinct. Disagreement is valuable drift evidence and should not be reconciled by silently choosing whichever source is newer.",
+      "severity": "warning"
     },
     {
-      "text": "Living Documentation already establishes continuous investment in knowledge and automation. AI changes the urgency and feasible interaction model, not the underlying need.",
-      "severity": "info",
-      "source_id": "s51"
+      "text": "Effectiveness should be measured with task time, answer correctness, source navigation, and stale-claim rate; page views and aesthetic preference do not establish better comprehension.",
+      "severity": "note"
     }
   ]
 }

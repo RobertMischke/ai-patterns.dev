@@ -1,20 +1,25 @@
 {
-  "summary": "NIST guidance supports the pattern's two control planes: documented, risk-proportionate human oversight and platform-enforced least-privilege with auditable events.",
+  "summary": "Evidence is direct that tool-using agents exhibit consequential security failures and that current prompt-level defenses are incomplete; evidence for the exact combined fencing architecture is adjacent. No direct controlled study located compares end-to-end trust-tier and platform-history designs.",
   "items": [
     {
-      "text": "NIST AI Risk Management Framework Core",
-      "ref_type": "source",
-      "ref_id": "s19"
+      "text": "AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents — Edoardo Debenedetti, Jie Zhang, Mislav Balunovic, Luca Beurer-Kellner, Marc Fischer, and Florian Tramèr (2024). The NeurIPS benchmark supplies 97 realistic tasks and 629 security test cases and finds that contemporary agents and defenses do not jointly achieve reliable utility and security. This directly motivates enforcement outside prompts, but it does not compare fencing architectures.",
+      "ref_type": "external",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/97091a5177d8dc64b1da8bf3e1f6fb54-Abstract-Datasets_and_Benchmarks_Track.html"
     },
     {
-      "text": "NIST AI RMF Playbook: Measure — document oversight, escalations and accountable decisions",
-      "ref_type": "source",
-      "ref_id": "s24"
+      "text": "Agent Security Bench: Formalizing and Benchmarking Attacks and Defenses in LLM-based Agents — Zhexin Zhang et al. (2025). This ICLR study evaluates ten agents, more than 400 tools, and 27 attack and defense methods across ten scenarios, documenting broad vulnerabilities and incomplete defenses. It is direct security evidence, though not a study of durable histories or organizational trust tiers.",
+      "ref_type": "external",
+      "url": "https://openreview.net/forum?id=V4y0CpX4hK"
     },
     {
-      "text": "NIST SP 800-171 Rev. 3 — least privilege and audit-record content",
-      "ref_type": "source",
-      "ref_id": "s25"
+      "text": "Identifying the Risks of LM Agents with an LM-Emulated Sandbox — Yangjun Ruan et al. (2024). ToolEmu constructs adversarial tool-use cases in an emulated sandbox; human evaluation found 68.8% of generated failures valid. This directly supports testing agents against harmful side effects, while production policy enforcement remains outside the experiment.",
+      "ref_type": "external",
+      "url": "https://arxiv.org/abs/2309.15817"
+    },
+    {
+      "text": "NIST SP 800-171 Revision 3 — National Institute of Standards and Technology (2024). The standard requires least privilege and defined audit-record content. This is adjacent governance evidence for scoped authority and platform-owned logs, not an empirical evaluation of LLM agents.",
+      "ref_type": "external",
+      "url": "https://csrc.nist.gov/pubs/sp/800/171/r3/final"
     }
   ]
 }

@@ -1,10 +1,20 @@
 {
-  "summary": "FrugalGPT provides the direct evidence base for cascading lower-cost and higher-capability models.",
+  "summary": "Evidence is direct for learned LLM routing and cascades on benchmark tasks: large cost reductions can preserve measured quality. Generalization remains task-, model-, threshold-, and distribution-dependent, and production coding or high-impact tool use is less directly studied.",
   "items": [
     {
-      "text": "FrugalGPT evaluates cascades that route requests to more capable models when needed.",
-      "ref_type": "source",
-      "ref_id": "s15"
+      "text": "FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance — Lingjiao Chen, Matei Zaharia, and James Zou (2024). TMLR experiments on classification, reading comprehension, and scientific QA report cascades matching the best individual model with up to 98% cost reduction or improving accuracy by 4% at equal cost. This directly supports cascades, but the headline results are benchmark-specific.",
+      "ref_type": "external",
+      "url": "https://mlanthology.org/tmlr/2024/chen2024tmlr-frugalgpt/"
+    },
+    {
+      "text": "RouteLLM: Learning to Route LLMs from Preference Data — Isaac Ong et al. (2025). ICLR evaluations report more than a twofold cost reduction without response-quality loss on selected public benchmarks and some transfer to model pairs unseen in training. This is direct routing evidence, not proof that one fixed threshold remains calibrated after deployment drift.",
+      "ref_type": "external",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/5503a7c69d48a2f86fc00b3dc09de686-Abstract-Conference.html"
+    },
+    {
+      "text": "Learning to Route LLMs with Confidence Tokens — Yu-Neng Chuang et al. (2025). ICML experiments show trained confidence tokens outperform verbalized confidence and token-probability baselines for downstream routing and rejection tasks. This directly supports calibrated triggers while requiring model training and task-representative labels.",
+      "ref_type": "external",
+      "url": "https://proceedings.mlr.press/v267/chuang25b.html"
     }
   ]
 }

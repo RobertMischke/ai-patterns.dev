@@ -1,4 +1,20 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Evidence is mixed: modern agent pull-request data directly describes review outcomes, while the case for deliberate review checkpoints comes mainly from adjacent code-review and human-automation research.",
+  "items": [
+    {
+      "text": "Alberto Bacchelli and Christian Bird, in 'Expectations, Outcomes, and Challenges of Modern Code Review' (ICSE, 2013), combine observation, interviews, a survey, and review-comment analysis at Microsoft. They find that understanding changes, knowledge transfer, awareness, and alternative solutions are major review outcomes beyond defect finding. This supports reviewing a durable artifact, but the work predates autonomous coding agents.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1109/ICSE.2013.6606617"
+    },
+    {
+      "text": "Pinna and colleagues, in 'Comparing AI Coding Agents: A Task-Stratified Analysis of Pull Request Acceptance' (2026 preprint), analyze 7,156 pull requests attributed to Codex, Copilot, Devin, Cursor, and Claude Code. Acceptance varies strongly by task type and no agent dominates every stratum, supporting routing and review rather than unconditional trust. Acceptance is an observational proxy, not a controlled measure of correctness.",
+      "ref_type": "external",
+      "url": "https://arxiv.org/abs/2602.08915"
+    },
+    {
+      "text": "Gouraud, Delorme, and Berberian, in 'Autopilot, Mind Wandering, and the Out of the Loop Performance Problem' (Frontiers in Neuroscience, 2017), synthesize evidence that sustained automation can reduce attention and degrade recovery when people must retake control. This is adjacent aviation and human-factors evidence: it motivates meaningful checkpoints and active evidence review, but does not test coding-agent workflows.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.3389/fnins.2017.00541"
+    }
+  ]
 }

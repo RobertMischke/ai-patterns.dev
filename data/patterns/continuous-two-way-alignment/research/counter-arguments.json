@@ -1,21 +1,21 @@
 {
-  "stance": "mixed",
-  "summary": "A continuous loop can reduce drift, but excessive synchronization produces noise, churn and misplaced confidence.",
+  "stance": "challenges",
+  "summary": "Bidirectional automation can create feedback loops, propagate false mappings, and flood owners with low-value updates. The write-back path also expands the companion from a read interface into a privileged change system.",
   "points": [
     {
-      "text": "Regenerating on every file change wastes compute and destabilizes shared views. Trigger on declared semantic inputs, debounce bursts and retain a pinned version while review is pending.",
+      "text": "A generated companion edit can trigger a source change, which triggers regeneration and another semantically equivalent edit; without convergence rules, the system oscillates or churns commits.",
       "severity": "warning"
     },
     {
-      "text": "Forcing every conversation into the repository creates low-signal records. Capture only decisions, constraints, corrected facts, unresolved questions and reusable learnings with a named owner.",
-      "severity": "warning"
-    },
-    {
-      "text": "A green freshness badge can certify only the alignment contract it measured. It cannot prove that the contract includes every relevant artifact or that a generated explanation is correct.",
+      "text": "Probabilistic trace links and entity matching can update the wrong requirement, component, or decision. Once written back, the false link appears authoritative and influences later reconciliation.",
       "severity": "blocker"
     },
     {
-      "text": "Automated write-back into code, specs or ADRs can launder an unreviewed human or model claim into apparent authority. Keep semantic write-back reviewable and attributable.",
+      "text": "If every detected mismatch becomes a pull request or approval task, reviewers face a permanent queue and start bulk-accepting cosmetic synchronization.",
+      "severity": "warning"
+    },
+    {
+      "text": "A companion that can propose or apply source changes needs stronger identity, authorization, injection defenses, and audit controls than a generated read-only site.",
       "severity": "warning"
     }
   ]

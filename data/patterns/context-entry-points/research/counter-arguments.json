@@ -1,5 +1,22 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "challenges",
+  "summary": "Context files can raise cost, anchor agents to stale interpretations, and create an opaque instruction hierarchy whose conflicts are harder to inspect than the source code.",
+  "points": [
+    {
+      "text": "Direct evaluation found no general success-rate improvement and more than 20% average inference-cost increase, so mandatory loading can be net negative.",
+      "severity": "warning"
+    },
+    {
+      "text": "Copied architecture summaries and command lists drift from build files and tests; their authoritative tone may discourage the agent from checking changed reality.",
+      "severity": "warning"
+    },
+    {
+      "text": "Organization, user, repository, directory, and task instructions can conflict. Silent precedence and branch-local instruction changes create prompt-injection and review risks.",
+      "severity": "blocker"
+    },
+    {
+      "text": "Maintaining parallel files for multiple assistants duplicates policy and encourages lowest-common-denominator prose instead of stable links and machine-enforced rules.",
+      "severity": "note"
+    }
+  ]
 }

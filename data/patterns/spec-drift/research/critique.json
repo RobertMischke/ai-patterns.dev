@@ -1,5 +1,22 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "supports",
+  "summary": "Spec-drift checks are valuable when they produce located, typed differences and treat ambiguity as a review queue, not when they collapse unlike artifacts into an unexplained score.",
+  "points": [
+    {
+      "text": "Reflexion models establish a durable mechanism: map implementation facts to intended elements, then report convergence, divergence and absence rather than asking whether prose and code are merely similar.",
+      "severity": "info"
+    },
+    {
+      "text": "Executable contracts and architecture rules provide high-confidence drift findings; semantic comparison of roadmap or rationale prose should carry lower confidence and require human confirmation.",
+      "severity": "note"
+    },
+    {
+      "text": "Every finding should identify both artifact versions, trace link, relevant code or contract location and proposed authority direction so teams know whether code or specification should change.",
+      "severity": "warning"
+    },
+    {
+      "text": "A scalar drift score hides whether the issue is obsolete documentation, missing implementation, unrecorded design evolution or a broken API; typed counts and trends are more actionable.",
+      "severity": "warning"
+    }
+  ]
 }

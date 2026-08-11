@@ -1,4 +1,14 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Use the wiki as a projection over authoritative artifacts with explicit gaps and feedback from real navigation behavior.",
+  "items": [
+    {
+      "text": "Generate component, dependency, ownership and deployment facts; reserve manually curated prose for intent, tradeoffs and incident learning."
+    },
+    {
+      "text": "Open or block a review when code, schema or ownership changes invalidate linked maps and decision records."
+    },
+    {
+      "text": "Measure failed searches, dead-end pages, time-to-answer and correction frequency to decide which cognitive views deserve maintenance."
+    }
+  ]
 }

@@ -1,19 +1,22 @@
 {
   "stance": "supports",
-  "summary": "A platform-owned event trail makes agent work reviewable and gives policy enforcement a durable control point.",
+  "summary": "Agent fencing is a necessary systems control for tool-using agents because a prompt cannot reliably constrain the same model that is choosing actions. Its value depends on genuinely independent enforcement and useful audit semantics.",
   "points": [
     {
-      "text": "Separate the agent's private reasoning from the authoritative record of requested work, grants, tool effects and evidence. This improves reconstruction without treating generated chat as proof.",
-      "severity": "info"
+      "text": "The durable history must be append-only to the agent and protected by a different identity and retention policy; a log the agent can edit or delete is evidence, not a fence.",
+      "severity": "warning"
     },
     {
-      "text": "Trust tiers let routine, reversible work move quickly while concentrating human attention on sensitive, irreversible or weakly evidenced actions.",
-      "severity": "info"
+      "text": "Authorization belongs at the tool or gateway boundary and should default-deny unknown actions. Prompt instructions and model self-assessment are inputs to policy, never the final policy decision.",
+      "severity": "warning"
     },
     {
-      "text": "Independent gates and structured verdicts make escalation evidence-based instead of relying on the originating agent's confidence.",
-      "severity": "note",
-      "source_id": "s19"
+      "text": "Trust tiers should bind a specific model version, tool set, environment, task class, and observed failure rate. A global reputation score hides materially different risk profiles.",
+      "severity": "note"
+    },
+    {
+      "text": "Audit records need actor, requested action, arguments or a privacy-preserving digest, policy version, decision, result, and correlation ID. Token transcripts alone are noisy and often insufficient for incident reconstruction.",
+      "severity": "note"
     }
   ]
 }

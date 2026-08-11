@@ -1,5 +1,18 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "mixed",
+  "summary": "Modern semantic retrieval can compensate for imperfect structure, so reorganizing a mature repository solely for an agent may cost more than it returns.",
+  "points": [
+    {
+      "text": "Search, language servers, dependency graphs and repository indexes can recover relationships without forcing feature-folder locality.",
+      "severity": "note"
+    },
+    {
+      "text": "Large structural migrations create merge risk and human retraining cost; a small maintained project map may deliver most of the value.",
+      "severity": "warning"
+    },
+    {
+      "text": "The strongest studies evaluate code retrieval benchmarks, not long-running teams maintaining mixed code, documentation and operations artifacts.",
+      "severity": "note"
+    }
+  ]
 }

@@ -1,30 +1,25 @@
 {
-  "summary": "Mature ecosystems use visible companion files when metadata must remain independent of the annotated payload.",
+  "summary": "Evidence strength: adjacent. Security systems and provenance standards validate separately stored, hash-bound metadata, and a licensing standard explicitly defines same-name companions; no direct controlled study located compares general sidecars with frontmatter, comments or a central registry for maintainability and comprehension.",
   "items": [
     {
-      "text": "The REUSE Specification permits `<filename>.license` companion files and identifies them as the option for files that cannot carry comments.",
+      "text": "Torres-Arias, Afzali, Kuppusamy, Curtmola and Cappos, in-toto: Providing farm-to-table guarantees for bits and bytes (USENIX Security 2019), evaluated signed link metadata against 30 real software supply-chain compromises and demonstrated deployments across cloud environments. It provides strong adjacent evidence for hash-bound companion provenance, not for arbitrary descriptive metadata UX.",
+      "ref_type": "external",
+      "url": "https://www.usenix.org/conference/usenixsecurity19/presentation/torres-arias"
+    },
+    {
+      "text": "Newman, Meyers and Torres-Arias, Sigstore: Software Signing for Everybody (ACM CCS 2022), presented identity-bound ephemeral signing and transparency logs and reported more than 2.2 million signatures at publication. It supports detached verification metadata at scale, while cryptographic signatures have stricter invariants than ordinary JSON sidecars.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1145/3548606.3560596"
+    },
+    {
+      "text": "Moreau and Missier, W3C PROV-DM: The PROV Data Model (W3C Recommendation, 2013), defines interoperable entities, activities, agents and derivations for provenance. It supports a structured sidecar schema, but the standard deliberately does not prescribe adjacent-file placement or measure maintenance outcomes.",
+      "ref_type": "external",
+      "url": "https://www.w3.org/TR/prov-dm/"
+    },
+    {
+      "text": "Free Software Foundation Europe, REUSE Specification 3.3 (2024), requires same-name .license companions for uncommentable files and recommends embedded comments where practical because they survive copying better. This is direct standards evidence for the mechanism and an explicit limitation: sidecars can detach from their payload.",
       "ref_type": "external",
       "url": "https://reuse.software/spec/"
-    },
-    {
-      "text": "OpenPGP describes detached signatures as separate entities stored as standalone files alongside or independently of the signed data.",
-      "ref_type": "external",
-      "url": "https://openpgp.dev/book/signing_data.html"
-    },
-    {
-      "text": "GNU Coreutils documents checksum output that records a digest with its file name and can later verify the file against that record.",
-      "ref_type": "external",
-      "url": "https://www.gnu.org/software/coreutils/manual/html_node/cksum-invocation.html"
-    },
-    {
-      "text": "Adobe documents XMP sidecar files for metadata that cannot be embedded in the media format.",
-      "ref_type": "external",
-      "url": "https://www.adobe.com/content/dam/cc/us/en/acom/products/xmp/Pdfs/XMP_for_CreativeProfessionals.pdf"
-    },
-    {
-      "text": "TypeScript declaration files contain type information without implementation, and declaration layout mirrors the JavaScript library it describes.",
-      "ref_type": "external",
-      "url": "https://www.typescriptlang.org/docs/handbook/2/type-declarations"
     }
   ]
 }

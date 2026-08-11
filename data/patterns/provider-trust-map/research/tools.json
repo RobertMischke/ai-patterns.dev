@@ -1,4 +1,20 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Provider trust maps can be assembled from vendor assurance data, continuous third-party risk records and policy-as-code enforcement. These tools cover provider evidence and runtime decisions; the organization must still define its own data classes, tasks and acceptable residual risk.",
+  "items": [
+    {
+      "text": "Cloud Security Alliance STAR is a public registry of cloud-provider security and privacy assurance, including self-assessments, third-party certifications and continuous assurance levels. Its control evidence can populate the provider side of a trust map instead of relying on model-brand reputation.",
+      "ref_type": "external",
+      "url": "https://cloudsecurityalliance.org/star/"
+    },
+    {
+      "text": "OneTrust Third-Party Risk Management maintains a vendor inventory, assigns risk tiers, runs assessments and monitors changes and issues. Those capabilities support per-provider evidence, review dates and escalation triggers rather than a one-time allowlist.",
+      "ref_type": "external",
+      "url": "https://www.onetrust.com/products/third-party-risk-management/"
+    },
+    {
+      "text": "Open Policy Agent evaluates declarative Rego policies over structured JSON input and returns machine-readable decisions. A gateway can use it to enforce that task fit, model trust, provider trust, data class and requested capability all satisfy the map before dispatch.",
+      "ref_type": "external",
+      "url": "https://www.openpolicyagent.org/docs"
+    }
+  ]
 }

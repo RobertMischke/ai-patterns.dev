@@ -1,4 +1,20 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Evidence is direct but still limited: benchmark studies show that executable workflow structure can improve agent performance and that coordination, verification, and termination frequently fail. They do not establish one universal repository pipeline design.",
+  "items": [
+    {
+      "text": "AFlow: Automating Agentic Workflow Generation — Jiayi Zhang et al. (2025). This ICLR paper searches over code-represented node-and-edge workflows and reports a 5.7% average gain over prior baselines across six benchmarks; on selected tasks a smaller model surpassed GPT-4o at 4.55% of its inference cost. This is direct evidence that workflow topology matters, but the generated benchmark workflows are not long-lived production pipelines.",
+      "ref_type": "external",
+      "url": "https://openreview.net/forum?id=z5uVAKwmjf"
+    },
+    {
+      "text": "Why Do Multi-Agent LLM Systems Fail? — Mert Cemri et al. (2025). Six expert annotators analyzed five frameworks across more than 150 tasks and derived 14 failure modes in specification, coordination, verification, and termination, with Cohen's kappa of 0.88. This directly supports explicit roles and pass criteria while showing that simple role prompts or orchestration patches are insufficient.",
+      "ref_type": "external",
+      "url": "https://arxiv.org/abs/2503.13657"
+    },
+    {
+      "text": "Workflow Patterns — Wil M. P. van der Aalst, Arthur H. M. ter Hofstede, Bartek Kiepuszewski, and Alistair P. Barros (2003). The paper develops a systematic vocabulary for control-flow constructs used to compare workflow systems. It is adjacent, pre-LLM evidence: its split, join, choice, cancellation, and synchronization patterns clarify pipeline semantics but do not validate agent behavior.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1023/A:1022883727209"
+    }
+  ]
 }

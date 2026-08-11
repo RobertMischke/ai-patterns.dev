@@ -1,4 +1,25 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Coding agents, policy engines and repository controls provide complementary rails: operating-system containment, deterministic action policy and independent merge or deployment gates.",
+  "items": [
+    {
+      "text": "OpenAI Codex sandboxing: filesystem and network policies bound what agent-run commands can access independently of prompt compliance.",
+      "ref_type": "external",
+      "url": "https://learn.chatgpt.com/docs/sandboxing"
+    },
+    {
+      "text": "Claude Code sandboxing: operating-system primitives restrict filesystem and network access while preserving autonomous command execution inside the boundary.",
+      "ref_type": "external",
+      "url": "https://www.anthropic.com/engineering/claude-code-sandboxing"
+    },
+    {
+      "text": "GitHub protected branches: required reviews, status checks and merge restrictions create platform-owned gates after autonomous work.",
+      "ref_type": "external",
+      "url": "https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches"
+    },
+    {
+      "text": "Open Policy Agent: policy-as-code can evaluate structured action or deployment requests outside the agent process.",
+      "ref_type": "external",
+      "url": "https://www.openpolicyagent.org/docs/latest/"
+    }
+  ]
 }

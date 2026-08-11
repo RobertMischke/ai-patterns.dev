@@ -1,5 +1,18 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "mixed",
+  "summary": "Roles and parallelism can make delegation legible, but a workforce should be justified by better accepted outcomes after coordination cost, not by agent count or simulated organizational detail.",
+  "points": [
+    {
+      "text": "Track cost, elapsed time, handoff failures, duplicated work, review corrections and accepted output per task class against a strong single-agent baseline.",
+      "severity": "info"
+    },
+    {
+      "text": "Define authority separately from role: a reviewer persona is not independent if it shares prompts, evidence and model failure modes with the implementer.",
+      "severity": "warning"
+    },
+    {
+      "text": "Bound concurrency by integration capacity. More agents can produce a larger queue of conflicting or unreviewable changes faster than humans can absorb it.",
+      "severity": "blocker"
+    }
+  ]
 }

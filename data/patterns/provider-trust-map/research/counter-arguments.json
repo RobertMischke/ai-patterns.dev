@@ -1,5 +1,22 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "mixed",
+  "summary": "Trust maps can become stale compliance theater, and provider-level labels may hide service-, region- and configuration-specific differences.",
+  "points": [
+    {
+      "text": "A provider marked trusted can still expose an unsafe endpoint, subprocessor, region or retention setting; coarse provider labels create dangerous transitive trust.",
+      "severity": "blocker"
+    },
+    {
+      "text": "Public certifications and questionnaires are lagging evidence and may not cover the exact service configuration or emerging failure mode used by an agent.",
+      "severity": "warning"
+    },
+    {
+      "text": "A large task-by-data-by-provider matrix is expensive to maintain and can lead teams to route around controls when legitimate combinations are missing.",
+      "severity": "warning"
+    },
+    {
+      "text": "Self-hosting reduces some contractual exposure but shifts patching, access-control and incident-response risk to the deploying organization; it is not automatically the highest-trust route.",
+      "severity": "note"
+    }
+  ]
 }

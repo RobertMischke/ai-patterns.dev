@@ -1,4 +1,30 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Agent guardrails, cloud identity systems, and policy engines can enforce dimensions of a trust map; the map itself must combine these controls rather than rely on one model-level permission.",
+  "items": [
+    {
+      "text": "OpenAI Agents SDK guardrails can inspect agent input, output, and custom function-tool calls, reject execution with a tripwire, and place human approval before guarded tool execution. They implement content and action gates, although the documentation notes coverage and ordering limitations that must be included in the trust model.",
+      "ref_type": "external",
+      "url": "https://openai.github.io/openai-agents-js/guides/guardrails/"
+    },
+    {
+      "text": "Amazon Bedrock uses IAM policies to control who may create, retrieve, update, delete, or apply guardrails and who may invoke models with them. Separate identities and explicit actions allow data, model, and guardrail authority to be represented independently.",
+      "ref_type": "external",
+      "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-permissions.html"
+    },
+    {
+      "text": "Microsoft Foundry role-based access control supplies built-in and custom roles for project administration, model deployment, inference, and connected resources. Assigning narrowly scoped managed identities lets an agent's infrastructure authority differ from its apparent reasoning capability.",
+      "ref_type": "external",
+      "url": "https://learn.microsoft.com/en-us/azure/foundry/concepts/rbac-foundry"
+    },
+    {
+      "text": "Cedar expresses authorization over principal, action, resource, and context and keeps policy evaluation separate from application code. A trust-map compiler can issue only policies or capability grants justified by the current task, model, resource, and recovery class.",
+      "ref_type": "external",
+      "url": "https://docs.cedarpolicy.com/"
+    },
+    {
+      "text": "Open Policy Agent evaluates declarative policy against structured input and can be embedded at API gateways, services, and infrastructure boundaries. It can enforce trust-map decisions close to each effect instead of depending on the model to obey prompt-level restrictions.",
+      "ref_type": "external",
+      "url": "https://www.openpolicyagent.org/docs/latest/"
+    }
+  ]
 }

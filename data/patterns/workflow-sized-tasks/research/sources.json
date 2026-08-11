@@ -1,5 +1,5 @@
 {
-  "summary": "The accepted TE-23 analysis is the factual core; its measured Agent Studio evidence and vendor documentation establish the economic and capability boundaries.",
+  "summary": "The accepted TE-23 analysis is the local factual core. Repository-level planning research supports dependency-aware decomposition, but it does not establish that one large outer card is universally cheaper than linked small cards.",
   "items": [
     {
       "text": "TE-23 — Dynamic Workflows as a Task-Cutting Strategy: accepted cost model, decision rubric, capability matrix and limitations.",
@@ -35,6 +35,21 @@
       "text": "Codex non-interactive mode reference: codex exec sandboxing and event output, without a verified subagent lifecycle contract in the supplied analysis.",
       "ref_type": "source",
       "ref_id": "s69"
+    },
+    {
+      "text": "CodePlan (FSE 2024) evaluates repository-level coding with dependency-aware planning and reports gains over plan-free baselines, supporting explicit cross-file task structure rather than an unbounded single instruction.",
+      "ref_type": "external",
+      "url": "https://www.microsoft.com/en-us/research/publication/codeplan-repository-level-coding-using-llms-and-planning-2/"
+    },
+    {
+      "text": "SWE-agent (NeurIPS 2024) studies an agent-computer interface for repository issue resolution and shows that action and observation design materially affects outcomes; it supports qualified runtimes, not a particular card size.",
+      "ref_type": "external",
+      "url": "https://papers.nips.cc/paper_files/paper/2024/hash/5a7c947568c1b1328ccc5230172e1e7c-Abstract-Conference.html"
+    },
+    {
+      "text": "Runtime-Structured Task Decomposition (2026 preprint) evaluates adaptive decomposition for software agents; the recency and preprint status require replication before using it as a production threshold.",
+      "ref_type": "external",
+      "url": "https://arxiv.org/abs/2605.15425"
     }
   ]
 }

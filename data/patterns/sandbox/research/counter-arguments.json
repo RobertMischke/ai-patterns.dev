@@ -1,5 +1,22 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "mixed",
+  "summary": "A sandbox adds real friction and can still fail through kernel escapes, allowed channels, poisoned inputs or unsafe exported artifacts.",
+  "points": [
+    {
+      "text": "Containers share the host kernel, and every virtualization or syscall-emulation layer has vulnerabilities; calling the environment a sandbox can create a false security boundary.",
+      "severity": "blocker"
+    },
+    {
+      "text": "Useful coding tasks often need package registries, source hosts, test services and credentials, so broad egress exceptions can recreate the exfiltration path the sandbox was meant to close.",
+      "severity": "blocker"
+    },
+    {
+      "text": "Measured gVisor overhead and VM startup or image costs can make strong isolation too expensive for short, high-volume tasks.",
+      "severity": "warning"
+    },
+    {
+      "text": "A clean runtime does not protect against malicious dependencies, prompt injection in repository files or harmful patches that pass through an approved export channel.",
+      "severity": "warning"
+    }
+  ]
 }

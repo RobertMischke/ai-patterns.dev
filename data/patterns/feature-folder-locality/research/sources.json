@@ -1,4 +1,20 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Evidence is adjacent rather than direct: modularity and feature-oriented-programming studies support change-oriented grouping, but no controlled study was located that isolates ordinary feature folders from layer folders.",
+  "items": [
+    {
+      "text": "David L. Parnas, in 'On the Criteria to Be Used in Decomposing Systems into Modules' (Communications of the ACM, 1972), argues that modules should hide design decisions likely to change rather than merely mirror processing stages. This is the foundational rationale for feature ownership and stable boundaries, but it is an analytical case study, not an experiment about filesystem layout.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1145/361598.361623"
+    },
+    {
+      "text": "Ferreira, Gaia, Figueiredo, and Maia, in 'On the use of feature-oriented programming for evolving software product lines: A comparative study' (Science of Computer Programming, 2014), compare evolutions of WebStore and MobileMedia and report fewer changed elements plus reduced scattering and tangling for feature modules in many changes. The evidence concerns language-level feature modules, so transfer to folder layout is plausible but not direct.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1016/j.scico.2013.10.010"
+    },
+    {
+      "text": "Zhou, Cai, and colleagues, in 'Understanding Evolutionary Coupling by Fine-Grained Co-Change Relationship Analysis' (ICPC, 2019), analyze 27,087 co-change commits from six open-source systems and show that files often evolve in recurring fine-grained relationships. This supports making change companions discoverable, while not proving that placing them in one folder improves outcomes.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1109/ICPC.2019.00046"
+    }
+  ]
 }

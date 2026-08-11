@@ -1,24 +1,17 @@
 {
-  "summary": "The pattern becomes more useful when memory maintenance is treated as ordinary repository maintenance rather than a separate knowledge-management programme.",
+  "summary": "Extensions add typed provenance, retrieval evaluation, safe compaction, and a protected tier for data that should not live in Git.",
   "items": [
     {
-      "text": "Validate index targets, duplicate identifiers, broken links and supersession cycles in continuous integration."
+      "text": "Represent each record as a typed event with actor, timestamp, source links, confidence, sensitivity, validity interval, supersedes links, and review state; derive human-friendly indexes from those fields."
     },
     {
-      "text": "Display recalled file paths and revisions alongside agent output so an operator can inspect the effective context."
+      "text": "Add retrieval regression tests containing answerable, contradicted, expired, ambiguous, and not-found queries, and measure both recall and stale-fact leakage."
     },
     {
-      "text": "Assign review intervals by consequence: command syntax and operational policy expire faster than historical rationale."
+      "text": "Periodically create signed consolidation snapshots while retaining links to source events; expire snapshots on any successor event rather than silently editing history."
     },
     {
-      "text": "Connect durable memory to the existing pattern for searchable decisions rather than creating a parallel decision archive.",
-      "ref_type": "pattern",
-      "ref_id": "decision-memory"
-    },
-    {
-      "text": "Load memory through small, explicit context entry points instead of injecting the whole folder into every run.",
-      "ref_type": "pattern",
-      "ref_id": "context-entry-points"
+      "text": "Keep secrets, personal data, and erasure-sensitive records in an access-controlled store and commit only opaque identifiers plus non-sensitive provenance to Git."
     }
   ]
 }

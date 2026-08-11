@@ -1,4 +1,20 @@
 {
-  "summary": "The current evidence base is the first-hand Agent Studio operating observation recorded in the critique. The proposed flow, quality and audit telemetry should test and calibrate the pattern without inventing a universal threshold.",
-  "items": []
+  "summary": "Human-factors research supports the risk of losing situation awareness at high automation levels and the value of adaptive control. It is adjacent evidence: no controlled study yet establishes the correct abstraction-switch threshold for coding-agent operations.",
+  "items": [
+    {
+      "text": "Endsley and Kiris (1995) experimentally studied out-of-the-loop performance with automation and found degraded situation awareness and recovery performance after automation failure, motivating retained drill-down and practice.",
+      "ref_type": "external",
+      "url": "https://journals.sagepub.com/doi/abs/10.1518/001872095779064555"
+    },
+    {
+      "text": "Gutman et al. (2021) evaluated levels of automation and workload with 80 participants, providing adjacent evidence that the best control level depends on workload and task context rather than a universal maximum.",
+      "ref_type": "external",
+      "url": "https://www.mdpi.com/2076-3417/11/16/7340"
+    },
+    {
+      "text": "Research on adaptive automation (2003) examines dynamic changes in allocation between humans and automation, supporting explicit transition criteria while remaining outside software-agent delivery.",
+      "ref_type": "external",
+      "url": "https://journals.sagepub.com/doi/abs/10.1518/hfes.45.4.601.27092"
+    }
+  ]
 }

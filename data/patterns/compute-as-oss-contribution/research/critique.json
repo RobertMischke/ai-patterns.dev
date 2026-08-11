@@ -1,5 +1,22 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "mixed",
+  "summary": "Compute sponsorship can be acknowledged as an enabling contribution when it is requested, attributable, and tied to reviewable outputs. It should remain process provenance, never a mechanism for purchasing acceptance, rank, or governance power.",
+  "points": [
+    {
+      "text": "The statement should report model and revision, provider or hardware, token or accelerator usage, pricing basis, workflow version, attempts including failures, generated artifacts, and validation results. A dollar total alone is neither portable nor reproducible.",
+      "severity": "note"
+    },
+    {
+      "text": "Maintainers should define eligible workloads in advance, such as a benchmark run or requested migration. Unsolicited inference that produces review burden is not automatically a contribution.",
+      "severity": "warning"
+    },
+    {
+      "text": "Credit should be attached to the accepted artifact and useful evidence, while authorship, review responsibility, and governance remain governed by project policy.",
+      "severity": "warning"
+    },
+    {
+      "text": "Efficiency and environmental cost should be visible beside raw compute. Reaching the same validated result with less compute is usually a stronger engineering contribution, not a smaller one.",
+      "severity": "note"
+    }
+  ]
 }

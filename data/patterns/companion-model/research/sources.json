@@ -1,10 +1,20 @@
 {
-  "summary": "Planning-driven programming is relevant evidence for separating planning and execution roles.",
+  "summary": "Evidence is direct for explicit planner-executor separation and adjacent for strong-versus-weak model economics. It remains limited for the exact claim that a larger planner with a smaller executor, or the reverse, is consistently better than a single model under matched cost.",
   "items": [
     {
-      "text": "Planning-Driven Programming studies a workflow that separates planning from implementation.",
-      "ref_type": "source",
-      "ref_id": "s16"
+      "text": "Plan-and-Act: Improving Planning of Agents for Long-Horizon Tasks — Lutfi Eren Erdogan et al. (2025). The framework trains a planner to emit structured high-level plans and an executor to translate them into actions, reaching a reported 54% success rate on WebArena-Lite. This directly supports role separation, but it does not isolate model size as the causal factor.",
+      "ref_type": "external",
+      "url": "https://arxiv.org/abs/2503.09572"
+    },
+    {
+      "text": "Plan-Then-Execute: An Empirical Study of User Trust and Team Performance When Using LLM Agents As A Daily Assistant — Gaole He, Gianluca Demartini, and Ujwal Gadiraju (2025). A CHI study with 248 participants across six tasks found that high-quality plans and appropriate user involvement can help, while plausible faulty plans can miscalibrate trust. This supports inspectable plans and checkpoints, not a particular two-model size split.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1145/3706598.3713218"
+    },
+    {
+      "text": "RouteLLM: Learning to Route LLMs from Preference Data — Isaac Ong et al. (2025). ICLR evaluations report more than a twofold cost reduction without quality loss on selected public benchmarks by routing between stronger and weaker models. This is adjacent economic evidence; query routing is not the same as assigning complementary planner and executor roles.",
+      "ref_type": "external",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/5503a7c69d48a2f86fc00b3dc09de686-Abstract-Conference.html"
     }
   ]
 }

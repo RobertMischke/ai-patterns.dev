@@ -1,4 +1,25 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Specification assistants already turn rough intent into reviewable requirements and task artifacts, but humans must still supply context and approve the resulting contract.",
+  "items": [
+    {
+      "text": "Kiro Specs expands a feature prompt into structured requirements, design, and implementation tasks, and explicitly lets the user review and refine each stage before coding. The staged artifact is a close implementation of LLM-mediated task shaping.",
+      "ref_type": "external",
+      "url": "https://kiro.dev/docs/web/specs/"
+    },
+    {
+      "text": "GitHub Copilot can create or update GitHub issues from natural-language instructions, using repository context to draft the title and body. The result remains an ordinary issue that a human can edit, label, discuss, and approve before assignment.",
+      "ref_type": "external",
+      "url": "https://docs.github.com/en/copilot/how-tos/copilot-on-github/copilot-for-github-tasks/use-copilot-to-create-or-update-issues"
+    },
+    {
+      "text": "Taskade AI Project Studio turns a prompt and supplied resources into projects containing tasks, subtasks, and structured blocks. It is useful for converting an unstructured request into a reviewable work breakdown, though it does not guarantee requirements quality.",
+      "ref_type": "external",
+      "url": "https://help.taskade.com/en/articles/8958450-ai-project-studio"
+    },
+    {
+      "text": "AI Acceptance Criteria for Jira converts issue descriptions or discussion context into discrete acceptance criteria inside Jira. Its narrow focus illustrates mediation at the contract boundary rather than asking a model to implement an underspecified request immediately.",
+      "ref_type": "external",
+      "url": "https://marketplace.atlassian.com/apps/1237301/ai-acceptance-criteria"
+    }
+  ]
 }

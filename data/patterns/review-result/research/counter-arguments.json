@@ -1,5 +1,22 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "mixed",
+  "summary": "A polished result packet can conceal uncertainty, cherry-pick evidence and make reviewers over-trust the agent's framing.",
+  "points": [
+    {
+      "text": "If the producing agent selects both evidence and summary, it can omit failed attempts, contradictory outputs or scope changes that would alter the verdict.",
+      "severity": "blocker"
+    },
+    {
+      "text": "An aggregate green status can hide skipped tests, flaky retries, weak coverage or a gate that never ran; absence and waiver states must be first-class.",
+      "severity": "blocker"
+    },
+    {
+      "text": "Reviewers may lose causal context for a non-obvious design choice when the conversational exploration is compressed into a confident one-line rationale.",
+      "severity": "warning"
+    },
+    {
+      "text": "Building and maintaining a common result schema across heterogeneous agents and tools creates adapter work and may flatten domain-specific evidence.",
+      "severity": "note"
+    }
+  ]
 }

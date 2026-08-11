@@ -1,5 +1,18 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "mixed",
+  "summary": "Observability can create the appearance of control while adding expense, sensitive telemetry and correlated automated judgments.",
+  "points": [
+    {
+      "text": "Traces show what the instrumentation captured, not necessarily what caused a real-world outcome; missing environment state can make a complete-looking record misleading.",
+      "severity": "warning"
+    },
+    {
+      "text": "LLM judges can share blind spots with the generator, so evaluator diversity and human sampling matter more than evaluator count.",
+      "severity": "warning"
+    },
+    {
+      "text": "Logging prompts, retrieved data and tool output can expose personal data, secrets or licensed material; minimization and access control are part of trust, not optional plumbing.",
+      "severity": "blocker"
+    }
+  ]
 }

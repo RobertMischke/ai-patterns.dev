@@ -1,4 +1,25 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Code-review platforms can enforce that findings are resolved, dismissed by an authorized reviewer, or blocked before merge. They provide the state machine for a council loop; the quality of findings and acceptance rationales still requires project policy.",
+  "items": [
+    {
+      "text": "GitHub protected branches can require pull-request reviews, successful status checks, and resolution of every review conversation before merge; stale approvals can be dismissed when the reviewed diff changes.",
+      "ref_type": "external",
+      "url": "https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches"
+    },
+    {
+      "text": "GitLab merge requests combine assigned reviewers, approval rules, discussions, CI results, and merge checks in one record; unresolved feedback can remain a visible blocker instead of disappearing into an agent transcript.",
+      "ref_type": "external",
+      "url": "https://docs.gitlab.com/user/project/merge_requests/"
+    },
+    {
+      "text": "Gerrit submit requirements express project-specific, query-based conditions for when a change is submittable and display satisfied, unsatisfied, and overridden states with applicability rules.",
+      "ref_type": "external",
+      "url": "https://gerrit-review.googlesource.com/Documentation/config-submit-requirements.html"
+    },
+    {
+      "text": "GitLab approval rules can require specified numbers and groups of approvers and control whether authors or committers may self-approve, supporting explicit authority for accepting a council finding.",
+      "ref_type": "external",
+      "url": "https://docs.gitlab.com/user/project/merge_requests/approvals/rules/"
+    }
+  ]
 }

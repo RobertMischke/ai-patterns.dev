@@ -1,5 +1,5 @@
 {
-  "summary": "Primary vendor and project documentation supports each surveyed strand and the in-progress reference implementation.",
+  "summary": "Primary documentation supports the implementation options, while controlled studies show that prompt order and formatting can materially change results. The studies justify exact version identity; they do not by themselves prove that a particular registry workflow improves team productivity.",
   "items": [
     {
       "text": "Prompty file-first prompts-as-code and tracing",
@@ -22,9 +22,9 @@
       "ref_id": "s40"
     },
     {
-      "text": "Humanloop serialized files and version-linked logs",
-      "ref_type": "source",
-      "ref_id": "s42"
+      "text": "Historical Humanloop implementation and official 2025 platform-sunset notice",
+      "ref_type": "external",
+      "url": "https://humanloop.com/docs/changelog/2025/08"
     },
     {
       "text": "Semantic Kernel version-controlled YAML prompt templates",
@@ -45,6 +45,21 @@
       "text": "Agent Studio prompt registry reference implementation, in progress",
       "ref_type": "source",
       "ref_id": "s49"
+    },
+    {
+      "text": "Lu et al. (ACL 2022) show that the order of few-shot examples can substantially affect model performance, providing direct evidence that seemingly small prompt-text changes require exact version attribution.",
+      "ref_type": "external",
+      "url": "https://aclanthology.org/2022.acl-long.556/"
+    },
+    {
+      "text": "Quantifying Language Models' Sensitivity to Spurious Features in Prompt Design (ICLR 2024) evaluates formatting sensitivity across models and tasks, reinforcing the need to preserve the exact rendered prompt.",
+      "ref_type": "external",
+      "url": "https://openreview.net/forum?id=RIu5lyNXjT"
+    },
+    {
+      "text": "POSIX (Findings of EMNLP 2024) studies prompt sensitivity and robustness, adding evidence that prompt variants should be evaluated and linked to observed runs rather than treated as interchangeable prose.",
+      "ref_type": "external",
+      "url": "https://aclanthology.org/2024.findings-emnlp.852/"
     }
   ]
 }

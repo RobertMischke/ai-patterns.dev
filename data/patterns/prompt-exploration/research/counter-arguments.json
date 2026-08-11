@@ -1,5 +1,22 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "mixed",
+  "summary": "Mandatory exploration can become ceremony, and stakeholders can answer confidently without resolving the underlying uncertainty.",
+  "points": [
+    {
+      "text": "For reversible, low-risk tasks, the cost of an interview and specification may exceed the cost of producing a small prototype and learning from concrete feedback.",
+      "severity": "warning"
+    },
+    {
+      "text": "Users may not know hidden constraints or edge cases; recording their first answer can freeze a mistaken assumption rather than discover the real need.",
+      "severity": "blocker"
+    },
+    {
+      "text": "An agent can generate plausible but leading questions that bias stakeholders toward its preferred implementation and create false confidence in alignment.",
+      "severity": "warning"
+    },
+    {
+      "text": "Long exploration queues increase time to first evidence and encourage specification drift if the repository changes before execution starts.",
+      "severity": "note"
+    }
+  ]
 }

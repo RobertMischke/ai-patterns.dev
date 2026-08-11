@@ -22,9 +22,9 @@
       "url": "https://langfuse.com/docs/prompt-management/features/link-to-traces"
     },
     {
-      "text": "Humanloop: version-control-friendly serialized prompt files plus version-linked logs demonstrate the same hybrid boundary.",
+      "text": "Humanloop (discontinued): its serialized prompt files and version-linked logs are a historical example of the hybrid boundary; the platform was sunset on 8 September 2025 and is not a current implementation choice.",
       "ref_type": "external",
-      "url": "https://humanloop.com/docs/reference/serialized-files"
+      "url": "https://humanloop.com/docs/changelog/2025/08"
     }
   ]
 }

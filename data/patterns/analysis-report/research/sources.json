@@ -1,4 +1,20 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Evidence is adjacent: empirical software-analytics and continuous-monitoring studies support concise, timely, drill-down-capable reports, but no direct controlled study located evaluates an LLM that repeatedly synthesizes queues, ADRs, logs, and evidence into follow-up actions.",
+  "items": [
+    {
+      "text": "Information Needs for Software Development Analytics — Raymond P. L. Buse and Thomas Zimmermann (2012). Interviews and a survey of 110 developers and managers found demand for fast, concise analytics that combine indicators and allow drill-down. This directly informs report usability, but the study predates generative synthesis and automated action creation.",
+      "ref_type": "external",
+      "url": "https://www.microsoft.com/en-us/research/publication/information-needs-for-software-development-analytics-2/"
+    },
+    {
+      "text": "Dashboards for Continuous Monitoring of Quality for Software Product under Development — Tomas Gustavsson et al. (2014). Industrial cases at Ericsson, Volvo, and Saab describe dashboards used to monitor quality and release readiness. This is adjacent evidence for continuous, multi-source visibility, not a controlled test of analysis-report accuracy.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1016/B978-0-12-417009-4.00008-9"
+    },
+    {
+      "text": "On the Need to Monitor Continuous Integration Practices — Gustavo A. Santos et al. (2025). This empirical software-engineering study reports that practitioners view monitoring CI practices as important and investigates actionable indicators. It supports scheduled process analysis, while the evidence does not establish that an LLM-generated report improves decisions.",
+      "ref_type": "external",
+      "url": "https://doi.org/10.1007/s10664-025-10682-6"
+    }
+  ]
 }

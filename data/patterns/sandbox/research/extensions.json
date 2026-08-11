@@ -1,4 +1,25 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Sandbox variants should scale isolation and capability to task risk rather than exposing one broad environment to every agent.",
+  "items": [
+    {
+      "text": "Generate a per-task capability manifest and enforce it at filesystem, network, secret and tool boundaries.",
+      "ref_type": "pattern",
+      "ref_id": "agent-fencing"
+    },
+    {
+      "text": "Give each task a disposable worktree and export only a reviewed patch plus declared artifacts.",
+      "ref_type": "pattern",
+      "ref_id": "worktree"
+    },
+    {
+      "text": "Join model-token, compute-time and external-service ceilings into one enforceable resource budget.",
+      "ref_type": "pattern",
+      "ref_id": "token-budget"
+    },
+    {
+      "text": "Select local, private-cloud or external sandboxes using the task's provider trust decision and data class.",
+      "ref_type": "pattern",
+      "ref_id": "provider-trust-map"
+    }
+  ]
 }

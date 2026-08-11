@@ -1,4 +1,25 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Git and leading coding-agent products use worktrees to isolate parallel file state. Full task isolation additionally requires separate runtime resources, secrets and cleanup policy.",
+  "items": [
+    {
+      "text": "Git worktree: attaches multiple working trees to one repository so each agent can operate on a separate checked-out branch.",
+      "ref_type": "external",
+      "url": "https://git-scm.com/docs/git-worktree"
+    },
+    {
+      "text": "OpenAI Codex worktrees: isolated workspaces allow parallel tasks without changing the user's active checkout.",
+      "ref_type": "external",
+      "url": "https://learn.chatgpt.com/docs/environments/git-worktrees"
+    },
+    {
+      "text": "Claude Code --worktree: starts a session in an isolated Git worktree and supports worktree lifecycle hooks.",
+      "ref_type": "external",
+      "url": "https://code.claude.com/docs/en/worktrees"
+    },
+    {
+      "text": "Cursor parallel agents: worktree-based isolation underpins concurrent agent changes before integration.",
+      "ref_type": "external",
+      "url": "https://cursor.com/changelog/04-24-26"
+    }
+  ]
 }

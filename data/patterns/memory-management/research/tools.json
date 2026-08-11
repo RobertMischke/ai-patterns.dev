@@ -1,17 +1,30 @@
 {
-  "summary": "A minimal implementation needs repository primitives before it needs a memory service.",
+  "summary": "Useful implementations combine human-auditable versioned artifacts with retrieval, metadata, and explicit update history; no single product supplies every safeguard in the pattern.",
   "items": [
     {
-      "text": "Use memory/index.md as the human-readable entry point and keep each durable assertion in memory/facts/<stable-id>.md."
+      "text": "Git provides immutable object history, diffs, blame, branches, and reviewable commits for small text memory files. Stable paths and ordinary code review make additions and successor corrections inspectable, while Git alone supplies no semantic retrieval or staleness policy.",
+      "ref_type": "external",
+      "url": "https://git-scm.com/docs/git"
     },
     {
-      "text": "Give each fact a short metadata header with status, source, recorded date, reviewed date and optional supersedes or related links."
+      "text": "Letta memory blocks are persistent, labeled, described, editable memory units that can be attached to and shared among agents; blocks can also be read-only. Their identifiers and visibility make individual memory records inspectable rather than hiding all state in a prompt transcript.",
+      "ref_type": "external",
+      "url": "https://docs.letta.com/guides/core-concepts/memory/memory-blocks"
     },
     {
-      "text": "Have retrieval return source_path, source_revision and the selected excerpt with every result."
+      "text": "Mem0 exposes create, search, update, delete, and history operations for memories, with metadata and timestamps available to retrieval. The history endpoint makes changes to a memory observable, although applications must still define provenance, approval, and retention policy.",
+      "ref_type": "external",
+      "url": "https://docs.mem0.ai/core-concepts/memory-operations/search"
     },
     {
-      "text": "Run a small validator for missing index entries, broken links, multiple current versions and overdue reviews."
+      "text": "Zep represents conversational memory in a temporal knowledge graph, preserving event time and invalidating outdated facts while retaining historical context. This directly addresses successor facts and contradictions, but uses a service-backed graph rather than Git-native files.",
+      "ref_type": "external",
+      "url": "https://help.getzep.com/concepts"
+    },
+    {
+      "text": "LangGraph distinguishes short-term thread state from long-term namespace stores and documents semantic, episodic, and procedural memory. It supports updating memory either on the request path or in background jobs, making retrieval latency and consolidation explicit design choices.",
+      "ref_type": "external",
+      "url": "https://docs.langchain.com/oss/python/concepts/memory"
     }
   ]
 }

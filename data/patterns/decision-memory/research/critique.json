@@ -1,5 +1,22 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "supports",
+  "summary": "Repository-local decision memory is a low-friction way to preserve rationale and supersession across human and agent work. Its success depends more on timely, selective capture and retrieval than on the ADR format.",
+  "points": [
+    {
+      "text": "Record decisions while alternatives and uncertainty are still visible: context, drivers, options, evidence, owner, date, status, consequences, validation plan, and supersession links.",
+      "severity": "note"
+    },
+    {
+      "text": "Stable IDs and explicit statuses such as proposed, accepted, rejected, superseded, and expired are essential. Editing history into a timeless current answer destroys the memory's audit value.",
+      "severity": "warning"
+    },
+    {
+      "text": "Index decisions by affected paths, services, interfaces, requirements, and incidents so retrieval follows the task. A directory of prose is not automatically searchable organizational memory.",
+      "severity": "note"
+    },
+    {
+      "text": "Set review triggers for invalidated assumptions, architecture changes, incidents, or elapsed time; freshness should be event-driven rather than a blanket calendar rewrite.",
+      "severity": "note"
+    }
+  ]
 }

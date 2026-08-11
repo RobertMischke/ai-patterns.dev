@@ -1,5 +1,18 @@
 {
-  "stance": "unknown",
-  "summary": "",
-  "points": []
+  "stance": "mixed",
+  "summary": "A proxy can reduce avoidable clarification and routing work, but it should expose transformations and abstain when intent or urgency is uncertain.",
+  "points": [
+    {
+      "text": "Retain the raw request alongside normalized fields so reviewers can detect omissions, changed priority or invented acceptance criteria.",
+      "severity": "warning"
+    },
+    {
+      "text": "Measure time-to-first-correct-owner, duplicate precision, clarification rounds, requester rework and missed-severity incidents rather than number of tickets processed.",
+      "severity": "info"
+    },
+    {
+      "text": "A confidence threshold should route ambiguous, security-sensitive or high-impact requests to a person instead of forcing a classification.",
+      "severity": "blocker"
+    }
+  ]
 }

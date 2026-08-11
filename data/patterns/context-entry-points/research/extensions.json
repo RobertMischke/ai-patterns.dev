@@ -1,4 +1,25 @@
 {
-  "summary": "",
-  "items": []
+  "summary": "Extensions should generate small task frames from stable entry points, continuously test commands, and surface instruction conflicts as normal engineering findings.",
+  "items": [
+    {
+      "text": "Build a task-specific active frame from the nearest entry point and retrieve referenced details only when the current step needs them.",
+      "ref_type": "pattern",
+      "ref_id": "context-compaction"
+    },
+    {
+      "text": "Turn documented bootstrap, test, lint, and build commands into executable documentation checks so stale entry points fail visibly.",
+      "ref_type": "pattern",
+      "ref_id": "executable-safety-net"
+    },
+    {
+      "text": "Add an instruction linter that detects duplication, unreachable links, unbounded wording, conflicting scopes, missing owners, and rules that should be enforced outside prompts.",
+      "ref_type": "pattern",
+      "ref_id": "analysis-report"
+    },
+    {
+      "text": "Regenerate or queue review of affected entry points when workflow, dependency, ownership, or architecture artifacts change.",
+      "ref_type": "pattern",
+      "ref_id": "continuous-two-way-alignment"
+    }
+  ]
 }
