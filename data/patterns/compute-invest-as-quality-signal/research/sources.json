@@ -1,25 +1,4 @@
 {
-  "summary": "Evidence is limited: controlled benchmark work shows that well-allocated test-time compute can improve reasoning, but the effect depends on model, strategy, difficulty, and verifier. No direct controlled study located shows that observed compute investment is a reliable maintainer-facing quality signal for software artifacts.",
-  "items": [
-    {
-      "text": "Scaling LLM Test-Time Compute Optimally Can Be More Effective than Scaling Parameters for Reasoning — Charlie Snell, Jaehoon Lee, Kelvin Xu, and Aviral Kumar (2025). ICLR experiments on mathematical reasoning report more than fourfold efficiency over best-of-N for a compute-optimal strategy and cases where a smaller model outperformed a 14-times-larger one at matched FLOPs. This directly shows strategy-dependent gains, while warning that raw compute is not monotonic evidence of quality.",
-      "ref_type": "external",
-      "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/1b623663fd9b874366f3ce019fdfdd44-Abstract-Conference.html"
-    },
-    {
-      "text": "Self-Consistency Improves Chain of Thought Reasoning in Language Models — Xuezhi Wang et al. (2023). Sampling diverse reasoning paths and selecting the consistent answer improved reported arithmetic and commonsense benchmarks, including 17.9 points on GSM8K. This is direct evidence that some extra inference can help, but only with a specific aggregation method and externally scored tasks.",
-      "ref_type": "external",
-      "url": "https://arxiv.org/abs/2203.11171"
-    },
-    {
-      "text": "On the Use of Agentic Coding: An Empirical Study of Pull Requests on GitHub — Miku Watanabe et al. (2025). The study of 567 agent-assisted pull requests reports high merge rates but human revisions in 45.1% of merged cases. This is adjacent field evidence that real-world acceptance depends on review and project fit, not an observable amount of model work.",
-      "ref_type": "external",
-      "url": "https://arxiv.org/abs/2509.14745"
-    },
-    {
-      "text": "SLSA Version 1.2 Provenance — OpenSSF and the SLSA community (2026). The standard makes production history verifiable but does not claim provenance establishes artifact quality. This distinction is directly relevant: an effort fingerprint can calibrate scrutiny, never substitute for evidence about the result.",
-      "ref_type": "external",
-      "url": "https://slsa.dev/spec/v1.2/provenance"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

@@ -1,25 +1,25 @@
 {
-  "summary": "Evidence strength: limited and adjacent. Delivery research questions heavyweight approval and documents the wider social value of review, while security standards permit combinations of human and automated controls; no direct controlled study located compares an agent pipeline without mandatory human pull-request review against a matched human-review workflow.",
+  "summary": "Delivery research supplies the case against formal approval gates, the honest account of what code review actually delivers, the standards basis for an automated review path, and the warning about validation lagging behind agent speed.",
   "items": [
     {
-      "text": "Google DORA, Streamlining Change Approval (capability research synthesis, accessed 2026), reports no evidence that formal external approval is associated with lower change-failure rates and argues that heavyweight approval slows delivery and increases batch size. This supports challenging mandatory approval, but it is not a randomized study of AI-authored changes or removal of all review.",
-      "ref_type": "external",
-      "url": "https://dora.dev/capabilities/streamlining-change-approval/"
+      "text": "DORA — Streamlining change approval: no evidence that formal external review lowers change fail rates; heavyweight approval slows delivery and enlarges batches.",
+      "ref_type": "source",
+      "ref_id": "s26"
     },
     {
-      "text": "Sadowski, Soderberg, Church, Sipko and Bacchelli, Modern Code Review: A Case Study at Google (2018), combined 12 interviews, a 44-person survey and analysis of millions of reviews. It found lightweight review delivers education, ownership, consistency and maintainability in addition to defect detection, so a no-mandatory-PR process must deliberately re-home those functions.",
-      "ref_type": "external",
-      "url": "https://research.google/pubs/modern-code-review-a-case-study-at-google/"
+      "text": "Sadowski et al. — Modern Code Review: A Case Study at Google: review at scale is lightweight and fast, and its main value is education, ownership and norm-keeping.",
+      "ref_type": "source",
+      "ref_id": "s27"
     },
     {
-      "text": "Souppaya, Scarfone and Dodson, NIST SP 800-218 Secure Software Development Framework (2022), recommends human code review and/or automated code analysis according to risk, with findings recorded and triaged. It supports a defensible automated path but does not authorize removing segregation-of-duties or regulatory approvals.",
-      "ref_type": "external",
-      "url": "https://csrc.nist.gov/pubs/sp/800/218/final"
+      "text": "NIST SSDF SP 800-218 PW.7: code review by a person and code analysis by tooling are selectable, combinable controls, with findings recorded and triaged.",
+      "ref_type": "source",
+      "ref_id": "s20"
     },
     {
-      "text": "Google DORA, State of AI-assisted Software Development 2025, found AI adoption acts as an amplifier: throughput can rise while delivery stability suffers when downstream validation and organizational systems do not keep pace. This is adjacent industry evidence that machine gates must precede any removal of the human bottleneck, not proof that those gates are sufficient.",
-      "ref_type": "external",
-      "url": "https://dora.dev/dora-report-2025/"
+      "text": "DORA — State of AI-assisted Software Development 2025: AI raises throughput while instability grows where validation systems lag the automation. The counter-case for skipping the gate before building one.",
+      "ref_type": "source",
+      "ref_id": "s28"
     }
   ]
 }

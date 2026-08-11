@@ -1,25 +1,4 @@
 {
-  "summary": "The most useful variants reduce repeated noise, make each claim auditable, and turn accepted findings into bounded engineering work.",
-  "items": [
-    {
-      "text": "Use an incremental report that analyzes only evidence changed since the last successful run, while periodically executing a full baseline to detect long-term drift.",
-      "ref_type": "pattern",
-      "ref_id": "context-compaction"
-    },
-    {
-      "text": "Record reviewer dispositions, rejected recommendations, and superseded findings as durable decision memory; future runs must cite rather than rediscover them.",
-      "ref_type": "pattern",
-      "ref_id": "decision-memory"
-    },
-    {
-      "text": "Promote an accepted recommendation only after it receives an owner, acceptance test, and executable safety-net target; otherwise keep it as an observation with an expiry date.",
-      "ref_type": "pattern",
-      "ref_id": "executable-safety-net"
-    },
-    {
-      "text": "Add a bidirectional reconciliation mode in which confirmed report findings update the companion view and resolved work closes the original finding by stable ID.",
-      "ref_type": "pattern",
-      "ref_id": "continuous-two-way-alignment"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

@@ -1,25 +1,4 @@
 {
-  "summary": "CI platforms and reporting standards already expose the core review-result primitives: an aggregate conclusion, concise summary, file-level annotations, test details and durable machine-readable artifacts. The pattern is an interaction layer over those evidence sources.",
-  "items": [
-    {
-      "text": "GitHub Checks API represents each check run with a status, conclusion, output title, summary, optional detailed text and line-level annotations. A review-result view can aggregate these objects without forcing users through every agent conversation.",
-      "ref_type": "external",
-      "url": "https://docs.github.com/en/rest/guides/using-the-rest-api-to-interact-with-checks"
-    },
-    {
-      "text": "GitHub code scanning accepts SARIF results and displays normalized alerts with file locations, rule metadata and fingerprints. This provides durable, deduplicated evidence links behind a security-review verdict.",
-      "ref_type": "external",
-      "url": "https://docs.github.com/en/code-security/how-tos/find-and-fix-code-vulnerabilities/integrate-with-existing-tools/upload-sarif-file"
-    },
-    {
-      "text": "GitLab Unit Test Reports parse JUnit artifacts and show summaries, failed cases, execution time and branch comparisons in merge requests and pipelines. They implement progressive disclosure from one result state to reproducible test evidence.",
-      "ref_type": "external",
-      "url": "https://docs.gitlab.com/ci/testing/unit_test_reports/"
-    },
-    {
-      "text": "Allure Reports attach screenshots, logs, files, tables and links to individual test results. These attachments let a compact verdict retain deep evidence without putting every diagnostic in the top-level review surface.",
-      "ref_type": "external",
-      "url": "https://allurereport.org/docs/attachments/"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

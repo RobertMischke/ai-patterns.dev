@@ -1,18 +1,5 @@
 {
-  "stance": "mixed",
-  "summary": "Worktrees add lifecycle and dependency-state complexity and are unnecessary when agents only inspect data or edit strictly disjoint generated artifacts.",
-  "points": [
-    {
-      "text": "Shared package caches, ignored files and repository-local databases can still couple supposedly isolated worktrees in surprising ways.",
-      "severity": "warning"
-    },
-    {
-      "text": "Large dependency installations per tree can consume substantial disk and setup time unless caches are designed safely.",
-      "severity": "note"
-    },
-    {
-      "text": "A worktree prevents accidental file-state collision but cannot prevent two agents from making incompatible decisions about the same API or requirement.",
-      "severity": "warning"
-    }
-  ]
+  "stance": "unknown",
+  "summary": "",
+  "points": []
 }

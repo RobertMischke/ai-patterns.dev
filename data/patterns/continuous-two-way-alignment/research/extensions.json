@@ -1,25 +1,40 @@
 {
-  "summary": "Extensions should stage write-back behind policy, analyze drift in batches, and preserve the rationale for accepting or rejecting reconciliation.",
+  "summary": "The alignment loop reuses existing catalogue mechanisms and gives them explicit directionality around the Companion App.",
   "items": [
     {
-      "text": "Use risk-tiered write-back: low-risk formatting may auto-merge after checks, semantic changes become pull requests, and privileged or destructive updates require explicit approval.",
+      "text": "Provide the human-facing surface whose freshness and write-back paths the alignment contract governs.",
       "ref_type": "pattern",
-      "ref_id": "agent-fencing"
+      "ref_id": "companion-app"
     },
     {
-      "text": "Generate a periodic drift report that clusters duplicate mismatches, estimates blast radius, and assigns owners before opening individual changes.",
+      "text": "Extend the existing specification meta-loop from spec-versus-code to companion-versus-artifact and human-intent-versus-durable-system reconciliation.",
       "ref_type": "pattern",
-      "ref_id": "analysis-report"
+      "ref_id": "spec-drift"
     },
     {
-      "text": "Store accepted, rejected, deferred, and superseded reconciliation decisions with evidence so the next cycle does not repeatedly reopen intentional differences.",
+      "text": "Use fingerprints, source versions, review timestamps and explicit state in visible companion files.",
+      "ref_type": "pattern",
+      "ref_id": "sidecar-metadata"
+    },
+    {
+      "text": "Write architectural rationale into the established searchable decision store.",
       "ref_type": "pattern",
       "ref_id": "decision-memory"
     },
     {
-      "text": "Require contract, schema, link-integrity, and generation-idempotence checks before a write-back can update an authoritative artifact.",
+      "text": "Run change-triggered alignment stages as named, versioned pipeline roles.",
       "ref_type": "pattern",
-      "ref_id": "executable-safety-net"
+      "ref_id": "agent-pipelines"
+    },
+    {
+      "text": "Use scheduled sweeps to detect slow or cross-cutting drift that no individual change trigger sees.",
+      "ref_type": "pattern",
+      "ref_id": "scheduled-quality-sweeps"
+    },
+    {
+      "text": "Reuse the layered wiki maintenance and learnings stages when the companion takes wiki form.",
+      "ref_type": "pattern",
+      "ref_id": "wiki-as-cognitive-interface"
     }
   ]
 }

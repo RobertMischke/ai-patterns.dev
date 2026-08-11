@@ -1,25 +1,4 @@
 {
-  "summary": "Variants can scale specification depth by risk and make the artifact executable, versioned and continuously checked.",
-  "items": [
-    {
-      "text": "Begin with prompt exploration and promote only resolved assumptions, goals, non-goals and acceptance criteria into the specification.",
-      "ref_type": "pattern",
-      "ref_id": "prompt-exploration"
-    },
-    {
-      "text": "Compile acceptance clauses into tests, contracts and policy checks that form the executable safety net.",
-      "ref_type": "pattern",
-      "ref_id": "executable-safety-net"
-    },
-    {
-      "text": "Version specification templates and agent instructions alongside outcome evaluations, just like production prompt text.",
-      "ref_type": "pattern",
-      "ref_id": "versioned-prompt-text"
-    },
-    {
-      "text": "Continuously compare implementation, tests and documentation with the active specification and route ambiguous differences for review.",
-      "ref_type": "pattern",
-      "ref_id": "spec-drift"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

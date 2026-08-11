@@ -1,18 +1,5 @@
 {
-  "stance": "mixed",
-  "summary": "A capable agent with good tools and explicit checkpoints may outperform a workforce by avoiding communication loss and correlated self-review.",
-  "points": [
-    {
-      "text": "Organization metaphors can introduce performative meetings and role messages that consume tokens without adding information or independent evidence.",
-      "severity": "warning"
-    },
-    {
-      "text": "Parallel agents often read the same incomplete context and repeat the same mistake, so apparent consensus is not statistical independence.",
-      "severity": "warning"
-    },
-    {
-      "text": "Specialized configurations increase prompt, model, permission and evaluation surfaces that must be versioned and maintained.",
-      "severity": "note"
-    }
-  ]
+  "stance": "unknown",
+  "summary": "",
+  "points": []
 }

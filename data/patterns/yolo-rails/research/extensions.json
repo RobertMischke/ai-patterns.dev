@@ -1,14 +1,4 @@
 {
-  "summary": "Scale autonomy through explicit risk tiers and measured promotion, not one global 'YOLO' switch.",
-  "items": [
-    {
-      "text": "Define action classes with maximum blast radius, required evidence, permitted credentials, network destinations and approval owner."
-    },
-    {
-      "text": "Promote an agent to wider rails only after shadow runs and canary tasks meet calibrated success, incident and recovery thresholds."
-    },
-    {
-      "text": "Continuously inject adversarial and failure scenarios into non-production environments to verify that containment and rollback still work."
-    }
-  ]
+  "summary": "",
+  "items": []
 }

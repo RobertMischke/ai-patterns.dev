@@ -1,18 +1,5 @@
 {
-  "stance": "mixed",
-  "summary": "Delegation can protect context and exploit specialization, but value comes from explicit contracts and independent verification rather than the number of agents.",
-  "points": [
-    {
-      "text": "The orchestrator should decompose by independently verifiable responsibility and provide only the sources, tools, authority, budget, and success criteria required for that subtask."
-    },
-    {
-      "text": "A compact return should contain result, evidence, assumptions, unresolved issues, actions taken, and artifact identifiers. A fluent narrative summary can hide failed checks or discarded alternatives."
-    },
-    {
-      "text": "Context isolation reduces distraction and prompt contamination, but necessary dependencies must be represented explicitly; freshness is harmful when it erases constraints the orchestrator failed to pass."
-    },
-    {
-      "text": "Verification should be structurally independent from production work: rerun tests, inspect artifacts, and use deterministic validators rather than asking the same model family whether its own output looks correct."
-    }
-  ]
+  "stance": "unknown",
+  "summary": "",
+  "points": []
 }

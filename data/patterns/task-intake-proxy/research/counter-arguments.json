@@ -1,18 +1,5 @@
 {
-  "stance": "mixed",
-  "summary": "Better forms, ownership rules and a small human triage rotation may outperform an LLM layer when request volume is modest or domain risk is high.",
-  "points": [
-    {
-      "text": "A proxy can make low-quality demand look orderly without resolving missing product decisions or conflicting stakeholder goals.",
-      "severity": "warning"
-    },
-    {
-      "text": "Automated duplicate detection tends to struggle when two requests share vocabulary but differ in user segment, failure mode or desired outcome.",
-      "severity": "note"
-    },
-    {
-      "text": "Adding a conversational gate may frustrate requesters and reduce reporting of small but important defects.",
-      "severity": "warning"
-    }
-  ]
+  "stance": "unknown",
+  "summary": "",
+  "points": []
 }

@@ -1,18 +1,5 @@
 {
-  "stance": "mixed",
-  "summary": "An interface can be too narrow, turning simple local calls into opaque, chatty, or inflexible protocols.",
-  "points": [
-    {
-      "text": "A single high-level operation may accumulate flags and hidden policy, becoming harder to predict than several orthogonal primitives."
-    },
-    {
-      "text": "Over-encapsulation can prevent efficient batching, diagnostics, and specialized use cases, pushing consumers toward unsupported escape hatches or duplicated logic."
-    },
-    {
-      "text": "Hiding all implementation context makes failures difficult to diagnose. Stable error types, evidence, observability, and recovery controls are part of the public contract even if they enlarge it."
-    },
-    {
-      "text": "Prematurely freezing a small interface can lock in the wrong abstraction. During discovery, a wider experimental surface with clear instability markers may support better learning."
-    }
-  ]
+  "stance": "unknown",
+  "summary": "",
+  "points": []
 }

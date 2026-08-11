@@ -1,21 +1,21 @@
 {
-  "stance": "challenges",
-  "summary": "A companion app can become an expensive, persuasive cache of outdated interpretations. Its broad integrations also create a concentrated security boundary and can overwhelm rather than orient newcomers.",
+  "stance": "mixed",
+  "summary": "A companion can lower comprehension cost or simply create another system that must be understood and maintained.",
   "points": [
     {
-      "text": "Generated summaries may lag code, deployments, or decisions and still look authoritative. A stale companion can be more dangerous than missing documentation because users stop checking the source.",
-      "severity": "blocker"
-    },
-    {
-      "text": "To connect code, tickets, traces, incidents, and decisions, the app often receives wider read access than any normal developer tool; indexing and search can unintentionally expose secrets or restricted operational data.",
+      "text": "A separate app introduces hosting, authorization, search, accessibility and lifecycle costs. Prefer the static-site floor until richer interaction pays for itself.",
       "severity": "warning"
     },
     {
-      "text": "Large dependency maps and undifferentiated timelines increase cognitive load. Controlled evidence suggests that representation benefits are task-specific rather than universal.",
-      "severity": "note"
+      "text": "Large canvases and knowledge graphs can expose every relationship while clarifying none. Design around user questions and progressive disclosure, not maximum graph density.",
+      "severity": "warning"
     },
     {
-      "text": "Generation, indexing, identity integration, link repair, and schema evolution create a standing platform cost that may exceed the value for small or rapidly changing systems.",
+      "text": "Generated explanations may be fluent but wrong. Preserve source links, mark inference and uncertainty, and never let an unverified summary outrank executable artifacts.",
+      "severity": "blocker"
+    },
+    {
+      "text": "The word companion can be confused with companion-model, while sidecar can be confused with sidecar-metadata. Naming must be reinforced by the product's comprehension purpose.",
       "severity": "note"
     }
   ]

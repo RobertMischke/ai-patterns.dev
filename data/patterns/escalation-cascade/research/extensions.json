@@ -1,25 +1,10 @@
 {
-  "summary": "Extensions should combine calibrated routing with authority tiers, complementary model roles, executable checks, and continual threshold evaluation.",
+  "summary": "Use external acceptance checks, calibrated confidence, and a bounded fallback sequence.",
   "items": [
     {
-      "text": "Use a two-dimensional cascade: model capability may increase with difficulty while tool authority decreases as action risk rises, requiring explicit approval for irreversible steps.",
+      "text": "Model-Task Capability Map defines the task classes and approved models that can feed a cascade.",
       "ref_type": "pattern",
-      "ref_id": "agent-fencing"
-    },
-    {
-      "text": "Escalate only the failing role in a planner-executor pair, preserving a validated artifact rather than rerunning the whole task with a larger model.",
-      "ref_type": "pattern",
-      "ref_id": "companion-model"
-    },
-    {
-      "text": "Feed test, type, policy, security, and contract failures into the routing trigger and treat a clean check as evidence, not merely model confidence.",
-      "ref_type": "pattern",
-      "ref_id": "executable-safety-net"
-    },
-    {
-      "text": "Run shadow routes on a sample of traffic and publish per-task false-accept, escalation, cost, and latency trends before changing thresholds.",
-      "ref_type": "pattern",
-      "ref_id": "analysis-report"
+      "ref_id": "model-task-capability"
     }
   ]
 }

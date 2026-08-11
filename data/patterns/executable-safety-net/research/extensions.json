@@ -1,25 +1,4 @@
 {
-  "summary": "Extensions should adapt coverage to risk, connect checks to pipeline transitions and decisions, and continuously analyze whether the net remains fast and discriminating.",
-  "items": [
-    {
-      "text": "Select a mandatory baseline for every change and add risk-triggered suites for privileged tools, migrations, public APIs, security boundaries, or irreversible effects.",
-      "ref_type": "pattern",
-      "ref_id": "agent-fencing"
-    },
-    {
-      "text": "Make safety-net artifacts typed pipeline inputs: a stage advances only when the expected revision, environment, and named checks match the handoff.",
-      "ref_type": "pattern",
-      "ref_id": "agent-pipelines"
-    },
-    {
-      "text": "Link important checks to the decision or requirement they confirm, and retain superseded checks with the rationale for removal rather than silently deleting institutional knowledge.",
-      "ref_type": "pattern",
-      "ref_id": "decision-memory"
-    },
-    {
-      "text": "Publish a recurring health report for flakiness, runtime, bypass frequency, weakly discriminating tests, uncovered change hotspots, and incidents that passed the net.",
-      "ref_type": "pattern",
-      "ref_id": "analysis-report"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

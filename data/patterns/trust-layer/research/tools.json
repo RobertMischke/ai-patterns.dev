@@ -1,25 +1,4 @@
 {
-  "summary": "A trust layer is assembled from traces, evaluations, regression gates and review policy; no single observability product proves that an output is safe or correct.",
-  "items": [
-    {
-      "text": "LangSmith: traces, datasets, offline experiments and online evaluators connect observed runs to repeatable quality checks.",
-      "ref_type": "external",
-      "url": "https://docs.langchain.com/langsmith/evaluation-concepts"
-    },
-    {
-      "text": "Arize Phoenix: open-source tracing and evaluations expose model calls, tool steps and evaluator results for inspection.",
-      "ref_type": "external",
-      "url": "https://arize.com/docs/phoenix"
-    },
-    {
-      "text": "Langfuse: trace, prompt, evaluation, token and cost records can provide the evidence projection behind a review queue.",
-      "ref_type": "external",
-      "url": "https://langfuse.com/docs"
-    },
-    {
-      "text": "OpenTelemetry GenAI semantic conventions: vendor-neutral trace attributes can reduce dependence on one observability backend.",
-      "ref_type": "external",
-      "url": "https://opentelemetry.io/docs/specs/semconv/gen-ai/"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

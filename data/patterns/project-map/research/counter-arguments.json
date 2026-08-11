@@ -1,22 +1,5 @@
 {
-  "stance": "mixed",
-  "summary": "The map can become a second, stale architecture that consumes attention without improving outcomes, especially where the repository is small or the information is already discoverable from build metadata.",
-  "points": [
-    {
-      "text": "Hand-maintained dependency, feature and ownership data duplicates authoritative build files and source history; silent divergence can make an agent more confidently wrong than ordinary search would.",
-      "severity": "blocker"
-    },
-    {
-      "text": "A universal schema tends either to omit domain-specific relationships or to grow into a catalog platform whose maintenance cost exceeds its navigation benefit.",
-      "severity": "warning"
-    },
-    {
-      "text": "Ownership data may encode formal team boundaries but miss actual expertise, temporary rotations and shared responsibility; enforcing it mechanically can bottleneck reviews.",
-      "severity": "warning"
-    },
-    {
-      "text": "For a compact, conventionally structured repository, directory names, tests and build graph may already provide enough orientation, making another entry point redundant.",
-      "severity": "note"
-    }
-  ]
+  "stance": "unknown",
+  "summary": "",
+  "points": []
 }

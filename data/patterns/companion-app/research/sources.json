@@ -1,20 +1,40 @@
 {
-  "summary": "Evidence is adjacent but substantive: controlled studies show that trace and hierarchical visualizations can improve particular comprehension tasks, while architecture-documentation research warns that format alone may not improve understanding. No direct controlled study located evaluates the full generated companion-app bundle.",
+  "summary": "The pattern deliberately composes established approaches to living, versioned and navigable system knowledge; the Companion App is a product-shaped integration, not a claim of invention.",
   "items": [
     {
-      "text": "A Controlled Experiment for Program Comprehension through Trace Visualization — Bas Cornelissen, Andy Zaidman, and Arie van Deursen (2011). Participants using a trace visualization completed tasks 22% faster and answered 43% more correctly in the reported experiment. This supports runtime-linked views, but the treatment was one visualization rather than an integrated companion product.",
-      "ref_type": "external",
-      "url": "https://doi.org/10.1109/TSE.2010.47"
+      "text": "Cyrille Martraire, Living Documentation — documentation evolves with the code through well-crafted artifacts and automation.",
+      "ref_type": "source",
+      "ref_id": "s51"
     },
     {
-      "text": "Software Landscape and Application Visualization for System Comprehension with ExplorViz — Florian Fittkau, Alexander Krause, and Wilhelm Hasselbring (2017). Four controlled experiments found hierarchical and multi-level visualizations improved correctness for several comprehension comparisons, with task- and representation-specific effects. This directly supports layered landscape views but not automatically generated prose or decision links.",
-      "ref_type": "external",
-      "url": "https://doi.org/10.1016/j.infsof.2016.07.004"
+      "text": "Write the Docs, Docs as Code — version control, plain text, reviews and automated tests apply software workflows to documentation.",
+      "ref_type": "source",
+      "ref_id": "s52"
     },
     {
-      "text": "A Study of Documentation for Software Architecture — Neil A. Ernst and Martin P. Robillard (2023). In a randomized questionnaire study with 65 participants, structured versus narrative documentation had no significant association with answer quality; prior source familiarity dominated. This is important counter-evidence: navigability and structure do not substitute for links to code and task-relevant evidence.",
-      "ref_type": "external",
-      "url": "https://arxiv.org/abs/2305.17286"
+      "text": "Simon Brown, C4 model — hierarchical diagrams provide different zoom levels for different audiences.",
+      "ref_type": "source",
+      "ref_id": "s53"
+    },
+    {
+      "text": "ISO/IEC 13250-2:2006 — the current Topic Maps data model defines structure, interpretation and merging rules.",
+      "ref_type": "source",
+      "ref_id": "s54"
+    },
+    {
+      "text": "W3C RDF 1.1 Concepts — a standard graph data model underlying many knowledge-graph implementations.",
+      "ref_type": "source",
+      "ref_id": "s55"
+    },
+    {
+      "text": "Michael Nygard, Documenting Architecture Decisions — small repository-local records preserve forces, decisions, status and consequences.",
+      "ref_type": "source",
+      "ref_id": "s56"
+    },
+    {
+      "text": "Agent Studio operational evidence — Wiki Pulse, drift grading, Quality Review and target-state consolidation exercise the integrated pattern.",
+      "ref_type": "source",
+      "ref_id": "s57"
     }
   ]
 }

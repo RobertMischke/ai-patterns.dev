@@ -1,25 +1,50 @@
 {
-  "summary": "Evidence is adjacent and architectural: process-management research, lease protocols, long-running transaction theory, and an agent interoperability standard support individual mechanisms, but no controlled study validates the complete process-actor pattern for LLM workflows.",
+  "summary": "Landscape survey: the pattern docks onto durable agent graphs, bounded multi-agent conversations, agentic BPM, interoperability protocols and classic workflow coordination. Each strand transfers a useful semantic fragment; none alone supplies the complete process-actor contract.",
   "items": [
     {
-      "text": "Calvanese and colleagues, in 'Agentic Business Process Management: A Research Manifesto' (Information Systems, 2026), propose process-aware frames that constrain autonomous human and software actors and identify framed autonomy, explainability, conversational actionability, and self-modification as core capabilities. It directly matches the governance goal but is explicitly a manifesto and research roadmap, not an outcome study.",
-      "ref_type": "external",
-      "url": "https://doi.org/10.1016/j.is.2026.102738"
+      "text": "Agent workflow frameworks — LangGraph persistence. Transferability verdict: PARTIAL. Checkpoints, interruption, recovery and inspectable thread state transfer directly to process evidence and resumability; exclusive claims, fencing and domain-level outcome types still belong to the surrounding process runtime.",
+      "ref_type": "source",
+      "ref_id": "s26"
     },
     {
-      "text": "Gray and Cheriton, in 'Leases: An Efficient Fault-Tolerant Mechanism for Distributed File Cache Consistency' (SOSP, 1989), analyze and evaluate time-bounded leases for coordinating cached data under failures. The work supports expiring worker claims; a lease alone does not prevent a paused former holder from acting, so process actors still need fencing or version checks at side-effect boundaries.",
-      "ref_type": "external",
-      "url": "https://doi.org/10.1145/74850.74870"
+      "text": "Multi-agent orchestration — AutoGen termination and hand-off conditions. Transferability verdict: PARTIAL-STRONG. Maximum messages, token use, timeouts, external stops and HandoffMessage provide useful loop budgets and control-yield primitives, but a conversation stop reason is not yet a typed business-process verdict.",
+      "ref_type": "source",
+      "ref_id": "s27"
     },
     {
-      "text": "Garcia-Molina and Salem, in 'Sagas' (SIGMOD, 1987), decompose long-lived transactions into committed subtransactions with compensating actions. This is foundational adjacent evidence for explicit recovery plans around agent side effects, while compensation is domain-specific and may be impossible for disclosure, notification, or physical harm.",
-      "ref_type": "external",
-      "url": "https://doi.org/10.1145/38713.38742"
+      "text": "Agentic process automation literature — Agentic BPM research manifesto. Transferability verdict: STRONG CONCEPTUAL. Its process-aware human/software actors and framed autonomy support bounded autonomous actors; the manifesto remains a research agenda, so leases, fencing, evidence schemas and operational escalation must be made concrete by the runtime.",
+      "ref_type": "source",
+      "ref_id": "s28"
     },
     {
-      "text": "The Linux Foundation's Agent2Agent protocol specification (current standard) defines immutable task IDs, interrupted and terminal states, streaming status updates, and versioned artifacts for opaque agents. It demonstrates ecosystem convergence on typed task lifecycles but is an interoperability specification, not empirical proof of correctness or safety.",
-      "ref_type": "external",
-      "url": "https://a2aproject.github.io/A2A/latest/specification/"
+      "text": "Agent-to-agent interoperability — A2A task lifecycle. Transferability verdict: STRONG AT THE WIRE BOUNDARY. Stateful tasks, immutable terminal states, artifacts and separate input-required/completed/failed/rejected states are directly reusable for honest hand-offs; add blocked versus infra-failure and do not mistake a remote task ID for exclusive step ownership.",
+      "ref_type": "source",
+      "ref_id": "s29"
+    },
+    {
+      "text": "Agent/host separation — Agent Host Protocol. Transferability verdict: STRONG FOR AUTHORITY AND TRACE ORDERING. Host-owned sequencing, immutable derived state, reconciliation, protected-resource declarations and ping liveness fit the platform-owned control plane; AHP deliberately does not define the agent loop, work lease or process verdict taxonomy.",
+      "ref_type": "source",
+      "ref_id": "s30"
+    },
+    {
+      "text": "Classic BPM — BPMN 2.0.2. Transferability verdict: ADAPT, DO NOT COPY BLINDLY. Tasks, user/service actors, events, gateways, errors and compensation give a mature process vocabulary; model execution is probabilistic, so task completion must be evidence-gated and human tasks must receive a decision packet rather than merely a lane assignment.",
+      "ref_type": "source",
+      "ref_id": "s31"
+    },
+    {
+      "text": "Long-running transactions — Sagas. Transferability verdict: SELECTIVE BUT ESSENTIAL. Explicit compensating actions transfer to agent side effects that cannot be rolled back atomically; compensation is a domain action with its own evidence and possible failure, not a prompt asking the model to undo.",
+      "ref_type": "source",
+      "ref_id": "s32"
+    },
+    {
+      "text": "Durable workflow engines — Temporal task queues and Activity lifecycle. Transferability verdict: STRONG OPERATIONAL. Polling workers, task tokens, event history, heartbeat timeouts and retries are close precedents for claims, liveness and traceability; because an Activity may execute more than once, external effects still require idempotency or fencing.",
+      "ref_type": "source",
+      "ref_id": "s33"
+    },
+    {
+      "text": "Distributed coordination — etcd's lease-expiry and fencing-token example. Transferability verdict: DIRECT. A lease alone cannot stop a paused former owner; monotonically ordered tokens must reach the protected resource, which rejects stale writes. The same rule applies when the worker is an agent runner.",
+      "ref_type": "source",
+      "ref_id": "s34"
     }
   ]
 }

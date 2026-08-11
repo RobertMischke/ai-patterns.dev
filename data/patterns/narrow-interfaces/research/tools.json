@@ -1,25 +1,4 @@
 {
-  "summary": "API declaration, export control, and architecture-testing tools can make public surface area explicit and prevent accidental boundary growth.",
-  "items": [
-    {
-      "text": "API Extractor follows a TypeScript package's exported declarations, generates a reviewable API report, and can produce a rolled-up declaration file. Committing the report turns every addition to the public surface into an explicit code-review decision.",
-      "ref_type": "external",
-      "url": "https://api-extractor.com/pages/overview/intro/"
-    },
-    {
-      "text": "ArchUnit lets Java teams write executable rules over classes, packages, layers, slices, and dependencies, including cycle checks. It can verify that consumers reach a subsystem only through an intended narrow facade.",
-      "ref_type": "external",
-      "url": "https://www.archunit.org/userguide/html/000_Index.html"
-    },
-    {
-      "text": "Smithy models services as explicit resources, operations, and shapes in an interface-definition language and generates clients, servers, documentation, and validation from that contract. The IDL makes boundary width and compatibility visible before implementation details leak.",
-      "ref_type": "external",
-      "url": "https://smithy.io/2.0/quickstart.html"
-    },
-    {
-      "text": "Node.js package exports defines the supported package entry points and encapsulates unlisted subpaths. It provides a concrete enforcement mechanism for exposing one stable interface while leaving internal files unavailable to consumers.",
-      "ref_type": "external",
-      "url": "https://nodejs.org/api/packages.html#package-entry-points"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

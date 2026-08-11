@@ -1,25 +1,4 @@
 {
-  "summary": "Several coding agents now implement asynchronous dispatch, observable task state, and reviewable pull-request artifacts; they differ in isolation, logs, and approval controls.",
-  "items": [
-    {
-      "text": "GitHub Copilot's coding agent works in an ephemeral GitHub Actions environment, opens a pull request, records session logs, and requests human review. Repository rules and required checks can make the review checkpoint enforceable rather than ceremonial.",
-      "ref_type": "external",
-      "url": "https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent"
-    },
-    {
-      "text": "OpenAI Codex cloud tasks run in isolated environments in the background, expose progress and terminal evidence, and return changes that a developer can inspect, revise, or turn into a pull request. Multiple tasks can be delegated concurrently and reviewed when they finish.",
-      "ref_type": "external",
-      "url": "https://openai.com/index/introducing-codex/"
-    },
-    {
-      "text": "Cursor background agents clone a repository into an isolated remote environment, edit and run code asynchronously, stream status, and push changes on a branch for later review. The branch is the durable artifact connecting fire, track, and review.",
-      "ref_type": "external",
-      "url": "https://docs.cursor.com/background-agent"
-    },
-    {
-      "text": "Google Jules accepts a repository task, exposes a plan and execution progress, and finishes by presenting code changes and a pull request link for review. Its task UI separates autonomous execution from the user's acceptance decision.",
-      "ref_type": "external",
-      "url": "https://jules.google/docs/running-tasks/"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

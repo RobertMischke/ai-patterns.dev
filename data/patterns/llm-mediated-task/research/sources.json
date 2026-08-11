@@ -1,20 +1,4 @@
 {
-  "summary": "Evidence is emerging and partially direct: recent requirements-engineering experiments assess LLM-generated requirements, while established standards provide adjacent quality criteria rather than proof that mediation improves delivery.",
-  "items": [
-    {
-      "text": "Casciani and colleagues, in 'From issue titles to requirements: an empirical study of large language models and prompt engineering strategies' (Requirements Engineering, 2026), generate 900 candidate requirements from 150 open-source issue titles using two LLMs and three prompting strategies, with a five-rater validation subset. Outputs were often linguistically strong but depended on input and prompt; the study does not establish completeness, feasibility, or downstream implementation success.",
-      "ref_type": "external",
-      "url": "https://doi.org/10.1007/s00766-026-00462-z"
-    },
-    {
-      "text": "Arora and colleagues, in 'Challenges in applying large language models to requirements engineering tasks' (Design Science, 2024), analyze recurring difficulties including domain context, ambiguity, hallucination, evaluation, privacy, and human oversight. The work supports a human-reviewed mediation boundary, but it is a research agenda and synthesis rather than a controlled trial of one task-template workflow.",
-      "ref_type": "external",
-      "url": "https://www.cambridge.org/core/journals/design-science/article/challenges-in-applying-large-language-models-to-requirements-engineering-tasks/1FC7666F0A0B4E7091D2D4B2D46321B5"
-    },
-    {
-      "text": "ISO/IEC/IEEE 29148:2018, 'Systems and software engineering - Life cycle processes - Requirements engineering,' defines characteristics and processes for requirements and requirements information items. It is an authoritative adjacent standard for reviewing clarity, verifiability, consistency, and traceability; it contains no evidence about LLM-generated task briefs.",
-      "ref_type": "external",
-      "url": "https://www.iso.org/standard/72089.html"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

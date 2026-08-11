@@ -1,18 +1,18 @@
 {
   "stance": "supports",
-  "summary": "On-demand UI generation is defensible when it produces a constrained declarative artifact with deterministic identity, validation, and stable user interaction semantics.",
+  "summary": "Existing generative-UI and schema-form systems validate both ends of the spectrum; the pattern's contribution is to make caching, provenance and input-triggered regeneration explicit for durable artifact-facing surfaces.",
   "points": [
     {
-      "text": "The cache key should include artifact content, schema version, generator and prompt version, component registry, locale, theme, and security policy; otherwise stale UI can survive a meaningful input change."
+      "text": "AI SDK UI maps model-selected tool results to application components, demonstrating rich per-response UI without requiring arbitrary generated markup.",
+      "source_id": "s20"
     },
     {
-      "text": "Generate a typed component tree or schema, not executable HTML and JavaScript. The host should own rendering, event wiring, navigation, and side-effect authorization."
+      "text": "JSON Forms and react-jsonschema-form demonstrate that schemas can drive forms while retaining schema-owned validation and allowing a separate presentation layer.",
+      "source_id": "s21"
     },
     {
-      "text": "Acceptance must include schema validation, sanitization, accessibility checks, interaction tests, and unsupported-state handling. A visually plausible render is not sufficient."
-    },
-    {
-      "text": "Regeneration needs stable semantic keys and state migration so focus, entered data, user preferences, and learned locations do not disappear with every artifact revision."
+      "text": "Generated HTML remains untrusted output; safe DOM construction, contextual encoding and sanitization are part of the pattern rather than optional hardening.",
+      "source_id": "s23"
     }
   ]
 }

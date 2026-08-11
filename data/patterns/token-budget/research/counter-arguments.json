@@ -1,18 +1,5 @@
 {
-  "stance": "mixed",
-  "summary": "Rigid token ceilings can be economically irrational when one additional verification step prevents expensive rework or an incident.",
-  "points": [
-    {
-      "text": "Tokenization differs by provider and model, so a raw-token allowance is not a stable cross-model measure of money or computational effort.",
-      "severity": "note"
-    },
-    {
-      "text": "Hard caps can bias agents toward premature answers, skipped tests or hidden retries unless completion criteria remain primary.",
-      "severity": "warning"
-    },
-    {
-      "text": "For low-volume, high-value tasks, engineering a fine-grained budget service may cost more than simple alerts and human approval.",
-      "severity": "note"
-    }
-  ]
+  "stance": "unknown",
+  "summary": "",
+  "points": []
 }

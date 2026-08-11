@@ -1,18 +1,5 @@
 {
-  "stance": "mixed",
-  "summary": "Plan-first workflows can delay learning, anchor teams to an incorrect design, and overwhelm reviewers with plausible prose.",
-  "points": [
-    {
-      "text": "Exploratory tasks reveal their constraints through small edits, builds, and experiments. A read-only phase may produce a detailed plan based on assumptions that one reversible prototype would quickly disprove."
-    },
-    {
-      "text": "Fluent plans create an illusion of coverage. Reviewers may approve named files and steps without noticing a missing security boundary, migration consequence, or unstated product decision."
-    },
-    {
-      "text": "Mandatory approval for routine, reversible work adds latency and notification fatigue, encouraging blanket approvals that weaken control for genuinely risky plans."
-    },
-    {
-      "text": "A plan becomes stale as the branch, dependencies, or requirements change. Reusing it without binding input revisions and freshness checks can be worse than replanning."
-    }
-  ]
+  "stance": "unknown",
+  "summary": "",
+  "points": []
 }

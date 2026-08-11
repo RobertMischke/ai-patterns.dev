@@ -1,25 +1,4 @@
 {
-  "summary": "Extensions should combine process effort with external outcome evidence, monitor calibration, and treat abnormal compute as a risk signal rather than prestige.",
-  "items": [
-    {
-      "text": "Display a two-axis review matrix: normalized compute effort on one axis and independent safety-net evidence on the other. Only the evidence axis can authorize acceptance.",
-      "ref_type": "pattern",
-      "ref_id": "executable-safety-net"
-    },
-    {
-      "text": "Publish calibration reports by task class showing whether the fingerprint predicts reviewer findings, rework, or escaped defects, and retire dimensions that add no predictive value.",
-      "ref_type": "pattern",
-      "ref_id": "analysis-report"
-    },
-    {
-      "text": "Treat sudden retry explosions, repeated denied tool calls, or unusual model upgrades as anomaly signals that tighten authority and trigger review.",
-      "ref_type": "pattern",
-      "ref_id": "agent-fencing"
-    },
-    {
-      "text": "When compute is externally sponsored, expose the normalized fingerprint in the contribution statement but explicitly separate recognition from quality and governance.",
-      "ref_type": "pattern",
-      "ref_id": "compute-as-oss-contribution"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

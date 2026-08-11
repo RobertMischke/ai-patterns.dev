@@ -1,25 +1,4 @@
 {
-  "summary": "Linters and complexity analyzers can enforce local size budgets at file, function and class level. They make the pattern measurable, but their thresholds are policy choices that should vary by language, generated-code status and observed maintenance outcomes.",
-  "items": [
-    {
-      "text": "ESLint max-lines limits lines per JavaScript or TypeScript file and can ignore blank lines, comments or trailing comments. It provides an enforceable file-context budget with explicit exceptions in versioned configuration.",
-      "ref_type": "external",
-      "url": "https://eslint.org/docs/latest/rules/max-lines"
-    },
-    {
-      "text": "ESLint max-lines-per-function limits lines in a function, method or class static block and supports separate handling for comments, blank lines and IIFEs. This directly enforces a bounded local reasoning unit rather than only a whole-file cap.",
-      "ref_type": "external",
-      "url": "https://eslint.org/docs/latest/rules/max-lines-per-function"
-    },
-    {
-      "text": "PMD Java design rules include ExcessiveClassLength, ExcessiveMethodLength and TooManyMethods, with configurable thresholds and suppressions. They extend context budgets to class surface and method count in Java CI.",
-      "ref_type": "external",
-      "url": "https://pmd.github.io/pmd/pmd_rules_java_design.html"
-    },
-    {
-      "text": "Lizard analyzes many languages and reports function NLOC, cyclomatic complexity and parameter count, with command-line thresholds that fail when limits are exceeded. It supports one cross-language budget report while retaining per-function evidence.",
-      "ref_type": "external",
-      "url": "https://github.com/terryyin/lizard"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

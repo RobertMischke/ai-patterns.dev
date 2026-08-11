@@ -1,18 +1,5 @@
 {
-  "stance": "supports",
-  "summary": "The pattern makes asynchronous delegation governable when tracking records decision-relevant evidence and review remains an active acceptance step.",
-  "points": [
-    {
-      "text": "A branch or pull request is a stronger handoff than a chat transcript because it is diffable, testable, attributable, and compatible with existing review and rollback controls."
-    },
-    {
-      "text": "Tracking should expose state transitions, environment, commands, checks, warnings, and scope drift. A progress spinner alone cannot support a responsible acceptance decision."
-    },
-    {
-      "text": "Review intensity should follow change risk and uncertainty. Low-risk, reversible maintenance can use sampled or automated checkpoints; security, data, and public-contract changes need explicit human scrutiny."
-    },
-    {
-      "text": "Outcome calibration matters: teams should record accepted, revised, rejected, and later-regressed work by task class so dispatch policy is based on observed performance rather than brand-level confidence."
-    }
-  ]
+  "stance": "unknown",
+  "summary": "",
+  "points": []
 }

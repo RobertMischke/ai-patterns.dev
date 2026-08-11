@@ -1,25 +1,4 @@
 {
-  "summary": "Mature ADR tooling keeps decisions as versioned text, assigns lifecycle states and links, and renders searchable views without moving authority out of the repository. The tool is useful only if teams capture deliberation before it disappears.",
-  "items": [
-    {
-      "text": "adr-tools is a command-line suite for creating numbered Markdown architecture decision records and marking later records as superseding earlier ones, preserving a navigable repository-local history.",
-      "ref_type": "external",
-      "url": "https://github.com/npryce/adr-tools"
-    },
-    {
-      "text": "MADR provides a structured Markdown template with status, context, decision drivers, considered options, outcome, consequences, confirmation, and links, making rationale and alternatives reviewable as code.",
-      "ref_type": "external",
-      "url": "https://adr.github.io/madr/"
-    },
-    {
-      "text": "Log4brains builds a searchable static decision website and chronological timeline from ADR files and Git metadata while leaving the repository as the source of truth.",
-      "ref_type": "external",
-      "url": "https://github.com/thomvaill/log4brains"
-    },
-    {
-      "text": "Structurizr decision views render ADRs and their statuses beside a model-as-code architecture workspace, connecting rationale to the affected system elements.",
-      "ref_type": "external",
-      "url": "https://docs.structurizr.com/ui/decisions"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

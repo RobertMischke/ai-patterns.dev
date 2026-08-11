@@ -1,22 +1,5 @@
 {
-  "stance": "mixed",
-  "summary": "Line and method-count limits are weak proxies for semantic complexity and can fragment cohesive logic into a navigation-heavy graph.",
-  "points": [
-    {
-      "text": "Mechanical splitting can replace one long unit with many thin wrappers, indirection and hidden coupling, increasing the total context required to understand behavior.",
-      "severity": "blocker"
-    },
-    {
-      "text": "Declarative schemas, parsers, generated clients and test tables can be long yet conceptually simple; uniform caps create suppressions and churn without reducing risk.",
-      "severity": "warning"
-    },
-    {
-      "text": "Fault and change correlations may reflect difficult domains causing both large classes and defects, so reducing size alone may not improve the underlying design.",
-      "severity": "warning"
-    },
-    {
-      "text": "Aggressive public-method limits can force premature abstractions and expose more types, files and dependencies than a cohesive module requires.",
-      "severity": "note"
-    }
-  ]
+  "stance": "unknown",
+  "summary": "",
+  "points": []
 }

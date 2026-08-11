@@ -1,20 +1,4 @@
 {
-  "summary": "Evidence is now direct and mixed. Repository context files are widely used and instructions are followed, but a 2026 evaluation found no general task-success gain and more than 20% extra inference cost; older README studies support information discovery, not coding-agent success.",
-  "items": [
-    {
-      "text": "Evaluating AGENTS.md: Are Repository-Level Context Files Helpful for Coding Agents? — Thibaud Gloaguen, Niels Mündler, Mark Müller, Veselin Raychev, and Martin Vechev (2026). Across SWE-bench tasks and repositories with developer-authored files, context files did not generally improve success and increased inference cost by more than 20% on average; non-standard coding practices were more useful than repository overviews. This is direct evidence for terse, task-relevant entry points and against context dumping.",
-      "ref_type": "external",
-      "url": "https://arxiv.org/abs/2602.11988"
-    },
-    {
-      "text": "On the Use of Agentic Coding Manifests: An Empirical Study of Claude Code — Worawalan Chatlatanagulchai et al. (2025). Analysis of 253 CLAUDE.md files from 242 repositories found shallow structures dominated by operational commands, implementation notes, and high-level architecture. This is direct descriptive evidence of practice, not evidence that the manifests improve outcomes.",
-      "ref_type": "external",
-      "url": "https://doi.org/10.1007/978-3-032-12089-2_40"
-    },
-    {
-      "text": "Categorizing the Content of GitHub README Files — Gede Artha Azriadi Prana, Christoph Treude, Ferdian Thung, Thushari Atapattu, and David Lo (2019). The authors annotated 4,226 sections from 393 repositories; purpose and status were often missing, and most of 20 professionals perceived labeled sections as easing discovery. This is adjacent evidence for structured human entry points, with a small perception study rather than task-performance proof.",
-      "ref_type": "external",
-      "url": "https://arxiv.org/abs/1802.06997"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

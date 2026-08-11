@@ -1,18 +1,5 @@
 {
-  "stance": "supports",
-  "summary": "The retrieval literature supports making useful repository relationships legible to agents, but the exact structural prescription remains an engineering hypothesis that must be measured locally.",
-  "points": [
-    {
-      "text": "Use task success, retrieval precision, context size and time-to-orientation to test whether a project map, naming rule or ADR index actually improves agent work.",
-      "severity": "info"
-    },
-    {
-      "text": "A clean directory tree is only a proxy for semantic relevance. Cross-cutting behavior, generated code and runtime configuration often violate folder boundaries.",
-      "severity": "warning"
-    },
-    {
-      "text": "Instruction files and architecture maps become harmful when stale: their authoritative tone can cause an agent to prefer obsolete context over executable evidence.",
-      "severity": "warning"
-    }
-  ]
+  "stance": "unknown",
+  "summary": "",
+  "points": []
 }

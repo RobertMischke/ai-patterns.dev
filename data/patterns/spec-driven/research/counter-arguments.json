@@ -1,22 +1,5 @@
 {
-  "stance": "mixed",
-  "summary": "A specification can freeze false assumptions, delay feedback and move hallucination from code into an authoritative-looking document.",
-  "points": [
-    {
-      "text": "Stakeholders often learn what they need from working software; a detailed pre-implementation spec can postpone the prototype that would expose the mistaken premise fastest.",
-      "severity": "blocker"
-    },
-    {
-      "text": "An agent-generated specification may invent constraints, edge cases or acceptance criteria that the requester never chose, then validate code against its own fabricated authority.",
-      "severity": "blocker"
-    },
-    {
-      "text": "Keeping specification, plan, tasks, tests and code synchronized creates substantial change overhead and several new drift surfaces.",
-      "severity": "warning"
-    },
-    {
-      "text": "Exploratory maintenance, incident response and small reversible fixes may be slowed by a full specification workflow with little compensating risk reduction.",
-      "severity": "note"
-    }
-  ]
+  "stance": "unknown",
+  "summary": "",
+  "points": []
 }

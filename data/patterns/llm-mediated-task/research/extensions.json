@@ -1,19 +1,4 @@
 {
-  "summary": "Variants strengthen traceability, calibrate effort to risk, and preserve human ownership of unresolved decisions.",
-  "items": [
-    {
-      "text": "Generate a two-column task contract: each proposed requirement is paired with its source evidence or marked explicitly as an assumption requiring approval."
-    },
-    {
-      "text": "Use adaptive depth: a lightweight title, goal, and acceptance check for small work; add non-goals, threat analysis, rollout, and recovery requirements as risk rises."
-    },
-    {
-      "text": "Run a contradiction pass against repository documentation, interfaces, and policy before presenting the draft, then list conflicts instead of silently resolving them."
-    },
-    {
-      "text": "Feed the approved task into plan mode so implementation steps inherit a human-reviewed scope without treating the original prompt as executable authority.",
-      "ref_type": "pattern",
-      "ref_id": "plan-mode"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

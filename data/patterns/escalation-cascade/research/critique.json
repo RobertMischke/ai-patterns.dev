@@ -1,22 +1,11 @@
 {
-  "stance": "supports",
-  "summary": "A bounded cascade is a well-supported way to reduce cost while reserving stronger models for hard cases. The central engineering problem is a calibrated external trigger, not the order of model names.",
+  "stance": "mixed",
+  "summary": "A cascade only saves money when escalation signals are reliable and inexpensive.",
   "points": [
     {
-      "text": "Prefer observable triggers such as failed tests, schema violations, missing evidence, policy risk, disagreement, or a task-specific calibrated score. Raw self-reported confidence is usually insufficient.",
-      "severity": "warning"
-    },
-    {
-      "text": "Calibrate thresholds per task class and model revision using false-accept cost as well as average accuracy. High-impact tasks should escalate earlier than reversible drafting work.",
-      "severity": "warning"
-    },
-    {
-      "text": "Bound the number of stages, retries, tokens, elapsed time, and spend, and define a terminal safe state. A cascade without a stop rule is an expensive loop.",
-      "severity": "blocker"
-    },
-    {
-      "text": "Record the route decision, trigger value, models and versions, intermediate artifact, final outcome, and counterfactual samples so routing quality can be re-evaluated after drift.",
-      "severity": "note"
+      "text": "Measure failure-detection quality and the escalation rate before treating a cascade as a cost saving.",
+      "severity": "warning",
+      "source_id": "s15"
     }
   ]
 }

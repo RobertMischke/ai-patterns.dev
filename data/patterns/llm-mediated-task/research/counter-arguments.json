@@ -1,18 +1,5 @@
 {
-  "stance": "mixed",
-  "summary": "A generated brief can formalize the wrong problem, add process overhead, or create false agreement.",
-  "points": [
-    {
-      "text": "When the requester lacks domain knowledge, review may become rubber-stamping: the same person who supplied an underspecified prompt may be unable to detect the model's invented business rule."
-    },
-    {
-      "text": "For a tiny, reversible change, producing and approving a full task contract can cost more than implementation and direct review."
-    },
-    {
-      "text": "The model can anchor the conversation around its first decomposition. Stakeholders may edit wording while failing to reconsider a missing alternative or an incorrect problem frame."
-    },
-    {
-      "text": "Sensitive issue context may be copied into an external service. Mediation adds another data boundary that needs retention, access, and provider controls."
-    }
-  ]
+  "stance": "unknown",
+  "summary": "",
+  "points": []
 }

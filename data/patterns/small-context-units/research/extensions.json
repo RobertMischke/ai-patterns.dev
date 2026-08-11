@@ -1,25 +1,4 @@
 {
-  "summary": "Better variants measure semantic locality alongside physical size and use the resulting budget to guide retrieval and refactoring.",
-  "items": [
-    {
-      "text": "Keep related implementation, tests, contracts and documentation in a feature folder so a small unit also has a small navigation radius.",
-      "ref_type": "pattern",
-      "ref_id": "feature-folder-locality"
-    },
-    {
-      "text": "Pair size caps with narrow dependency and public interfaces rather than rewarding file splitting alone.",
-      "ref_type": "pattern",
-      "ref_id": "narrow-interfaces"
-    },
-    {
-      "text": "Compact generated or historical detail while retaining the current contract and dependency boundary in the active context.",
-      "ref_type": "pattern",
-      "ref_id": "context-compaction"
-    },
-    {
-      "text": "Package selected units into typed context sections with explicit provenance and truncation indicators for agents.",
-      "ref_type": "pattern",
-      "ref_id": "structure-context"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

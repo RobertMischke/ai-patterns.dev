@@ -1,22 +1,5 @@
 {
-  "stance": "challenges",
-  "summary": "Treating compute as contribution can reward waste, amplify wealth-based influence, and transfer hidden review and environmental costs to a project.",
-  "points": [
-    {
-      "text": "A contributor can inflate tokens, samples, retries, or expensive-model calls without improving the artifact. Raw spend is unusually easy to game because the costly process is often invisible to maintainers.",
-      "severity": "blocker"
-    },
-    {
-      "text": "Public recognition based on compute privileges well-funded actors and can become pay-to-influence even if no formal voting rights are granted.",
-      "severity": "warning"
-    },
-    {
-      "text": "Generated patches may be cheap for the sponsor but expensive for maintainers to understand, revise, and support; reporting inference cost without review cost externalizes the dominant burden.",
-      "severity": "warning"
-    },
-    {
-      "text": "Provider traces can expose prompts, proprietary code, pricing agreements, or user data, while closed model revisions and changing prices make apparently precise statements hard to reproduce.",
-      "severity": "warning"
-    }
-  ]
+  "stance": "unknown",
+  "summary": "",
+  "points": []
 }

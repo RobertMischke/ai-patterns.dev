@@ -1,18 +1,5 @@
 {
-  "stance": "mixed",
-  "summary": "Rails impose latency and maintenance cost, and over-restrictive sandboxes can prevent agents from completing otherwise routine work.",
-  "points": [
-    {
-      "text": "A permission prompt for every low-impact command produces approval fatigue and can be less safe than a well-designed bounded autonomy zone.",
-      "severity": "warning"
-    },
-    {
-      "text": "Rollback is not universally possible: external messages, data disclosure, purchases and destructive migrations can have irreversible effects.",
-      "severity": "blocker"
-    },
-    {
-      "text": "Security benchmarks intentionally stress systems and do not by themselves quantify real deployment risk; local threat modeling remains necessary.",
-      "severity": "note"
-    }
-  ]
+  "stance": "unknown",
+  "summary": "",
+  "points": []
 }

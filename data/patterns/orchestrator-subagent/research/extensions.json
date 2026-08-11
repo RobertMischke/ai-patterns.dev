@@ -1,19 +1,4 @@
 {
-  "summary": "Extensions make delegation typed, budgeted, reconstructable, and selectively independent.",
-  "items": [
-    {
-      "text": "Define a subtask contract schema with inputs, allowed tools and paths, authority, budget, acceptance checks, output type, evidence links, and explicit unknowns."
-    },
-    {
-      "text": "Use an independent verifier for high-risk outputs, varying model, retrieval source, or deterministic method to reduce correlated self-review."
-    },
-    {
-      "text": "Represent the delegation graph as durable process state with leased work claims, deadlines, cancellation, and typed terminal verdicts.",
-      "ref_type": "pattern",
-      "ref_id": "process-actor"
-    },
-    {
-      "text": "Adopt an orchestration budget that limits fan-out and permits a worker to request missing context rather than recursively spawning without bound."
-    }
-  ]
+  "summary": "",
+  "items": []
 }

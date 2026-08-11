@@ -1,25 +1,4 @@
 {
-  "summary": "Evidence is direct but emerging. Action research and repository mining show practical benefits, low and inconsistent adoption, and weak correlations with broad project metrics. Studies do not prove that merely adding ADR files improves architecture outcomes.",
-  "items": [
-    {
-      "text": "Architecture Decision Records in Practice: An Action Research Study — Bardha Ahmeti, Maja Linder, Raffaela Groner, and Rebekka Wohlrab (2024). After seven diagnostic interviews, the researchers introduced ADRs for three months in a microservice company; documentation culture, knowledge transfer, and prioritization improved, while distributed-component documentation remained difficult and storage location strongly affected usefulness.",
-      "ref_type": "external",
-      "url": "https://doi.org/10.1007/978-3-031-70797-1_22"
-    },
-    {
-      "text": "Using Architecture Decision Records in Open Source Projects: An MSR Study on GitHub — Georg Buchgeher, Stefan Schöberl, Verena Geist, Bernhard Dorninger, Philipp Haindl, and Rainer Weinreich (2023). Repository mining found ADR adoption still low and about half of ADR-using repositories contained only one to five records; systematic users showed team participation over time. This is direct descriptive evidence, not causal outcome evidence.",
-      "ref_type": "external",
-      "url": "https://doi.org/10.1109/ACCESS.2023.3287654"
-    },
-    {
-      "text": "Architecture Decision Records: Adoption, Impact, and Developer Engagement in Open-Source Software — Enio Garcia de Santana Junior et al. (2026). Analysis of 921 repositories and 5,800 ADRs found mostly small correlations with project-quality metrics and roughly 63% of ADRs opened directly as accepted, often omitting deliberation. This directly supports preserving process while cautioning against ceremonial records.",
-      "ref_type": "external",
-      "url": "https://conf.researchr.org/details/icsa-2026/icsa-2026-papers/34/Architecture-Decision-Records-Adoption-Impact-and-Developer-Engagement-in-Open-Sou"
-    },
-    {
-      "text": "Documenting after the Fact: Recovering Architectural Design Decisions — Anton Jansen, Paris Avgeriou, and Jan Bosch (2008). A case study evaluates a structured recovery approach for decisions missing from architecture documentation. This supports durable capture before knowledge evaporates, while recovery after implementation is labor-intensive and vulnerable to hindsight.",
-      "ref_type": "external",
-      "url": "https://doi.org/10.1016/j.jss.2007.08.025"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

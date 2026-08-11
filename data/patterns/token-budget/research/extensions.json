@@ -1,14 +1,4 @@
 {
-  "summary": "Move from one global cap to a portfolio of outcome-aware, staged allowances.",
-  "items": [
-    {
-      "text": "Allocate separate exploration, implementation and verification envelopes, with a protected reserve for tests and handoff."
-    },
-    {
-      "text": "Permit budget increases only through a machine-readable request containing progress evidence, remaining risk and an estimated next checkpoint."
-    },
-    {
-      "text": "Continuously compare provider, model and strategy by cost per accepted task and escaped-defect rate, then tune defaults by task class."
-    }
-  ]
+  "summary": "",
+  "items": []
 }

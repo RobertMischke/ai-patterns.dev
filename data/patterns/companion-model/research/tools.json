@@ -1,30 +1,4 @@
 {
-  "summary": "Multi-agent frameworks already support a planner or supervisor that delegates to separately configured workers. Implementing the pattern requires distinct model assignments plus explicit artifacts and checks; role labels alone do not create a reliable companion-model boundary.",
-  "items": [
-    {
-      "text": "LangChain subagents use a central supervisor that invokes isolated subagents as tools and controls the context passed into and returned from each call; each subagent can be configured with its own model and bounded tool set.",
-      "ref_type": "external",
-      "url": "https://docs.langchain.com/oss/python/langchain/multi-agent/subagents"
-    },
-    {
-      "text": "CrewAI's hierarchical process assigns a manager agent or manager model to plan, delegate, and validate work performed by specialist agents, providing a direct planner-reviewer versus executor structure.",
-      "ref_type": "external",
-      "url": "https://docs.crewai.com/en/concepts/processes"
-    },
-    {
-      "text": "Microsoft AutoGen SelectorGroupChat selects the next specialist through a model-based selector and permits agents with distinct model clients, tools, and descriptions; a planning agent can therefore route bounded tasks to cheaper executors.",
-      "ref_type": "external",
-      "url": "https://microsoft.github.io/autogen/dev/user-guide/agentchat-user-guide/selector-group-chat.html"
-    },
-    {
-      "text": "Google Agent Development Kit composes agents through explicit sub-agent hierarchies and workflow agents for sequential, parallel, or loop execution; individual LLM agents can use separate model configurations.",
-      "ref_type": "external",
-      "url": "https://adk.dev/agents/multi-agents/"
-    },
-    {
-      "text": "RouteLLM provides learned routers and evaluation code for selecting between stronger and weaker models from preference data, useful for calibrating when a low-cost companion is sufficient rather than fixing the split by intuition.",
-      "ref_type": "external",
-      "url": "https://github.com/lm-sys/RouteLLM"
-    }
-  ]
+  "summary": "No tool is prescribed; the executor should be bounded by the tools appropriate to its assigned step.",
+  "items": []
 }

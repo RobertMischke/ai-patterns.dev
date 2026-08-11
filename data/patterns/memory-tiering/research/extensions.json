@@ -1,19 +1,4 @@
 {
-  "summary": "Extensions turn the taxonomy into an observable lifecycle with risk-sensitive writes and measurable retrieval.",
-  "items": [
-    {
-      "text": "Use one event ledger with derived tier views, so a record can participate in several views without copying or losing provenance.",
-      "ref_type": "pattern",
-      "ref_id": "memory-management"
-    },
-    {
-      "text": "Define explicit promotion gates: repeated evidence may propose a semantic claim, while a procedural change additionally requires tests and authorized human approval."
-    },
-    {
-      "text": "Build a query planner that declares which tiers it searched, why each item was selected, and how conflicts or successor facts were resolved."
-    },
-    {
-      "text": "Evaluate tiers separately with working-context contamination tests, episodic temporal questions, semantic update cases, and procedural rollback scenarios."
-    }
-  ]
+  "summary": "",
+  "items": []
 }

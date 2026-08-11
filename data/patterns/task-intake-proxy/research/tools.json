@@ -1,25 +1,4 @@
 {
-  "summary": "Issue trackers already provide much of the intake substrate: structured forms, triage queues, duplicate detection and routing suggestions. AI classification should remain reviewable because misrouting can silently hide urgent work.",
-  "items": [
-    {
-      "text": "Linear Triage Intelligence: suggests teams, projects, assignees and labels and identifies possible duplicates or related issues for a human to accept or decline.",
-      "ref_type": "external",
-      "url": "https://linear.app/docs/triage-intelligence"
-    },
-    {
-      "text": "Linear Asks: converts requests from Slack or email into structured issues and supports a managed intake workflow.",
-      "ref_type": "external",
-      "url": "https://linear.app/docs/linear-asks"
-    },
-    {
-      "text": "GitHub Issue Forms: YAML-defined required fields and validation provide a deterministic front door before optional AI normalization.",
-      "ref_type": "external",
-      "url": "https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms"
-    },
-    {
-      "text": "Jira Service Management Forms: conditional fields and reusable forms can capture the minimum evidence a proxy needs before routing work.",
-      "ref_type": "external",
-      "url": "https://support.atlassian.com/jira-service-management-cloud/docs/create-or-edit-a-form/"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

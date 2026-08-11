@@ -1,25 +1,4 @@
 {
-  "summary": "Catalogs, docs-as-code systems, knowledge graphs and architecture tools provide complementary layers. The pattern succeeds only when ownership and update triggers connect them to delivery work.",
-  "items": [
-    {
-      "text": "Backstage Software Catalog plus TechDocs: maps owned components and places versioned technical documentation beside catalog entities.",
-      "ref_type": "external",
-      "url": "https://backstage.io/docs/features/software-catalog/"
-    },
-    {
-      "text": "Docusaurus: docs-as-code, search and explicit documentation versioning support a browsable human/agent knowledge layer.",
-      "ref_type": "external",
-      "url": "https://docusaurus.io/docs/versioning"
-    },
-    {
-      "text": "Obsidian Graph View and properties: bidirectional links plus structured metadata can expose relationships among decisions, incidents and components.",
-      "ref_type": "external",
-      "url": "https://obsidian.md/help/plugins/graph"
-    },
-    {
-      "text": "Structurizr: a model-based C4 workspace can generate consistent architecture views instead of maintaining disconnected diagrams.",
-      "ref_type": "external",
-      "url": "https://docs.structurizr.com/"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

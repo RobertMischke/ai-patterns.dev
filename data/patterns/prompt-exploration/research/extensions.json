@@ -1,25 +1,4 @@
 {
-  "summary": "Prompt exploration can scale by separating clarification, planning and specification depth according to risk.",
-  "items": [
-    {
-      "text": "Use a risk-tiered plan mode: immediately execute reversible tasks, but require explicit approval of high-impact assumptions.",
-      "ref_type": "pattern",
-      "ref_id": "plan-mode"
-    },
-    {
-      "text": "Add a task-intake proxy that detects missing actors, constraints, acceptance criteria and non-goals before an agent is assigned.",
-      "ref_type": "pattern",
-      "ref_id": "task-intake-proxy"
-    },
-    {
-      "text": "Promote the resolved exploration record into the versioned implementation specification instead of copying it into a separate document.",
-      "ref_type": "pattern",
-      "ref_id": "spec-driven"
-    },
-    {
-      "text": "For complex changes, require the requester to confirm a concise intent restatement before detailed design begins.",
-      "ref_type": "pattern",
-      "ref_id": "verbose-intent"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

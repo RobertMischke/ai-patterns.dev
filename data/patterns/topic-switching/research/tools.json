@@ -1,20 +1,4 @@
 {
-  "summary": "Agent products expose session reset, compaction and side-conversation controls that can implement the policy. None determines the optimal switch point automatically; teams need outcome-linked session telemetry.",
-  "items": [
-    {
-      "text": "Claude Code context management: automatic compaction plus /compact and /clear give operators explicit continuation and reset controls.",
-      "ref_type": "external",
-      "url": "https://code.claude.com/docs/en/context-window"
-    },
-    {
-      "text": "Aider in-chat commands: /clear, /reset, /tokens and /save allow a session to be inspected, checkpointed or restarted deliberately.",
-      "ref_type": "external",
-      "url": "https://aider.chat/docs/usage/commands.html"
-    },
-    {
-      "text": "Cursor Side Chat: a side conversation can explore a subtopic without adding all of it to the primary agent context.",
-      "ref_type": "external",
-      "url": "https://cursor.com/changelog/side-chat"
-    }
-  ]
+  "summary": "This is an operator-session policy and telemetry pattern rather than a feature of one agent tool.",
+  "items": []
 }

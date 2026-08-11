@@ -1,19 +1,4 @@
 {
-  "summary": "Extensions connect routing evidence to authority, uncertainty, and production feedback.",
-  "items": [
-    {
-      "text": "Separate capability from authority: a model that drafts excellent SQL may still be prohibited from seeing production data or executing a query.",
-      "ref_type": "pattern",
-      "ref_id": "model-trust-map"
-    },
-    {
-      "text": "Use a cascade with explicit escalation: start with the least costly approved model, escalate on low confidence, failed validators, disagreement, or high-risk task attributes."
-    },
-    {
-      "text": "Maintain shadow evaluations on sampled production inputs and require statistical and incident review before promoting a new model or router policy."
-    },
-    {
-      "text": "Expose a machine-readable routing explanation containing task class, policy version, considered models, binding constraints, and the evidence record that authorized the choice."
-    }
-  ]
+  "summary": "",
+  "items": []
 }

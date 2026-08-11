@@ -1,22 +1,5 @@
 {
-  "stance": "supports",
-  "summary": "Context compaction is a sound response to finite attention and retrieval noise, provided the compact frame is treated as a lossy index into durable evidence rather than a replacement for that evidence.",
-  "points": [
-    {
-      "text": "The active frame should preserve the current goal, constraints, accepted decisions, open questions, next actions, validation state, and stable source pointers. Narrative chronology is usually less valuable.",
-      "severity": "note"
-    },
-    {
-      "text": "Keep recent raw turns and safety-critical instructions verbatim, and preserve valid tool-call and result pairs. Summarizing an authorization boundary can change its meaning.",
-      "severity": "warning"
-    },
-    {
-      "text": "Compaction should be observable: record the trigger, input revision, summary version, removed ranges, retained anchors, and retrievals made afterward.",
-      "severity": "note"
-    },
-    {
-      "text": "Evaluate the compacted frame with constraint recall, source-retrieval success, task completion, and contradiction detection, not token reduction alone.",
-      "severity": "warning"
-    }
-  ]
+  "stance": "unknown",
+  "summary": "",
+  "points": []
 }

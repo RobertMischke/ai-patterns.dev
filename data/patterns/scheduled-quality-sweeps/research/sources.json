@@ -1,25 +1,4 @@
 {
-  "summary": "Evidence strength: adjacent, with direct observational evidence for recurring dependency and vulnerability detection. The literature shows that risks accumulate beyond touched code, but no direct controlled study located evaluates a unified agent sweep framework using the same evidence shape as per-change gates.",
-  "items": [
-    {
-      "text": "Kula, German, Ouni, Ishio and Inoue, Do Developers Update Their Library Dependencies? (Empirical Software Engineering, 2018 preprint), studied 4,600 projects and 2,700 library dependencies, reporting widespread outdated dependencies and limited awareness of vulnerable versions. This directly motivates periodic dependency sweeps, though it does not compare scheduling strategies.",
-      "ref_type": "external",
-      "url": "https://arxiv.org/abs/1709.04621"
-    },
-    {
-      "text": "Decan, Mens and Constantinou, On the Impact of Security Vulnerabilities in the npm Package Dependency Network (MSR 2018), analyzed roughly 610,000 packages and vulnerability reports, showing propagation through dependency networks and delays before fixes reach dependents. It supports whole-graph recurring checks rather than reviewing only files changed today.",
-      "ref_type": "external",
-      "url": "https://doi.org/10.1145/3196398.3196401"
-    },
-    {
-      "text": "Li, Liang, Soliman and Avgeriou, Understanding Software Architecture Erosion: A Systematic Mapping Study (Journal of Software: Evolution and Process, 2022), synthesized 73 studies and connected erosion with maintainability and evolution problems while noting limited industrial evidence. This is adjacent support for scheduled architecture and drift checks, not evidence for a specific agent cadence.",
-      "ref_type": "external",
-      "url": "https://doi.org/10.1002/smr.2423"
-    },
-    {
-      "text": "Souppaya, Scarfone and Dodson, NIST SP 800-218 Secure Software Development Framework (2022), recommends ongoing vulnerability identification, recorded findings and risk-based remediation throughout the software lifecycle. It supports recurring security sweeps as a standard, but does not establish their optimal frequency or automation design.",
-      "ref_type": "external",
-      "url": "https://csrc.nist.gov/pubs/sp/800/218/final"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

@@ -1,18 +1,5 @@
 {
-  "stance": "mixed",
-  "summary": "A cognitive taxonomy can add boundaries and failure modes without improving task performance.",
-  "points": [
-    {
-      "text": "Real records cross categories: a correction learned during an incident is simultaneously episodic evidence, semantic knowledge, and a candidate procedure. Forced single-tier classification can discard important relationships."
-    },
-    {
-      "text": "Promotion and consolidation are themselves model judgments. A mistaken summary can transform a local episode into an apparently authoritative fact or procedure."
-    },
-    {
-      "text": "Multiple stores raise latency, operational cost, access-control complexity, and consistency risk. A small application may perform better with one typed store and filtered views."
-    },
-    {
-      "text": "Retrieval from several tiers can overfill context and create conflicts about precedence. Without explicit resolution policy, more organized storage produces less predictable behavior."
-    }
-  ]
+  "stance": "unknown",
+  "summary": "",
+  "points": []
 }

@@ -1,25 +1,4 @@
 {
-  "summary": "Useful variants reduce duplication, surface freshness and tailor the map to the reader's task.",
-  "items": [
-    {
-      "text": "Generate dependency and path inventories, then keep only architectural intent and exceptions hand-authored.",
-      "ref_type": "pattern",
-      "ref_id": "context-entry-points"
-    },
-    {
-      "text": "Attach per-feature owners, lifecycle and review dates as local companions while the root map remains an index.",
-      "ref_type": "pattern",
-      "ref_id": "sidecar-metadata"
-    },
-    {
-      "text": "Run a drift check that compares declared components and dependencies with the build graph and source tree.",
-      "ref_type": "pattern",
-      "ref_id": "spec-drift"
-    },
-    {
-      "text": "Organize the map by cohesive feature folders so a feature entry resolves to a bounded working set.",
-      "ref_type": "pattern",
-      "ref_id": "feature-folder-locality"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

@@ -1,25 +1,4 @@
 {
-  "summary": "Extensions should calibrate reviewer authority, attach external checks, and preserve each disposition as reusable project knowledge.",
-  "items": [
-    {
-      "text": "Weight findings by reviewer-specific precision for the task class and require corroboration or external evidence before a machine finding can block.",
-      "ref_type": "pattern",
-      "ref_id": "agent-fencing"
-    },
-    {
-      "text": "Convert verifiable findings into named tests, policies, or type checks so the same issue is caught automatically rather than debated in every future council.",
-      "ref_type": "pattern",
-      "ref_id": "executable-safety-net"
-    },
-    {
-      "text": "Archive fixes, accepted residual risks, rejected findings, and escalation outcomes under stable IDs for later search and supersession.",
-      "ref_type": "pattern",
-      "ref_id": "decision-memory"
-    },
-    {
-      "text": "Escalate only unresolved high-impact or low-calibration findings to a stronger model or human reviewer, with a hard end-to-end budget.",
-      "ref_type": "pattern",
-      "ref_id": "escalation-cascade"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

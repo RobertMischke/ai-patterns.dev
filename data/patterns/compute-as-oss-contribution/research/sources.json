@@ -1,25 +1,4 @@
 {
-  "summary": "Evidence is limited and adjacent. Empirical studies show that agent-generated pull requests can be useful yet require human revision and that missing discussion obscures rationale; provenance standards define how to document production. No direct controlled study located validates compute expenditure itself as an open-source contribution unit.",
-  "items": [
-    {
-      "text": "On the Use of Agentic Coding: An Empirical Study of Pull Requests on GitHub — Miku Watanabe, Hao Li, Yutaro Kashiwa, Brittany Reid, Hajimu Iida, and Ahmed E. Hassan (2025). Among 567 Claude Code pull requests across 157 open-source projects, 83.8% were merged, but 45.1% of merged changes needed human revisions. This supports recognizing agent-enabled work while showing that compute does not replace maintainership or quality review.",
-      "ref_type": "external",
-      "url": "https://arxiv.org/abs/2509.14745"
-    },
-    {
-      "text": "The Quiet Contributions: Insights into AI-Generated Silent Pull Requests — S. M. Mahedy Hasan, Md Fazle Rabbi, and Minhaz Zibran (2026). The study examines 4,762 AI-generated pull requests with no comments or discussion and highlights the difficulty of inferring acceptance rationale from code metrics alone. It directly motivates a contribution statement, but it does not evaluate compute disclosure.",
-      "ref_type": "external",
-      "url": "https://arxiv.org/abs/2601.21102"
-    },
-    {
-      "text": "On Wasted Contributions: Understanding the Dynamics of Contributor-Abandoned Pull Requests — SayedHassan Khatoonabadi, Diego Elias Costa, Rabe Abdalkareem, and Emad Shihab (2023). A mixed-methods study of 265,325 pull requests in ten projects found complex changes and lengthy review associated with abandonment and documented effort costs for contributors and maintainers. This is adjacent evidence that contribution value must include review burden, not only production spend.",
-      "ref_type": "external",
-      "url": "https://doi.org/10.1145/3530785"
-    },
-    {
-      "text": "SLSA Version 1.2 Provenance — OpenSSF and the SLSA community (2026). The approved standard defines provenance as verifiable information about where, when, and how an artifact was produced. It supports an attestable compute statement, but explicitly provides production provenance rather than a quality or social-value judgment.",
-      "ref_type": "external",
-      "url": "https://slsa.dev/spec/v1.2/provenance"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

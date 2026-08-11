@@ -1,30 +1,4 @@
 {
-  "summary": "Routers can enforce a task-to-model policy, while evaluation platforms supply the evidence needed to maintain it; automatic routing should not be confused with a validated capability map.",
-  "items": [
-    {
-      "text": "OpenRouter's Auto Router selects a model from an allowed set using prompt characteristics and required capabilities, and returns the selected model in response metadata. Applications can constrain the candidate pool and observe routing decisions, though the provider's router is not a substitute for local acceptance tests.",
-      "ref_type": "external",
-      "url": "https://openrouter.ai/docs/guides/routing/routers/auto-router"
-    },
-    {
-      "text": "Portkey Conditional Routing sends requests to configured targets based on request metadata and explicit conditions. Teams can encode an approved task class, sensitivity, tenant, or quality tier as policy instead of letting each caller choose a model ad hoc.",
-      "ref_type": "external",
-      "url": "https://portkey.ai/docs/product/ai-gateway/conditional-routing"
-    },
-    {
-      "text": "LiteLLM Router provides a common API over many providers with model groups, fallbacks, cooldowns, budgets, and routing strategies based on load, latency, or cost. It is useful as the enforcement plane after suitability has been established by evaluations.",
-      "ref_type": "external",
-      "url": "https://docs.litellm.ai/docs/routing"
-    },
-    {
-      "text": "LangSmith evaluation uses versioned datasets, reference outputs, evaluators, experiments, and comparative views. It can run candidate models on the task-specific cases that justify entries in a capability map and detect regressions after model or prompt changes.",
-      "ref_type": "external",
-      "url": "https://docs.langchain.com/langsmith/evaluation-concepts"
-    },
-    {
-      "text": "Stanford HELM is an open evaluation framework and public benchmark service that evaluates models across scenarios and multiple metrics such as accuracy, calibration, robustness, fairness, efficiency, and toxicity. Its reproducible scenario configuration is a useful template for evidence-backed capability records.",
-      "ref_type": "external",
-      "url": "https://crfm.stanford.edu/helm/latest/"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

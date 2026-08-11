@@ -1,18 +1,5 @@
 {
-  "stance": "supports",
-  "summary": "Budgets are justified as cost and failure-containment controls, provided they account for task value and do not reward superficially cheap but incomplete work.",
-  "points": [
-    {
-      "text": "Enforce limits outside the model process; a prompt that asks an agent to stop spending is not a reliable financial control.",
-      "severity": "blocker"
-    },
-    {
-      "text": "Track cost per accepted outcome, retry rate, review burden and failure class alongside tokens so teams do not optimize the denominator alone.",
-      "severity": "info"
-    },
-    {
-      "text": "Reserve capacity for validation and safe shutdown. Exhausting the budget immediately after generation can leave no allowance to test, summarize or hand off state.",
-      "severity": "warning"
-    }
-  ]
+  "stance": "unknown",
+  "summary": "",
+  "points": []
 }

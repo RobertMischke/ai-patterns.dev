@@ -1,22 +1,5 @@
 {
-  "stance": "supports",
-  "summary": "Separating provider trust from model capability closes a real governance gap: the same model can have materially different retention, access, contractual and operational properties depending on where it runs.",
-  "points": [
-    {
-      "text": "NIST's AI and supply-chain frameworks both treat third-party risk as a lifecycle concern, supporting provider review that is independent of benchmark quality or model identity.",
-      "severity": "info"
-    },
-    {
-      "text": "A matrix becomes operational only when its cells map to dispatch decisions over data class, capability and environment; a prose vendor assessment alone cannot prevent a disallowed route.",
-      "severity": "warning"
-    },
-    {
-      "text": "Evidence should include contractual retention, training use, residency, subprocessors, identity controls, incident response and service configuration because provider trust is multidimensional.",
-      "severity": "note"
-    },
-    {
-      "text": "Every entry needs evidence provenance, expiry and a re-evaluation trigger; certifications and terms can change while the model name remains constant.",
-      "severity": "warning"
-    }
-  ]
+  "stance": "unknown",
+  "summary": "",
+  "points": []
 }

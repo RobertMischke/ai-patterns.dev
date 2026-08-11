@@ -1,25 +1,4 @@
 {
-  "summary": "Evidence strength: adjacent and mixed. Studies support repository-aware retrieval, explicit ownership and architecture knowledge, but no direct controlled study located evaluates a single repo-local project-map artifact with all proposed fields; one controlled study also warns that format alone may not improve comprehension.",
-  "items": [
-    {
-      "text": "Ernst and Robillard, A Study of Documentation for Software Architecture (2023, Empirical Software Engineering preprint), ran a controlled questionnaire with 65 participants and found no significant comprehension advantage for structured over narrative architecture documentation; familiarity with the source project dominated. This directly cautions that a project map's format is insufficient without accurate, familiar content, although the experiment did not test agent navigation.",
-      "ref_type": "external",
-      "url": "https://arxiv.org/abs/2305.17286"
-    },
-    {
-      "text": "Zhang et al., RepoCoder: Repository-Level Code Completion with Iterative Retrieval and Generation (EMNLP 2023), reported more than 10% improvement over in-file completion baselines across its settings by retrieving repository-level context. This is adjacent evidence that explicit cross-file structure matters to coding models, not a test of a maintained project-map file.",
-      "ref_type": "external",
-      "url": "https://aclanthology.org/2023.emnlp-main.151/"
-    },
-    {
-      "text": "Bird, Nagappan, Murphy, Gall and Devanbu, Don't Touch My Code! Examining the Effects of Ownership on Software Quality (ESEC/FSE 2011), analyzed two Windows releases and found ownership measures associated with pre- and post-release failures. It supports making ownership explicit, but the result is observational and does not establish that a map itself improves quality.",
-      "ref_type": "external",
-      "url": "https://doi.org/10.1145/2025113.2025119"
-    },
-    {
-      "text": "Jansen, Avgeriou and van der Ven, Enriching Software Architecture Documentation (Journal of Systems and Software, 2009), evaluated formalized architectural knowledge in a quasi-controlled experiment using a real large system and found that the approach partially addressed understanding, traceability and navigation problems. It supports recording rationale and relations, while its document tasks do not directly represent autonomous agents operating on a live repository.",
-      "ref_type": "external",
-      "url": "https://doi.org/10.1016/j.jss.2009.04.052"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

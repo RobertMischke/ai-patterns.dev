@@ -1,21 +1,4 @@
 {
-  "summary": "Extensions make dispatch risk-aware and keep the review queue within human capacity.",
-  "items": [
-    {
-      "text": "Attach a risk class and review contract at dispatch: required tests, prohibited paths, evidence to capture, maximum cost, and the person or role authorized to accept."
-    },
-    {
-      "text": "Use bounded concurrency and review-queue backpressure so new work is not fired when completed artifacts already exceed reviewer capacity."
-    },
-    {
-      "text": "Route tasks using measured capability by task type, then feed accepted, revised, rejected, and regressed outcomes back into that map.",
-      "ref_type": "pattern",
-      "ref_id": "model-task-capability"
-    },
-    {
-      "text": "Require plan approval before firing work whose direction is expensive to reverse, while allowing direct execution for narrow, well-tested changes.",
-      "ref_type": "pattern",
-      "ref_id": "plan-mode"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

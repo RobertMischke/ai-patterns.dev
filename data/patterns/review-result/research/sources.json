@@ -1,25 +1,4 @@
 {
-  "summary": "Evidence strength: adjacent. Empirical code-review studies support concise change understanding, context and traceable findings, while standards support structured result interchange; no direct controlled study located compares reviewing an agent result packet with reading its chat transcript.",
-  "items": [
-    {
-      "text": "Bacchelli and Bird, Expectations, Outcomes, and Challenges of Modern Code Review (ICSE 2013), used interviews and observations at Microsoft and found review supports defect discovery, knowledge transfer, awareness and alternative solutions, while understanding the change and its context is a central challenge. This supports a result-first surface with inspectable context, but it studied human code review rather than agent transcripts.",
-      "ref_type": "external",
-      "url": "https://doi.org/10.1109/ICSE.2013.6606617"
-    },
-    {
-      "text": "Sadowski, Soderberg, Church, Sipko and Bacchelli, Modern Code Review: A Case Study at Google (2018), combined interviews, a survey and analysis of millions of reviews and found that small, understandable changes and rapid feedback are central to the process. It is adjacent evidence for compact result packets and progressive disclosure, not a test of agent-chat omission.",
-      "ref_type": "external",
-      "url": "https://research.google/pubs/modern-code-review-a-case-study-at-google/"
-    },
-    {
-      "text": "Souppaya, Scarfone and Dodson, NIST SP 800-218 Secure Software Development Framework (2022), calls for code-analysis findings to be recorded, triaged and tracked through remediation. This directly supports durable evidence and status fields, but is normative secure-development guidance rather than a user-interface experiment.",
-      "ref_type": "external",
-      "url": "https://csrc.nist.gov/pubs/sp/800/218/final"
-    },
-    {
-      "text": "OASIS, Static Analysis Results Interchange Format Version 2.1.0 (2020), standardizes tool, rule, location, result, severity, fingerprint and artifact metadata across analyzers. It is strong implementation evidence for interoperable review results, but provides no empirical claim that a particular summary design improves review accuracy.",
-      "ref_type": "external",
-      "url": "https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

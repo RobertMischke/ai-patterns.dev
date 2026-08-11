@@ -1,25 +1,4 @@
 {
-  "summary": "AI review products can supply named review passes and structured feedback, while deterministic quality-gate platforms provide reproducible blocking criteria. A robust implementation combines both rather than treating an LLM verdict as a test result.",
-  "items": [
-    {
-      "text": "GitHub Copilot code review reviews selected changes or pull requests and can apply repository custom instructions that encode local review standards. Its comments and requested changes provide a named AI-review stage, while GitHub protections can keep the final merge decision separate.",
-      "ref_type": "external",
-      "url": "https://docs.github.com/en/copilot/how-tos/use-copilot-agents/request-a-code-review/use-code-review"
-    },
-    {
-      "text": "Qodo Merge (formerly PR-Agent) exposes commands for review, code suggestions, compliance and test generation, and supports automatic invocation in repository workflows. Those distinct tools can be configured as specialized gate agents with machine-consumable findings.",
-      "ref_type": "external",
-      "url": "https://qodo-merge-docs.qodo.ai/"
-    },
-    {
-      "text": "CodeRabbit auto-review configuration controls target branches, labels, draft behavior and review status, while repository instructions tune the standards it checks. This implements policy-scoped automated review rather than an unbounded general critique.",
-      "ref_type": "external",
-      "url": "https://docs.coderabbit.ai/configuration/auto-review"
-    },
-    {
-      "text": "SonarQube Quality Gates evaluate explicit conditions over static-analysis measures and return a pass/fail status that can block CI. They provide the deterministic evidence layer that should corroborate or override probabilistic agent claims.",
-      "ref_type": "external",
-      "url": "https://docs.sonarsource.com/sonarqube-server/quality-standards-administration/managing-quality-gates/introduction-to-quality-gates"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

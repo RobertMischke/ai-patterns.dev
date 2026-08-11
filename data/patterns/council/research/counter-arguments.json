@@ -1,22 +1,5 @@
 {
-  "stance": "challenges",
-  "summary": "Mandatory disposition can turn noisy reviews into process debt, encourage superficial rationales, and let several correlated models manufacture an appearance of consensus.",
-  "points": [
-    {
-      "text": "Low-precision reviewers can flood a change with plausible findings; requiring an answer to every item shifts the cost of model errors to authors and maintainers.",
-      "severity": "warning"
-    },
-    {
-      "text": "A reviewer and fixer that share models, prompts, or context may agree on the same false premise. Multiple seats do not create independent evidence.",
-      "severity": "warning"
-    },
-    {
-      "text": "Teams may write boilerplate acceptance rationales to clear the gate, producing an audit trail that documents compliance without improving the decision.",
-      "severity": "warning"
-    },
-    {
-      "text": "Blocking all unresolved findings gives a malicious or malfunctioning reviewer denial-of-service leverage unless severity, reviewer authority, and override paths are bounded.",
-      "severity": "blocker"
-    }
-  ]
+  "stance": "unknown",
+  "summary": "",
+  "points": []
 }

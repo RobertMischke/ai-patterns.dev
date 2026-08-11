@@ -1,25 +1,4 @@
 {
-  "summary": "The map is strongest when provider evidence, model behavior and runtime capabilities are evaluated separately and then joined at dispatch.",
-  "items": [
-    {
-      "text": "Combine the provider decision with a separately maintained record of model capability, behavioral evaluations and task fit.",
-      "ref_type": "pattern",
-      "ref_id": "model-trust-map"
-    },
-    {
-      "text": "Translate allowed cells into enforceable network, filesystem, secret and tool capabilities at runtime.",
-      "ref_type": "pattern",
-      "ref_id": "agent-fencing"
-    },
-    {
-      "text": "Route high-risk combinations into a hardened execution environment even when the provider and model are otherwise approved.",
-      "ref_type": "pattern",
-      "ref_id": "sandbox"
-    },
-    {
-      "text": "Expose the resulting route and evidence as one layer in a broader, inspectable trust decision.",
-      "ref_type": "pattern",
-      "ref_id": "trust-layer"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

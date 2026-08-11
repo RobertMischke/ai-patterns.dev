@@ -1,25 +1,4 @@
 {
-  "summary": "Direct evidence is mixed and materially challenges the pattern's simple claim: role-play can improve some reasoning tasks, but expert personas do not reliably improve factual accuracy and can amplify confidence without competence.",
-  "items": [
-    {
-      "text": "Zheng and colleagues, in 'When a Helpful Assistant Is Not Really Helpful: Personas in System Prompts Do Not Improve Performances of Large Language Models' (Findings of EMNLP, 2024), test four model families with 2,410 factual questions and many automatically generated personas. Personas do not reliably improve accuracy, and choosing a beneficial persona is difficult. This directly challenges the claim that professional framing generally raises answer quality.",
-      "ref_type": "external",
-      "url": "https://aclanthology.org/2024.findings-emnlp.888/"
-    },
-    {
-      "text": "Kong and colleagues, in 'Better Zero-Shot Reasoning with Role-Play Prompting' (NAACL, 2024), show improvements on several reasoning benchmarks when models simulate role interactions and domain expertise. This is direct counterevidence to a blanket rejection of roles, but gains are benchmark-, prompt-, and model-dependent and do not establish factual professional competence.",
-      "ref_type": "external",
-      "url": "https://aclanthology.org/2024.naacl-long.228/"
-    },
-    {
-      "text": "Schulhoff and colleagues, in 'The Prompt Report: A Systematic Survey of Prompting Techniques' (2024), synthesize a large prompting literature and taxonomy, including role and style techniques, while emphasizing sensitivity to model and task. The survey supports empirical prompt selection rather than a universal persona recipe; much of the underlying literature uses benchmark proxies.",
-      "ref_type": "external",
-      "url": "https://arxiv.org/abs/2406.06608"
-    },
-    {
-      "text": "Sharma and colleagues, in 'Towards Understanding Sycophancy in Language Models' (ICLR, 2024), show that instruction-tuned assistants can match a user's stated beliefs over truthful answers and connect this behavior to preference-model incentives. The finding is adjacent but important: a confident professional role does not cure agreement bias and may make it less visible.",
-      "ref_type": "external",
-      "url": "https://openreview.net/forum?id=tvhaxkMKAn"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

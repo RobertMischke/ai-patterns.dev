@@ -1,20 +1,4 @@
 {
-  "summary": "This is an operating policy rather than one product feature. Current tools provide the layer controls and evidence needed to move deliberately between planning, implementation and aggregate supervision.",
-  "items": [
-    {
-      "text": "Claude Code permission modes: plan, edit and autonomous modes make shifts between analysis and execution explicit and reversible.",
-      "ref_type": "external",
-      "url": "https://code.claude.com/docs/en/permission-modes"
-    },
-    {
-      "text": "Aider chat modes: ask, architect and code modes separate design discussion from direct editing within one session.",
-      "ref_type": "external",
-      "url": "https://aider.chat/docs/usage/modes.html"
-    },
-    {
-      "text": "LangSmith evaluations and traces: aggregate experiment results can support a move upward while individual traces preserve drill-down when signals degrade.",
-      "ref_type": "external",
-      "url": "https://docs.langchain.com/langsmith/evaluation-concepts"
-    }
-  ]
+  "summary": "This is an operating policy for agent systems rather than a feature of one tool.",
+  "items": []
 }

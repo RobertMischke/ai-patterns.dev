@@ -1,19 +1,4 @@
 {
-  "summary": "Replace persona-first prompting with measured behavior contracts, using roles only where comparative evaluation shows value.",
-  "items": [
-    {
-      "text": "Define a professional behavior contract: audience, decision standard, evidence hierarchy, required checks, uncertainty vocabulary, refusal boundary, and output schema."
-    },
-    {
-      "text": "A/B test neutral, role-framed, and behavior-contract prompts on a versioned task suite, scoring correctness and calibration as well as style."
-    },
-    {
-      "text": "Require claim-level evidence labels such as sourced, computed, inferred, assumed, or unknown, and prohibit professional tone from changing those labels."
-    },
-    {
-      "text": "Select framing by task and observed model performance rather than applying one expert persona across the system.",
-      "ref_type": "pattern",
-      "ref_id": "model-task-capability"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

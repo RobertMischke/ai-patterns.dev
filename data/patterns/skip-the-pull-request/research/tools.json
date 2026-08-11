@@ -1,25 +1,4 @@
 {
-  "summary": "No mainstream platform literally removes every review object while retaining protected integration, but merge queues, merge trains and policy engines can make machine gates the operative approval mechanism. The pull request may remain as an automation envelope even when routine human diff approval is removed.",
-  "items": [
-    {
-      "text": "GitHub merge queue validates required status checks against the latest target branch and queued changes before merge, then removes a failing entry. It replaces manual merge coordination with an integration-tested gate, although GitHub still uses a pull request as the queued change record.",
-      "ref_type": "external",
-      "url": "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request-with-a-merge-queue"
-    },
-    {
-      "text": "GitLab merge trains create pipelines against the combined state of the target branch and earlier queued changes and merge only successful entries in order. This implements machine-validated integration and avoids a human having to re-evaluate stale branch state.",
-      "ref_type": "external",
-      "url": "https://docs.gitlab.com/ci/pipelines/merge_trains/"
-    },
-    {
-      "text": "Mergify Merge Queue updates queued changes with their base, runs required CI and applies configurable queue rules before merging. It provides explicit policy, priorities and batch behavior for a gate-led delivery path.",
-      "ref_type": "external",
-      "url": "https://docs.mergify.com/merge-queue/setup/"
-    },
-    {
-      "text": "SonarQube Quality Gates return a versioned pass/fail result over explicit analysis conditions and can block CI. They supply a deterministic quality standard that remains meaningful when routine human review is no longer mandatory.",
-      "ref_type": "external",
-      "url": "https://docs.sonarsource.com/sonarqube-server/quality-standards-administration/managing-quality-gates/introduction-to-quality-gates"
-    }
-  ]
+  "summary": "This is a delivery policy assembled from CI configuration, merge rules and agent-platform review stages rather than a feature of any single tool.",
+  "items": []
 }

@@ -1,25 +1,4 @@
 {
-  "summary": "Repository schedulers and dependency/security automation provide mature primitives for periodic whole-system sweeps. They become this pattern when each run has named ownership, bounded scope, a comparable result schema and durable follow-up rather than merely a cron expression.",
-  "items": [
-    {
-      "text": "GitHub Actions workflow syntax supports cron-based schedule triggers, timezone-aware schedules and manual invocation, executing from the latest default-branch commit. A repository can use one named workflow per sweep and publish standardized check outputs and artifacts.",
-      "ref_type": "external",
-      "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax"
-    },
-    {
-      "text": "GitHub CodeQL default setup scans code on a schedule in addition to push and pull-request events, catching vulnerabilities outside the immediate change path. Results become durable code-scanning alerts with rule and location evidence.",
-      "ref_type": "external",
-      "url": "https://docs.github.com/en/code-security/code-scanning/enabling-code-scanning/configuring-default-setup-for-code-scanning"
-    },
-    {
-      "text": "Dependabot configuration supports daily, weekly, monthly, quarterly, semiannual and annual update intervals, grouping and per-ecosystem directories. It implements a recurring dependency-freshness sweep with explicit scope and generated remediation changes.",
-      "ref_type": "external",
-      "url": "https://docs.github.com/en/code-security/concepts/supply-chain-security/about-the-dependabot-yml-file"
-    },
-    {
-      "text": "Renovate's schedule configuration constrains when repository update checks and branch creation occur and supports named presets. Its dependency dashboard and PR artifacts turn detected staleness into owned follow-up work.",
-      "ref_type": "external",
-      "url": "https://docs.renovatebot.com/configuration-options/"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

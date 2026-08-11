@@ -1,14 +1,4 @@
 {
-  "summary": "Build a calibrated evidence graph that supports concrete release and escalation decisions.",
-  "items": [
-    {
-      "text": "Define evidence requirements by risk class: routine tasks may need tests and provenance, while security or production changes require independent review and deployment telemetry."
-    },
-    {
-      "text": "Use shadow evaluation and periodic blinded human samples to detect evaluator drift before changing approval policy."
-    },
-    {
-      "text": "Make each trust signal explainable and separately inspectable; compute summaries only as navigation aids, never as the sole release gate."
-    }
-  ]
+  "summary": "",
+  "items": []
 }

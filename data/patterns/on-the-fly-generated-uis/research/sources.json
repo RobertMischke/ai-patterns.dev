@@ -1,24 +1,28 @@
 {
-  "summary": "Evidence is adjacent and limited: adaptive and schema-generated UI research demonstrates feasibility and some user benefits, but no direct controlled study was located for cached LLM-generated interfaces with the full validation and regeneration pattern.",
+  "summary": "Primary documentation anchors the streaming-component branch, the schema-to-form lineage and the markup safety boundary.",
   "items": [
     {
-      "text": "Gajos, Weld, and Wobbrock, in 'Automatically Generating Personalized User Interfaces with Supple' (Artificial Intelligence, 2010), evaluate optimization-generated interfaces, including users with motor impairments, and report improvements in speed, accuracy, and satisfaction for personalized layouts. This is direct evidence for runtime generation, but it uses explicit optimization models rather than LLM-authored components.",
-      "ref_type": "external",
-      "url": "https://doi.org/10.1016/j.artint.2010.05.005"
+      "text": "AI SDK UI: Generative User Interfaces",
+      "ref_type": "source",
+      "ref_id": "s20",
+      "url": "https://ai-sdk.dev/docs/ai-sdk-ui/generative-user-interfaces"
     },
     {
-      "text": "Findlater and Gajos, in 'Design Space and Evaluation Challenges of Adaptive Graphical User Interfaces' (AI Magazine, 2009), synthesize adaptive-UI research and emphasize predictability, user control, learnability, and evaluation over time. The work supports conservative regeneration and stability, while not testing artifact-keyed caching or generative AI.",
-      "ref_type": "external",
-      "url": "https://doi.org/10.1609/aimag.v30i4.2268"
+      "text": "JSON Forms: What is JSON Forms?",
+      "ref_type": "source",
+      "ref_id": "s21",
+      "url": "https://jsonforms.io/docs/"
     },
     {
-      "text": "Gajos and Weld, in 'SUPPLE: Automatically Generating User Interfaces' (IUI, 2004), formulate UI generation as constrained optimization over device capabilities and user tasks and demonstrate automatic adaptation across devices. It is a close technical predecessor, but does not address modern web security, accessibility conformance, or model uncertainty.",
-      "ref_type": "external",
-      "url": "https://doi.org/10.1145/964442.964461"
+      "text": "react-jsonschema-form: Introduction and philosophy",
+      "ref_type": "source",
+      "ref_id": "s22",
+      "url": "https://rjsf-team.github.io/react-jsonschema-form/docs/"
     },
     {
-      "text": "OWASP's 'Cross Site Scripting Prevention Cheat Sheet' consolidates browser-security guidance on contextual output encoding, sanitization, safe sinks, and avoiding dangerous framework escape hatches. It is an authoritative adjacent standard for generated markup, not a study of UI quality or LLM safety.",
-      "ref_type": "external",
+      "text": "OWASP: Cross Site Scripting Prevention Cheat Sheet",
+      "ref_type": "source",
+      "ref_id": "s23",
       "url": "https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html"
     }
   ]

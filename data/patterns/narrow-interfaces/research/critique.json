@@ -1,18 +1,5 @@
 {
-  "stance": "supports",
-  "summary": "Narrow interfaces reduce discovery and change burden when they expose coherent task-level operations and hide genuinely volatile details.",
-  "points": [
-    {
-      "text": "Surface area should be measured from the consumer's view: exported names, concepts, required call order, error modes, configuration, and implicit state all contribute to interface width."
-    },
-    {
-      "text": "A good boundary accepts explicit dependencies and domain-shaped inputs rather than requiring consumers or agents to discover internal objects and assemble a valid call sequence."
-    },
-    {
-      "text": "Generated API reports and dependency tests make accidental growth reviewable. Documentation alone cannot prevent callers from binding to public but unsupported internals."
-    },
-    {
-      "text": "The context-window rationale is plausible but unproven. The stronger evidence-backed argument is information hiding and reduced API discovery burden, not an arbitrary line-count target."
-    }
-  ]
+  "stance": "unknown",
+  "summary": "",
+  "points": []
 }

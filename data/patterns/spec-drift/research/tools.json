@@ -1,25 +1,4 @@
 {
-  "summary": "Contract testing, schema fuzzing and architecture conformance tools can detect several concrete forms of specification drift. Free-form README, roadmap and rationale drift still requires trace links and review because current tools are strongest on executable or structural specifications.",
-  "items": [
-    {
-      "text": "Specmatic backward-compatibility checks compare API specifications and report changes that break consumers before implementation or deployment. It turns versioned OpenAPI and related contracts into an enforceable drift gate instead of passive documentation.",
-      "ref_type": "external",
-      "url": "https://docs.specmatic.io/contract_driven_development/backward_compatibility"
-    },
-    {
-      "text": "Pact provider verification replays consumer contracts against a running provider, publishes verification results and can guard deployment using broker state. It detects when implemented behavior no longer satisfies an agreed interaction specification.",
-      "ref_type": "external",
-      "url": "https://docs.pact.io/provider"
-    },
-    {
-      "text": "Schemathesis derives property-based tests from OpenAPI or GraphQL schemas, exercises boundary cases and reports responses that violate the declared contract. This finds implementation/specification divergence beyond manually selected examples.",
-      "ref_type": "external",
-      "url": "https://schemathesis.readthedocs.io/en/stable/"
-    },
-    {
-      "text": "ArchUnit tests Java architecture as code, including package dependencies, layers, cycles and naming rules, and runs those checks in ordinary unit-test infrastructure. It operationalizes intended architecture so drift becomes a failing, located result.",
-      "ref_type": "external",
-      "url": "https://www.archunit.org/userguide/html/000_Index.html"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

@@ -1,18 +1,5 @@
 {
-  "stance": "supports",
-  "summary": "Feature-local folders are a useful default when they correspond to real ownership and change boundaries, but locality is a proxy for cohesion rather than proof of it.",
-  "points": [
-    {
-      "text": "The strongest rationale is change locality: a maintainer can inspect implementation, tests, documentation, and feature configuration without reconstructing a layer-spanning dependency path."
-    },
-    {
-      "text": "The pattern improves discoverability only if folder names express product or domain concepts. A feature directory filled with generic utilities merely moves the layer architecture down one level."
-    },
-    {
-      "text": "Physical colocation should be paired with import or module-boundary checks. Otherwise nearby files can remain tightly coupled to unrelated features while the directory tree presents a misleading architecture."
-    },
-    {
-      "text": "The empirical basis is indirect: studies of information hiding, feature modules, and co-change motivate the pattern, but they do not establish a universal productivity or defect advantage for a particular folder layout."
-    }
-  ]
+  "stance": "unknown",
+  "summary": "",
+  "points": []
 }

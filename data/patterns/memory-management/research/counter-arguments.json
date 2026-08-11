@@ -1,18 +1,21 @@
 {
   "stance": "mixed",
-  "summary": "Versioned file memory can become a slow, privacy-sensitive archive whose apparent auditability exceeds its actual correctness.",
+  "summary": "A folder is a default, not a universal database. The burden of proof sits with the additional store because every second persistence mechanism creates another place where visibility, structure and currency can diverge.",
   "points": [
     {
-      "text": "Append-only growth increases noise and retrieval collisions. Without compaction, expiry, and successor-aware ranking, stale statements remain easy for an agent to surface."
+      "text": "A database is appropriate for high-volume event streams, transactional coordination or queries that cannot be served from a small index. Keep the durable human-agent contract in files and derive the database representation where possible.",
+      "severity": "note"
     },
     {
-      "text": "Git history conflicts with deletion obligations and secret remediation because content persists in repository history and clones. Sensitive or regulated memory may require a store with enforceable retention and erasure."
+      "text": "A vector index can help semantic retrieval across a corpus too large for direct navigation. Treat it as a rebuildable access layer: returned passages still need stable source paths and revisions so a human can inspect them.",
+      "severity": "note"
     },
     {
-      "text": "Human-readable files and indexes can diverge under concurrent writes or partial updates. A transactional database may provide stronger uniqueness, locking, and referential integrity."
+      "text": "A secrets manager or access-controlled service is necessary when Git cannot meet confidentiality, retention or deletion requirements. Store only a pointer and non-sensitive provenance in the memory folder.",
+      "severity": "note"
     },
     {
-      "text": "Auditability does not validate truth. An incorrect model-generated inference can be perfectly versioned and repeatedly retrieved unless sources, confidence, and approval state are represented."
+      "text": "Session scratch state does not need durable review history. Keep it ephemeral and promote only facts that should affect future work."
     }
   ]
 }

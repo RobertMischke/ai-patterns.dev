@@ -1,22 +1,10 @@
 {
   "stance": "challenges",
-  "summary": "A two-model pair introduces a lossy protocol and correlated failure surface. A stronger plan can still be wrong, and a cheaper executor can convert a recoverable ambiguity into confident action.",
+  "summary": "Context transfer, coordination latency, and review overhead can erase the savings from a smaller executor.",
   "points": [
     {
-      "text": "Planner errors become upstream commitments: the executor may faithfully implement a flawed decomposition and never revisit the premise that produced it.",
+      "text": "Avoid the split when the executor needs the full planning context or a fast interactive response.",
       "severity": "warning"
-    },
-    {
-      "text": "Different models may interpret schemas, tool semantics, uncertainty language, and domain terms differently; an apparently valid handoff can hide semantic mismatch.",
-      "severity": "warning"
-    },
-    {
-      "text": "A second model does not guarantee independent judgment. Related training data, shared prompts, and the first model's framing can cause correlated acceptance of the same error.",
-      "severity": "warning"
-    },
-    {
-      "text": "Two calls increase latency, telemetry, provider exposure, and operational complexity; for short or tightly coupled tasks a single well-instrumented model may be cheaper and more accurate.",
-      "severity": "note"
     }
   ]
 }

@@ -1,25 +1,4 @@
 {
-  "summary": "Evidence strength: direct systems evidence for isolation and overhead, plus adjacent standards guidance. Firecracker and gVisor studies quantify real isolation designs and tradeoffs, but no direct controlled study located evaluates the full agent-specific combination of capability limits, cost caps, audit and safe artifact export.",
-  "items": [
-    {
-      "text": "Agache et al., Firecracker: Lightweight Virtualization for Serverless Applications (Amazon Web Services, NSDI 2020), described a purpose-built microVM monitor used for production workloads, with fast startup, low memory overhead and layered isolation. This is direct systems evidence for per-task microVMs, not an evaluation of autonomous-agent behavior.",
-      "ref_type": "external",
-      "url": "https://www.usenix.org/conference/nsdi20/presentation/agache"
-    },
-    {
-      "text": "Young et al., The True Cost of Containing: A gVisor Case Study (HotCloud 2019), measured substantial workload-dependent overhead from user-space syscall interception. The study directly establishes an isolation/performance tradeoff and cautions that stronger containment is not operationally free.",
-      "ref_type": "external",
-      "url": "https://www.usenix.org/system/files/hotcloud19-paper-young.pdf"
-    },
-    {
-      "text": "Souppaya, Morello and Scarfone, NIST SP 800-190 Application Container Security Guide (2017), identifies image, registry, orchestrator, container and host risks and recommends configuration, isolation, monitoring and lifecycle controls. It is adjacent normative guidance and does not claim containers alone contain hostile agent code.",
-      "ref_type": "external",
-      "url": "https://csrc.nist.gov/pubs/sp/800/190/final"
-    },
-    {
-      "text": "Yang et al., SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering Language Models (Princeton University, NeurIPS 2024), showed that a purpose-designed computer interface improved agents' ability to navigate repositories, edit files and run tests. This is adjacent evidence for giving agents execution tools, but it does not establish that its environment is a sufficient security sandbox.",
-      "ref_type": "external",
-      "url": "https://papers.nips.cc/paper_files/paper/2024/hash/5a7c947568c1b1328ccc5230172e1e7c-Abstract-Conference.html"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

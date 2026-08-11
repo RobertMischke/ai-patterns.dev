@@ -1,22 +1,5 @@
 {
-  "stance": "supports",
-  "summary": "An executable safety net is the clearest way to turn repository expectations into repeatable evidence for humans and agents. It should optimize fast, trustworthy feedback while remaining explicit about what it does not test.",
-  "points": [
-    {
-      "text": "Expose one documented local entry command that reproduces required CI checks, plus named fast subsets for the affected feature. Local and CI environments should pin the same tool and rule versions.",
-      "severity": "note"
-    },
-    {
-      "text": "Layer checks by feedback time and risk: format and type checks first, focused tests next, then broader integration, security, policy, and build checks. Early failures should cancel wasteful downstream work.",
-      "severity": "note"
-    },
-    {
-      "text": "Protect the gate itself through reviewed workflow changes, trusted check producers, least-privileged credentials, isolated untrusted code, and retained logs; a mutable CI result is not evidence.",
-      "severity": "warning"
-    },
-    {
-      "text": "Track flake rate, runtime, queue delay, bypasses, mutation or defect detection, and escaped failures. A green badge measures conformance to the current net, not complete correctness.",
-      "severity": "warning"
-    }
-  ]
+  "stance": "unknown",
+  "summary": "",
+  "points": []
 }

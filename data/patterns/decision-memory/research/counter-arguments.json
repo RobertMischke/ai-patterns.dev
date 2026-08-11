@@ -1,22 +1,5 @@
 {
-  "stance": "challenges",
-  "summary": "Decision logs can become ceremonial, stale, selective, or politically sanitized. A long archive may preserve the appearance of rationale while the actual trade-offs remain in private conversations.",
-  "points": [
-    {
-      "text": "Research finds many ADRs begin directly in accepted state, bypassing alternatives and deliberation; such records document an outcome but not a reusable decision process.",
-      "severity": "warning"
-    },
-    {
-      "text": "If records are not linked to code and change triggers, old assumptions remain discoverable but misleading, increasing confidence in obsolete constraints.",
-      "severity": "warning"
-    },
-    {
-      "text": "Teams may avoid recording security weaknesses, interpersonal trade-offs, commercial constraints, or uncertainty, leaving the most important rationale outside the searchable archive.",
-      "severity": "warning"
-    },
-    {
-      "text": "Requiring an ADR for routine choices creates documentation queues and dilutes significant decisions among low-value records.",
-      "severity": "note"
-    }
-  ]
+  "stance": "unknown",
+  "summary": "",
+  "points": []
 }

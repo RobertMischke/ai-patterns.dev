@@ -1,25 +1,4 @@
 {
-  "summary": "Variants can tune result depth to risk while retaining a common evidence envelope.",
-  "items": [
-    {
-      "text": "Require every quality-gate agent to emit the same verdict, evidence, confidence, waiver and remediation fields.",
-      "ref_type": "pattern",
-      "ref_id": "quality-gate-agents"
-    },
-    {
-      "text": "Render a compact top-level verdict from a richer machine-readable analysis report rather than duplicating evidence.",
-      "ref_type": "pattern",
-      "ref_id": "analysis-report"
-    },
-    {
-      "text": "Use a fast lane for low-risk green results and escalate suspicious or conflicting packets into an evidence-deep review track.",
-      "ref_type": "pattern",
-      "ref_id": "fire-track-review"
-    },
-    {
-      "text": "Display provenance, model, provider, tools and policy decisions as expandable trust layers beside the result.",
-      "ref_type": "pattern",
-      "ref_id": "trust-layer"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

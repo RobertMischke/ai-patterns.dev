@@ -1,19 +1,4 @@
 {
-  "summary": "Extensions make trust decisions executable, compositional, and continuously tested.",
-  "items": [
-    {
-      "text": "Compile the map into short-lived capability tokens containing model identity, task ID, allowed actions and resources, data ceiling, budget, expiry, and required approval."
-    },
-    {
-      "text": "Add composition tests that search for harmful multi-step paths through individually permitted tools, including indirect prompt-injection and confused-deputy scenarios."
-    },
-    {
-      "text": "Link each authority grant to a task-capability evidence record, while keeping the policy decision independent: being capable never automatically confers permission.",
-      "ref_type": "pattern",
-      "ref_id": "model-task-capability"
-    },
-    {
-      "text": "Use incident-sensitive decay: narrow or suspend grants automatically when model, prompt, tool, or environment versions change or when review outcomes cross a risk threshold."
-    }
-  ]
+  "summary": "",
+  "items": []
 }

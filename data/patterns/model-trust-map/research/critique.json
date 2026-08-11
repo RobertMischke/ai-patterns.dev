@@ -1,18 +1,5 @@
 {
-  "stance": "supports",
-  "summary": "The key contribution is separating observed capability from granted authority and enforcing each permission at the system boundary.",
-  "points": [
-    {
-      "text": "Trust dimensions should remain independent: permission to read a repository does not imply access to secrets, permission to draft a command does not imply execution, and reliable formatting does not imply factual reliability."
-    },
-    {
-      "text": "The map should resolve to short-lived, resource-scoped capabilities enforced by tools and infrastructure. A system-prompt sentence is guidance, not an authorization boundary."
-    },
-    {
-      "text": "Recovery changes acceptable authority. A reversible branch write can be granted under different evidence and approval rules from a production deployment, payment, deletion, or external message."
-    },
-    {
-      "text": "Trust is conditional and versioned: model build, prompt, tool schema, data classification, task type, measured incidents, and expiry all belong in the decision record."
-    }
-  ]
+  "stance": "unknown",
+  "summary": "",
+  "points": []
 }

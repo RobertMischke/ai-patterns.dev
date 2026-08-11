@@ -1,18 +1,5 @@
 {
-  "stance": "supports",
-  "summary": "Independent evidence is essential for delegated AI work, but trust should be a decision supported by several signals rather than a decorative aggregate score.",
-  "points": [
-    {
-      "text": "Bind every decision to task intent, artifact version, model and tool trace, evaluator version, test result and reviewer action so the evidence can be reproduced.",
-      "severity": "info"
-    },
-    {
-      "text": "Separate capability confidence from permission. A system that often succeeds still should not receive irreversible production authority without an enforceable boundary.",
-      "severity": "blocker"
-    },
-    {
-      "text": "Monitor calibration: compare predicted confidence and automated grades with later acceptance, reopenings, incidents and sampled human review.",
-      "severity": "warning"
-    }
-  ]
+  "stance": "unknown",
+  "summary": "",
+  "points": []
 }

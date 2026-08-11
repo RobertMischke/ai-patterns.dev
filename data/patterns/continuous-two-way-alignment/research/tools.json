@@ -1,30 +1,4 @@
 {
-  "summary": "Existing products implement pieces of the loop: bidirectional Git synchronization, UI-to-pull-request write-back, source-built portals, and model-as-code views. No listed tool independently performs semantic, conflict-aware reconciliation across code, runtime, decisions, and a companion.",
-  "items": [
-    {
-      "text": "GitBook Git Sync supports bidirectional synchronization between GitBook content and a GitHub or GitLab repository, with changes from either side represented through commits and reviewable branches.",
-      "ref_type": "external",
-      "url": "https://gitbook.com/docs/integrations/git-sync"
-    },
-    {
-      "text": "Decap CMS Editorial Workflow turns browser edits into Git branches and pull requests with draft, review, and ready states; merging updates the repository, making companion-originated write-back reviewable.",
-      "ref_type": "external",
-      "url": "https://decapcms.org/docs/editorial-workflows/"
-    },
-    {
-      "text": "Backstage TechDocs builds repository documentation in CI and serves the resulting site in the catalog, supplying the artifact-to-companion half with explicit source ownership and rebuild history.",
-      "ref_type": "external",
-      "url": "https://backstage.io/docs/features/techdocs/architecture/"
-    },
-    {
-      "text": "Structurizr's versionable DSL produces multiple diagrams, documentation, and decision views from one architecture model, reducing internal drift among companion representations while keeping changes reviewable as text.",
-      "ref_type": "external",
-      "url": "https://docs.structurizr.com/"
-    },
-    {
-      "text": "GitHub Actions can trigger reconciliation on repository events or schedules and can require generated-view drift checks before merge, turning freshness from a promise into a repeatable workflow.",
-      "ref_type": "external",
-      "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows"
-    }
-  ]
+  "summary": "The pattern is a cross-tool operating loop assembled from repository triggers, generators, metadata checks, review workflows and write-back mechanisms.",
+  "items": []
 }

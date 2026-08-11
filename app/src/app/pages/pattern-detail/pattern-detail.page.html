@@ -146,20 +146,11 @@
 
           @if (hasContent(research()?.tools)) {
             <div class="section" id="implementation">
-              <h2>Tools and products in practice</h2>
+              <h2>Reference implementation</h2>
               @if (research()?.tools?.summary) { <p>{{ research()?.tools?.summary }}</p> }
               @if (research()?.tools?.items?.length) {
                 <ul>
-                  @for (it of research()!.tools!.items; track it.text) {
-                    <li>
-                      {{ it.text }}
-                      @if (referencedTool(it.ref_id); as relatedTool) {
-                        <span> <a [href]="relatedTool.url" target="_blank" rel="noopener">{{ relatedTool.name }} &nearr;</a></span>
-                      } @else if (it.url) {
-                        <span> <a [href]="it.url" target="_blank" rel="noopener">Product documentation &nearr;</a></span>
-                      }
-                    </li>
-                  }
+                  @for (it of research()!.tools!.items; track it.text) { <li>{{ it.text }}</li> }
                 </ul>
               }
             </div>
@@ -229,7 +220,7 @@
             <li><a href="#critique">Critical questioning</a></li>
             <li><a href="#counter">Counter-arguments</a></li>
             <li><a href="#extensions">Extensions</a></li>
-            @if (hasContent(research()?.tools)) { <li><a href="#implementation">Tools and products</a></li> }
+            @if (hasContent(research()?.tools)) { <li><a href="#implementation">Reference implementation</a></li> }
             @if (relatedTools().length)   { <li><a href="#tools">Tools</a></li> }
             @if (relatedSources().length) { <li><a href="#sources">Sources</a></li> }
             @if (relatedConcepts().length){ <li><a href="#concepts">Concepts</a></li> }

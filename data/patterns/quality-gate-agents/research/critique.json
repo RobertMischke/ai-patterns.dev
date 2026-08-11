@@ -1,22 +1,5 @@
 {
-  "stance": "mixed",
-  "summary": "Named gate agents can scale specialist checks and make standards visible, but their verdicts should be treated as fallible assessments joined with deterministic tests, provenance and escalation rules.",
-  "points": [
-    {
-      "text": "Specializing prompts, tools and evidence by testing, security, architecture or drift makes each gate narrower and more auditable than asking one general reviewer to judge everything.",
-      "severity": "note"
-    },
-    {
-      "text": "The 2026 conformance study demonstrates that explanation-heavy review can dramatically increase rejection of correct code; thresholds must therefore be calibrated with both false-positive and false-negative rates.",
-      "severity": "warning"
-    },
-    {
-      "text": "A structured verdict should cite files, rules and executable artifacts so another gate or a human can reproduce the claim; persuasive prose is not evidence.",
-      "severity": "warning"
-    },
-    {
-      "text": "Deterministic tests and analyzers should decide objective conditions, leaving agents to identify hypotheses, gaps and risk that require contextual judgment.",
-      "severity": "info"
-    }
-  ]
+  "stance": "unknown",
+  "summary": "",
+  "points": []
 }

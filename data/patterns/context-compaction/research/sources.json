@@ -1,25 +1,4 @@
 {
-  "summary": "Evidence is direct for long-context position failures and learned prompt compression, and adjacent for just-in-time repository retrieval. Studies show meaningful gains on selected NLP tasks, not that any generic conversation summary preserves all constraints in software work.",
-  "items": [
-    {
-      "text": "Lost in the Middle: How Language Models Use Long Contexts — Nelson F. Liu et al. (2024). TACL experiments found performance often highest when relevant information appears at the beginning or end and degraded when it appears in the middle, even for models marketed with long context windows. This directly undermines the assumption that dumping more context is harmless.",
-      "ref_type": "external",
-      "url": "https://aclanthology.org/2024.tacl-1.9/"
-    },
-    {
-      "text": "LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models — Huiqiang Jiang et al. (2023). EMNLP experiments report up to 20-times prompt compression with limited performance loss across four evaluated settings. This is direct compression evidence, but results depend on task, compressor, and downstream model.",
-      "ref_type": "external",
-      "url": "https://aclanthology.org/2023.emnlp-main.825/"
-    },
-    {
-      "text": "LongLLMLingua: Accelerating and Enhancing LLMs in Long Context Scenarios via Prompt Compression — Huiqiang Jiang et al. (2024). ACL experiments use question-aware compression and document reordering to improve selected long-context tasks while reducing cost and latency. It supports relevance-oriented compaction, not unconstrained summarization of decisions.",
-      "ref_type": "external",
-      "url": "https://aclanthology.org/2024.acl-long.91/"
-    },
-    {
-      "text": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks — Patrick Lewis et al. (2020). NeurIPS experiments show that retrieving external passages can improve several knowledge-intensive tasks and preserve provenance opportunities. This is adjacent evidence for just-in-time retrieval; repositories, code relations, and evolving work state were not studied.",
-      "ref_type": "external",
-      "url": "https://proceedings.neurips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

@@ -1,30 +1,4 @@
 {
-  "summary": "A companion app is assembled from documentation portals, model-as-code views, runtime traces, and decision browsers. The essential implementation feature is a generated, navigable view whose elements retain links to authoritative artifacts and freshness metadata.",
-  "items": [
-    {
-      "text": "Backstage TechDocs builds documentation from repository sources, commonly in CI, stores the generated site, and renders it inside the software catalog; this connects discoverable system pages to owned source repositories.",
-      "ref_type": "external",
-      "url": "https://backstage.io/docs/features/techdocs/architecture/"
-    },
-    {
-      "text": "Structurizr uses a versionable DSL to create a C4 software-architecture model and multiple diagrams, documentation, and decision views from that shared model, supporting consistent layered navigation.",
-      "ref_type": "external",
-      "url": "https://docs.structurizr.com/"
-    },
-    {
-      "text": "Docusaurus documentation versioning creates addressable snapshots while its static build preserves normal source-control review; a companion can label current and historical views rather than silently replacing them.",
-      "ref_type": "external",
-      "url": "https://docusaurus.io/docs/versioning"
-    },
-    {
-      "text": "Log4brains renders repository-local architecture decision records as a searchable static site with a chronological decision log and Git-derived metadata, exposing rationale alongside other companion views.",
-      "ref_type": "external",
-      "url": "https://github.com/thomvaill/log4brains"
-    },
-    {
-      "text": "Jaeger stores distributed traces and provides trace search and span visualizations; linking a companion's component view to live traces supplies runtime evidence rather than an architecture-only narrative.",
-      "ref_type": "external",
-      "url": "https://www.jaegertracing.io/docs/latest/architecture/"
-    }
-  ]
+  "summary": "A Companion App is an integration surface rather than a feature supplied by one tool; implementations may combine static-site generation, diagramming, graph storage, search and canvas components.",
+  "items": []
 }

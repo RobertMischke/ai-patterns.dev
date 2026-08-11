@@ -1,25 +1,4 @@
 {
-  "summary": "Extensions should make compaction hierarchical, source-linked, and testable against durable project state.",
-  "items": [
-    {
-      "text": "Maintain layered checkpoints: a tiny active frame, per-phase summaries, and immutable raw event history, each with stable IDs and supersession links.",
-      "ref_type": "pattern",
-      "ref_id": "decision-memory"
-    },
-    {
-      "text": "Seed the compact frame with repository entry points and retrieval keys rather than duplicated documentation, then fetch the smallest authoritative slice for the current step.",
-      "ref_type": "pattern",
-      "ref_id": "context-entry-points"
-    },
-    {
-      "text": "Run a periodic contradiction and constraint-recall report that compares the active frame with current code, decisions, tests, and unresolved work.",
-      "ref_type": "pattern",
-      "ref_id": "analysis-report"
-    },
-    {
-      "text": "Before a destructive or high-impact action, rehydrate the relevant raw requirements, approval, and safety checks even when the compact summary appears sufficient.",
-      "ref_type": "pattern",
-      "ref_id": "agent-fencing"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

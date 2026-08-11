@@ -1,25 +1,4 @@
 {
-  "summary": "Evidence is direct for plan-first prompting and repository-level planning but limited for the full governance claim: no controlled study was located showing that mandatory human plan approval before every code edit universally improves outcomes.",
-  "items": [
-    {
-      "text": "Wang and colleagues, in 'Plan-and-Solve Prompting: Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models' (ACL, 2023), evaluate ten datasets across arithmetic, commonsense, and symbolic reasoning and report consistent gains over zero-shot chain-of-thought for the studied GPT-3 setup. This supports separating planning from solving, but not software editing or human approval.",
-      "ref_type": "external",
-      "url": "https://aclanthology.org/2023.acl-long.147/"
-    },
-    {
-      "text": "Bairi and colleagues, in 'CodePlan: Repository-level Coding using LLMs and Planning' (2023 preprint), represent multi-file coding as an iterative planning problem and evaluate package migration and temporal repository edits. Planning improves repository-level task handling in those settings, while benchmark scope, model era, and automated evaluation limit claims about general development work.",
-      "ref_type": "external",
-      "url": "https://arxiv.org/abs/2309.12499"
-    },
-    {
-      "text": "Yao and colleagues, in 'ReAct: Synergizing Reasoning and Acting in Language Models' (ICLR, 2023), show that interleaving reasoning with actions lets models acquire information and adjust behavior on knowledge and interactive tasks. It is important counterevidence to rigid one-shot planning: execution can reveal facts that require replanning.",
-      "ref_type": "external",
-      "url": "https://openreview.net/forum?id=WE_vluYUL-X"
-    },
-    {
-      "text": "Barke, James, and Polikarpova, in 'Grounded Copilot: How Programmers Interact with Code-Generating Models' (2022), observe programmers using GitHub Copilot and identify acceleration and exploration interaction modes. This adjacent human study supports different oversight levels for well-specified versus exploratory work, but does not evaluate a formal plan gate.",
-      "ref_type": "external",
-      "url": "https://arxiv.org/abs/2206.15000"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

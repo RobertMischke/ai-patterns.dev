@@ -1,30 +1,4 @@
 {
-  "summary": "A practical analysis-report loop needs scheduled orchestration, connectors to engineering evidence, repeatable evaluators, and outputs that remain inspectable after the run. These tools cover parts of that chain rather than a turnkey implementation.",
-  "items": [
-    {
-      "text": "GitHub Actions can start workflows on schedules, pull requests, pushes, manual dispatch, or repository events, making the analysis job and its trigger policy reviewable in the same repository.",
-      "ref_type": "external",
-      "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows"
-    },
-    {
-      "text": "Arize Phoenix evaluator traces record inputs, outputs, evaluator decisions, and spans for experiments or production traces; the trace viewer supports evidence-linked analysis instead of an uninspectable aggregate score.",
-      "ref_type": "external",
-      "url": "https://arize.com/docs/phoenix/evaluation/llm-evals/evaluator-traces"
-    },
-    {
-      "text": "LangSmith Evaluation supports offline datasets, online evaluators, human annotation queues, and experiment comparison, providing repeatable quality evidence that a report job can query and summarize.",
-      "ref_type": "external",
-      "url": "https://www.langchain.com/langsmith/evaluation"
-    },
-    {
-      "text": "SonarQube Server's Web API exposes issues and measures for automation, allowing a report generator to cite the underlying quality findings rather than restating dashboard impressions.",
-      "ref_type": "external",
-      "url": "https://docs.sonarsource.com/sonarqube-server/extension-guide/web-api"
-    },
-    {
-      "text": "Dagster automation supports schedules and sensors that launch runs from time or external state changes, with run history and asset metadata available for a reproducible reporting pipeline.",
-      "ref_type": "external",
-      "url": "https://docs.dagster.io/guides/automate"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

@@ -1,18 +1,5 @@
 {
-  "stance": "mixed",
-  "summary": "Multi-agent decomposition adds lossy boundaries, coordination cost, correlated failures, and a larger security surface.",
-  "points": [
-    {
-      "text": "The orchestrator can be the weakest link: a bad decomposition or incomplete brief propagates to every specialist while no worker sees enough context to challenge the overall goal."
-    },
-    {
-      "text": "Summaries discard provenance and nuance. Repeated compression can turn uncertainty into fact and make later reviewers unable to reconstruct why a decision was made."
-    },
-    {
-      "text": "Agents using the same model, prompt conventions, or retrieval source have correlated blind spots; apparent consensus is not independent evidence."
-    },
-    {
-      "text": "Every handoff adds tokens, latency, failure states, and an injection channel. Many tasks are cheaper and more reliable as one bounded tool-using agent with checkpoints."
-    }
-  ]
+  "stance": "unknown",
+  "summary": "",
+  "points": []
 }

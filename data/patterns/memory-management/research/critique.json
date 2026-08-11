@@ -1,18 +1,18 @@
 {
   "stance": "supports",
-  "summary": "Memory works best as a governed evidence system: small addressable records, explicit provenance and successors, deterministic lookup, and observable maintenance.",
+  "summary": "The evidence supports Git-backed folders as the default storage mechanism, but storage does not settle the three management problems. Each needs its own practice and still has an unresolved boundary.",
   "points": [
     {
-      "text": "Stable filenames and compact records improve recall precision because an agent can retrieve one decision or event without injecting an entire chronological log into context."
+      "text": "Visibility emerges because retrieval can influence an action without entering the human-visible transcript. Show the memory path, excerpt, revision and reason for each recall, and provide a browsable view of the current index. What remains open is how much recall evidence to show before inspection itself becomes noise or exposes sensitive context.",
+      "severity": "warning"
     },
     {
-      "text": "Append-mostly history is valuable only when corrections are first-class. A newer record should identify what it supersedes, why it changed, and which scopes still depend on the older statement."
+      "text": "Organizedness degrades because every new fact, link and exception increases navigation cost, even when each file is well formed. Keep one durable assertion per file, use stable names and typed links, and validate that indexed targets and backlinks exist. What remains open is when to split, merge or reclassify memories without breaking references or teaching the agent a second taxonomy.",
+      "severity": "warning"
     },
     {
-      "text": "An index is operational metadata, not clerical garnish. Owners, validity intervals, sensitivity, status, and successor links enable cheap filtering before semantic retrieval."
-    },
-    {
-      "text": "Git improves provenance and review but does not solve recall: lexical search, structured metadata, optional embeddings, and benchmarked not-found behavior are still required."
+      "text": "Currency becomes difficult because a once-correct instruction remains readable and plausible after the surrounding system changes. Attach provenance and review dates, link corrections with explicit supersedes relationships, and test high-impact instructions against the current interface. What remains open is reliable staleness detection for facts whose invalidating change happens outside the repository.",
+      "severity": "blocker"
     }
   ]
 }

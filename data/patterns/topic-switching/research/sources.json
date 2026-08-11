@@ -1,25 +1,4 @@
 {
-  "summary": "Programming-interruption research documents resumption costs, while LLM context studies show that longer context is not uniformly usable. Neither directly identifies when a coding-agent conversation should be reused, compacted or reset, so local telemetry remains essential.",
-  "items": [
-    {
-      "text": "Parnin and Rugaber (ICPC 2009) studied resumption strategies across more than 10,000 programming sessions from 85 programmers and document the cues developers use after interruptions; it supports explicit checkpoints but predates coding agents.",
-      "ref_type": "external",
-      "url": "https://chrisparnin.me/pdf/parnin-icpc09.pdf"
-    },
-    {
-      "text": "Two Sides of the Same Coin (2018) studies developer task switching through survey evidence and distinguishes benefits from disruption costs, offering adjacent evidence for task-similarity-aware switching policy.",
-      "ref_type": "external",
-      "url": "https://opus.lib.uts.edu.au/bitstream/10453/132915/1/1805.05504.pdf"
-    },
-    {
-      "text": "Lost in the Middle (TACL 2024) shows that model use of relevant information varies with its position in long contexts; this supports monitoring context quality rather than assuming every retained token remains useful.",
-      "ref_type": "external",
-      "url": "https://aclanthology.org/2024.tacl-1.9/"
-    },
-    {
-      "text": "Programming by Chat (2026 preprint) analyzes 11,579 IDE sessions and provides recent descriptive evidence about conversational programming behavior; it is not a randomized comparison of reset policies.",
-      "ref_type": "external",
-      "url": "https://arxiv.org/abs/2604.00436"
-    }
-  ]
+  "summary": "The current evidence base is the first-hand operator observation recorded in the critique; TE repair-density telemetry is the proposed test and should replace intuition with local evidence.",
+  "items": []
 }

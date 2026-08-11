@@ -1,25 +1,4 @@
 {
-  "summary": "Several coding assistants now provide an explicit read-only planning phase and a user-controlled transition to editing, making the plan a reviewable permission boundary.",
-  "items": [
-    {
-      "text": "Cline separates Plan and Act modes: Plan can inspect the project, search, and discuss an approach, while Act enables file changes and commands after the user switches modes. The conversation preserves the approved direction across the transition.",
-      "ref_type": "external",
-      "url": "https://docs.cline.bot/core-workflows/plan-and-act"
-    },
-    {
-      "text": "Claude Code Plan mode restricts the agent to reading and exploration, then presents a plan that the user can refine, edit, or approve into a chosen execution permission mode. The tool boundary prevents source edits while planning rather than relying only on an instruction.",
-      "ref_type": "external",
-      "url": "https://code.claude.com/docs/en/permission-modes"
-    },
-    {
-      "text": "Cursor Plan mode researches the codebase, asks clarifying questions, and creates an implementation plan before the user starts building. Mode-specific tools and custom modes let teams separate read-only analysis from editing and command execution.",
-      "ref_type": "external",
-      "url": "https://docs.cursor.com/en/agent/modes"
-    },
-    {
-      "text": "Kiro Specs creates requirements, design, and implementation-task artifacts that users review and refine before opening a coding task or pull request. The persisted spec makes the plan reusable by later sessions and reviewers.",
-      "ref_type": "external",
-      "url": "https://kiro.dev/docs/web/specs/"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

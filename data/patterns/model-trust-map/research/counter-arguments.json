@@ -1,18 +1,5 @@
 {
-  "stance": "mixed",
-  "summary": "A detailed trust matrix can create administrative confidence while compound actions, stale evidence, and enforcement gaps remain.",
-  "points": [
-    {
-      "text": "The state space grows quickly across models, versions, tools, resources, tenants, and task classes. Unmaintained cells silently become permissive defaults or block legitimate work."
-    },
-    {
-      "text": "Safe-looking permissions can compose into harm: reading instructions, writing a configuration file, and triggering an otherwise approved job may together bypass an intended execution ban."
-    },
-    {
-      "text": "Content guardrails have false positives and false negatives, and indirect prompt injection can cross a permitted read channel into a permitted action. Enforcement must reason about provenance and data flow, not only action names."
-    },
-    {
-      "text": "Overly restrictive policies drive users toward shared credentials, manual copying, or unlogged side channels, reducing observability and sometimes increasing actual risk."
-    }
-  ]
+  "stance": "unknown",
+  "summary": "",
+  "points": []
 }

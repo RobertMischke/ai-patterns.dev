@@ -1,22 +1,5 @@
 {
-  "stance": "supports",
-  "summary": "Result-first review is a sound default because it centers the changed artifact and reproducible evidence, while preserving the transcript only as diagnostic provenance.",
-  "points": [
-    {
-      "text": "A useful packet starts with scope, final diff, checks, verdict and unresolved risk; this aligns with empirical review work showing that change understanding and context are the bottleneck.",
-      "severity": "info"
-    },
-    {
-      "text": "Structured locations, rule identifiers and fingerprints make findings deduplicable and traceable across runs, as demonstrated by SARIF-style reporting.",
-      "severity": "note"
-    },
-    {
-      "text": "Progressive disclosure should link every summary claim to raw test output, analyzer result or exact code hunk so compression does not erase auditability.",
-      "severity": "warning"
-    },
-    {
-      "text": "The transcript remains valuable when the result is surprising, evidence conflicts, or a reviewer must reconstruct tool choices; it should be retained, not treated as the primary interface.",
-      "severity": "note"
-    }
-  ]
+  "stance": "unknown",
+  "summary": "",
+  "points": []
 }

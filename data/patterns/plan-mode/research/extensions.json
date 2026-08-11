@@ -1,19 +1,4 @@
 {
-  "summary": "Extensions calibrate planning depth, make validation executable, and require approval only for meaningful deltas.",
-  "items": [
-    {
-      "text": "Use risk-adaptive planning: a short intent and check list for local reversible changes, and a full threat, migration, rollout, and recovery plan for consequential work."
-    },
-    {
-      "text": "Compile acceptance steps into executable checks where possible and attach their results to the plan, while keeping judgment-based criteria explicit."
-    },
-    {
-      "text": "Hash the inspected repository state and require a plan-delta review when relevant files, dependencies, assumptions, or requested scope change before execution."
-    },
-    {
-      "text": "Persist the approved plan as the task contract supplied to asynchronous agents and later artifact reviewers.",
-      "ref_type": "pattern",
-      "ref_id": "fire-track-review"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

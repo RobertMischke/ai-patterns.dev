@@ -1,25 +1,4 @@
 {
-  "summary": "Evidence strength: adjacent and standards-based. Cloud and AI risk frameworks directly require third-party risk governance, and empirical trust research identifies multiple provider factors, but no direct controlled study located tests AI task routing with separate model and provider trust maps.",
-  "items": [
-    {
-      "text": "NIST, Artificial Intelligence Risk Management Framework 1.0 Core (2023), explicitly calls for third-party AI, software, data and supply-chain risks to be documented, monitored and managed across Govern, Map and Manage functions. This directly supports a distinct provider-risk dimension, although the framework is normative guidance rather than an outcome study.",
-      "ref_type": "external",
-      "url": "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/"
-    },
-    {
-      "text": "Boyens et al. at NIST, SP 800-161 Rev. 1 Update 1: Cybersecurity Supply Chain Risk Management Practices (2022, updated 2024), details reduced visibility and control over acquired services and recommends risk-based supplier governance throughout the lifecycle. This is strong adjacent guidance for providers, not AI-model-specific empirical evidence.",
-      "ref_type": "external",
-      "url": "https://csrc.nist.gov/pubs/sp/800/161/r1/upd1/final"
-    },
-    {
-      "text": "Alhanahnah, Bertok and Tari, Trusting Cloud Service Providers: Trust Phases and a Taxonomy of Trust Factors (IEEE Cloud Computing, 2017), synthesized trust into phases and multiple technical and organizational factors rather than a single reputation score. The taxonomy is adjacent to AI providers and does not validate a particular routing policy.",
-      "ref_type": "external",
-      "url": "https://doi.org/10.1109/MCC.2017.20"
-    },
-    {
-      "text": "Alghaith, The Role of Trust in Cloud Service Providers on the Adoption of Cloud Computing in Saudi Arabia: An Empirical Investigation (Journal of Computer Science, 2023), found that reputation and SLA verification explained 82% of trust in its adoption model. It supports provider-specific factors but measures perceptions and adoption, not security incidents or agent-routing outcomes.",
-      "ref_type": "external",
-      "url": "https://doi.org/10.3844/jcssp.2023.1107.1123"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

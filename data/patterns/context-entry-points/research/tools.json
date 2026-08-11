@@ -1,30 +1,4 @@
 {
-  "summary": "Major coding assistants now recognize repository-wide and path-scoped instruction files, while code-intelligence tools retrieve local context. The concrete value is a small, verified route to authoritative workflows and code, not a large generic repository synopsis.",
-  "items": [
-    {
-      "text": "GitHub Copilot supports repository-wide copilot-instructions.md, path-specific instruction files, and nearest-scope AGENTS.md files; the documentation explicitly targets project understanding plus build, test, and validation guidance.",
-      "ref_type": "external",
-      "url": "https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions"
-    },
-    {
-      "text": "Claude Code loads project CLAUDE.md files and path-scoped rules at session start and can import linked files; its documentation recommends concise, specific instructions and distinguishes context from enforced policy.",
-      "ref_type": "external",
-      "url": "https://code.claude.com/docs/en/memory"
-    },
-    {
-      "text": "VS Code recognizes workspace custom instructions and file-pattern-scoped instructions, allowing module-specific conventions and workflow links to apply only when relevant files are being edited.",
-      "ref_type": "external",
-      "url": "https://code.visualstudio.com/docs/agent-customization/custom-instructions"
-    },
-    {
-      "text": "Sourcegraph Cody builds context through code search and code-graph signals and accepts explicit files, symbols, repositories, and selections, supporting an entry-point-first workflow followed by targeted retrieval.",
-      "ref_type": "external",
-      "url": "https://sourcegraph.com/docs/cody/core-concepts/context"
-    },
-    {
-      "text": "Backstage TechDocs places repository-built documentation beside catalog ownership and service metadata, making a stable module or service landing page discoverable without embedding all details in agent context.",
-      "ref_type": "external",
-      "url": "https://backstage.io/docs/features/techdocs/architecture/"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

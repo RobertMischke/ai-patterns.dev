@@ -1,25 +1,4 @@
 {
-  "summary": "Variants should separate orchestration, evidence production, verdict review and periodic recalibration.",
-  "items": [
-    {
-      "text": "Run gates as an explicit pipeline with fan-out for independent checks and a deterministic join policy.",
-      "ref_type": "pattern",
-      "ref_id": "agent-pipelines"
-    },
-    {
-      "text": "Normalize every gate into one result packet containing status, evidence, uncertainty and remediation.",
-      "ref_type": "pattern",
-      "ref_id": "review-result"
-    },
-    {
-      "text": "Require executable tests, analyzers or reproduction steps for claims that can block integration.",
-      "ref_type": "pattern",
-      "ref_id": "executable-safety-net"
-    },
-    {
-      "text": "Re-run gate standards over the whole system on a schedule to detect policy and baseline drift.",
-      "ref_type": "pattern",
-      "ref_id": "scheduled-quality-sweeps"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

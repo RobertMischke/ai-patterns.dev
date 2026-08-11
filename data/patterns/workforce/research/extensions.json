@@ -1,14 +1,4 @@
 {
-  "summary": "Manage agents as a measured portfolio of capabilities and authorities rather than a static organization chart.",
-  "items": [
-    {
-      "text": "Maintain a role card with allowed tools, model, budget, evidence requirements, escalation path and recent calibrated performance by task class."
-    },
-    {
-      "text": "Route first to the smallest topology likely to succeed; add specialists only when an uncertainty, dependency or independent check warrants them."
-    },
-    {
-      "text": "Run periodic ablations against single-agent and human-assisted baselines to retire roles whose coordination cost exceeds their measured contribution."
-    }
-  ]
+  "summary": "",
+  "items": []
 }

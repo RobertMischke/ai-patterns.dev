@@ -1,25 +1,4 @@
 {
-  "summary": "Research supports large cost variability and useful efficiency techniques, but token count is an imperfect proxy for work value. Hard ceilings are an operational control whose thresholds should be calibrated by task class.",
-  "items": [
-    {
-      "text": "How Do AI Agents Spend Your Money? (2026 preprint) reports very large token-cost variation across agentic coding configurations and finds that higher expenditure does not reliably imply higher task success; results are recent and await broader replication.",
-      "ref_type": "external",
-      "url": "https://arxiv.org/abs/2604.22750"
-    },
-    {
-      "text": "FrugalGPT (TMLR 2024) evaluates model cascades and reports major cost reductions on its tested tasks while retaining target accuracy, supporting routing before simply enlarging every budget.",
-      "ref_type": "external",
-      "url": "https://openreview.net/forum?id=cSimKw5p6R"
-    },
-    {
-      "text": "LLMLingua (EMNLP 2023) evaluates prompt compression and reports up to 20x compression with limited loss on studied datasets; compression is complementary to, not a substitute for, enforceable ceilings.",
-      "ref_type": "external",
-      "url": "https://aclanthology.org/2023.emnlp-main.825/"
-    },
-    {
-      "text": "Lost in the Middle (TACL 2024) shows that long-context models can use information unevenly depending on position, warning that paying for more context does not guarantee proportional utility.",
-      "ref_type": "external",
-      "url": "https://aclanthology.org/2024.tacl-1.9/"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

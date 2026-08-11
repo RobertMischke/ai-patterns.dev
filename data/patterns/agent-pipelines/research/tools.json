@@ -1,30 +1,4 @@
 {
-  "summary": "Current orchestration frameworks can encode roles, graph transitions, persistence, triggers, and checks as versioned code. The implementation feature to look for is an inspectable state machine, not merely a list of agent personas.",
-  "items": [
-    {
-      "text": "LangGraph's Graph API defines nodes, normal and conditional edges, entry points, and loops in code; compiled graphs expose an explicit execution topology that can be versioned and tested.",
-      "ref_type": "external",
-      "url": "https://docs.langchain.com/oss/python/langgraph/graph-api"
-    },
-    {
-      "text": "CrewAI Flows provide event-driven start and listener methods, structured state, routing, and persistence, allowing a repository to encode which role runs after which verified event.",
-      "ref_type": "external",
-      "url": "https://docs.crewai.com/en/concepts/flows"
-    },
-    {
-      "text": "Microsoft AutoGen GraphFlow represents sequential, parallel, conditional, and looping agent execution as a directed graph; its graph structure makes handoffs and termination paths explicit.",
-      "ref_type": "external",
-      "url": "https://microsoft.github.io/autogen/dev/user-guide/agentchat-user-guide/graph-flow.html"
-    },
-    {
-      "text": "Temporal Workflows persist event history and support retries, timers, signals, and deterministic replay, supplying durable control flow when an agent pipeline spans failures or long waits.",
-      "ref_type": "external",
-      "url": "https://docs.temporal.io/workflows"
-    },
-    {
-      "text": "GitHub Actions binds repository workflows to pull-request, push, schedule, manual, and external events, so an agent pipeline and its triggering conditions can be reviewed beside the code it changes.",
-      "ref_type": "external",
-      "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

@@ -1,22 +1,11 @@
 {
-  "stance": "supports",
-  "summary": "The pattern is credible when it buys capability only at the reasoning bottleneck and makes the handoff independently checkable. Model size should be selected from measured role performance, not equated with planner status.",
+  "stance": "mixed",
+  "summary": "Role splitting helps only when the capability difference outweighs the cost of hand-offs and review.",
   "points": [
     {
-      "text": "The plan artifact needs goals, assumptions, constraints, permitted actions, acceptance tests, and escalation conditions. A prose outline that the executor must reinterpret does not create real separation.",
-      "severity": "warning"
-    },
-    {
-      "text": "Evaluate planner accuracy, executor conformance, review recall, end-to-end success, latency, and cost separately. Aggregate task success cannot reveal which half of the pair is failing.",
-      "severity": "note"
-    },
-    {
-      "text": "The verifying model should receive primary evidence and acceptance criteria, not only the other model's narrative; otherwise shared framing errors pass through both stages.",
-      "severity": "warning"
-    },
-    {
-      "text": "Use the smallest model that clears role-specific thresholds and re-benchmark after model, prompt, tool, or task-distribution changes. Parameter count is an unstable proxy for capability.",
-      "severity": "note"
+      "text": "Compare split-role workflows with a single-model baseline for each task class before making them a default.",
+      "severity": "note",
+      "source_id": "s16"
     }
   ]
 }

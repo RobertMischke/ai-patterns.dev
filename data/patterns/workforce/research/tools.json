@@ -1,25 +1,4 @@
 {
-  "summary": "Multi-agent frameworks expose roles, handoffs and team topologies, while coding products add scoped subagents. Production workforce management still needs cost, permission and outcome controls around those primitives.",
-  "items": [
-    {
-      "text": "Microsoft AutoGen AgentChat Teams: selector, round-robin, swarm and graph-based teams provide explicit coordination topologies and termination conditions.",
-      "ref_type": "external",
-      "url": "https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/tutorial/teams.html"
-    },
-    {
-      "text": "Claude Code subagents: named specialists can carry separate prompts, tools, models and permissions for delegated work.",
-      "ref_type": "external",
-      "url": "https://code.claude.com/docs/en/agents"
-    },
-    {
-      "text": "OpenAI Codex subagents: reusable agent roles and parallel delegation provide a coding-specific substrate for a bounded workforce.",
-      "ref_type": "external",
-      "url": "https://learn.chatgpt.com/docs/agent-configuration/subagents"
-    },
-    {
-      "text": "CrewAI agents and crews: role, goal, tools, delegation and process configuration model an organization-like agent team.",
-      "ref_type": "external",
-      "url": "https://docs.crewai.com/en/concepts/agents"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

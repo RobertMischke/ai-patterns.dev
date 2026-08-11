@@ -1,18 +1,5 @@
 {
-  "stance": "mixed",
-  "summary": "Asynchronous execution can increase throughput while also creating review overload, stale work, and automation complacency.",
-  "points": [
-    {
-      "text": "Parallel agents can produce more diffs than humans can understand. The bottleneck moves from coding to review, encouraging shallow approval and weakening the very control the pattern is meant to provide."
-    },
-    {
-      "text": "Long-running tasks drift against a changing main branch, requirements, or dependency state. A polished artifact can be obsolete before review begins."
-    },
-    {
-      "text": "Green checks and fluent summaries can anchor reviewers. Tests may encode the agent's mistaken interpretation, omit important negative cases, or pass only in the agent's environment."
-    },
-    {
-      "text": "Review-after-completion is too late for irreversible external actions or a fundamentally wrong direction. Such tasks require constrained tools, staged approvals, or an approved plan before execution."
-    }
-  ]
+  "stance": "unknown",
+  "summary": "",
+  "points": []
 }

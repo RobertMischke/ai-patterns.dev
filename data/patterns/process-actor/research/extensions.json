@@ -1,17 +1,35 @@
 {
-  "summary": "Extensions add reconstructable history, safe effect mediation, policy gates, and replay-based validation.",
+  "summary": "The process actor is the execution contract that connects delegation, pipelines, review reaction, task intake and escalation.",
   "items": [
     {
-      "text": "Persist an append-only transition journal and derive current state as a projection, retaining actor, policy version, attempt, evidence, and reason for every accepted or rejected command."
+      "text": "Orchestrator / Subagent defines who delegates; Process Actor adds claim ownership, verdict and hand-off semantics to the delegated step.",
+      "ref_type": "pattern",
+      "ref_id": "orchestrator-subagent"
     },
     {
-      "text": "Route all consequential effects through an outbox or command gateway carrying process ID, attempt token, idempotency key, expected version, deadline, and compensation reference."
+      "text": "Council consumes typed findings and runs the accountable, budgeted reaction loop after a process-actor verdict.",
+      "ref_type": "pattern",
+      "ref_id": "council"
     },
     {
-      "text": "Attach policy-as-code guards to transitions and reserve human approval for risk-sensitive state changes such as external publication, production mutation, or non-compensable actions."
+      "text": "Agent Pipelines define the versioned chain of roles and gates in which process actors claim work.",
+      "ref_type": "pattern",
+      "ref_id": "agent-pipelines"
     },
     {
-      "text": "Replay recorded histories against new state-machine and policy versions in shadow mode to find stuck paths, invalid transitions, retry storms, and changed verdict semantics before rollout."
+      "text": "LLM-Mediated Task Creation turns human intent into the explicit objective and acceptance contract a process actor receives.",
+      "ref_type": "pattern",
+      "ref_id": "llm-mediated-task"
+    },
+    {
+      "text": "Decision-making above the code line depends on the complete process evidence emitted by every actor and hand-off.",
+      "ref_type": "concept",
+      "ref_id": "decision-making-above-the-code-line"
+    },
+    {
+      "text": "Escalation Cascade supplies bounded routing across accountable model and human actors when evidence says the current lane cannot finish safely.",
+      "ref_type": "pattern",
+      "ref_id": "escalation-cascade"
     }
   ]
 }

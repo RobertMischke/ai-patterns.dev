@@ -1,18 +1,5 @@
 {
-  "stance": "supports",
-  "summary": "Fast autonomous execution is defensible only when impact is bounded, evidence is observable, recovery is tested and approval occurs at a consequence-appropriate boundary.",
-  "points": [
-    {
-      "text": "Enforce filesystem, network, credential, spend and deployment limits outside the model; natural-language prohibitions are guidance, not rails.",
-      "severity": "blocker"
-    },
-    {
-      "text": "Default to reversible branches, disposable environments and idempotent operations, and test rollback before increasing autonomy.",
-      "severity": "blocker"
-    },
-    {
-      "text": "Record action provenance and surface compact review evidence at the merge or release gate so speed inside the sandbox does not overwhelm reviewers.",
-      "severity": "info"
-    }
-  ]
+  "stance": "unknown",
+  "summary": "",
+  "points": []
 }

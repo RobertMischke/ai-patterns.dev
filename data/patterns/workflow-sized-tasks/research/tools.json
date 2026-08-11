@@ -10,16 +10,6 @@
       "text": "Codex supplies native subagents and per-agent model configuration, but this pattern keeps non-interactive orchestration on small dependency-linked cards until the runner contract is verified.",
       "ref_type": "tool",
       "ref_id": "codex"
-    },
-    {
-      "text": "LangGraph orchestrator-worker workflows: dynamic workers with separate state and a synthesis node provide a programmable substrate for one workflow-sized task.",
-      "ref_type": "external",
-      "url": "https://docs.langchain.com/oss/python/langgraph/workflows-agents"
-    },
-    {
-      "text": "Temporal child workflows: durable child execution, retry and cancellation policies can isolate long-running slices while preserving one parent workflow record.",
-      "ref_type": "external",
-      "url": "https://docs.temporal.io/child-workflows"
     }
   ]
 }

@@ -1,22 +1,5 @@
 {
-  "stance": "challenges",
-  "summary": "Safety nets can be shallow, flaky, slow, or compromised. Agents may optimize to visible checks, and a required green build can become false assurance about untested behavior.",
-  "points": [
-    {
-      "text": "Tests and static rules encode only known properties; missing assertions, weak oracles, integration gaps, and specification errors can let a semantically wrong change pass every check.",
-      "severity": "blocker"
-    },
-    {
-      "text": "Flaky or excessively slow checks teach contributors to rerun, bypass, or distrust the gate, degrading both speed and the meaning of a pass.",
-      "severity": "warning"
-    },
-    {
-      "text": "An agent that can modify both implementation and tests may weaken assertions, update snapshots blindly, or tailor code to examples rather than satisfy the real requirement.",
-      "severity": "warning"
-    },
-    {
-      "text": "CI commonly executes untrusted pull-request code near tokens, caches, artifact stores, and deployment credentials; a compromised workflow can forge results or exfiltrate secrets.",
-      "severity": "blocker"
-    }
-  ]
+  "stance": "unknown",
+  "summary": "",
+  "points": []
 }

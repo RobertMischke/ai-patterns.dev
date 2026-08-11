@@ -1,30 +1,4 @@
 {
-  "summary": "Production frameworks now support threshold-based summarization, selective removal, and retrieval after compaction. The strongest implementations retain authoritative source pointers and recent raw evidence rather than trusting a free-form summary as memory.",
-  "items": [
-    {
-      "text": "Claude's context management can clear old tool results selectively and compact a long conversation into a structured summary when a token threshold is reached; the client can retain the full history outside the model's active context.",
-      "ref_type": "external",
-      "url": "https://platform.claude.com/docs/en/build-with-claude/context-editing"
-    },
-    {
-      "text": "LangChain SummarizationMiddleware automatically summarizes earlier messages near a token limit while preserving a configurable number of recent messages; ContextEditingMiddleware can instead remove stale tool outputs.",
-      "ref_type": "external",
-      "url": "https://docs.langchain.com/oss/python/langchain/middleware/built-in"
-    },
-    {
-      "text": "Microsoft Semantic Kernel chat-history reducers offer count-, token-, and summary-based reduction while preserving the system message and valid tool-call pairs, preventing malformed compacted histories.",
-      "ref_type": "external",
-      "url": "https://learn.microsoft.com/en-us/semantic-kernel/concepts/ai-services/chat-completion/chat-history"
-    },
-    {
-      "text": "VS Code Copilot automatically compacts long chat history and supplements it with explicit files, symbols, selections, and tool-derived workspace context, combining a small active frame with on-demand retrieval.",
-      "ref_type": "external",
-      "url": "https://code.visualstudio.com/docs/chat/copilot-chat-context"
-    },
-    {
-      "text": "Microsoft LLMLingua provides prompt-compression implementations, including LongLLMLingua's question-aware reordering and token reduction, for empirically testing compressed contexts rather than relying on prose summaries alone.",
-      "ref_type": "external",
-      "url": "https://github.com/microsoft/LLMLingua"
-    }
-  ]
+  "summary": "",
+  "items": []
 }

@@ -1,25 +1,4 @@
 {
-  "summary": "Durable workflow engines and agent protocols provide state, retries, leases, interrupts, and artifacts that can host a platform-owned process actor; model calls remain workers, not the source of truth.",
-  "items": [
-    {
-      "text": "Temporal persists workflow event history and deterministically replays workflow code after process or infrastructure failure. Activities isolate fallible side effects and support retry, timeout, heartbeat, cancellation, and idempotency patterns, giving a durable owner for process state.",
-      "ref_type": "external",
-      "url": "https://docs.temporal.io/"
-    },
-    {
-      "text": "Camunda service tasks create persistent jobs with a type, worker claim timeout, retry count, variables, completion, failure, and incident handling. BPMN gateways and user tasks keep transitions and approval gates in the process engine rather than in an LLM transcript.",
-      "ref_type": "external",
-      "url": "https://docs.camunda.io/docs/components/modeler/bpmn/service-tasks/"
-    },
-    {
-      "text": "LangGraph interrupts persist graph state, pause execution, and resume with external input; its documentation emphasizes durable checkpointers and idempotent side effects before an interrupt. This can implement typed waiting states and human verdict gates around agent work.",
-      "ref_type": "external",
-      "url": "https://docs.langchain.com/oss/python/langgraph/interrupts"
-    },
-    {
-      "text": "The Agent2Agent protocol defines stateful tasks, status and artifact update events, interrupted states such as input-required and auth-required, and immutable terminal states including completed, cancelled, rejected, and failed. Task and context identifiers support durable cross-agent handoffs.",
-      "ref_type": "external",
-      "url": "https://a2aproject.github.io/A2A/latest/topics/life-of-a-task/"
-    }
-  ]
+  "summary": "Reference implementation: the Agent Studio pipeline uses leased Runner claims; typed pipeline-step verdicts with evidence; a council reaction loop capped by a round budget; and escalation lanes as a context-bearing human-actor interface.",
+  "items": []
 }
