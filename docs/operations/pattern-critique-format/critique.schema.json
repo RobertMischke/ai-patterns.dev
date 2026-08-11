@@ -1,0 +1,373 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ai-patterns.dev/schemas/pattern-critique-v1.json",
+  "title": "AI-Patterns critique companion",
+  "description": "Normative proposal for a durable editorial critique companion. This dossier is decision-pending; the schema is not yet an implementation contract.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "pattern",
+    "patternRevision",
+    "entries"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "pattern": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "patternRevision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "algorithm",
+        "value"
+      ],
+      "properties": {
+        "algorithm": {
+          "enum": [
+            "sha256"
+          ]
+        },
+        "value": {
+          "type": "string",
+          "pattern": "^[A-Fa-f0-9]{64}$"
+        }
+      }
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/entry"
+      }
+    }
+  },
+  "$defs": {
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "claim",
+        "grounding",
+        "status",
+        "rating",
+        "anchor",
+        "targets",
+        "origin",
+        "createdAt"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^PC-[0-9]{4,}$"
+        },
+        "type": {
+          "enum": [
+            "question",
+            "counter-argument",
+            "extension",
+            "related-pattern"
+          ]
+        },
+        "claim": {
+          "type": "string",
+          "minLength": 1
+        },
+        "grounding": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/grounding"
+          }
+        },
+        "status": {
+          "enum": [
+            "open",
+            "addressed",
+            "absorbed",
+            "rejected"
+          ]
+        },
+        "rating": {
+          "$ref": "#/$defs/rating"
+        },
+        "anchor": {
+          "$ref": "#/$defs/anchor"
+        },
+        "targets": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          }
+        },
+        "origin": {
+          "$ref": "#/$defs/origin"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date"
+        },
+        "resolution": {
+          "$ref": "#/$defs/resolution"
+        },
+        "advisoryAssessments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/advisoryAssessment"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "addressed",
+                  "absorbed",
+                  "rejected"
+                ]
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "required": [
+              "resolution"
+            ]
+          }
+        }
+      ]
+    },
+    "grounding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "ref",
+        "summary"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "repository",
+            "external",
+            "observation",
+            "experiment"
+          ]
+        },
+        "ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "rating": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "relevance",
+        "strength",
+        "urgency",
+        "assessedBy",
+        "assessedAt",
+        "reviewAfter",
+        "validAgainst"
+      ],
+      "properties": {
+        "relevance": {
+          "enum": [
+            "adjacent",
+            "material",
+            "direct"
+          ]
+        },
+        "strength": {
+          "enum": [
+            "weak",
+            "plausible",
+            "compelling"
+          ]
+        },
+        "urgency": {
+          "enum": [
+            "later",
+            "next-revision",
+            "blocking"
+          ]
+        },
+        "assessedBy": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "id"
+          ],
+          "properties": {
+            "kind": {
+              "enum": [
+                "author",
+                "editor"
+              ]
+            },
+            "id": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "assessedAt": {
+          "type": "string",
+          "format": "date"
+        },
+        "reviewAfter": {
+          "type": "string",
+          "format": "date"
+        },
+        "validAgainst": {
+          "type": "string",
+          "pattern": "^[A-Fa-f0-9]{64}$"
+        }
+      }
+    },
+    "anchor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pointer",
+        "quote"
+      ],
+      "properties": {
+        "pointer": {
+          "type": "string",
+          "pattern": "^/"
+        },
+        "quote": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "origin": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "id"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "author",
+            "editor",
+            "reader",
+            "llm-seed"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "runRef": {
+          "type": "string"
+        }
+      }
+    },
+    "resolution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "rationale",
+        "decidedBy",
+        "decidedAt"
+      ],
+      "properties": {
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "decidedBy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "decidedAt": {
+          "type": "string",
+          "format": "date"
+        },
+        "revisionRef": {
+          "type": "string"
+        }
+      }
+    },
+    "advisoryAssessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sourceKind",
+        "sourceId",
+        "relevance",
+        "strength",
+        "urgency",
+        "assessedAt",
+        "advisory"
+      ],
+      "properties": {
+        "sourceKind": {
+          "enum": [
+            "reader",
+            "llm-judge"
+          ]
+        },
+        "sourceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "relevance": {
+          "enum": [
+            "adjacent",
+            "material",
+            "direct"
+          ]
+        },
+        "strength": {
+          "enum": [
+            "weak",
+            "plausible",
+            "compelling"
+          ]
+        },
+        "urgency": {
+          "enum": [
+            "later",
+            "next-revision",
+            "blocking"
+          ]
+        },
+        "assessedAt": {
+          "type": "string",
+          "format": "date"
+        },
+        "advisory": {
+          "const": true
+        },
+        "runRef": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

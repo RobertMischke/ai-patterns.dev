@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "artifactType": "dossier",
+  "title": "Pattern critique format and companion tooling",
+  "status": "decision-pending",
+  "phase": "decision-ready",
+  "sourceTaskKeys": [
+    "AIP-20"
+  ],
+  "updatedAt": "2026-08-11"
+}

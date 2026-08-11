@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 1,
+  "pattern": "sidecar-metadata",
+  "patternRevision": {
+    "algorithm": "sha256",
+    "value": "19A6554A920E69E8A9C31CF53DE77FE65FE26E48CAF285729357977E70BE2565"
+  },
+  "entries": [
+    {
+      "id": "PC-0040",
+      "type": "question",
+      "claim": "Which repository operations guarantee that an artifact and its sidecar move or copy together, and how is a broken pair detected?",
+      "grounding": [
+        {
+          "kind": "repository",
+          "ref": "data/patterns/sidecar-metadata/research/counter-arguments.json",
+          "summary": "The existing research notes that in-file metadata cannot be left behind by tools that are unaware of the sidecar convention."
+        }
+      ],
+      "status": "open",
+      "rating": {
+        "relevance": "direct",
+        "strength": "compelling",
+        "urgency": "blocking",
+        "assessedBy": {
+          "kind": "editor",
+          "id": "example-editor"
+        },
+        "assessedAt": "2026-08-11",
+        "reviewAfter": "2026-09-10",
+        "validAgainst": "19A6554A920E69E8A9C31CF53DE77FE65FE26E48CAF285729357977E70BE2565"
+      },
+      "anchor": {
+        "pointer": "/solution",
+        "quote": "Agents and tools discover companions with globs instead of a registry"
+      },
+      "targets": [
+        "sidecar-metadata"
+      ],
+      "origin": {
+        "kind": "editor",
+        "id": "example-editor"
+      },
+      "createdAt": "2026-08-11"
+    },
+    {
+      "id": "PC-0041",
+      "type": "counter-argument",
+      "claim": "Separate files improve visibility but weaken atomic portability: ordinary file moves, copies, downloads, and patches can silently omit the metadata.",
+      "grounding": [
+        {
+          "kind": "external",
+          "ref": "https://reuse.software/spec/",
+          "summary": "REUSE uses companion .license files for content that cannot carry comments, illustrating both the established convention and the need for sidecar-aware tooling."
+        },
+        {
+          "kind": "repository",
+          "ref": "data/patterns/sidecar-metadata/research/counter-arguments.json",
+          "summary": "The pattern research explicitly identifies accidental separation during moves or copies as a trade-off."
+        }
+      ],
+      "status": "addressed",
+      "rating": {
+        "relevance": "direct",
+        "strength": "compelling",
+        "urgency": "next-revision",
+        "assessedBy": {
+          "kind": "editor",
+          "id": "example-editor"
+        },
+        "assessedAt": "2026-08-11",
+        "reviewAfter": "2026-11-09",
+        "validAgainst": "19A6554A920E69E8A9C31CF53DE77FE65FE26E48CAF285729357977E70BE2565"
+      },
+      "anchor": {
+        "pointer": "/problem",
+        "quote": "The deciding force is visibility"
+      },
+      "targets": [
+        "sidecar-metadata",
+        "companion-app"
+      ],
+      "origin": {
+        "kind": "reader",
+        "id": "worked-example-reader"
+      },
+      "createdAt": "2026-08-11",
+      "resolution": {
+        "rationale": "The pattern already states that native in-file annotations win for small metadata and that drift must be surfaced. The next revision should make move/copy safety an explicit adoption precondition.",
+        "decidedBy": "example-editor",
+        "decidedAt": "2026-08-11"
+      },
+      "advisoryAssessments": [
+        {
+          "sourceKind": "llm-judge",
+          "sourceId": "critique-round-example",
+          "relevance": "direct",
+          "strength": "plausible",
+          "urgency": "next-revision",
+          "assessedAt": "2026-08-11",
+          "advisory": true,
+          "runRef": "illustrative-only"
+        }
+      ]
+    },
+    {
+      "id": "PC-0042",
+      "type": "extension",
+      "claim": "Store a content fingerprint and review date in every rich sidecar, then derive stale-companion and fleet-search views from repository-local files.",
+      "grounding": [
+        {
+          "kind": "repository",
+          "ref": "data/patterns/sidecar-metadata/pattern.json#/solution",
+          "summary": "The current solution calls for content fingerprints, review-age fields, invalidation on content change, and derived caches rather than a distant source of truth."
+        }
+      ],
+      "status": "absorbed",
+      "rating": {
+        "relevance": "direct",
+        "strength": "compelling",
+        "urgency": "next-revision",
+        "assessedBy": {
+          "kind": "author",
+          "id": "example-author"
+        },
+        "assessedAt": "2026-08-11",
+        "reviewAfter": "2027-02-07",
+        "validAgainst": "19A6554A920E69E8A9C31CF53DE77FE65FE26E48CAF285729357977E70BE2565"
+      },
+      "anchor": {
+        "pointer": "/solution",
+        "quote": "store a content fingerprint plus review/age fields"
+      },
+      "targets": [
+        "sidecar-metadata",
+        "on-the-fly-generated-uis"
+      ],
+      "origin": {
+        "kind": "author",
+        "id": "example-author"
+      },
+      "createdAt": "2026-08-11",
+      "resolution": {
+        "rationale": "Absorbed into the solution as fingerprint invalidation, review aging, and derived-cache guidance.",
+        "decidedBy": "example-author",
+        "decidedAt": "2026-08-11",
+        "revisionRef": "data/patterns/sidecar-metadata/pattern.json#/solution"
+      }
+    },
+    {
+      "id": "PC-0043",
+      "type": "related-pattern",
+      "claim": "Decision Memory is a necessary companion when a sidecar stores lifecycle state: the sidecar records current state, while the decision record preserves why that state changed.",
+      "grounding": [
+        {
+          "kind": "repository",
+          "ref": "data/patterns/decision-memory/pattern.json",
+          "summary": "Decision Memory preserves decisions and rationale, complementing Sidecar Metadata's focus on visible structured state."
+        }
+      ],
+      "status": "addressed",
+      "rating": {
+        "relevance": "material",
+        "strength": "plausible",
+        "urgency": "later",
+        "assessedBy": {
+          "kind": "editor",
+          "id": "example-editor"
+        },
+        "assessedAt": "2026-08-11",
+        "reviewAfter": "2027-02-07",
+        "validAgainst": "19A6554A920E69E8A9C31CF53DE77FE65FE26E48CAF285729357977E70BE2565"
+      },
+      "anchor": {
+        "pointer": "/solution",
+        "quote": "preserves rationale alongside decision-memory"
+      },
+      "targets": [
+        "sidecar-metadata",
+        "decision-memory"
+      ],
+      "origin": {
+        "kind": "editor",
+        "id": "example-editor"
+      },
+      "createdAt": "2026-08-11",
+      "resolution": {
+        "rationale": "The solution already names Decision Memory and now the critique records the division of responsibility explicitly.",
+        "decidedBy": "example-editor",
+        "decidedAt": "2026-08-11",
+        "revisionRef": "data/patterns/sidecar-metadata/pattern.json#/solution"
+      }
+    }
+  ]
+}

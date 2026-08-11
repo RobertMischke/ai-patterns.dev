@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Decision-ready dossier for a file-first pattern critique format and its companion edit-mode tooling.">
+  <title>Pattern critique format and companion tooling · AI-Patterns dossier</title>
+  <style>
+    :root {
+      --page: #f4f1ea;
+      --surface: #fffdf8;
+      --surface-muted: #ece7dc;
+      --ink: #202522;
+      --ink-soft: #59615c;
+      --line: #d8d1c3;
+      --accent: #286a62;
+      --accent-soft: #dcece7;
+      --amber: #8b5e1a;
+      --amber-soft: #f5e9ce;
+      --rose: #8b4545;
+      --rose-soft: #f3dfdc;
+      --blue: #3c607c;
+      --blue-soft: #e1ebf2;
+      --shadow: 0 1.2rem 3rem rgba(39, 43, 39, .08);
+      --radius-sm: .45rem;
+      --radius-md: .9rem;
+      --radius-lg: 1.35rem;
+      --space-1: .35rem;
+      --space-2: .65rem;
+      --space-3: 1rem;
+      --space-4: 1.5rem;
+      --space-5: 2.25rem;
+      --space-6: 3.5rem;
+      --measure: 76rem;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.62;
+    }
+
+    a { color: var(--accent); text-underline-offset: .18em; }
+    a:hover { text-decoration-thickness: .13em; }
+
+    h1, h2, h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 500;
+      line-height: 1.14;
+      letter-spacing: -.018em;
+      text-wrap: balance;
+    }
+
+    h1 { margin: 0 0 var(--space-3); font-size: clamp(2.4rem, 6vw, 5.5rem); }
+    h2 { margin: 0 0 var(--space-4); font-size: clamp(1.8rem, 3vw, 2.7rem); }
+    h3 { margin: 0 0 var(--space-2); font-size: 1.35rem; }
+    p { margin: 0 0 var(--space-3); }
+    ul, ol { margin: 0 0 var(--space-3); padding-left: 1.3rem; }
+    li + li { margin-top: var(--space-1); }
+
+    code, pre {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    }
+
+    code {
+      border-radius: var(--radius-sm);
+      background: var(--surface-muted);
+      padding: .12em .38em;
+      font-size: .9em;
+    }
+
+    pre {
+      overflow: auto;
+      margin: var(--space-3) 0 0;
+      border: .0625rem solid var(--line);
+      border-radius: var(--radius-md);
+      background: #242925;
+      color: #f5f1e8;
+      padding: var(--space-4);
+      font-size: .84rem;
+      line-height: 1.55;
+    }
+
+    pre code { background: transparent; padding: 0; }
+
+    .shell { width: min(calc(100% - 2rem), var(--measure)); margin-inline: auto; }
+
+    .hero {
+      padding: var(--space-6) 0 var(--space-5);
+      border-bottom: .0625rem solid var(--line);
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: .76rem;
+      font-weight: 750;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .lede { max-width: 56rem; color: var(--ink-soft); font-size: 1.15rem; }
+
+    .badges { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-4); }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-1);
+      border: .0625rem solid var(--line);
+      border-radius: 999rem;
+      background: var(--surface);
+      padding: .35rem .72rem;
+      color: var(--ink-soft);
+      font-size: .77rem;
+      font-weight: 700;
+      letter-spacing: .035em;
+      text-transform: uppercase;
+    }
+
+    .badge.decision { border-color: #dfc489; background: var(--amber-soft); color: var(--amber); }
+    .badge.ready { border-color: #a7cec3; background: var(--accent-soft); color: var(--accent); }
+
+    .toc {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+      gap: var(--space-2);
+      margin-top: var(--space-5);
+    }
+
+    .toc a {
+      border-top: .0625rem solid var(--line);
+      padding-top: var(--space-2);
+      color: var(--ink-soft);
+      font-size: .86rem;
+      text-decoration: none;
+    }
+
+    main { padding: var(--space-5) 0 var(--space-6); }
+
+    section { scroll-margin-top: var(--space-3); padding: var(--space-5) 0; border-bottom: .0625rem solid var(--line); }
+
+    .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); }
+
+    .card {
+      border: .0625rem solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      padding: var(--space-4);
+    }
+
+    .card > :last-child { margin-bottom: 0; }
+    .callout { border-left: .28rem solid var(--accent); box-shadow: var(--shadow); }
+    .callout.amber { border-left-color: var(--amber); }
+
+    .kicker {
+      margin-bottom: var(--space-2);
+      color: var(--accent);
+      font-size: .73rem;
+      font-weight: 800;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    .decision-line { font-family: Georgia, "Times New Roman", serif; font-size: 1.35rem; line-height: 1.42; }
+    .muted { color: var(--ink-soft); }
+
+    .table-wrap { overflow-x: auto; border: .0625rem solid var(--line); border-radius: var(--radius-md); background: var(--surface); }
+
+    table { width: 100%; border-collapse: collapse; font-size: .91rem; }
+    th, td { padding: .85rem 1rem; border-bottom: .0625rem solid var(--line); text-align: left; vertical-align: top; }
+    th { background: var(--surface-muted); color: var(--ink-soft); font-size: .74rem; letter-spacing: .06em; text-transform: uppercase; }
+    tr:last-child td { border-bottom: 0; }
+
+    .pill {
+      display: inline-block;
+      border-radius: 999rem;
+      padding: .15rem .55rem;
+      font-size: .72rem;
+      font-weight: 750;
+      white-space: nowrap;
+    }
+
+    .pill.question { background: var(--blue-soft); color: var(--blue); }
+    .pill.counter { background: var(--rose-soft); color: var(--rose); }
+    .pill.extension { background: var(--accent-soft); color: var(--accent); }
+    .pill.related { background: var(--amber-soft); color: var(--amber); }
+
+    .axis { border-top: .2rem solid var(--accent); }
+    .axis:nth-child(2) { border-top-color: var(--rose); }
+    .axis:nth-child(3) { border-top-color: var(--amber); }
+
+    .sequence {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: var(--space-2);
+      counter-reset: loop;
+    }
+
+    .sequence > div {
+      position: relative;
+      min-height: 9rem;
+      border: .0625rem solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      padding: var(--space-3);
+      counter-increment: loop;
+    }
+
+    .sequence > div::before {
+      content: counter(loop, decimal-leading-zero);
+      display: block;
+      margin-bottom: var(--space-2);
+      color: var(--accent);
+      font-size: .7rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+    }
+
+    .sequence strong { display: block; margin-bottom: var(--space-1); }
+
+    figure { margin: var(--space-4) 0 0; }
+
+    .mockup-frame {
+      overflow: hidden;
+      border: .0625rem solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .mockup-frame svg { display: block; width: 100%; height: auto; }
+    figcaption { margin-top: var(--space-2); color: var(--ink-soft); font-size: .82rem; }
+
+    .entry { position: relative; padding-left: var(--space-4); }
+    .entry + .entry { margin-top: var(--space-4); padding-top: var(--space-4); border-top: .0625rem solid var(--line); }
+    .entry::before { content: ""; position: absolute; left: 0; top: .48rem; width: .6rem; height: .6rem; border-radius: 50%; background: var(--accent); }
+    .entry.counter::before { background: var(--rose); }
+    .entry.related::before { background: var(--amber); }
+    .entry.question::before { background: var(--blue); }
+
+    .entry-meta { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-2); }
+
+    .rating-row { display: flex; flex-wrap: wrap; gap: var(--space-1); color: var(--ink-soft); font-size: .76rem; }
+    .rating-row span { border: .0625rem solid var(--line); border-radius: var(--radius-sm); padding: .18rem .45rem; }
+
+    .option-recommended { background: linear-gradient(145deg, var(--surface), var(--accent-soft)); }
+
+    .footnote { font-size: .82rem; color: var(--ink-soft); }
+
+    footer { padding: var(--space-5) 0 var(--space-6); color: var(--ink-soft); font-size: .84rem; }
+
+    @media (max-width: 52rem) {
+      .grid-2, .grid-3, .sequence { grid-template-columns: 1fr; }
+      .sequence > div { min-height: auto; }
+      h1 { font-size: 2.55rem; }
+    }
+
+    @media print {
+      body { background: white; }
+      .shell { width: 100%; }
+      .card, .mockup-frame, .table-wrap { box-shadow: none; break-inside: avoid; }
+      a { color: inherit; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="shell">
+      <div class="eyebrow">AI-Patterns · concept dossier · AIP-20</div>
+      <h1>Pattern critique as a first-class companion</h1>
+      <p class="lede">A file-first format and a focused editing surface for keeping questions, counter-arguments, extensions, and relationships visible beside every pattern—without turning opinion into a popularity score.</p>
+      <div class="badges" aria-label="Dossier state">
+        <span class="badge decision">Decision pending</span>
+        <span class="badge ready">Decision ready</span>
+        <span class="badge">Schema v1 proposal</span>
+        <span class="badge">Documentation only</span>
+      </div>
+      <nav class="toc" aria-label="Dossier sections">
+        <a href="#decision">01 · Decision</a>
+        <a href="#format">02 · Format</a>
+        <a href="#rating">03 · Rating</a>
+        <a href="#edit-mode">04 · Edit mode</a>
+        <a href="#example">05 · Worked example</a>
+        <a href="#extensions">06 · Extensions</a>
+        <a href="#tooling">07 · Tooling</a>
+        <a href="#slices">08 · Slice plan</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section id="decision">
+      <div class="grid-2">
+        <div>
+          <div class="eyebrow">Recommendation</div>
+          <h2>Keep critique close, structured, and editorial</h2>
+        </div>
+        <div class="card callout">
+          <div class="kicker">Proposed decision</div>
+          <p class="decision-line">Adopt <code>data/patterns/&lt;slug&gt;/critique.json</code> as the canonical critique companion, render it statically, and add a local split-view editor only after the format has survived hand-authored use.</p>
+          <p class="muted">Use three named rating axes. A human editor owns the canonical rating; readers and LLM judges provide separately visible advisory assessments.</p>
+        </div>
+      </div>
+
+      <div class="table-wrap" style="margin-top: var(--space-4)">
+        <table>
+          <thead><tr><th>Decision</th><th>Recommendation</th><th>Why</th></tr></thead>
+          <tbody>
+            <tr><td>Source of truth</td><td>One JSON sidecar per pattern</td><td>Typed, diffable, schema-validatable, and native to the existing data register.</td></tr>
+            <tr><td>Rating</td><td>Relevance × strength × urgency</td><td>Separates three different editorial questions and avoids a false “4.3/5” precision.</td></tr>
+            <tr><td>Authority</td><td>Named author or editor</td><td>Preserves accountability. Reader and model assessments remain evidence, not votes that silently change the register.</td></tr>
+            <tr><td>First interface</td><td>Static reading view</td><td>Proves usefulness and information architecture before an editing stack is introduced.</td></tr>
+            <tr><td>Editing interface</td><td>Small local split-view editor</td><td>Writes the same sidecar, requires no hosted mutation service, and fits a git-native workflow.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="format">
+      <div class="eyebrow">Format first</div>
+      <h2>A durable editorial record, not another research summary</h2>
+      <p>The repository already keeps research-stage files such as <code>research/critique.json</code> and <code>research/counter-arguments.json</code>. Those synthesize source material while a pattern is authored. The proposed top-level <code>critique.json</code> has a different job: it is the long-lived discussion and resolution record after publication. Migration should curate research points into durable entries, never copy them wholesale.</p>
+
+      <div class="grid-3" style="margin-top: var(--space-4)">
+        <div class="card">
+          <div class="kicker">Locality</div>
+          <h3>One companion</h3>
+          <p><code>data/patterns/&lt;slug&gt;/critique.json</code> travels with <code>pattern.json</code>. A build scans companions and derives all indexes.</p>
+        </div>
+        <div class="card">
+          <div class="kicker">Identity</div>
+          <h3>Stable entries</h3>
+          <p>Every entry gets a repository-wide <code>PC-nnnn</code> ID. Anchors may drift; IDs, history, and links remain stable.</p>
+        </div>
+        <div class="card">
+          <div class="kicker">Freshness</div>
+          <h3>Revision-bound</h3>
+          <p>The companion records the pattern fingerprint; each rating says which fingerprint it assessed and when to review it.</p>
+        </div>
+      </div>
+
+      <h3 style="margin-top: var(--space-5)">Required entry contract</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Field</th><th>Meaning</th><th>Rule</th></tr></thead>
+          <tbody>
+            <tr><td><code>id</code></td><td>Stable critique identity</td><td>Repository-wide identifier; do not derive it from mutable prose.</td></tr>
+            <tr><td><code>type</code></td><td>Editorial intent</td><td><code>question</code>, <code>counter-argument</code>, <code>extension</code>, or <code>related-pattern</code>.</td></tr>
+            <tr><td><code>claim</code></td><td>One contestable statement</td><td>Keep atomic enough to accept, answer, absorb, or reject independently.</td></tr>
+            <tr><td><code>grounding[]</code></td><td>Why the entry deserves attention</td><td>At least one repository reference, external source, observation, or experiment; include a short relevance summary.</td></tr>
+            <tr><td><code>status</code></td><td>Editorial disposition</td><td><code>open</code>, <code>addressed</code>, <code>absorbed</code>, or <code>rejected</code>. Terminal dispositions require a resolution.</td></tr>
+            <tr><td><code>rating</code></td><td>Current editorial triage</td><td>Three named axes, a human assessor, assessment date, review date, and content fingerprint.</td></tr>
+            <tr><td><code>anchor</code></td><td>Where it applies</td><td>JSON Pointer plus a short quote. The pointer enables tooling; the quote makes drift understandable.</td></tr>
+            <tr><td><code>targets[]</code></td><td>Patterns affected</td><td>Includes the companion’s own slug and may name other patterns for reuse.</td></tr>
+            <tr><td><code>origin</code></td><td>Provenance</td><td>Author, editor, reader, or LLM seed; model-seeded entries retain a run reference.</td></tr>
+            <tr><td><code>resolution</code></td><td>Why the status changed</td><td>Required for addressed, absorbed, or rejected. Absorbed entries should point to the revision.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid-2" style="margin-top: var(--space-4)">
+        <div class="card">
+          <h3>Status semantics</h3>
+          <ul>
+            <li><strong>Open:</strong> material and unresolved; not necessarily correct.</li>
+            <li><strong>Addressed:</strong> the pattern now answers or bounds it without adopting its proposal.</li>
+            <li><strong>Absorbed:</strong> the critique changed the pattern; preserve the entry as provenance.</li>
+            <li><strong>Rejected:</strong> an accountable editor declined it with reasons. Rejected does not mean disproven.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Normative artifacts</h3>
+          <p><a href="critique.schema.json">critique.schema.json</a> contains the proposed v1 contract. <a href="sidecar-metadata.example.critique.json">sidecar-metadata.example.critique.json</a> is a schema-shaped worked example against the real P-40 pattern.</p>
+          <p class="footnote">Both are dossier artifacts while the decision remains pending. Adoption should move the accepted schema into the repository’s normal schema location and add validation to the existing data build.</p>
+        </div>
+      </div>
+
+      <pre aria-label="Compact critique entry example"><code>{
+  "id": "PC-0041",
+  "type": "counter-argument",
+  "claim": "Separate files improve visibility but weaken atomic portability.",
+  "grounding": [{ "kind": "repository", "ref": "…", "summary": "…" }],
+  "status": "addressed",
+  "rating": {
+    "relevance": "direct",
+    "strength": "compelling",
+    "urgency": "next-revision",
+    "assessedBy": { "kind": "editor", "id": "example-editor" },
+    "assessedAt": "2026-08-11",
+    "reviewAfter": "2026-11-09",
+    "validAgainst": "19A655…BE2565"
+  },
+  "anchor": { "pointer": "/problem", "quote": "The deciding force is visibility" },
+  "targets": ["sidecar-metadata", "companion-app"],
+  "origin": { "kind": "reader", "id": "worked-example-reader" },
+  "createdAt": "2026-08-11",
+  "resolution": { "rationale": "…", "decidedBy": "…", "decidedAt": "…" }
+}</code></pre>
+    </section>
+
+    <section id="rating">
+      <div class="eyebrow">Rating model</div>
+      <h2>Three questions, three words, no arithmetic</h2>
+      <p>A rating is triage, not truth. The recommended model asks whether the critique is about the pattern, whether its reasoning holds up, and what delay costs. These axes must never be summed or averaged: <em>direct + weak + blocking</em> conveys a very different editorial situation from <em>direct + compelling + later</em>.</p>
+
+      <div class="grid-3" style="margin-top: var(--space-4)">
+        <div class="card axis">
+          <div class="kicker">Relevance</div>
+          <h3>Does it bear on the claim?</h3>
+          <p><strong>Adjacent</strong> · useful context<br><strong>Material</strong> · changes application or boundary<br><strong>Direct</strong> · attacks or extends the central claim</p>
+        </div>
+        <div class="card axis">
+          <div class="kicker">Strength</div>
+          <h3>How well is it supported?</h3>
+          <p><strong>Weak</strong> · assertion or poor fit<br><strong>Plausible</strong> · coherent with some grounding<br><strong>Compelling</strong> · strong evidence and reasoning</p>
+        </div>
+        <div class="card axis">
+          <div class="kicker">Urgency</div>
+          <h3>When must it affect revision?</h3>
+          <p><strong>Later</strong> · backlog safely<br><strong>Next revision</strong> · resolve before material expansion<br><strong>Blocking</strong> · publication or use risks misleading readers</p>
+        </div>
+      </div>
+
+      <div class="grid-2" style="margin-top: var(--space-4)">
+        <div class="card">
+          <h3>Who may rate?</h3>
+          <p><strong>Canonical rating:</strong> the named pattern author or an accountable editor. They own the disposition and can explain it in review.</p>
+          <p><strong>Readers:</strong> submit their own triplets and reasons as advisory assessments. The interface may summarize distributions, but a crowd average must not overwrite the canonical rating.</p>
+          <p><strong>LLM judges:</strong> advisory only, always labeled with run provenance. Models may challenge ratings or surface disagreement; they may not close an entry or determine its public priority.</p>
+        </div>
+        <div class="card">
+          <h3>How ratings age</h3>
+          <ul>
+            <li>Mark a rating <strong>stale immediately</strong> when <code>validAgainst</code> no longer matches the pattern fingerprint.</li>
+            <li>Review blocking ratings within 30 days, next-revision ratings within 90 days, and later ratings within 180 days.</li>
+            <li>A terminal status does not erase the rating; it records the pressure that shaped the decision.</li>
+            <li>Re-rating updates the assessment fields in git history. It does not rewrite the original claim or resolution.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 style="margin-top: var(--space-5)">Alternatives considered</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Model</th><th>Benefit</th><th>Failure mode</th><th>Disposition</th></tr></thead>
+          <tbody>
+            <tr><td>Single 1–5 score</td><td>Compact and sortable</td><td>Conflates relevance, evidence, and urgency; “4” has no stable meaning.</td><td>Reject</td></tr>
+            <tr><td>Up/down reader votes</td><td>Low contribution friction</td><td>Measures audience reaction and visibility, not argument quality; susceptible to brigading.</td><td>Use only as a separate signal, if at all</td></tr>
+            <tr><td>Confidence probability</td><td>Useful for calibrated forecasts</td><td>Most critique is not a resolvable binary prediction; decimals create fake precision.</td><td>Reserve for explicit forecasts</td></tr>
+            <tr><td>Freeform editorial label</td><td>Nuanced</td><td>Hard to filter and inconsistent between patterns.</td><td>Keep nuance in rationale, not the rating</td></tr>
+            <tr><td>Three ordinal axes</td><td>Readable, sortable, honest about uncertainty</td><td>Requires brief rubric training and human judgment.</td><td><strong>Recommend</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="edit-mode">
+      <div class="eyebrow">Edit-mode UX</div>
+      <h2>The argument stays beside the sentence it challenges</h2>
+      <p>Desktop uses a synchronized split view: pattern fields on the left, filtered critique on the right, with a thin anchor rail connecting both. Narrow screens switch to margin-note markers that open a critique drawer. The default reader view remains calm; edit mode is deliberate and local.</p>
+
+      <figure>
+        <div class="mockup-frame">
+          <svg viewBox="0 0 1200 690" role="img" aria-labelledby="mock-title mock-desc" xmlns="http://www.w3.org/2000/svg">
+            <title id="mock-title">Split-view mockup for editing Sidecar Metadata and its critique</title>
+            <desc id="mock-desc">A left pane contains the pattern text. A right pane contains filter controls and critique cards. One counter-argument is linked to highlighted pattern text, and an absorb action points into a revision preview.</desc>
+            <defs>
+              <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#26322f" flood-opacity=".10"/>
+              </filter>
+            </defs>
+            <rect width="1200" height="690" fill="#f4f1ea"/>
+            <rect x="24" y="22" width="1152" height="646" rx="18" fill="#fffdf8" stroke="#d8d1c3" filter="url(#shadow)"/>
+            <rect x="24" y="22" width="1152" height="64" rx="18" fill="#202522"/>
+            <rect x="24" y="66" width="1152" height="20" fill="#202522"/>
+            <circle cx="54" cy="54" r="7" fill="#f0b7a8"/>
+            <circle cx="78" cy="54" r="7" fill="#e7cf82"/>
+            <circle cx="102" cy="54" r="7" fill="#92c7b5"/>
+            <text x="136" y="60" fill="#f6f2e8" font-family="system-ui, sans-serif" font-size="17" font-weight="650">Sidecar Metadata</text>
+            <rect x="995" y="40" width="152" height="30" rx="15" fill="#dcece7"/>
+            <text x="1071" y="60" text-anchor="middle" fill="#286a62" font-family="system-ui, sans-serif" font-size="12" font-weight="700">EDIT CRITIQUE</text>
+
+            <rect x="24" y="86" width="670" height="582" fill="#fffdf8"/>
+            <rect x="694" y="86" width="482" height="582" fill="#f8f6f0"/>
+            <line x1="694" y1="86" x2="694" y2="668" stroke="#d8d1c3"/>
+
+            <text x="62" y="129" fill="#286a62" font-family="system-ui, sans-serif" font-size="11" font-weight="800" letter-spacing="1.5">PATTERN · P-40</text>
+            <text x="62" y="167" fill="#202522" font-family="Georgia, serif" font-size="30">Sidecar Metadata</text>
+            <text x="62" y="198" fill="#59615c" font-family="system-ui, sans-serif" font-size="14">Put rich artifact metadata in predictably named companion files…</text>
+
+            <text x="62" y="245" fill="#202522" font-family="Georgia, serif" font-size="19">Problem</text>
+            <text x="62" y="276" fill="#59615c" font-family="system-ui, sans-serif" font-size="13">An external registry can query across a fleet, but it is invisible at the file,</text>
+            <text x="62" y="298" fill="#59615c" font-family="system-ui, sans-serif" font-size="13">separates history and permissions from the artifact, and quietly rots.</text>
+            <rect x="54" y="316" width="600" height="56" rx="8" fill="#f3dfdc"/>
+            <rect x="54" y="316" width="4" height="56" rx="2" fill="#8b4545"/>
+            <text x="70" y="340" fill="#4e3939" font-family="system-ui, sans-serif" font-size="13">The deciding force is visibility: a sidecar is stronger when rich metadata</text>
+            <text x="70" y="360" fill="#4e3939" font-family="system-ui, sans-serif" font-size="13">matters because the tree immediately shows that the companion exists.</text>
+            <circle cx="672" cy="344" r="12" fill="#8b4545"/>
+            <text x="672" y="349" text-anchor="middle" fill="white" font-family="system-ui, sans-serif" font-size="11" font-weight="800">1</text>
+
+            <text x="62" y="420" fill="#202522" font-family="Georgia, serif" font-size="19">Solution</text>
+            <text x="62" y="451" fill="#59615c" font-family="system-ui, sans-serif" font-size="13">Adopt one boring convention: an artifact path/&lt;file&gt; is annotated by</text>
+            <text x="62" y="473" fill="#59615c" font-family="system-ui, sans-serif" font-size="13">path/&lt;file&gt;.meta.json. Agents and tools discover companions with globs.</text>
+            <rect x="54" y="497" width="600" height="79" rx="8" fill="#eaf3ef" stroke="#a7cec3" stroke-dasharray="4 4"/>
+            <text x="70" y="520" fill="#286a62" font-family="system-ui, sans-serif" font-size="11" font-weight="800">REVISION PREVIEW</text>
+            <text x="70" y="544" fill="#38534d" font-family="system-ui, sans-serif" font-size="13">Require sidecar-aware move/copy validation before adopting the convention;</text>
+            <text x="70" y="564" fill="#38534d" font-family="system-ui, sans-serif" font-size="13">surface an orphan as a failed repository check.</text>
+            <rect x="54" y="606" width="132" height="34" rx="17" fill="#286a62"/>
+            <text x="120" y="628" text-anchor="middle" fill="white" font-family="system-ui, sans-serif" font-size="12" font-weight="700">SAVE REVISION</text>
+
+            <text x="730" y="126" fill="#202522" font-family="Georgia, serif" font-size="24">Critique</text>
+            <text x="1136" y="126" text-anchor="end" fill="#59615c" font-family="system-ui, sans-serif" font-size="12">4 entries</text>
+            <rect x="730" y="145" width="92" height="28" rx="14" fill="#202522"/>
+            <text x="776" y="163" text-anchor="middle" fill="white" font-family="system-ui, sans-serif" font-size="11" font-weight="700">ALL TYPES</text>
+            <rect x="831" y="145" width="94" height="28" rx="14" fill="#fffdf8" stroke="#d8d1c3"/>
+            <text x="878" y="163" text-anchor="middle" fill="#59615c" font-family="system-ui, sans-serif" font-size="11">OPEN + 1</text>
+            <rect x="934" y="145" width="104" height="28" rx="14" fill="#fffdf8" stroke="#d8d1c3"/>
+            <text x="986" y="163" text-anchor="middle" fill="#59615c" font-family="system-ui, sans-serif" font-size="11">DIRECT + 1</text>
+            <rect x="1047" y="145" width="89" height="28" rx="14" fill="#fffdf8" stroke="#d8d1c3"/>
+            <text x="1091" y="163" text-anchor="middle" fill="#59615c" font-family="system-ui, sans-serif" font-size="11">STALE 0</text>
+
+            <line x1="684" y1="344" x2="713" y2="344" stroke="#8b4545" stroke-width="2"/>
+            <circle cx="714" cy="344" r="5" fill="#8b4545"/>
+            <rect x="730" y="195" width="406" height="255" rx="12" fill="#fffdf8" stroke="#cba4a1"/>
+            <rect x="730" y="195" width="5" height="255" rx="2" fill="#8b4545"/>
+            <text x="752" y="223" fill="#8b4545" font-family="system-ui, sans-serif" font-size="11" font-weight="800" letter-spacing="1">COUNTER-ARGUMENT · PC-0041</text>
+            <rect x="1034" y="207" width="80" height="24" rx="12" fill="#f5e9ce"/>
+            <text x="1074" y="223" text-anchor="middle" fill="#8b5e1a" font-family="system-ui, sans-serif" font-size="10" font-weight="700">ADDRESSED</text>
+            <text x="752" y="257" fill="#202522" font-family="system-ui, sans-serif" font-size="14" font-weight="650">Separate files improve visibility but weaken</text>
+            <text x="752" y="278" fill="#202522" font-family="system-ui, sans-serif" font-size="14" font-weight="650">atomic portability.</text>
+            <text x="752" y="308" fill="#59615c" font-family="system-ui, sans-serif" font-size="12">Grounding · repository research + REUSE specification</text>
+            <rect x="752" y="327" width="70" height="24" rx="5" fill="#e1ebf2"/>
+            <text x="787" y="343" text-anchor="middle" fill="#3c607c" font-family="system-ui, sans-serif" font-size="10">DIRECT</text>
+            <rect x="830" y="327" width="96" height="24" rx="5" fill="#dcece7"/>
+            <text x="878" y="343" text-anchor="middle" fill="#286a62" font-family="system-ui, sans-serif" font-size="10">COMPELLING</text>
+            <rect x="934" y="327" width="111" height="24" rx="5" fill="#f5e9ce"/>
+            <text x="989" y="343" text-anchor="middle" fill="#8b5e1a" font-family="system-ui, sans-serif" font-size="10">NEXT REVISION</text>
+            <line x1="752" y1="373" x2="1114" y2="373" stroke="#e3ddd1"/>
+            <text x="752" y="397" fill="#59615c" font-family="system-ui, sans-serif" font-size="11">Resolution: make move/copy safety an adoption precondition.</text>
+            <rect x="752" y="411" width="128" height="28" rx="14" fill="#286a62"/>
+            <text x="816" y="429" text-anchor="middle" fill="white" font-family="system-ui, sans-serif" font-size="11" font-weight="700">ABSORB INTO TEXT</text>
+            <text x="1114" y="429" text-anchor="end" fill="#59615c" font-family="system-ui, sans-serif" font-size="11">Edit rating</text>
+
+            <rect x="730" y="468" width="406" height="82" rx="12" fill="#fffdf8" stroke="#d8d1c3"/>
+            <text x="752" y="493" fill="#3c607c" font-family="system-ui, sans-serif" font-size="10" font-weight="800">QUESTION · PC-0040 · OPEN</text>
+            <text x="752" y="520" fill="#202522" font-family="system-ui, sans-serif" font-size="13">Which operations guarantee the pair moves together?</text>
+            <text x="752" y="540" fill="#8b4545" font-family="system-ui, sans-serif" font-size="10" font-weight="700">DIRECT · COMPELLING · BLOCKING</text>
+
+            <rect x="730" y="566" width="406" height="74" rx="12" fill="#fffdf8" stroke="#a7cec3" stroke-dasharray="4 4"/>
+            <text x="752" y="594" fill="#286a62" font-family="system-ui, sans-serif" font-size="11" font-weight="800">+ ADD CRITIQUE AT /solution</text>
+            <text x="752" y="619" fill="#59615c" font-family="system-ui, sans-serif" font-size="12">Type a claim; add grounding before saving.</text>
+          </svg>
+        </div>
+        <figcaption>Concept mockup—not an implemented interface. The left highlight and numbered rail preserve context; the right card exposes grounding, status, and all rating axes before an entry can be absorbed.</figcaption>
+      </figure>
+
+      <div class="grid-2" style="margin-top: var(--space-4)">
+        <div class="card">
+          <h3>Core interactions</h3>
+          <ul>
+            <li>Filter by type, status, any rating axis, staleness, and target pattern.</li>
+            <li>Select text or focus a JSON field to add an anchored entry inline.</li>
+            <li>Require grounding before saving; allow an explicit “observation” when no publication exists.</li>
+            <li>Show rating labels in full. Color supports type and status but never carries meaning alone.</li>
+            <li>Preview anchor drift and pattern fingerprint changes before writing.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Absorb without erasing</h3>
+          <p>“Absorb into text” opens a revision preview rather than changing status immediately. Saving writes the pattern revision, updates the fingerprint, stores a <code>resolution.revisionRef</code>, and only then changes the critique to <code>absorbed</code>.</p>
+          <p>If a save fails validation, both files remain unchanged. The critique never disappears from the public history; it becomes evidence for why the pattern reads as it does.</p>
+        </div>
+      </div>
+
+      <h3 style="margin-top: var(--space-5)">Revision loop</h3>
+      <div class="sequence" aria-label="Critique revision loop">
+        <div><strong>Notice</strong><span class="muted">Reader, editor, or model proposes a grounded entry.</span></div>
+        <div><strong>Triage</strong><span class="muted">Editor anchors, types, rates, and deduplicates it.</span></div>
+        <div><strong>Revise</strong><span class="muted">Author answers, absorbs, or rejects with a rationale.</span></div>
+        <div><strong>Validate</strong><span class="muted">Schema, links, anchors, fingerprint, and site build pass.</span></div>
+        <div><strong>Remember</strong><span class="muted">Resolution remains visible and later changes may reopen it.</span></div>
+      </div>
+      <p class="footnote" style="margin-top: var(--space-3)">This deliberately mirrors the platform’s dossier lifecycle as prior art: investigation remains visible while a dossier becomes decision-ready, and a decision changes its disposition rather than deleting the branches that informed it. Pattern critique applies that living-document discipline at entry scale.</p>
+    </section>
+
+    <section id="example">
+      <div class="eyebrow">Worked example · real pattern P-40</div>
+      <h2>Sidecar Metadata critiques its own premise</h2>
+      <p>The example is bound to the current SHA-256 fingerprint of <code>data/patterns/sidecar-metadata/pattern.json</code>. It contains all four entry types, three dispositions, a multi-pattern target, one LLM advisory assessment, and a complete rating on every entry. Read the <a href="sidecar-metadata.example.critique.json">full companion JSON</a>.</p>
+
+      <div class="grid-2" style="margin-top: var(--space-4)">
+        <article class="card entry question">
+          <div class="entry-meta"><span class="pill question">Question</span><span class="pill">Open</span><code>PC-0040</code></div>
+          <h3>What keeps the pair together?</h3>
+          <p>Which repository operations guarantee that an artifact and its sidecar move or copy together, and how is a broken pair detected?</p>
+          <div class="rating-row"><span>Direct</span><span>Compelling</span><span>Blocking</span></div>
+        </article>
+        <article class="card entry counter">
+          <div class="entry-meta"><span class="pill counter">Counter-argument</span><span class="pill">Addressed</span><code>PC-0041</code></div>
+          <h3>Visibility costs portability</h3>
+          <p>Ordinary moves, copies, downloads, and patches can silently omit a separate metadata file. The pattern recognizes the trade-off; its next revision should make sidecar-aware operations an adoption precondition.</p>
+          <div class="rating-row"><span>Direct</span><span>Compelling</span><span>Next revision</span></div>
+        </article>
+        <article class="card entry">
+          <div class="entry-meta"><span class="pill extension">Extension</span><span class="pill">Absorbed</span><code>PC-0042</code></div>
+          <h3>Make drift mechanically visible</h3>
+          <p>Fingerprint rich sidecars, age their review, and derive fleet-wide views from repository-local records. The current solution already absorbs this extension.</p>
+          <div class="rating-row"><span>Direct</span><span>Compelling</span><span>Next revision</span></div>
+        </article>
+        <article class="card entry related">
+          <div class="entry-meta"><span class="pill related">Related pattern</span><span class="pill">Addressed</span><code>PC-0043</code></div>
+          <h3>State needs rationale</h3>
+          <p>Decision Memory preserves why lifecycle state changed; Sidecar Metadata records what the current structured state is. Their division of responsibility is now explicit.</p>
+          <div class="rating-row"><span>Material</span><span>Plausible</span><span>Later</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="extensions">
+      <div class="eyebrow">Beyond the brief</div>
+      <h2>Turn critique into evidence infrastructure</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>LLM-seeded critique rounds</h3>
+          <p>Run bounded, role-diverse rounds—skeptical practitioner, evidence auditor, boundary-case finder, and adjacent-pattern mapper. Store candidates as <code>origin.kind: llm-seed</code> with run provenance in a staging view. A human editor must deduplicate, verify grounding, and accept a candidate before it enters the companion.</p>
+          <p class="footnote">Model and thinking-level selection belongs to the repository’s routing policy. The format must not hard-code a provider, model, or cost-based downgrade, and an LLM judge remains advisory even when several models agree.</p>
+        </div>
+        <div class="card">
+          <h3>Cross-pattern argument reuse</h3>
+          <p>An entry’s <code>targets[]</code> can name several patterns. The canonical entry lives in one companion; builds include it on every targeted pattern and report missing backlinks. If reuse becomes common, add a derived argument index—not a second editable registry.</p>
+          <p class="footnote">The example’s portability counter-argument targets both <code>sidecar-metadata</code> and <code>companion-app</code>.</p>
+        </div>
+        <div class="card">
+          <h3>Public contribution without public writes</h3>
+          <p>Start with a structured issue form (type, target, claim, grounding). A maintainer or bot converts accepted proposals into schema-valid changes. A later site form may create the same issue through a narrowly scoped service. This is PR-less for the contributor but still produces a reviewed git change.</p>
+        </div>
+        <div class="card">
+          <h3>Credibility through visible disagreement</h3>
+          <p>Publish open, rejected, and absorbed critique alongside sources and revision history. Coverage metrics should report grounded open questions, stale ratings, and resolved critique—not a leaderboard. A register that shows its strongest objections and how they changed the text is more credible than one that only accumulates supporting citations.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tooling">
+      <div class="eyebrow">Tooling options</div>
+      <h2>Earn the editor after proving the format</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Option</th><th>Benefits</th><th>Costs / limits</th><th>Fit</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Static rendering only</strong></td><td>Smallest surface; no auth or write path; public critique and filters can ship with the existing data build.</td><td>Authors edit JSON manually; anchoring, rating freshness, and absorption are awkward.</td><td>Best first slice</td></tr>
+            <tr><td><strong>Small local editor</strong></td><td>Split view, schema-guided forms, atomic two-file save, no hosted write service.</td><td>New local UI to maintain; must handle anchor drift, formatting, and concurrent changes.</td><td>Recommended authoring target</td></tr>
+            <tr><td><strong>Existing AIP dev-workflow integration</strong></td><td>One command, shared validation/build preview, familiar contributor path.</td><td>Tighter coupling; unclear extension points until the format and local editor stabilize.</td><td>Integrate progressively, not as slice one</td></tr>
+            <tr><td><strong>Hosted collaborative editor</strong></td><td>Lowest reader friction and live moderation.</td><td>Auth, abuse, storage, sync conflicts, and a second state system threaten the git-native premise.</td><td>Defer</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card callout amber option-recommended" style="margin-top: var(--space-4)">
+        <div class="kicker">Recommended path</div>
+        <p class="decision-line">Static read path first; small local editor second; expose that editor through the existing development workflow only after its file operations and validation are reliable.</p>
+        <p>This sequence preserves one source of truth at every step. The editor is a view and writer over repository files, never an independent discussion database.</p>
+      </div>
+    </section>
+
+    <section id="slices">
+      <div class="eyebrow">Delivery slices after approval</div>
+      <h2>Four independently reviewable increments</h2>
+      <div class="sequence" style="grid-template-columns: repeat(4, minmax(0, 1fr))">
+        <div><strong>Format + validation</strong><span class="muted">Accept the schema location and ID allocator; validate type, grounding, terminal resolutions, targets, fingerprints, and dates.</span></div>
+        <div><strong>Static reader</strong><span class="muted">Render critique on pattern pages with accessible filters, stable anchors, stale markers, and cross-pattern backlinks.</span></div>
+        <div><strong>Local edit mode</strong><span class="muted">Add split view, inline entry creation, revision preview, and atomic writes to pattern plus companion.</span></div>
+        <div><strong>Contribution + seeds</strong><span class="muted">Add the structured issue path and curated LLM rounds; measure acceptance, duplication, aging, and revision impact.</span></div>
+      </div>
+
+      <h3 style="margin-top: var(--space-5)">Acceptance gates per slice</h3>
+      <div class="grid-2">
+        <div class="card">
+          <ul>
+            <li>Malformed companions and broken target patterns fail deterministically.</li>
+            <li>No critique entry can be published without grounding and a complete canonical rating.</li>
+            <li>Status changes to addressed, absorbed, or rejected require a resolution.</li>
+            <li>Fingerprint mismatch is visible in builds and the UI; it is never silently refreshed.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <ul>
+            <li>The public page works without JavaScript; filters enhance rather than gate access.</li>
+            <li>Keyboard and screen-reader users can move between anchors and entries.</li>
+            <li>Absorption is atomic and preserves the critique entry plus revision reference.</li>
+            <li>Reader or LLM signals cannot alter status or canonical rating without human review.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="decision-questions">
+      <div class="eyebrow">Decision boundary</div>
+      <h2>What remains for the operator to approve</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Approve as a bundle</h3>
+          <ul>
+            <li>Canonical path and JSON-only source of truth</li>
+            <li>Four entry types and four status meanings</li>
+            <li>Three-axis, human-owned rating model</li>
+            <li>Static-first, local-editor-second sequence</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Resolve before implementation</h3>
+          <ul>
+            <li>Repository-wide ID allocation mechanism</li>
+            <li>Exact home for the accepted schema</li>
+            <li>Whether a stale rating is warning-only or build-blocking</li>
+            <li>Which issue system is the public proposal ingress</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell">
+      <p><strong>Decision-ready dossier.</strong> Status remains <em>decision-pending</em>. Source task: AIP-20. Updated 2026-08-11.</p>
+      <p>This dossier specifies a concept and delivery boundary; it does not implement critique rendering, editing, validation, or contribution services.</p>
+    </div>
+  </footer>
+</body>
+</html>
