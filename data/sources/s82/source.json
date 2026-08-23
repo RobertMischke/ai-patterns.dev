@@ -1,0 +1,10 @@
+{
+  "id": "s82",
+  "title": "Living document naming: Dossier",
+  "author": "Agent Studio (agent-orc)",
+  "kind": "doc",
+  "url": "https://github.com/agent-orc/agent-studio/blob/main/docs/operations/living-document-naming/index.html",
+  "patterns": [
+    "memory-management"
+  ]
+}

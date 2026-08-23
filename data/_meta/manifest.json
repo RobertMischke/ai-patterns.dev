@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-11T11:13:54.461Z",
+  "generatedAt": "2026-08-23T17:25:32.062Z",
   "locale": "en",
   "counts": {
     "patterns": 56,
     "categories": 8,
     "concepts": 28,
     "tools": 17,
-    "sources": 72
+    "sources": 78
   }
 }

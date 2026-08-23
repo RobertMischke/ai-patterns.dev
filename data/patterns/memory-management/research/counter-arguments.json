@@ -1,6 +1,6 @@
 {
   "stance": "mixed",
-  "summary": "A folder is a default, not a universal database. The burden of proof sits with the additional store because every second persistence mechanism creates another place where visibility, structure and currency can diverge.",
+  "summary": "A folder is a default, not a universal database, and instrumentation is not curation. The burden of proof sits with every additional store and with every mechanism that promises currency without a human deciding what is current.",
   "points": [
     {
       "text": "A database is appropriate for high-volume event streams, transactional coordination or queries that cannot be served from a small index. Keep the durable human-agent contract in files and derive the database representation where possible.",
@@ -11,11 +11,29 @@
       "severity": "note"
     },
     {
-      "text": "A secrets manager or access-controlled service is necessary when Git cannot meet confidentiality, retention or deletion requirements. Store only a pointer and non-sensitive provenance in the memory folder.",
+      "text": "A secrets manager or access-controlled service is necessary when git cannot meet confidentiality, retention or deletion requirements. Store only a pointer and non-sensitive provenance in the memory folder.",
       "severity": "note"
     },
     {
       "text": "Session scratch state does not need durable review history. Keep it ephemeral and promote only facts that should affect future work."
+    },
+    {
+      "text": "Lifecycle states, sidecars and grading runs are overhead for a small corpus. A team with a dozen documents needs a README and a decision log; add the machinery when the list no longer fits on one screen.",
+      "severity": "note"
+    },
+    {
+      "text": "Measured currency is not guaranteed currency. Commit-count bands miss facts invalidated outside the repository, machine grades are opinions with a fingerprint, and the reference system's own contract documents carried stale anchors and paths that neither mechanism flagged. Keep a sampled human read of the pages agents consult most.",
+      "severity": "warning",
+      "source_id": "s81"
+    },
+    {
+      "text": "Append-only logs and deletion-tolerant sidecars preserve history at the price of noise: references to deleted cards and superseded entries stay visible. Without a curation step that marks what is current, the memory becomes a well-instrumented pile.",
+      "severity": "warning"
+    },
+    {
+      "text": "Two vocabularies for one thing are a permanent tax. Keeping code identifiers while renaming the product noun avoids a risky rename but obliges every reader to learn the mapping; decide this consciously and record it.",
+      "severity": "note",
+      "source_id": "s82"
     }
   ]
 }

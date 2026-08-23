@@ -1,11 +1,11 @@
 {
-  "summary": "The pattern becomes more useful when memory maintenance is treated as ordinary repository maintenance rather than a separate knowledge-management programme.",
+  "summary": "The pattern becomes more useful when memory maintenance is treated as ordinary repository maintenance rather than a separate knowledge-management programme, and when the rest of the operating model is read through it.",
   "items": [
     {
-      "text": "Validate index targets, duplicate identifiers, broken links and supersession cycles in continuous integration."
+      "text": "Validate index targets, duplicate identifiers, broken links, descriptor enums and supersession cycles in continuous integration; a descriptor outside its enum should render as invalid, not disappear."
     },
     {
-      "text": "Display recalled file paths and revisions alongside agent output so an operator can inspect the effective context."
+      "text": "Display recalled file paths, revisions and per-page agent read counts alongside agent output so an operator can inspect the effective context."
     },
     {
       "text": "Assign review intervals by consequence: command syntax and operational policy expire faster than historical rationale."
@@ -24,6 +24,21 @@
       "text": "Load memory through small, explicit context entry points instead of injecting the whole folder into every run.",
       "ref_type": "pattern",
       "ref_id": "context-entry-points"
+    },
+    {
+      "text": "Give the memory a navigable, bidirectional surface: graphical overview pages, decision history, meta companions and read counters make the folder a cognitive interface rather than an archive.",
+      "ref_type": "pattern",
+      "ref_id": "wiki-as-cognitive-interface"
+    },
+    {
+      "text": "Keep page-level metadata — related tasks, grades, classification — in predictably named companion files beside the page so the memory can be surveyed without opening every document.",
+      "ref_type": "pattern",
+      "ref_id": "sidecar-metadata"
+    },
+    {
+      "text": "Read pull-request-free delivery through this layer: gate standards, override rules and requeue reasons are memory, and the verdict stream is only legible while they are kept current.",
+      "ref_type": "pattern",
+      "ref_id": "skip-the-pull-request"
     }
   ]
 }

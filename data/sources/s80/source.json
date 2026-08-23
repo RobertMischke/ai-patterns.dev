@@ -1,0 +1,10 @@
+{
+  "id": "s80",
+  "title": "The Wiki as Cognitive Interface (Agent Studio docs)",
+  "author": "Agent Studio (agent-orc)",
+  "kind": "doc",
+  "url": "https://github.com/agent-orc/agent-studio/blob/main/docs/concepts/wiki-as-cognitive-interface.md",
+  "patterns": [
+    "memory-management"
+  ]
+}

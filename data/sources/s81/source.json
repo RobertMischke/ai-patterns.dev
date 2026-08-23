@@ -1,0 +1,10 @@
+{
+  "id": "s81",
+  "title": "Wiki Pulse dashboard",
+  "author": "Agent Studio (agent-orc)",
+  "kind": "doc",
+  "url": "https://github.com/agent-orc/agent-studio/blob/main/docs/concepts/wiki-pulse-dashboard.md",
+  "patterns": [
+    "memory-management"
+  ]
+}

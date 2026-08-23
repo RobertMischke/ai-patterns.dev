@@ -1,17 +1,22 @@
 {
-  "summary": "A minimal implementation needs repository primitives before it needs a memory service.",
+  "summary": "A minimal implementation needs repository primitives before it needs a memory service. One open-source delivery system shows the full shape with dossiers, descriptors, sidecars and pipeline-enforced maintenance.",
   "items": [
     {
-      "text": "Use memory/index.md as the human-readable entry point and keep each durable assertion in memory/facts/<stable-id>.md."
+      "text": "Agent Studio is the reference implementation: dossiers as folders with an index page and a workbench.json descriptor (id equals folder; status active, decision-pending, decided, documented or archived), an explorer with a History toggle, inline decisions, a single entry point per topic complex, a pipeline step that requires referencing cards to append to the dossier's implementation log, post-review sidecar linking of related tasks, per-page agent read counts, commit-count drift bands and an opt-in grading run with a source fingerprint.",
+      "ref_type": "tool",
+      "ref_id": "agent-studio"
     },
     {
-      "text": "Give each fact a short metadata header with status, source, recorded date, reviewed date and optional supersedes or related links."
+      "text": "Use memory/index.md as the human-readable entry point and keep each durable assertion in memory/facts/<stable-id>.md; in a larger corpus, one folder per living document with its own descriptor."
     },
     {
-      "text": "Have retrieval return source_path, source_revision and the selected excerpt with every result."
+      "text": "Give each fact or document a short metadata header with status, source, recorded date, reviewed date and optional supersedes or related links, and validate the status against a fixed enum."
     },
     {
-      "text": "Run a small validator for missing index entries, broken links, multiple current versions and overdue reviews."
+      "text": "Have retrieval return source_path, source_revision and the selected excerpt with every result, and count reads per page."
+    },
+    {
+      "text": "Run a small validator for missing index entries, broken links, multiple current versions and overdue reviews, and derive a deterministic staleness band from commits since the last edit."
     }
   ]
 }

@@ -25,6 +25,11 @@
       "text": "See Versioned Prompt Text for the related use case or counterpoint: Keep prompts as plain files in the code repository, and link every model call to the exact prompt version that produced it.",
       "ref_type": "pattern",
       "ref_id": "versioned-prompt-text"
+    },
+    {
+      "text": "See Memory Management Is the New Code for the layer beneath the wiki: storage is solved by files in the repository; the maintained work is keeping pages visible, organised and current, with lifecycle states, sidecars, drift bands and pipeline-enforced updates.",
+      "ref_type": "pattern",
+      "ref_id": "memory-management"
     }
   ]
 }

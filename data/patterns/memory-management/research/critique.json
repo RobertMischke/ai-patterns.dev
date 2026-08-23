@@ -1,18 +1,28 @@
 {
   "stance": "supports",
-  "summary": "The evidence supports Git-backed folders as the default storage mechanism, but storage does not settle the three management problems. Each needs its own practice and still has an unresolved boundary.",
+  "summary": "The evidence supports git-backed folders as the default storage mechanism, but storage does not settle the three management problems. Each needs its own practice, each has a working reference shape in at least one production system, and each still has an unresolved boundary.",
   "points": [
     {
-      "text": "Visibility emerges because retrieval can influence an action without entering the human-visible transcript. Show the memory path, excerpt, revision and reason for each recall, and provide a browsable view of the current index. What remains open is how much recall evidence to show before inspection itself becomes noise or exposes sensitive context.",
+      "text": "First-hand case study, Agent Studio, 2026: project knowledge lives as dossiers, one folder each with an index page and a descriptor whose id must equal the folder; status is one of active, decision-pending, decided, documented or archived. The explorer lists the first three by default and keeps documented and archived under a History toggle, still readable. A pipeline step fails any card that references a dossier without appending to its marker-delimited implementation log, and a post-review step appends the card to the page's sidecar with a 'chore(wiki): link' commit. Qualitative single-organization evidence.",
+      "severity": "note",
+      "source_id": "s82"
+    },
+    {
+      "text": "Visibility emerges because retrieval can influence an action without entering the human-visible transcript. The reference system counts agent reads per wiki page and records which cards touched a page; what remains open is how much recall evidence to show before inspection itself becomes noise or exposes sensitive context.",
+      "severity": "warning",
+      "source_id": "s80"
+    },
+    {
+      "text": "Organisation degrades because every new fact, link and exception increases navigation cost, even when each file is well formed. Enforcing it at a few chokepoints works: id equals folder, one canonical agent-instruction file with vendor shims, one row in the start index per new document, one entry point per topic complex. What remains open is when to split, merge or reclassify documents without breaking references or teaching the agent a second taxonomy.",
       "severity": "warning"
     },
     {
-      "text": "Organizedness degrades because every new fact, link and exception increases navigation cost, even when each file is well formed. Keep one durable assertion per file, use stable names and typed links, and validate that indexed targets and backlinks exist. What remains open is when to split, merge or reclassify memories without breaking references or teaching the agent a second taxonomy.",
-      "severity": "warning"
+      "text": "Currency is the hardest of the three because a once-correct instruction remains readable and plausible after the surrounding system changes. A deterministic signal — pages banded Fresh, Aging or Stale by commits under the code roots since the last edit — is cheap and always on; a machine grade with a source fingerprint is opt-in. Neither detects a fact whose invalidating change happened outside the repository, and the reference system's own documents show stale anchors and paths that both mechanisms missed.",
+      "severity": "blocker",
+      "source_id": "s81"
     },
     {
-      "text": "Currency becomes difficult because a once-correct instruction remains readable and plausible after the surrounding system changes. Attach provenance and review dates, link corrections with explicit supersedes relationships, and test high-impact instructions against the current interface. What remains open is reliable staleness detection for facts whose invalidating change happens outside the repository.",
-      "severity": "blocker"
+      "text": "Dedup against in-flight work is a memory discipline, not a board feature. The reference system's task-creation skill instructs agents to search existing tasks first and answers duplicate slugs with a 409; its live improvement log gives every observation a verdict of covered-by, operator-action or new-candidate before a card may exist. Both depend on a person or agent actually performing the reconciliation; nothing in the store prevents a second plan for the same problem."
     }
   ]
 }

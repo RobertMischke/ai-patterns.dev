@@ -40,6 +40,11 @@
       "text": "See Versioned Prompt Text for the related use case or counterpoint: Keep prompts as plain files in the code repository, and link every model call to the exact prompt version that produced it.",
       "ref_type": "pattern",
       "ref_id": "versioned-prompt-text"
+    },
+    {
+      "text": "Page sidecars that record related tasks, grades and classification are the survey layer of a maintained memory; see Memory Management Is the New Code.",
+      "ref_type": "pattern",
+      "ref_id": "memory-management"
     }
   ]
 }

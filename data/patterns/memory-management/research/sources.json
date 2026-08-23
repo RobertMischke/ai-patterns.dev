@@ -1,6 +1,21 @@
 {
-  "summary": "The operational evidence for this pattern comes from an anonymized production agent workspace. It used file-based memory with an index and exposed both the value of simple storage and the failure modes that remain after storage is solved.",
+  "summary": "The operational evidence for this pattern comes from a production agent workspace that keeps its knowledge as living dossiers in the repository, plus an earlier anonymized file-based memory with an index. Both exposed the value of simple storage and the failure modes that remain after storage is solved.",
   "items": [
+    {
+      "text": "Agent Studio — The Wiki as Cognitive Interface: the project wiki as a bidirectional interface between repository knowledge and executable work; agents read it for grounding and write back through pipeline steps; archive is a metadata operation that keeps the page readable.",
+      "ref_type": "source",
+      "ref_id": "s80"
+    },
+    {
+      "text": "Agent Studio — Wiki Pulse dashboard: the generated landing view that bands every page Fresh, Aging or Stale by commits under the code roots since its last edit, deliberately deterministic and without a model.",
+      "ref_type": "source",
+      "ref_id": "s81"
+    },
+    {
+      "text": "Agent Studio — Living document naming: the recorded decision to call the artifact a dossier in UI and documentation while keeping workbench identifiers, descriptors, routes and keys unchanged.",
+      "ref_type": "source",
+      "ref_id": "s82"
+    },
     {
       "text": "Durable facts were stored one per file, indexed from a small entry point and connected with explicit links. Operators could review changes with the same diff and history tools used for code."
     },
