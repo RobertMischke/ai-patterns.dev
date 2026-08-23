@@ -1,6 +1,21 @@
 {
-  "summary": "Delivery research supplies the case against formal approval gates, the honest account of what code review actually delivers, the standards basis for an automated review path, and the warning about validation lagging behind agent speed.",
+  "summary": "Delivery research supplies the case against formal approval gates, the honest account of what code review actually delivers, the standards basis for an automated review path, and the warning about validation lagging behind agent speed. The case-study system's own documentation supplies the mechanics and the loop costs.",
   "items": [
+    {
+      "text": "Agent Studio — Task Integration and the Worktree/Merge Workflow: the run agent does no git, fenced delivery refs, integrate-before-review, the five-valued integration record computed from attributed commits, the acceptance invariant and the explicit operator override.",
+      "ref_type": "source",
+      "ref_id": "s77"
+    },
+    {
+      "text": "Agent Studio — Cycle-time stage model: stage medians per delivery and the lane-transition reading that quantifies bounce rounds and rework time.",
+      "ref_type": "source",
+      "ref_id": "s78"
+    },
+    {
+      "text": "Agent Studio — Release semantics: task integration, acceptance, release and stable freeze as four events that must not be conflated.",
+      "ref_type": "source",
+      "ref_id": "s79"
+    },
     {
       "text": "DORA — Streamlining change approval: no evidence that formal external review lowers change fail rates; heavyweight approval slows delivery and enlarges batches.",
       "ref_type": "source",

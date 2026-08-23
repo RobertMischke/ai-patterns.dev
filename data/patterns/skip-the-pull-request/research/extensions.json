@@ -1,5 +1,5 @@
 {
-  "summary": "The pattern is an assembly: it only works when the deterministic layer, the verdict layer, the durable record and the post-integration sweep are all present.",
+  "summary": "The pattern is an assembly: it only works when the deterministic layer, the verdict layer, the durable record, a verifiable completion rule and the post-integration sweep are all present, and when the decisions behind the gates are kept as maintained memory.",
   "items": [
     {
       "text": "Run the review itself as named gates with documented standards and structured pass, fail or advisory verdicts — the artifact the human actually reads instead of the diff.",
@@ -17,7 +17,7 @@
       "ref_id": "agent-pipelines"
     },
     {
-      "text": "Re-home the audit trail the pull request used to carry: platform-owned task history, authority grants and evidence that the delivering agent cannot rewrite.",
+      "text": "Re-home the audit trail the pull request used to carry: platform-owned task history, fenced delivery refs, authority grants and evidence that the delivering agent cannot rewrite.",
       "ref_type": "pattern",
       "ref_id": "agent-fencing"
     },
@@ -35,6 +35,11 @@
       "text": "When several independent slices are delivered as one workflow-sized task, preserve per-slice evidence and one end-to-end gate so skipping manual diff review does not hide a combined failure surface.",
       "ref_type": "pattern",
       "ref_id": "workflow-sized-tasks"
+    },
+    {
+      "text": "Keep the decisions behind the gates — which aspects block, which overrides are legitimate, why a card was requeued — as maintained, visible and current memory; the verdict stream is only legible while that layer is kept up to date.",
+      "ref_type": "pattern",
+      "ref_id": "memory-management"
     }
   ]
 }

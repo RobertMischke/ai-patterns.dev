@@ -1,0 +1,10 @@
+{
+  "id": "s78",
+  "title": "Cycle-time stage model",
+  "author": "Agent Studio (agent-orc)",
+  "kind": "doc",
+  "url": "https://github.com/agent-orc/agent-studio/blob/main/docs/concepts/cycle-time-stage-model.md",
+  "patterns": [
+    "skip-the-pull-request"
+  ]
+}

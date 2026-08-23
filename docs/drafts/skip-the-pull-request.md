@@ -1,6 +1,6 @@
 # Skip the Pull Request
 
-*Draft — thesis piece for the pattern P-56 "Skip the Pull Request". Status: unpublished.*
+*Draft — thesis piece for the pattern P-56 "Skip the Pull Request". Status: superseded on 2026-08-23 by the published field article `data/patterns/skip-the-pull-request/article.json` (grounded in Agent Studio's delivery mechanics, with figure and cost section). Kept for history; do not extend.*
 
 The pull request is not a quality control. It is a queue. In a team of humans that
 distinction rarely mattered, because the queue was short and the reviewer was the

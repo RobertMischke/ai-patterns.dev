@@ -1,6 +1,11 @@
 {
-  "summary": "No mainstream platform literally removes every review object while retaining protected integration, but merge queues, merge trains and policy engines can make machine gates the operative approval mechanism. The pull request may remain as an automation envelope even when routine human diff approval is removed.",
+  "summary": "One open-source delivery system runs the full assembly without a pull-request object. Mainstream platforms do not remove the review object, but merge queues, merge trains and policy engines can make machine gates the operative approval mechanism; the pull request may then remain as an automation envelope even when routine human diff approval is removed.",
   "items": [
+    {
+      "text": "Agent Studio is the reference implementation: the platform owns every git operation as a pipeline step, publishes fenced delivery refs, runs a fail-closed build-and-test gate and named review aspects, integrates green deliveries into develop before human review, recomputes each card's integration state from attributed-commit ancestry, and refuses the completed state without either integration or an explicit, recorded operator override. A pull-request integration strategy remains configurable for repositories whose policy requires it.",
+      "ref_type": "tool",
+      "ref_id": "agent-studio"
+    },
     {
       "text": "GitHub merge queue validates required status checks against the latest target branch and queued changes before merge, then removes a failing entry. It replaces manual merge coordination with an integration-tested gate, although GitHub still uses a pull request as the queued change record.",
       "ref_type": "external",

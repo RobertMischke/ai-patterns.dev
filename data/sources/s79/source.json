@@ -1,0 +1,10 @@
+{
+  "id": "s79",
+  "title": "Release semantics: integration, acceptance, release, and stable freeze",
+  "author": "Agent Studio (agent-orc)",
+  "kind": "doc",
+  "url": "https://github.com/agent-orc/agent-studio/blob/main/docs/concepts/release-semantics.md",
+  "patterns": [
+    "skip-the-pull-request"
+  ]
+}
