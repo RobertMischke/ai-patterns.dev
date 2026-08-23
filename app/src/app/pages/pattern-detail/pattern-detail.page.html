@@ -68,6 +68,25 @@
             <div class="callout">&ldquo;{{ p.one_liner }}&rdquo;</div>
           </div>
 
+          @if (articleSections().length) {
+            <div class="section pattern-article-lede" id="article">
+              <p class="kicker" style="margin: 0 0 10px;">Field article</p>
+              <p class="lede" style="margin: 0; font-style: italic;">{{ articleLede() }}</p>
+            </div>
+            @for (sec of articleSections(); track sec.anchor) {
+              <div class="section pattern-article-section" [id]="sec.anchor">
+                <h2>{{ sec.h }}</h2>
+                @for (para of sec.p; track $index) { <p>{{ para }}</p> }
+                @if (sec.figure; as fig) {
+                  <figure class="pattern-figure">
+                    <div class="pattern-figure-stage" [innerHTML]="fig.svg"></div>
+                    <figcaption class="pattern-figure-caption">{{ fig.caption }}</figcaption>
+                  </figure>
+                }
+              </div>
+            }
+          }
+
           @if (hasContent(research()?.sources)) {
             <div class="section" id="survey">
               <h2>Landscape survey</h2>
@@ -219,6 +238,9 @@
           <ol>
             <li><a href="#problem">The problem</a></li>
             <li><a href="#solution">The solution</a></li>
+            @for (sec of articleSections(); track sec.anchor) {
+              <li><a [href]="'#' + sec.anchor">{{ sec.h }}</a></li>
+            }
             @if (hasContent(research()?.sources)) { <li><a href="#survey">Landscape survey</a></li> }
             <li><a href="#critique">Critical questioning</a></li>
             <li><a href="#counter">Counter-arguments</a></li>

@@ -102,6 +102,24 @@ function hasMojibake(value) {
   return /\u00e2\u20ac|\u00c3[\u0080-\u00ff]|\u00c2[\u0080-\u00bf]|\u00ef\u00bb\u00bf|\u00f0\u0178|[\u0080-\u009f]/u.test(value);
 }
 
+// Inline figures are rendered verbatim, so they must stay self-contained:
+// no scripts, no event handlers, no external or raster references.
+const FIGURE_MARKUP_VIOLATIONS = Object.freeze([
+  { pattern: /<\s*script\b/iu, message: 'script elements are not allowed' },
+  { pattern: /<\s*(foreignObject|image|iframe|object|embed|use)\b/iu, message: 'embedded or external content elements are not allowed' },
+  { pattern: /\son[a-z]+\s*=/iu, message: 'event handler attributes are not allowed' },
+  { pattern: /javascript\s*:/iu, message: 'javascript: URLs are not allowed' },
+  { pattern: /(?:xlink:)?href\s*=\s*["'](?!#)/iu, message: 'only fragment (#id) references are allowed' },
+  { pattern: /url\s*\(\s*["']?\s*(?!#)/iu, message: 'CSS url() may only reference fragments' },
+  { pattern: /@import\b/iu, message: 'stylesheet imports are not allowed' },
+]);
+
+function figureMarkupErrors(markup) {
+  return FIGURE_MARKUP_VIOLATIONS
+    .filter(({ pattern }) => pattern.test(markup))
+    .map(({ message }) => message);
+}
+
 function walk(value, path, visit) {
   visit(value, path);
   if (Array.isArray(value)) {
@@ -126,6 +144,7 @@ function loadSchemaValidators(dataRoot, errors) {
     ...Object.values(COLLECTIONS).map(value => value.schema),
     ...Object.values(META_FILES).map(value => value.schema),
     'concept-article.schema.json',
+    'pattern-article.schema.json',
     'research.schema.json',
   ]);
 
@@ -184,6 +203,7 @@ export function validateCatalog({ dataRoot = DEFAULT_DATA_ROOT, strict = false }
     tools: [],
     sources: [],
     articles: new Map(),
+    patternArticles: new Map(),
     research: new Map(),
     radar: undefined,
     manifest: undefined,
@@ -259,7 +279,7 @@ export function validateCatalog({ dataRoot = DEFAULT_DATA_ROOT, strict = false }
       const entityRoot = join(collectionRoot, folder);
       const allowedEntityEntries = new Set(
         collectionName === 'patterns'
-          ? [config.file, 'research', 'examples']
+          ? [config.file, 'article.json', 'research', 'examples']
           : collectionName === 'concepts'
             ? [config.file, 'article.json']
             : [config.file],
@@ -284,6 +304,25 @@ export function validateCatalog({ dataRoot = DEFAULT_DATA_ROOT, strict = false }
           const article = readDocument(articlePath);
           applySchema('concept-article.schema.json', article, portablePath(root, articlePath));
           if (article !== undefined) catalog.articles.set(record.id, article);
+        }
+      }
+
+      if (collectionName === 'patterns') {
+        const articlePath = join(collectionRoot, folder, 'article.json');
+        if (existsSync(articlePath)) {
+          const articleLabel = portablePath(root, articlePath);
+          const article = readDocument(articlePath);
+          applySchema('pattern-article.schema.json', article, articleLabel);
+          if (article !== undefined) {
+            for (const [index, section] of (Array.isArray(article.body) ? article.body : []).entries()) {
+              const markup = section?.figure?.svg;
+              if (typeof markup !== 'string') continue;
+              for (const message of figureMarkupErrors(markup)) {
+                errors.push(`${articleLabel}.body[${index}].figure.svg: ${message}`);
+              }
+            }
+            catalog.patternArticles.set(record.id, article);
+          }
         }
       }
     }

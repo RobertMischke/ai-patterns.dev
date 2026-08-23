@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import {
   cpSync,
+  existsSync,
   mkdtempSync,
   readFileSync,
   readdirSync,
@@ -295,5 +296,39 @@ test('empty research is rejected in strict publication mode', () => {
     assert.match(errorText(result), /items must not be empty in a published catalogue/);
   } finally {
     restore();
+  }
+});
+
+test('pattern articles are validated and figures must stay self-contained', () => {
+  const dataRoot = TEST_DATA;
+  const patternId = patternIds(dataRoot).find(id => !existsSync(join(dataRoot, 'patterns', id, 'article.json')));
+  assert.ok(patternId, 'fixture needs a pattern without an article');
+  const path = join(dataRoot, 'patterns', patternId, 'article.json');
+  const figure = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" role="img" aria-label="x"><rect width="4" height="4" fill="var(--ink)"/></svg>';
+  const article = svg => ({ lede: 'Lede.', body: [{ h: 'Section', p: ['One paragraph.'], figure: { svg, caption: 'Caption.' } }] });
+  try {
+    writeJson(path, article(figure));
+    let result = validate(dataRoot);
+    assert.equal(result.valid, true, errorText(result));
+    assert.equal(result.catalog.patternArticles.has(patternId), true);
+
+    writeJson(path, { body: [{ h: 'Section', p: 'not an array' }] });
+    result = validate(dataRoot);
+    assert.equal(result.valid, false);
+    assert.match(errorText(result), new RegExp(`patterns/${patternId}/article.json: schema`));
+
+    writeJson(path, article(figure.replace('<rect', '<script>alert(1)</script><rect onclick="x()"')));
+    result = validate(dataRoot);
+    assert.equal(result.valid, false);
+    assert.match(errorText(result), /figure\.svg: script elements are not allowed/);
+    assert.match(errorText(result), /figure\.svg: event handler attributes are not allowed/);
+
+    writeJson(path, article(figure.replace('<rect', '<image href="https://example.com/x.png"/><rect')));
+    result = validate(dataRoot);
+    assert.equal(result.valid, false);
+    assert.match(errorText(result), /figure\.svg: embedded or external content elements are not allowed/);
+    assert.match(errorText(result), /figure\.svg: only fragment \(#id\) references are allowed/);
+  } finally {
+    rmSync(path, { force: true });
   }
 });

@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ai-patterns.dev/schemas/pattern-article.schema.json",
+  "title": "PatternArticle",
+  "description": "Long-form field article for a pattern. Optional sibling to pattern.json at data/patterns/<id>/article.json. Rendered after the problem and solution sections of the pattern page.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["lede", "body"],
+  "properties": {
+    "lede": { "type": "string", "minLength": 1, "description": "Italic opening paragraph shown before the first section." },
+    "body": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["h", "p"],
+        "properties": {
+          "h": { "type": "string", "minLength": 1, "description": "Section heading." },
+          "p": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": { "type": "string", "minLength": 1 },
+            "description": "Section paragraphs, rendered in order."
+          },
+          "figure": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["svg", "caption"],
+            "properties": {
+              "svg": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^<svg[\\s>][\\s\\S]*</svg>\\s*$",
+                "description": "Self-contained inline SVG markup in the site's style (use CSS custom properties such as var(--ink), var(--line), var(--accent)). Scripts, event handlers, external references and raster images are rejected by validation."
+              },
+              "caption": { "type": "string", "minLength": 1, "description": "Visible caption under the figure." }
+            }
+          }
+        }
+      }
+    }
+  }
+}

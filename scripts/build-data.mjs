@@ -184,7 +184,10 @@ if (!validation.valid) {
 }
 
 const { catalog } = validation;
-const patterns = sortPatterns(catalog.patterns);
+const patterns = sortPatterns(catalog.patterns).map(pattern => ({
+  ...pattern,
+  has_article: catalog.patternArticles.has(pattern.id),
+}));
 const categories = sortCategories(catalog.categories);
 const concepts = sortBy('id', catalog.concepts).map(concept => ({
   ...concept,
@@ -213,6 +216,7 @@ export interface Pattern {
   problem: string;
   solution: string;
   keywords: string[];
+  has_article: boolean;
 }
 
 export interface Category {

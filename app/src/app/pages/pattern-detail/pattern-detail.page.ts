@@ -2,7 +2,7 @@ import { isPlatformBrowser } from '@angular/common';
 import { Component, computed, inject, PLATFORM_ID, signal } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { Title, Meta } from '@angular/platform-browser';
+import { Title, Meta, DomSanitizer, type SafeHtml } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
 import {
@@ -27,6 +27,22 @@ interface ResearchBundle {
   tools?: ResearchList;
   extensions?: ResearchList;
   sources?: ResearchList;
+}
+interface PatternArticleSection {
+  h: string;
+  p: string[];
+  figure?: { svg: string; caption: string };
+}
+interface PatternArticle {
+  lede: string;
+  body: PatternArticleSection[];
+}
+/** Article section prepared for the template: stable anchor plus trusted figure markup. */
+interface ArticleSectionView {
+  anchor: string;
+  h: string;
+  p: string[];
+  figure: { svg: SafeHtml; caption: string } | null;
 }
 
 @Component({
@@ -55,6 +71,7 @@ export class PatternDetailPage {
   private readonly http  = inject(HttpClient);
   private readonly title = inject(Title);
   private readonly meta  = inject(Meta);
+  private readonly sanitizer = inject(DomSanitizer);
   private readonly platformId = inject(PLATFORM_ID);
 
   private readonly id = toSignal(this.route.paramMap, { requireSync: true });
@@ -94,6 +111,8 @@ export class PatternDetailPage {
   });
 
   protected readonly research = signal<ResearchBundle | null>(null);
+  protected readonly articleLede = signal<string | null>(null);
+  protected readonly articleSections = signal<ArticleSectionView[]>([]);
 
   async ngOnInit() {
     const p = this.pattern();
@@ -107,14 +126,28 @@ export class PatternDetailPage {
     if (!isPlatformBrowser(this.platformId)) return;
 
     const base = `/data/patterns/${p.id}/research`;
-    const [critique, counterArguments, tools, extensions, sources] = await Promise.all([
+    const [critique, counterArguments, tools, extensions, sources, article] = await Promise.all([
       this.loadJson<ResearchOpinion>(`${base}/critique.json`),
       this.loadJson<ResearchOpinion>(`${base}/counter-arguments.json`),
       this.loadJson<ResearchList>(`${base}/tools.json`),
       this.loadJson<ResearchList>(`${base}/extensions.json`),
       this.loadJson<ResearchList>(`${base}/sources.json`),
+      p.has_article ? this.loadJson<PatternArticle>(`/data/patterns/${p.id}/article.json`) : Promise.resolve(undefined),
     ]);
     this.research.set({ critique, counterArguments, tools, extensions, sources });
+    if (article) {
+      this.articleLede.set(article.lede);
+      this.articleSections.set(article.body.map((section, index) => ({
+        anchor: `article-${index + 1}`,
+        h: section.h,
+        p: section.p,
+        // Figure markup is repository-owned, validated by scripts/lib/catalog.mjs
+        // (no scripts, handlers or external references) and never user-supplied.
+        figure: section.figure
+          ? { svg: this.sanitizer.bypassSecurityTrustHtml(section.figure.svg), caption: section.figure.caption }
+          : null,
+      })));
+    }
   }
 
   private async loadJson<T>(url: string): Promise<T | undefined> {

@@ -12,6 +12,7 @@ generated copy.
 data/
   patterns/<id>/
     pattern.json
+    article.json              # optional long-form field article
     research/
       critique.json
       counter-arguments.json
@@ -51,6 +52,14 @@ data/
   Every explicit non-`pattern` abstraction links its parent, core, or components
   through `research/extensions.json`.
 - English is the only locale for now. Text fields are plain strings.
+- A pattern may carry an optional `article.json` (`schemas/pattern-article.schema.json`):
+  a lede plus ordered sections of `h` and `p[]`, each section optionally with one
+  `figure` (`svg` markup and `caption`). Figures are inline SVG in the site's own
+  style (CSS custom properties such as `var(--ink)`, `var(--line)`, `var(--accent)`)
+  and must stay self-contained: validation rejects scripts, event handlers, external
+  or raster references and `url()` values other than fragments. The article is
+  rendered between the solution and the research sections of the pattern page and
+  flagged in the pattern index.
 
 `P-15` is a permanent tombstone: the former `review-result` entry was merged
 into `P-23` (`fire-track-review`). The web route remains a compatibility

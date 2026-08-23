@@ -45,6 +45,9 @@
               @if (p.classify === 'anti-pattern') {
                 <span class="chip chip-anti">Anti-pattern</span>
               }
+              @if (p.has_article) {
+                <span class="pcard-article-flag" title="Includes a long-form field article">article &rarr;</span>
+              }
             </div>
             <h3 class="pcard-title">{{ p.title }}</h3>
             <p class="pcard-blurb">{{ p.one_liner }}</p>
