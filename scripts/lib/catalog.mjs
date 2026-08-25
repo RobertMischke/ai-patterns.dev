@@ -7,6 +7,7 @@ import {
 import { createRequire } from 'node:module';
 import { dirname, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { sanitizeFigureSvg } from './svg-sanitizer.mjs';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 export const REPOSITORY_ROOT = resolve(SCRIPT_DIR, '..', '..');
@@ -102,22 +103,12 @@ function hasMojibake(value) {
   return /\u00e2\u20ac|\u00c3[\u0080-\u00ff]|\u00c2[\u0080-\u00bf]|\u00ef\u00bb\u00bf|\u00f0\u0178|[\u0080-\u009f]/u.test(value);
 }
 
-// Inline figures are rendered verbatim, so they must stay self-contained:
-// no scripts, no event handlers, no external or raster references.
-const FIGURE_MARKUP_VIOLATIONS = Object.freeze([
-  { pattern: /<\s*script\b/iu, message: 'script elements are not allowed' },
-  { pattern: /<\s*(foreignObject|image|iframe|object|embed|use)\b/iu, message: 'embedded or external content elements are not allowed' },
-  { pattern: /\son[a-z]+\s*=/iu, message: 'event handler attributes are not allowed' },
-  { pattern: /javascript\s*:/iu, message: 'javascript: URLs are not allowed' },
-  { pattern: /(?:xlink:)?href\s*=\s*["'](?!#)/iu, message: 'only fragment (#id) references are allowed' },
-  { pattern: /url\s*\(\s*["']?\s*(?!#)/iu, message: 'CSS url() may only reference fragments' },
-  { pattern: /@import\b/iu, message: 'stylesheet imports are not allowed' },
-]);
-
+// Inline figures are rendered verbatim through bypassSecurityTrustHtml, so they
+// are a stored-XSS sink. A denylist over raw markup is inherently bypassable, so
+// figure markup is checked against a parse-then-allowlist sanitiser instead; see
+// scripts/lib/svg-sanitizer.mjs.
 function figureMarkupErrors(markup) {
-  return FIGURE_MARKUP_VIOLATIONS
-    .filter(({ pattern }) => pattern.test(markup))
-    .map(({ message }) => message);
+  return sanitizeFigureSvg(markup).errors;
 }
 
 function walk(value, path, visit) {

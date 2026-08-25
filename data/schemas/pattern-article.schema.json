@@ -34,7 +34,7 @@
                 "type": "string",
                 "minLength": 1,
                 "pattern": "^<svg[\\s>][\\s\\S]*</svg>\\s*$",
-                "description": "Self-contained inline SVG markup in the site's style (use CSS custom properties such as var(--ink), var(--line), var(--accent)). Scripts, event handlers, external references and raster images are rejected by validation."
+                "description": "Self-contained inline SVG markup in the site's style (use CSS custom properties such as var(--ink), var(--line), var(--accent)). Validated against an allowlist of safe SVG elements and attributes (scripts, event handlers, animation elements, external references, raster images and non-fragment url() references are rejected)."
               },
               "caption": { "type": "string", "minLength": 1, "description": "Visible caption under the figure." }
             }

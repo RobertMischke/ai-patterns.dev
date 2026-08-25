@@ -11,6 +11,7 @@ import {
   RADAR, radarRingOf, type Pattern, type RadarRingId,
 } from '../../../data';
 import { TechRadar } from '../../components/tech-radar/tech-radar';
+import { sanitizeFigureSvg } from '../../shared/figure-svg-sanitizer';
 
 interface ResearchOpinion {
   stance: 'supports' | 'challenges' | 'mixed' | 'unknown';
@@ -141,11 +142,7 @@ export class PatternDetailPage {
         anchor: `article-${index + 1}`,
         h: section.h,
         p: section.p,
-        // Figure markup is repository-owned, validated by scripts/lib/catalog.mjs
-        // (no scripts, handlers or external references) and never user-supplied.
-        figure: section.figure
-          ? { svg: this.sanitizer.bypassSecurityTrustHtml(section.figure.svg), caption: section.figure.caption }
-          : null,
+        figure: this.prepareFigure(section.figure),
       })));
     }
   }
@@ -156,6 +153,22 @@ export class PatternDetailPage {
     } catch {
       return undefined;
     }
+  }
+
+  /**
+   * Figure markup is repository-owned and allowlist-validated at build time, but
+   * the render path trusts it only after re-checking it against the same
+   * allowlist here. bypassSecurityTrustHtml therefore consumes provably
+   * sanitised output; anything that fails the allowlist renders nothing.
+   */
+  private prepareFigure(figure?: { svg: string; caption: string }): { svg: SafeHtml; caption: string } | null {
+    if (!figure) return null;
+    const { html, violations } = sanitizeFigureSvg(figure.svg);
+    if (html === null) {
+      console.warn('Dropped a pattern figure that failed allowlist sanitisation', violations);
+      return null;
+    }
+    return { svg: this.sanitizer.bypassSecurityTrustHtml(html), caption: figure.caption };
   }
 
   protected hasContent(r: ResearchOpinion | ResearchList | undefined): boolean {

@@ -13,6 +13,7 @@ import { dirname, join, resolve } from 'node:path';
 import { after, test } from 'node:test';
 import { fileURLToPath } from 'node:url';
 import { validateCatalog } from '../lib/catalog.mjs';
+import { sanitizeFigureSvg } from '../lib/svg-sanitizer.mjs';
 
 const SCRIPT_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const CANONICAL_DATA = join(SCRIPT_ROOT, 'data');
@@ -320,14 +321,85 @@ test('pattern articles are validated and figures must stay self-contained', () =
     writeJson(path, article(figure.replace('<rect', '<script>alert(1)</script><rect onclick="x()"')));
     result = validate(dataRoot);
     assert.equal(result.valid, false);
-    assert.match(errorText(result), /figure\.svg: script elements are not allowed/);
-    assert.match(errorText(result), /figure\.svg: event handler attributes are not allowed/);
+    assert.match(errorText(result), /figure\.svg: .*element <script> is not allowed/);
+    assert.match(errorText(result), /figure\.svg: .*event-handler attribute "onclick" is not allowed/);
 
     writeJson(path, article(figure.replace('<rect', '<image href="https://example.com/x.png"/><rect')));
     result = validate(dataRoot);
     assert.equal(result.valid, false);
-    assert.match(errorText(result), /figure\.svg: embedded or external content elements are not allowed/);
-    assert.match(errorText(result), /figure\.svg: only fragment \(#id\) references are allowed/);
+    assert.match(errorText(result), /figure\.svg: .*element <image> is not allowed/);
+  } finally {
+    rmSync(path, { force: true });
+  }
+});
+
+// Denylists over raw SVG markup are inherently leaky. Each payload below passed
+// the previous regex denylist yet is executable when rendered as HTML; the
+// allowlist sanitiser must reject every one of them. See scripts/lib/svg-sanitizer.mjs.
+const RETIRED_DENYLIST = [
+  /<\s*script\b/iu,
+  /<\s*(foreignObject|image|iframe|object|embed|use)\b/iu,
+  /\son[a-z]+\s*=/iu,
+  /javascript\s*:/iu,
+  /(?:xlink:)?href\s*=\s*["'](?!#)/iu,
+  /url\s*\(\s*["']?\s*(?!#)/iu,
+  /@import\b/iu,
+];
+const passesRetiredDenylist = markup => !RETIRED_DENYLIST.some(pattern => pattern.test(markup));
+const wrapSvg = inner => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10">${inner}</svg>`;
+const XSS_BYPASSES = {
+  // <animate>/<set> are not scripts and carry no `on…=` when a `/` separates the
+  // attribute, so the old denylist missed them; onbegin/onend fire on render.
+  'smil-onbegin': wrapSvg('<animate attributeName="x" dur="1s" /onbegin="alert(document.domain)"/>'),
+  'smil-onend': wrapSvg('<set attributeName="x" to="y" dur="1s"/onend="alert(1)"/>'),
+  // The href regex is anchored on a quote, so an unquoted value slips past it.
+  'unquoted-external-href': wrapSvg('<a href=https://evil.example/x><rect width="4" height="4"/></a>'),
+  // An entity breaks up "javascript:" in the raw text the regex scans.
+  'entity-broken-scheme': wrapSvg('<a href=&#106;avascript:alert(1)><rect width="4" height="4"/></a>'),
+  // <style> was never on the element denylist at all.
+  'style-element': wrapSvg('<style>rect{fill:red}</style><rect width="4" height="4"/>'),
+};
+
+test('the retired denylist accepted markup that executes when rendered', () => {
+  for (const [name, markup] of Object.entries(XSS_BYPASSES)) {
+    assert.equal(passesRetiredDenylist(markup), true, `${name} should slip past the retired denylist`);
+  }
+});
+
+test('the allowlist sanitiser rejects every known denylist bypass', () => {
+  for (const [name, markup] of Object.entries(XSS_BYPASSES)) {
+    const result = sanitizeFigureSvg(markup);
+    assert.equal(result.ok, false, `${name} must be rejected`);
+    assert.ok(result.errors.length > 0, `${name} must report a reason`);
+  }
+});
+
+test('the allowlist sanitiser accepts every shipped figure', () => {
+  for (const patternId of patternIds(CANONICAL_DATA)) {
+    const articlePath = join(CANONICAL_DATA, 'patterns', patternId, 'article.json');
+    if (!existsSync(articlePath)) continue;
+    const article = readJson(articlePath);
+    for (const [index, section] of article.body.entries()) {
+      if (typeof section?.figure?.svg !== 'string') continue;
+      const result = sanitizeFigureSvg(section.figure.svg);
+      assert.equal(result.ok, true, `${patternId} body[${index}]: ${result.errors.join(' | ')}`);
+    }
+  }
+});
+
+test('a figure XSS bypass is rejected by the full validator pipeline', () => {
+  const dataRoot = TEST_DATA;
+  const patternId = patternIds(dataRoot).find(id => !existsSync(join(dataRoot, 'patterns', id, 'article.json')));
+  assert.ok(patternId, 'fixture needs a pattern without an article');
+  const path = join(dataRoot, 'patterns', patternId, 'article.json');
+  try {
+    writeJson(path, {
+      lede: 'Lede.',
+      body: [{ h: 'Section', p: ['One paragraph.'], figure: { svg: XSS_BYPASSES['smil-onbegin'], caption: 'Caption.' } }],
+    });
+    const result = validate(dataRoot);
+    assert.equal(result.valid, false);
+    assert.match(errorText(result), /figure\.svg: .*element <animate> is not allowed/);
   } finally {
     rmSync(path, { force: true });
   }
