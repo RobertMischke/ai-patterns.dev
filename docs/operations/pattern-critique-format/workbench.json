@@ -10,5 +10,6 @@
   "updatedAt": "2026-08-11T00:00:00Z",
   "id": "pattern-critique-format",
   "summary": "A file-first critique format for AI patterns: questions, counter-arguments, extensions, and relationships stay visible beside every pattern in a JSON sidecar with a schema, plus a focused editing surface and companion tooling that validates and renders critiques. Decision-ready from the AIP-20 evidence.",
-  "entrypoint": "index.html"
+  "entrypoint": "index.html",
+  "key": "AIP-W1"
 }
