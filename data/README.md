@@ -52,6 +52,7 @@ data/
   Every explicit non-`pattern` abstraction links its parent, core, or components
   through `research/extensions.json`.
 - English is the only locale for now. Text fields are plain strings.
+- Optional `model_guidance` entries describe task-specific do, don’t or conditional advice for compact, strong and frontier capability tiers. The tier is a navigation aid, not a parameter-count cutoff or universal model ranking. Each entry must name the task, evidence and scope note; unannotated patterns have no tier verdict.
 - A pattern may carry an optional `article.json` (`schemas/pattern-article.schema.json`):
   a lede plus ordered sections of `h` and `p[]`, each section optionally with one
   `figure` (`svg` markup and `caption`). Figures are inline SVG in the site's own

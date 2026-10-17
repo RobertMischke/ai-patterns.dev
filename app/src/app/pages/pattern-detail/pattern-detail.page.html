@@ -68,6 +68,29 @@
             <div class="callout">&ldquo;{{ p.one_liner }}&rdquo;</div>
           </div>
 
+          @if (p.model_guidance?.length) {
+            <div class="section" id="model-guidance">
+              <h2>Model capability changes the advice</h2>
+              <p>These are scoped observations, not rules for every model in a tier. Check the named model, agent interface, task and evaluation before applying a Do or Don’t.</p>
+              <div class="model-advice-grid">
+                @for (guidance of p.model_guidance; track guidance.tier + guidance.task) {
+                  <div class="model-advice-card">
+                    <div class="model-advice-head">
+                      <span class="kicker">{{ guidance.tier }} capability</span>
+                      <span class="model-stance" [class]="'model-stance stance-' + guidance.stance">
+                        {{ guidance.stance === 'dont' ? 'Don’t' : guidance.stance === 'do' ? 'Do' : 'Conditional' }}
+                      </span>
+                    </div>
+                    <h3>{{ guidance.task }}</h3>
+                    <p>{{ guidance.note }}</p>
+                    <p class="model-advice-evidence"><strong>Evidence and scope:</strong> {{ guidance.evidence }}</p>
+                  </div>
+                }
+              </div>
+              <p class="model-filter-explainer">Use a capability index to locate candidates. A measured model–harness–task result determines the recommendation.</p>
+            </div>
+          }
+
           @if (articleSections().length) {
             <div class="section pattern-article-lede" id="article">
               <p class="kicker" style="margin: 0 0 10px;">Field article</p>
@@ -238,6 +261,7 @@
           <ol>
             <li><a href="#problem">The problem</a></li>
             <li><a href="#solution">The solution</a></li>
+            @if (p.model_guidance?.length) { <li><a href="#model-guidance">Model capability</a></li> }
             @for (sec of articleSections(); track sec.anchor) {
               <li><a [href]="'#' + sec.anchor">{{ sec.h }}</a></li>
             }

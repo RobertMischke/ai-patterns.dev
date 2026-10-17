@@ -3,7 +3,7 @@
     <div class="eyebrow"><span class="dot"></span>Library</div>
     <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-top: 14px; flex-wrap: wrap;">
       <h1 class="page-h1">All patterns.</h1>
-      <div style="display: flex; align-items: center; gap: 12px;">
+      <div class="model-filter-row">
         <label class="kicker" for="cat-filter">Group</label>
         <div class="patterns-filter">
           <select id="cat-filter" [value]="filter()" (change)="setFilter($event)">
@@ -13,8 +13,18 @@
             }
           </select>
         </div>
+        <label class="kicker" for="model-tier-filter">Model capability</label>
+        <div class="patterns-filter">
+          <select id="model-tier-filter" [value]="modelTier()" (change)="setModelTier($event)">
+            <option value="all">All capabilities</option>
+            <option value="compact">Compact &middot; {{ tierCount('compact') }}</option>
+            <option value="strong">Strong &middot; {{ tierCount('strong') }}</option>
+            <option value="frontier">Frontier &middot; {{ tierCount('frontier') }}</option>
+          </select>
+        </div>
       </div>
     </div>
+    <p class="model-filter-explainer">Capability tiers help find advice. A Do or Don’t applies only to its stated model, agent tools and task; unassessed patterns receive no tier verdict.</p>
   </section>
 
   @for (g of groups(); track g.category.id) {
@@ -37,7 +47,7 @@
              [routerLink]="['/patterns', p.id]">
             <span class="pcard-num mono">{{ p.num }}</span>
             <span class="pcard-cat-bar cat-bar"></span>
-            <div style="display: flex; align-items: center; gap: 10px;">
+            <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
               <span class="cat-name">{{ g.category.name }}</span>
               @if (p.abstraction && p.abstraction !== 'pattern') {
                 <span class="chip chip-abstraction">{{ p.abstraction }}</span>
@@ -48,9 +58,20 @@
               @if (p.has_article) {
                 <span class="pcard-article-flag" title="Includes a long-form field article">article &rarr;</span>
               }
+              @if (modelTier() === 'all' && p.model_guidance?.length) {
+                <span class="chip">Model-specific advice</span>
+              }
             </div>
             <h3 class="pcard-title">{{ p.title }}</h3>
             <p class="pcard-blurb">{{ p.one_liner }}</p>
+            @for (guidance of guidanceFor(p); track guidance.task) {
+              <div class="model-advice-preview">
+                <span class="model-stance" [class]="'model-stance stance-' + guidance.stance">
+                  {{ guidance.stance === 'dont' ? 'Don’t' : guidance.stance === 'do' ? 'Do' : 'Conditional' }}
+                </span>
+                <span>{{ guidance.task }}</span>
+              </div>
+            }
             @if (p.keywords.length) {
               <div class="pcard-keywords">
                 @for (k of p.keywords; track k) {
@@ -61,13 +82,17 @@
             <div class="pcard-foot">
               <span class="pcard-radar" [class]="'pcard-radar radar-ring-' + ringOf(p)">
                 <span class="pcard-radar-dot"></span>
-                <span class="pcard-radar-name">{{ ringLabel(ringOf(p)) }}</span>
+                <span class="pcard-radar-name">{{ modelTier() === 'all' ? '' : 'Overall radar: ' }}{{ ringLabel(ringOf(p)) }}</span>
               </span>
               <span class="mono muted" style="font-size: 11px;">&nearr;</span>
             </div>
           </a>
         }
       </div>
+    </section>
+  } @empty {
+    <section class="shell" style="padding: 32px 0 80px;">
+      <p class="muted">No patterns have model-specific guidance for this combination yet.</p>
     </section>
   }
 </main>

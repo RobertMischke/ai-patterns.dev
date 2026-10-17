@@ -5,27 +5,133 @@
   "description": "Core record for one AI-engineering pattern or anti-pattern. Lives at data/patterns/<id>/pattern.json.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "num", "category", "layer", "classify", "title", "one_liner", "problem", "solution", "keywords"],
+  "required": [
+    "id",
+    "num",
+    "category",
+    "layer",
+    "classify",
+    "title",
+    "one_liner",
+    "problem",
+    "solution",
+    "keywords"
+  ],
   "properties": {
-    "id":        { "type": "string", "minLength": 1, "pattern": "^[a-z][a-z0-9-]*$" },
-    "num":       { "type": "string", "pattern": "^(P|A)-[0-9]{2,}$", "description": "Display code, e.g. P-08 or A-01." },
-    "category":  { "type": "string", "minLength": 1, "pattern": "^[a-z][a-z0-9-]*$", "description": "Category id; matches data/categories/<id>/." },
-    "layer":     { "type": "string", "enum": ["operating", "infra"] },
-    "classify":  { "type": "string", "enum": ["new", "intensified", "proven", "anti-pattern", "unknown"] },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[a-z][a-z0-9-]*$"
+    },
+    "num": {
+      "type": "string",
+      "pattern": "^(P|A)-[0-9]{2,}$",
+      "description": "Display code, e.g. P-08 or A-01."
+    },
+    "category": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[a-z][a-z0-9-]*$",
+      "description": "Category id; matches data/categories/<id>/."
+    },
+    "layer": {
+      "type": "string",
+      "enum": [
+        "operating",
+        "infra"
+      ]
+    },
+    "classify": {
+      "type": "string",
+      "enum": [
+        "new",
+        "intensified",
+        "proven",
+        "anti-pattern",
+        "unknown"
+      ]
+    },
     "abstraction": {
       "type": "string",
-      "enum": ["principle", "hub", "pattern", "variant", "recipe", "application"],
+      "enum": [
+        "principle",
+        "hub",
+        "pattern",
+        "variant",
+        "recipe",
+        "application"
+      ],
       "description": "Optional abstraction kind. Omission is interpreted as pattern for backward compatibility."
     },
-    "title":     { "type": "string", "minLength": 1 },
-    "one_liner": { "type": "string", "minLength": 1 },
-    "problem":   { "type": "string", "minLength": 1 },
-    "solution":  { "type": "string", "minLength": 1 },
-    "keywords":  {
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "one_liner": {
+      "type": "string",
+      "minLength": 1
+    },
+    "problem": {
+      "type": "string",
+      "minLength": 1
+    },
+    "solution": {
+      "type": "string",
+      "minLength": 1
+    },
+    "keywords": {
       "type": "array",
       "minItems": 1,
       "uniqueItems": true,
-      "items": { "type": "string", "minLength": 1 }
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "model_guidance": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "tier",
+          "stance",
+          "task",
+          "evidence",
+          "note"
+        ],
+        "properties": {
+          "tier": {
+            "type": "string",
+            "enum": [
+              "compact",
+              "strong",
+              "frontier"
+            ]
+          },
+          "stance": {
+            "type": "string",
+            "enum": [
+              "do",
+              "dont",
+              "conditional"
+            ]
+          },
+          "task": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence": {
+            "type": "string",
+            "minLength": 1
+          },
+          "note": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
     }
   }
 }
