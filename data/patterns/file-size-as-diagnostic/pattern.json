@@ -1,0 +1,44 @@
+{
+  "id": "file-size-as-diagnostic",
+  "num": "P-57",
+  "category": "sud",
+  "layer": "infra",
+  "classify": "intensified",
+  "title": "File Size as a Diagnostic",
+  "one_liner": "Use a large file to investigate cohesion and change boundaries; do not treat its line count as an LLM limit.",
+  "problem": "A long source file can mix independent reasons to change, forcing developers and coding agents to inspect unrelated behavior. A fixed line cap is a poor diagnosis: a cohesive long file may be easy to navigate, while many short files can hide a tangled dependency graph. For example, a large Git service may contain diff inspection, commit workflows and worktree operations; the relevant question is which behaviors and invariants must change together.",
+  "solution": "Start with a representative change task. Locate the relevant entry points, callers, state transitions, tests and runtime contracts; measure how much code an agent actually needs to inspect and where errors occur. If unrelated responsibilities repeatedly change or must be loaded together, extract a cohesive component behind a narrow interface and preserve behavior with tests. Keep cohesive code together when splitting would add navigation, wrappers or hidden coupling. Compare task success, regressions, retrieval precision, review effort and cost before and after a change using the same model, harness and task set. Treat line count as a trigger for investigation, never as a universal pass/fail threshold.",
+  "keywords": [
+    "large files",
+    "code cohesion",
+    "file size",
+    "code navigation",
+    "dependency complexity",
+    "agent context",
+    "refactoring",
+    "context selection"
+  ],
+  "model_guidance": [
+    {
+      "tier": "compact",
+      "stance": "conditional",
+      "task": "Repository changes around a large source file",
+      "evidence": "2026 long-code studies show retrieval and semantic-use limits, but do not test a file-splitting intervention for this tier.",
+      "note": "Use a task-specific context slice and executable checks; split only when a cohesive boundary reduces the dependencies needed for the task."
+    },
+    {
+      "tier": "strong",
+      "stance": "conditional",
+      "task": "Repository changes around a large source file",
+      "evidence": "LongCodeBench reports different results by model and task, and file length itself was not a consistent negative correlate in its QA analysis.",
+      "note": "Measure the actual model and harness on representative changes before imposing a line limit."
+    },
+    {
+      "tier": "frontier",
+      "stance": "conditional",
+      "task": "Tool-using agent explores a large source file",
+      "evidence": "Frontier coding agents can navigate very large file-system corpora with search and scripts, while semantic use of long code remains task-dependent.",
+      "note": "Do not infer that a large file must be split for the agent; verify change correctness and dependency coverage."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "s85",
+  "title": "ContextBench: A Benchmark for Context Retrieval in Coding Agents",
+  "author": "Han Li, Letian Zhu, Bohan Zhang, Rili Feng, Jiaming Wang, Yue Pan, Earl T. Barr, Federica Sarro, Zhaoyang Chu, and He Ye",
+  "kind": "paper",
+  "url": "https://arxiv.org/abs/2602.05892",
+  "patterns": [
+    "file-size-as-diagnostic",
+    "capability-conditioned-agent-strategy"
+  ]
+}

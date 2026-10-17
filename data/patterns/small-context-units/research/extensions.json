@@ -1,10 +1,15 @@
 {
-  "summary": "Small units bound local reasoning cost; Structure as Context coordinates that constraint with the rest of the repository shape.",
+  "summary": "Small Context Units uses size as a local diagnostic; File Size as a Diagnostic explains how to test cohesion and change boundaries before splitting.",
   "items": [
     {
-      "text": "Use Structure as Context to connect unit-size budgets with locality, interfaces and navigation instead of treating line limits as an isolated style rule.",
+      "text": "Use Structure as Context to connect unit size with locality, interfaces and navigation instead of enforcing universal line limits.",
       "ref_type": "pattern",
       "ref_id": "structure-context"
+    },
+    {
+      "text": "Use File Size as a Diagnostic to decide whether a large unit should be extracted, retained, or navigated with selective search.",
+      "ref_type": "pattern",
+      "ref_id": "file-size-as-diagnostic"
     }
   ]
 }

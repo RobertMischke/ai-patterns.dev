@@ -17,6 +17,11 @@
     {
       "text": "Compression and retrieval add calls, latency, state management, and privacy exposure; short, well-scoped tasks may perform better with a deliberately small original context.",
       "severity": "note"
+    },
+    {
+      "text": "Tool-using frontier coding agents have navigated very large text corpora with search and scripts; adding standard retrievers sometimes reduced their performance. This is evidence against a universal “less context always wins” policy, although it is not a repository-editing trial.",
+      "severity": "note",
+      "source_id": "s87"
     }
   ]
 }

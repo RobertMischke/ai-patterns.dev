@@ -30,6 +30,11 @@
       "text": "Emit operation identity, contract version, request, result, side effects and evidence pointers into the run trace.",
       "ref_type": "pattern",
       "ref_id": "run-trace-evidence-envelope-replay"
+    },
+    {
+      "text": "Test the tool contract with the target model and task; Capability-Conditioned Agent Strategy records when a structured workspace interface helps or hurts relative to an alternative.",
+      "ref_type": "pattern",
+      "ref_id": "capability-conditioned-agent-strategy"
     }
   ]
 }

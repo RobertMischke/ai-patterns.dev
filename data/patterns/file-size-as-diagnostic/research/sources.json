@@ -1,0 +1,30 @@
+{
+  "summary": "Evidence is mixed and indirect for file splitting. Recent work measures long-code understanding, repository context retrieval and agent navigation; none directly establishes a safe line limit or a causal benefit from decomposing a large service.",
+  "items": [
+    {
+      "text": "Štorek et al., ACL 2026: ten models showed stable lexical retrieval but severe position-sensitive semantic understanding on SemTrace. Contexts reached about 16k tokens and used unrelated distractor functions; this is not a production-file refactoring trial.",
+      "ref_type": "source",
+      "ref_id": "s83"
+    },
+    {
+      "text": "Rando et al., LongCodeBench, 2025 preprint: real GitHub issue QA and single-shot repair across 32k–1M-token context brackets. Claude 3.5 Sonnet solved 29% of 32k repair tasks and 3% of 256k tasks, but each bracket contains different issues. Longer individual files correlated with higher Gemini 2 Flash QA accuracy in five of six brackets; no causal file-size conclusion follows.",
+      "ref_type": "source",
+      "ref_id": "s84"
+    },
+    {
+      "text": "Li et al., ContextBench, 2026 preprint: 1,136 tasks across 66 repositories and eight languages, with gold context annotations. It finds context-retrieval imprecision and a gap between explored and used context, not a file-size intervention.",
+      "ref_type": "source",
+      "ref_id": "s85"
+    },
+    {
+      "text": "Wang et al., ACL 2026 CodeFlowBench: multi-turn code work degrades as dependency complexity rises. It studies codeflow tasks, not extraction of long production files.",
+      "ref_type": "source",
+      "ref_id": "s86"
+    },
+    {
+      "text": "Cao et al., 2026 preprint: off-the-shelf coding agents used file-system tools effectively on long-text QA and corpus tasks. This is a counterweight to passive-context results, but not evidence that keeping a large source file improves code editing.",
+      "ref_type": "source",
+      "ref_id": "s87"
+    }
+  ]
+}

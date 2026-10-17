@@ -1,0 +1,10 @@
+{
+  "id": "s89",
+  "title": "CoreCodeBench: Decoupling Code Intelligence via Fine-Grained Repository-Level Tasks",
+  "author": "Lingyue Fu, Hao Guan, Bolun Zhang, Haowei Yuan, Yaoming Zhu, Lin Qiu, ZongYu Wang, Xuezhi Cao, Xunliang Cai, Weiwen Liu, Weinan Zhang, and Yong Yu",
+  "kind": "paper",
+  "url": "https://aclanthology.org/2026.acl-long.1196/",
+  "patterns": [
+    "capability-conditioned-agent-strategy"
+  ]
+}

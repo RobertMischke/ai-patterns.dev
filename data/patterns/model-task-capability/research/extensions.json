@@ -30,6 +30,11 @@
       "text": "Feed accepted, revised, rejected and later-regressed asynchronous results back from Fire, Track, Review so task-specific capability estimates improve with observed outcomes.",
       "ref_type": "pattern",
       "ref_id": "fire-track-review"
+    },
+    {
+      "text": "Use Capability-Conditioned Agent Strategy to attach model–harness, task and budget conditions to each recommended tool, planning or context policy.",
+      "ref_type": "pattern",
+      "ref_id": "capability-conditioned-agent-strategy"
     }
   ]
 }

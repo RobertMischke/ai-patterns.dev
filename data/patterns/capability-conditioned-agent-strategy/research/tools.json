@@ -1,0 +1,17 @@
+{
+  "summary": "A versioned evaluation matrix and replayable task set make capability-conditioned guidance testable instead of relying on a static model-tier label.",
+  "items": [
+    {
+      "text": "Pin model/version, provider, reasoning settings, agent harness, tool schemas, prompt, context budget and task-set revision in each evaluation run."
+    },
+    {
+      "text": "Run paired do-versus-don’t configurations on the same repository tasks, using executable tests and reporting success, failures, tokens, cost and time; retain uncertainty estimates."
+    },
+    {
+      "text": "Store each published recommendation with the exact measured condition, date, evidence link, expiry trigger and a “not tested” state for other model tiers."
+    },
+    {
+      "text": "Filter recommendations by task and measured model–harness capability first; use a broad performance index only as a discovery aid, and rerun local checks after model or tool changes."
+    }
+  ]
+}

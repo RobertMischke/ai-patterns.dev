@@ -1,0 +1,11 @@
+{
+  "id": "s83",
+  "title": "Sense and Sensitivity: Examining the Influence of Semantic Recall on Long Context Code Understanding",
+  "author": "Adam Štorek, Mukur Gupta, Samira Hajizadeh, Prashast Srivastava, and Suman Jana",
+  "kind": "paper",
+  "url": "https://aclanthology.org/2026.acl-long.19/",
+  "patterns": [
+    "context-compaction",
+    "file-size-as-diagnostic"
+  ]
+}

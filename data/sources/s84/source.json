@@ -1,0 +1,12 @@
+{
+  "id": "s84",
+  "title": "LongCodeBench: Evaluating Coding LLMs at 1M Context Windows",
+  "author": "Stefano Rando, Luca Romani, Alessio Sampieri, Luca Franco, John Yang, Yuta Kyuragi, Fabio Galasso, and Tatsunori Hashimoto",
+  "kind": "paper",
+  "url": "https://arxiv.org/abs/2505.07897",
+  "patterns": [
+    "small-context-units",
+    "file-size-as-diagnostic",
+    "capability-conditioned-agent-strategy"
+  ]
+}

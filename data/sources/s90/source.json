@@ -1,0 +1,10 @@
+{
+  "id": "s90",
+  "title": "The Scaffold Effect in Coding Agents: Harness Choice as a Hidden Variable in Coding-Agent Evaluation",
+  "author": "Naman Vats and Oleg Golev",
+  "kind": "paper",
+  "url": "https://arxiv.org/abs/2607.22585",
+  "patterns": [
+    "capability-conditioned-agent-strategy"
+  ]
+}

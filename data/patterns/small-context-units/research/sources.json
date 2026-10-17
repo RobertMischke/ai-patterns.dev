@@ -1,5 +1,5 @@
 {
-  "summary": "Evidence strength: moderate but adjacent. Human readability, fault-proneness and repository-level code-completion research all favor smaller or selectively pruned units, but no direct controlled study located validates universal limits such as 300 lines per file, 40 per function or seven public methods.",
+  "summary": "Evidence is mixed and mostly adjacent. Human readability and maintenance studies justify monitoring code shape, while newer agent research shows that dependency complexity and context selection matter more than any universal file, function or method limit.",
   "items": [
     {
       "text": "Buse and Weimer, Learning a Metric for Code Readability (IEEE Transactions on Software Engineering, 2010), learned from 120 human annotators, predicted readability judgments with about 80% accuracy and found correlations with changes and defect indicators over more than 2.2 million lines. It supports measurable local readability, but correlation does not identify a causal line-count threshold.",
@@ -20,6 +20,16 @@
       "text": "Zhang et al., Hierarchical Context Pruning: Optimizing Real-World Code Completion with Repository-Level Pretrained Code LLMs (Chinese Academy of Sciences and partners, AAAI 2025), evaluated hierarchical pruning across repository-level code-completion models and reported improved completion after removing irrelevant context. This directly supports selective model context, but not source-code size caps as the pruning mechanism.",
       "ref_type": "external",
       "url": "https://doi.org/10.1609/aaai.v39i24.34782"
+    },
+    {
+      "text": "Rando et al., LongCodeBench (2025 preprint), found that longer individual files correlated with higher QA accuracy for Gemini 2 Flash in five of six context brackets. This is observational and does not imply that larger files cause better results; it does refute a universal smaller-file rule.",
+      "ref_type": "source",
+      "ref_id": "s84"
+    },
+    {
+      "text": "Wang et al., CodeFlowBench (ACL 2026), found lower model performance as dependency complexity rose in multi-turn code tasks. This supports checking coupling and change scope rather than enforcing physical length caps.",
+      "ref_type": "source",
+      "ref_id": "s86"
     }
   ]
 }

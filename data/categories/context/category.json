@@ -3,6 +3,6 @@
   "num": "02",
   "color": "var(--cat-context)",
   "name": "Context Engineering",
-  "tagline": "Less context, retrieved on demand, beats more context dumped upfront.",
-  "blurb": "Context is the control surface that turns model capability into project-aligned work. Compaction, retrieval, memory tiers, structure."
+  "tagline": "Provide the evidence each task needs, with retrieval and compaction fitted to the model and window.",
+  "blurb": "Context is a task-specific interface to project evidence. Select, retrieve, structure or compact it when measured outcomes justify the cost and risk."
 }

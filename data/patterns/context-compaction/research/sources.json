@@ -1,5 +1,5 @@
 {
-  "summary": "Evidence is direct for long-context position failures and learned prompt compression, and adjacent for just-in-time repository retrieval. Studies show meaningful gains on selected NLP tasks, not that any generic conversation summary preserves all constraints in software work.",
+  "summary": "Evidence supports conditional context management, not a universal preference for less context. Recent coding-agent work finds semantic-use limits, strong tool-mediated navigation, and the largest compaction gains when a window would otherwise overflow.",
   "items": [
     {
       "text": "Lost in the Middle: How Language Models Use Long Contexts — Nelson F. Liu et al. (2024). TACL experiments found performance often highest when relevant information appears at the beginning or end and degraded when it appears in the middle, even for models marketed with long context windows. This directly undermines the assumption that dumping more context is harmless.",
@@ -20,6 +20,21 @@
       "text": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks — Patrick Lewis et al. (2020). NeurIPS experiments show that retrieving external passages can improve several knowledge-intensive tasks and preserve provenance opportunities. This is adjacent evidence for just-in-time retrieval; repositories, code relations, and evolving work state were not studied.",
       "ref_type": "external",
       "url": "https://proceedings.neurips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html"
+    },
+    {
+      "text": "Štorek et al., ACL 2026: ten models retrieved code nearly perfectly while semantic reasoning over code placed in the middle of 4k–16k-token synthetic contexts could degrade sharply. This isolates one failure mode, not the effect of compaction in a full coding-agent workflow.",
+      "ref_type": "source",
+      "ref_id": "s83"
+    },
+    {
+      "text": "Cao et al., 2026 preprint: off-the-shelf coding agents used filesystem tools and scripts to process very large text corpora, and extra retrievers did not consistently improve results. The tasks were mainly long-text processing, not code editing.",
+      "ref_type": "source",
+      "ref_id": "s87"
+    },
+    {
+      "text": "Fan et al., September 2026 preprint: across four models and two coding benchmarks, context management helped most at tighter window budgets by preventing overflow; its average success advantage shrank as budgets grew from 32k to 128k. The findings are bound to the tested harness policies.",
+      "ref_type": "source",
+      "ref_id": "s88"
     }
   ]
 }

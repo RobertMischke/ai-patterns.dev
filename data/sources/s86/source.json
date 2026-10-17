@@ -1,0 +1,11 @@
+{
+  "id": "s86",
+  "title": "CodeFlowBench: A Multi-turn, Iterative Benchmark for Complex Code Generation",
+  "author": "Sizhe Wang, Zhengren Wang, Dongsheng Ma, Yongan Yu, Rui Ling, Zhiyu Li, Feiyu Xiong, and Wentao Zhang",
+  "kind": "paper",
+  "url": "https://aclanthology.org/2026.acl-long.201/",
+  "patterns": [
+    "small-context-units",
+    "file-size-as-diagnostic"
+  ]
+}

@@ -1,13 +1,13 @@
 {
   "stance": "supports",
-  "summary": "Bounded units improve reviewability and model-context selection when budgets act as prompts for cohesion rather than arbitrary style law.",
+  "summary": "Bounded units can improve reviewability and context selection when size triggers a cohesion check rather than an arbitrary style rule.",
   "points": [
     {
       "text": "Readability and smell studies consistently associate local code shape, size and complexity with human judgments and maintenance outcomes, providing a reasonable basis for measurement.",
       "severity": "info"
     },
     {
-      "text": "Function-, class- and file-level budgets catch different failure modes; a small function inside a sprawling class does not create a small semantic context.",
+      "text": "Function, class and file size expose different possible maintenance risks; none alone measures the semantic context of a change.",
       "severity": "note"
     },
     {

@@ -12,7 +12,7 @@
       "ref_id": "agent-pipelines"
     },
     {
-      "text": "See Context Compaction & JIT Retrieval for the related use case or counterpoint: Less context, retrieved on demand, beats more context dumped upfront.",
+      "text": "See Context Compaction & JIT Retrieval for the related use case or counterpoint: Select task-relevant context and compact when the model, harness and context budget make it useful.",
       "ref_type": "pattern",
       "ref_id": "context-compaction"
     },

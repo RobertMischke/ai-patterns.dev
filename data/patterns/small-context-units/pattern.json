@@ -5,15 +5,39 @@
   "layer": "infra",
   "classify": "intensified",
   "title": "Small Context Units",
-  "one_liner": "Keep files, classes and functions small enough that an agent can hold one in mind without spilling.",
-  "problem": "1500-line files, 40-method classes and 200-line functions are review-hostile for humans and context-hostile for agents. Loading one such unit can consume most of the working budget; partial loads break understanding; edits ripple unpredictably because the unit does too many things.",
-  "solution": "Set explicit size budgets and enforce them with linting: e.g. files ≤ 300 lines, functions ≤ 40, classes ≤ 7 public methods. Treat exceedance as a refactor signal, not a style nit. Aim for units a competent reader can hold in mind in one pass — that is also the unit an agent can change safely.",
+  "one_liner": "Keep change-relevant code cohesive and navigable; treat excessive size as a signal to inspect, not an automatic failure.",
+  "problem": "A large file or class can mix unrelated reasons to change and make the relevant dependency set hard to find. Physical size alone does not establish this: a long cohesive unit may be easier to work with than many short files joined by hidden coupling. Fixed line and method caps can reward mechanical fragmentation.",
+  "solution": "Use file, class and function size as local review signals. For representative changes, inspect responsibilities, dependency closure, callers, tests and the code an agent actually needs to read. Extract a cohesive unit behind a clear interface when that reduces unrelated context or change risk; keep cohesive code together when splitting would add indirection. Calibrate any lint threshold to the language, generated-code status and observed outcomes. Evaluate correctness, navigation effort and review cost rather than treating a universal line count as an LLM capacity limit.",
   "keywords": [
-    "small files",
-    "small functions",
-    "context window",
+    "cohesive units",
+    "context selection",
+    "code size",
     "local reasoning",
+    "dependency closure",
     "modularity",
-    "cognitive load"
+    "reviewability"
+  ],
+  "model_guidance": [
+    {
+      "tier": "compact",
+      "stance": "conditional",
+      "task": "Changes involving a large file or class",
+      "evidence": "Long-context code studies identify task and position effects but do not validate a fixed file-size cap for compact models.",
+      "note": "Use scoped search and tests; extract only when the boundary reduces change-relevant dependencies."
+    },
+    {
+      "tier": "strong",
+      "stance": "conditional",
+      "task": "Changes involving a large file or class",
+      "evidence": "LongCodeBench found that longer files were not consistently associated with worse repository QA accuracy.",
+      "note": "Measure the model–harness pair and workflow before enforcing a size budget."
+    },
+    {
+      "tier": "frontier",
+      "stance": "conditional",
+      "task": "Tool-using agent works in a large repository",
+      "evidence": "Modern coding agents can navigate large file-system corpora with tools; no direct controlled file-split benefit was established.",
+      "note": "Keep a cohesive module intact unless extraction improves testability or change locality."
+    }
   ]
 }

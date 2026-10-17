@@ -91,6 +91,8 @@
     "wiki-as-cognitive-interface": "trial",
     "compute-as-oss-contribution": "assess",
     "memory-management": "assess",
-    "sidecar-metadata": "trial"
+    "sidecar-metadata": "trial",
+    "file-size-as-diagnostic": "assess",
+    "capability-conditioned-agent-strategy": "assess"
   }
 }

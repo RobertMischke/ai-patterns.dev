@@ -1,0 +1,17 @@
+{
+  "summary": "Use search, dependency inspection and executable verification to diagnose the change boundary before restructuring code.",
+  "items": [
+    {
+      "text": "Search for declarations, call sites, command invocations and tests; record the set actually inspected for a representative change rather than loading the entire file by default."
+    },
+    {
+      "text": "Use language-server references or static call graphs to find the dependency closure around a proposed component boundary; inspect dynamic dispatch and runtime configuration separately."
+    },
+    {
+      "text": "Run the existing build and behavior tests before and after extraction; add a focused characterization test only when a behavior has no executable check."
+    },
+    {
+      "text": "Track task completion, erroneous edits, context read, tool calls, review time and cost across the same tasks and model–harness pair."
+    }
+  ]
+}

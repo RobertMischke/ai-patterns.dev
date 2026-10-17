@@ -1,0 +1,46 @@
+{
+  "id": "capability-conditioned-agent-strategy",
+  "num": "P-58",
+  "category": "routing",
+  "layer": "operating",
+  "classify": "intensified",
+  "title": "Capability-Conditioned Agent Strategy",
+  "one_liner": "A useful agent practice for one model can become a poor default for another; scope every do and don’t to measured capability and task.",
+  "problem": "Agent guidance often labels a prompt, tool set or context strategy as universally good. Yet model ability is uneven across coding tasks, and the same intervention can help a weaker agent while slowing or hurting a stronger one. A single model leaderboard score or vague “frontier” label hides the model, harness, task and context conditions that determine the result.",
+  "solution": "Publish guidance as a versioned model–harness–task matrix. For each recommendation, record the exact model/version, agent interface, task family, context budget, baseline, outcome metric, sample size and evaluation date. Make the stance explicit for each measured condition: do, don’t or conditional. For example, in one controlled 2026 study, predefined workspace tools were a do for a shell-weak 30B model but a don’t relative to bash-only for a bash-capable 550B model on the same repository issue benchmark. Re-test after model, harness or task changes. Use a global capability index only to find candidates; local task-specific evidence decides which advice applies.",
+  "keywords": [
+    "model capability",
+    "frontier models",
+    "performance tier",
+    "agent harness",
+    "task-specific guidance",
+    "do and dont",
+    "tool interface",
+    "planning",
+    "context budget",
+    "evals"
+  ],
+  "model_guidance": [
+    {
+      "tier": "compact",
+      "stance": "do",
+      "task": "Repository issue resolution when the model struggles to operate a shell",
+      "evidence": "Fan et al. (2026): Nemotron-3 30B solved 25.2% of SWE-bench Verified tasks with predefined tools versus 10.2% with bash-only in their 128k/T4 harness.",
+      "note": "Provide a reliable read/search/edit interface in this measured setting; verify transfer to the chosen compact model."
+    },
+    {
+      "tier": "strong",
+      "stance": "dont",
+      "task": "Repository issue resolution when the model is proficient with Bash",
+      "evidence": "Fan et al. (2026): Nemotron-3 550B solved 69.4% with bash-only versus 65.8% with the full tool set on SWE-bench Verified, with lower cost.",
+      "note": "Do not impose the full predefined workspace tool set as a default for this measured model–harness–task pair; other strong models can differ."
+    },
+    {
+      "tier": "frontier",
+      "stance": "conditional",
+      "task": "Current frontier coding agent on a specific repository workflow",
+      "evidence": "ContextBench and scaffold studies report model–harness and task effects, but the 30B/550B crossover was not tested on every current frontier model.",
+      "note": "Run the local evaluation before assigning a do or don’t; record model version, harness, task and date."
+    }
+  ]
+}

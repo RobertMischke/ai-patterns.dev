@@ -1,0 +1,20 @@
+{
+  "summary": "This pattern refines Small Context Units: physical size is a review signal, while useful boundaries depend on cohesion, dependency closure and measured task outcomes.",
+  "items": [
+    {
+      "text": "Read Small Context Units as a local diagnostic rather than a universal 300-line or public-method cap.",
+      "ref_type": "pattern",
+      "ref_id": "small-context-units"
+    },
+    {
+      "text": "Structure as Context supplies the broader principle of making code relationships navigable.",
+      "ref_type": "pattern",
+      "ref_id": "structure-context"
+    },
+    {
+      "text": "Apply Capability-Conditioned Agent Strategy when evaluating the same change with different model–harness pairs.",
+      "ref_type": "pattern",
+      "ref_id": "capability-conditioned-agent-strategy"
+    }
+  ]
+}

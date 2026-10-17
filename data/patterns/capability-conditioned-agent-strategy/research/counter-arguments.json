@@ -1,0 +1,26 @@
+{
+  "stance": "mixed",
+  "summary": "The observed do/don’t crossover is real in its measured conditions, but neither parameter count nor the labels compact, strong and frontier supply universal thresholds.",
+  "points": [
+    {
+      "text": "Fan et al. is a September 2026 preprint. Its tool intervention changes the tool registry, interface prompt, file-state tracking and post-edit diagnostics together; it does not isolate tool count or prove a generally optimal Bash interface.",
+      "severity": "blocker",
+      "source_id": "s88"
+    },
+    {
+      "text": "The crossover was measured for three Nemotron-3 sizes and one Mistral model. The authors warn that model size is an imperfect capability proxy; Terminal-Bench has 89 tasks and many individual contrasts lack significance.",
+      "severity": "warning",
+      "source_id": "s88"
+    },
+    {
+      "text": "A recommendation can flip by task even for the same model: in LongCodeBench, retrieval hurt Claude 3.5 Sonnet’s repository QA but improved its long-context patching at 256k. This single-shot benchmark should not be transferred untested to interactive agents.",
+      "severity": "warning",
+      "source_id": "s84"
+    },
+    {
+      "text": "A small scaffold study found up to 40-fold variation in tokens per solved task across harnesses but mostly statistically inconclusive accuracy differences. Cost, latency and reliability need separate reporting.",
+      "severity": "note",
+      "source_id": "s90"
+    }
+  ]
+}

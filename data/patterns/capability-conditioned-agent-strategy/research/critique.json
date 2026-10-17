@@ -1,0 +1,26 @@
+{
+  "stance": "supports",
+  "summary": "Controlled 2026 evaluations show that agent-interface choices interact with model capability and task type; a model name or global score alone is an incomplete unit of advice.",
+  "points": [
+    {
+      "text": "In Fan et al.’s matched 128k-context harness, Nemotron-3 30B resolved 25.2% of SWE-bench Verified tasks with predefined tools versus 10.2% with bash-only. Nemotron-3 550B reversed the ordering: 65.8% with predefined tools versus 69.4% with bash-only, at lower cost. Both SWE-bench tool comparisons were significant under the authors’ paired test.",
+      "severity": "info",
+      "source_id": "s88"
+    },
+    {
+      "text": "The same study found planning raised the 30B model’s SWE-bench success by 11.6 percentage points while increasing cost; for the 550B and Mistral 128B models it mainly cut cost with small decreases in success. Advice must name the optimization target.",
+      "severity": "note",
+      "source_id": "s88"
+    },
+    {
+      "text": "CoreCodeBench, an ACL 2026 paper, tested 1,524 tasks from 12 Python repositories and found model ranking shifts between development, bug fixing and test-driven implementation. A single coding index misses these differences.",
+      "severity": "info",
+      "source_id": "s89"
+    },
+    {
+      "text": "ContextBench evaluated four frontier models and five coding agents on gold-context issue tasks; agent setup and context selection matter alongside the base model.",
+      "severity": "note",
+      "source_id": "s85"
+    }
+  ]
+}

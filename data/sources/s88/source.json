@@ -1,0 +1,11 @@
+{
+  "id": "s88",
+  "title": "An Empirical Study of Harness Design for Coding Agents",
+  "author": "Run-Ze Fan, Zihao Zhang, Simin Ma, Yebowen Hu, Shouju Wang, Kaiqiang Song, Fei Liu, Hamed Zamani, and Xiaoyang Wang",
+  "kind": "paper",
+  "url": "https://arxiv.org/abs/2609.20804",
+  "patterns": [
+    "context-compaction",
+    "capability-conditioned-agent-strategy"
+  ]
+}

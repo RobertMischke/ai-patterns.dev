@@ -1,0 +1,24 @@
+{
+  "stance": "mixed",
+  "summary": "Modern agents can navigate large corpora through tools, and mechanical splitting may make the behavior harder to follow.",
+  "points": [
+    {
+      "text": "A coding-agent study found that tool-using agents could navigate very large text corpora with file-system search and scripts, outperforming published long-context baselines on its text tasks. It did not measure code changes in a single large class.",
+      "severity": "note",
+      "source_id": "s87"
+    },
+    {
+      "text": "Moving methods into thin wrappers or partial files can increase cross-file jumps while leaving state, lifecycle and invariant coupling intact.",
+      "severity": "warning"
+    },
+    {
+      "text": "LongCodeBench compares different real issues across context-length brackets in a single-shot setup; its declining patch success is not a causal estimate of the effect of one file growing.",
+      "severity": "warning",
+      "source_id": "s84"
+    },
+    {
+      "text": "No controlled before-and-after study here demonstrates that decomposing one large service improves the success rate of current frontier coding agents.",
+      "severity": "blocker"
+    }
+  ]
+}

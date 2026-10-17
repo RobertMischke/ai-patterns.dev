@@ -1,0 +1,11 @@
+{
+  "id": "s87",
+  "title": "Coding Agents are Effective Long-Context Processors",
+  "author": "Weili Cao, Xunjian Yin, Bhuwan Dhingra, and Shuyan Zhou",
+  "kind": "paper",
+  "url": "https://arxiv.org/abs/2603.20432",
+  "patterns": [
+    "context-compaction",
+    "file-size-as-diagnostic"
+  ]
+}

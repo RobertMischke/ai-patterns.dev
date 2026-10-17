@@ -1,6 +1,6 @@
 {
   "stance": "supports",
-  "summary": "Context compaction is a sound response to finite attention and retrieval noise, provided the compact frame is treated as a lossy index into durable evidence rather than a replacement for that evidence.",
+  "summary": "Context selection and compaction can prevent overflow or reduce noise, but their value must be measured for the model, harness, task and window budget.",
   "points": [
     {
       "text": "The active frame should preserve the current goal, constraints, accepted decisions, open questions, next actions, validation state, and stable source pointers. Narrative chronology is usually less valuable.",
@@ -17,6 +17,11 @@
     {
       "text": "Evaluate the compacted frame with constraint recall, source-retrieval success, task completion, and contradiction detection, not token reduction alone.",
       "severity": "warning"
+    },
+    {
+      "text": "In a 2026 coding-harness study, managed-context gains were largest under 32k budgets and shrank as windows expanded to 128k, largely tracking avoided overflow failures.",
+      "severity": "info",
+      "source_id": "s88"
     }
   ]
 }

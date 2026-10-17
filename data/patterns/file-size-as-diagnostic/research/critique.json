@@ -1,0 +1,26 @@
+{
+  "stance": "supports",
+  "summary": "Current code-agent research supports selective context and attention to dependency complexity, but does not validate a universal file-size ceiling or a causal benefit from splitting a file.",
+  "points": [
+    {
+      "text": "ContextBench tracked 1,136 issue-resolution tasks across 66 repositories and found that agents often retrieve more context than they use. Measure whether a large file causes noisy exploration in the actual workflow.",
+      "severity": "info",
+      "source_id": "s85"
+    },
+    {
+      "text": "CodeFlowBench found performance degradation as dependency complexity increased in multi-turn code work. A refactor should reduce the dependency closure required for a change, not merely redistribute lines.",
+      "severity": "note",
+      "source_id": "s86"
+    },
+    {
+      "text": "In a 2026 controlled long-code study, models could often retrieve relevant code verbatim while failing to reason about its behavior when centrally placed in a 4k–16k-token input. The study used unrelated distractor functions and did not test splitting production files.",
+      "severity": "warning",
+      "source_id": "s83"
+    },
+    {
+      "text": "LongCodeBench found longer files associated with higher QA accuracy for Gemini 2 Flash in five of six context brackets. That association is not causal, but directly undercuts a universal smaller-file rule.",
+      "severity": "warning",
+      "source_id": "s84"
+    }
+  ]
+}

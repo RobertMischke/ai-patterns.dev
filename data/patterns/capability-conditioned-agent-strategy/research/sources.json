@@ -1,0 +1,30 @@
+{
+  "summary": "Evidence is direct for conditional tool and planning guidance in specific 2026 coding-agent configurations, while the labels compact, strong and frontier remain navigation aids rather than validated numeric cutoffs.",
+  "items": [
+    {
+      "text": "Fan et al., 2026 preprint: 176 matched settings across four models, SWE-bench Verified and Terminal-Bench 2.1. At 128k/T4, predefined tools improved Nemotron-3 30B on SWE-bench by 15.0 percentage points; bash-only improved Nemotron-3 550B by 3.6 points with lower cost. Tool availability, prompt and diagnostics changed as a bundle, and transfer to other models is untested.",
+      "ref_type": "source",
+      "ref_id": "s88"
+    },
+    {
+      "text": "Fu et al., ACL 2026 CoreCodeBench: 1,524 tasks from 12 Python repositories reveal different rankings for development, bug fixing and test-driven work. It supports task-specific capability assessment, not a universal performance-class threshold.",
+      "ref_type": "source",
+      "ref_id": "s89"
+    },
+    {
+      "text": "Rando et al., 2025 LongCodeBench preprint: for Claude 3.5 Sonnet, RAG reduced LongCodeQA accuracy at 32k from 65.5% to 25.55%, while at 256k it raised LongSWE-Bench solved issues from 3% to 21%. This demonstrates task-conditional direction for one model in a single-shot benchmark.",
+      "ref_type": "source",
+      "ref_id": "s84"
+    },
+    {
+      "text": "Li et al., 2026 ContextBench preprint: 1,136 issue tasks and gold code contexts show that model and agent configurations differ in retrieval and task success; the leaderboard reports agent–model pairs, not model capacity alone.",
+      "ref_type": "source",
+      "ref_id": "s85"
+    },
+    {
+      "text": "Vats and Golev, 2026 preliminary preprint: two models across three harnesses on 50 Terminal-Bench Pro tasks produced up to 40-fold differences in tokens per solved task; most paired success-rate differences were statistically inconclusive. It reinforces measuring cost and success separately.",
+      "ref_type": "source",
+      "ref_id": "s90"
+    }
+  ]
+}

@@ -5,12 +5,38 @@
   "layer": "infra",
   "classify": "new",
   "title": "Context Compaction & JIT Retrieval",
-  "one_liner": "Less context, retrieved on demand, beats more context dumped upfront.",
-  "problem": "Long contexts produce worse agent work — the model loses itself, weights wrong tokens, finds irrelevant snippets.",
-  "solution": "Keep the active frame small via compaction; let the agent pull on demand with glob/grep/read_file rather than pre-pump everything.",
+  "one_liner": "Select task-relevant context and compact when the model, harness and context budget make it useful.",
+  "problem": "An agent can miss relevant code when a large prompt contains unrelated material or when its working history overflows the available window. It can also fail after an overzealous summary drops an invariant or when retrieval omits a needed dependency. The effect of more context depends on the task, model, agent tools and context budget.",
+  "solution": "Start with the current task and its authoritative sources. Provide enough relevant code and constraints to solve it; let an agent search or read more when needed. When actual window pressure appears, elide stale observations or summarize history while preserving source pointers, recent raw evidence and critical requirements. Compare full, selected and compacted context on the same tasks with the target model–harness pair; use correctness, source coverage, overflow, latency and cost to choose a policy. Avoid a blanket rule that less context always wins.",
   "keywords": [
     "JIT retrieval",
+    "context selection",
     "compaction",
-    "frame size"
+    "context budget",
+    "source pointers",
+    "model-specific evaluation"
+  ],
+  "model_guidance": [
+    {
+      "tier": "compact",
+      "stance": "conditional",
+      "task": "Agent run approaching its usable context limit",
+      "evidence": "A 2026 matched harness study found context management valuable mainly when it prevented window-overflow failures across its tested models.",
+      "note": "Compact only after preserving requirements and retrievable source pointers; test whether the model can recover needed details."
+    },
+    {
+      "tier": "strong",
+      "stance": "conditional",
+      "task": "Repository issue resolution with a large context window",
+      "evidence": "In the same study, context-management accuracy gains shrank as the window increased from 32k to 128k.",
+      "note": "Select context by relevance and measure whether compaction adds value to the actual task."
+    },
+    {
+      "tier": "frontier",
+      "stance": "conditional",
+      "task": "Tool-using agent navigating a large corpus or repository",
+      "evidence": "Frontier coding agents have processed very large corpora using filesystem tools; added retrieval can also hurt on some tasks.",
+      "note": "Allow active search and targeted reads; do not force aggressive pre-compaction without evidence."
+    }
   ]
 }

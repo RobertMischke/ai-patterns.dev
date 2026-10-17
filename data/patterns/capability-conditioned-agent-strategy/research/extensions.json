@@ -1,0 +1,20 @@
+{
+  "summary": "Capability-conditioned strategy applies task routing to the design of the agent workflow itself, including tool surface, planning and context policy.",
+  "items": [
+    {
+      "text": "Model–Task Capability Map identifies which model may handle each task; this pattern records which workflow advice applies to that model and task.",
+      "ref_type": "pattern",
+      "ref_id": "model-task-capability"
+    },
+    {
+      "text": "Agent–Computer Interface / Tool Contract defines a tool surface; this pattern requires evidence that the selected surface helps the target model.",
+      "ref_type": "pattern",
+      "ref_id": "agent-computer-interface"
+    },
+    {
+      "text": "When deciding whether to split a large file for an agent, apply the file-size diagnostic and measure the target model–harness pair.",
+      "ref_type": "pattern",
+      "ref_id": "file-size-as-diagnostic"
+    }
+  ]
+}
