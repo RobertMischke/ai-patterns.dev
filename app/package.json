@@ -32,14 +32,14 @@
     "@angular/platform-browser": "^21.2.25",
     "@angular/platform-server": "^21.2.25",
     "@angular/router": "^21.2.25",
-    "@angular/ssr": "^21.2.27",
+    "@angular/ssr": "^21.2.29",
     "express": "^5.1.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "@angular/build": "^21.2.27",
-    "@angular/cli": "^21.2.27",
+    "@angular/build": "^21.2.29",
+    "@angular/cli": "^21.2.29",
     "@angular/compiler-cli": "^21.2.25",
     "@types/express": "^5.0.1",
     "@types/node": "^20.17.19",
@@ -51,8 +51,10 @@
     "vitest": "^4.1.12"
   },
   "overrides": {
-    "undici": "7.29.1",
-    "@modelcontextprotocol/sdk": "1.31.0",
-    "@hono/node-server": "2.1.0"
+    "undici": "7.30.1",
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "@hono/node-server": "2.1.5",
+    "glob": "14.0.3",
+    "minimatch": "11.0.3"
   }
 }
